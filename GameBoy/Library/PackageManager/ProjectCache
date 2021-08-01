@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637633853557131502
-    m_Hash: 3939502138
+      ticks: 637633860128612961
+    m_Hash: 680286519
   m_LockFileStatus:
     m_FilePath: C:/Users/Samuel Almeida/Documents/GitHub/lowResGame/GameBoy/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637633853557131502
-    m_Hash: 2429090653
+      ticks: 637633860128622964
+    m_Hash: 1498195455
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
