@@ -474,3 +474,4 @@ Received Import Request.
 Start importing Assets/Shaders/Lit Shader.shadergraph using Guid(80f55069daddc5e41baa51c7682d0d1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb3b0020ab8e1f285d1891ff6d988f0') in 0.018642 seconds 
   Import took 0.025585 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
