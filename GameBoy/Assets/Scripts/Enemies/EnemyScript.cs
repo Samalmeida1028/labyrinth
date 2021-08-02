@@ -11,29 +11,23 @@ public class EnemyScript : MonoBehaviour
     Rigidbody2D player = null;
     public int health = 100;
 
+
 private void Update(){
     if(health<=0){
         Destroy(gameObject);
     }
-    if(target != null){
-        float step = speed*Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-        PointToTarget(player);
-    }
-
 
 }
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
-            player = other.GetComponent<Rigidbody2D>();
-            target = other.transform;
+            GetComponent<AIDestinationSetter>().enabled = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
-            target = null;
-            player = null;
+            canFollow = false;
+            GetComponent<AIDestinationSetter>().enabled = false;
         }
     }
 
