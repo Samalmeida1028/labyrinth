@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour
     public int health = 100;
 
 
+
 private void Update(){
     if(health<=0){
         Destroy(gameObject);
@@ -20,14 +21,13 @@ private void Update(){
 }
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
-            GetComponent<AIDestinationSetter>().enabled = true;
+
         }
     }
 
     private void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
-            canFollow = false;
-            GetComponent<AIDestinationSetter>().enabled = false;
+
         }
     }
 
@@ -45,3 +45,4 @@ private void Update(){
     }
 
 }
+
