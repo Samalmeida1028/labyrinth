@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     public Rigidbody2D rb;
     public Camera cam;
-
+    public bool canShoot;
     Vector2 mousePos;
 
     void Update(){
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
      void PointToMouse(){
         Vector2 lookDir = mousePos - rb.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
-        float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg +90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
+        float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
         rb.rotation = angle;    //sets look angle to previously found angle
 
     }
