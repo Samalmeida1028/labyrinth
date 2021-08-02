@@ -26,6 +26,7 @@ sysinfo.txt
 *.unityproj
 *.user
 *.userprefs
+
 *.pidb
 .DS_Store
 
@@ -42,3 +43,4 @@ ehthumbs.db
 Thumbs.db
 *.log
 Gold Game/Logs
+!EditorUserSettings.asset
