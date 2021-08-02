@@ -21,12 +21,16 @@ private void Update(){
 }
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
+            Debug.Log("Hello");
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
         }
     }
 
     private void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
+            Debug.Log("Bye");
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
         }
     }

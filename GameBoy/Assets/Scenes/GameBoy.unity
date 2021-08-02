@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 949037289}
   - component: {fileID: 949037286}
   - component: {fileID: 949037285}
+  - component: {fileID: 949037290}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -578,7 +579,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949037284}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -635,6 +636,22 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!58 &949037290
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949037284}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7
 --- !u!114 &949037291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d380f6fc66863a40a4343106573cc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   cam: {fileID: 270856551}
   enemyrb: {fileID: 949037287}
   health: 100
@@ -823,8 +840,8 @@ MonoBehaviour:
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 0
-  showUnwalkableNodes: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
   debugRoof: 1
