@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+public string itemName;
+public int rarity;
+public bool isMelee;
+public float attackSpeed; 
 
 
-
-
-]
+}
