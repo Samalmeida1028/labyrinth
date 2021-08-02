@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public Item[] array
+    public Item[] inventory;
 
     void Update()
     {
