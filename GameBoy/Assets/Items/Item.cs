@@ -8,6 +8,10 @@ public string itemName;
 public int rarity;
 public bool isMelee;
 public float attackSpeed; 
+public SpriteRenderer sprite;
+public int damage;
+
+
 
 
 }
