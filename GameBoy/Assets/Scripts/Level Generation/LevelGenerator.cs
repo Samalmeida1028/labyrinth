@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class LevelGenerator : MonoBehaviour
 {
 
@@ -83,7 +82,9 @@ public class LevelGenerator : MonoBehaviour
             horizontal = (Random.Range(0,2)==1);
 
 
-        }else{
+        }
+        else
+        {
             if((width>height)&&(width/height>=1.25))
             {
                 horizontal = false;
