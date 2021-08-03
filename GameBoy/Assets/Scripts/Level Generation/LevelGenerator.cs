@@ -4,36 +4,36 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-
+    [Header ("Set up the Dungeon Generation")]
     public int numberOfRooms = 16;
     public int cols;
     public int rows;
     public int minRoomSize = 8;
     public int maxRoomSize = 24;
-
-    private float maxTreeLength;
-    private int dungeonCount = 0;
-    public List<Dungeon> finalDungeonList = new List<Dungeon>();
-
-    public GameObject wall; 
-    public GameObject backgroundWall; 
-    public GameObject collisionDetectorPrefab;
-    public GameObject roomCenterPrefab;
-
-    public GameObject splitPrefab;
-    public GameObject collisionDetector;
-    public GameObject [,] grid;
-
     public float tilePixelCount = 1.25f;
     public Vector4 color;
     public float roomBuffer = 2.5f;
+    public Vector2 defaultTranslation = new Vector2(0,0);
+    [Space(10)]
+    [Header ("Final Dungeon #")]
+    private float maxTreeLength;
+    private int dungeonCount = 0;
+    protected List<Dungeon> finalDungeonList = new List<Dungeon>();
+    [Space(10)]
+    [Header ("Prefabs")]
+    public GameObject wall; 
+    public GameObject backgroundWall; 
+    public GameObject roomCenterPrefab;
+    public GameObject splitPrefab;
+    public GameObject [,] grid;
+    public GameObject AiStar;
+
 
     // Start is called before the first frame update
     void Start()
     {
         color = splitPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().color;
         maxTreeLength = Mathf.Log(numberOfRooms,2);
-        collisionDetector = Instantiate(collisionDetector,new Vector3(1000,1000,0),Quaternion.identity);
         grid = new GameObject [rows,cols];
     }
 
@@ -43,8 +43,9 @@ public class LevelGenerator : MonoBehaviour
         {
            dungeonCount=0;
            generateBoard();
-           generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
+           generateDungeonTree(new Dungeon(defaultTranslation, new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
            generateRooms();
+            Instantiate(AiStar);
         }
         
     }
@@ -220,7 +221,6 @@ public class LevelGenerator : MonoBehaviour
                     
                     for (float j = roomX_Min; j<=roomX_Max; j+=tilePixelCount)
                     {
-
                         Destroy(grid[(int)(j/1.25),(int)(i/1.25)]);
 
                         if(i==roomY_Min||i>=roomY_Max||j==roomX_Min||j>=roomX_Max)
