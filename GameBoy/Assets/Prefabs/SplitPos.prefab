@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6426195160766542295}
   m_Layer: 0
   m_Name: SplitPos
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

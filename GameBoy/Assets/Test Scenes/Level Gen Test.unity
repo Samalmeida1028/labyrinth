@@ -178,6 +178,7 @@ MonoBehaviour:
   splitPrefab: {fileID: 6426195160766542294, guid: 9ac368364df679b4e8c64c5f3bbdfebb, type: 3}
   tilePixelCount: 1.25
   color: {x: 0, y: 0, z: 0, w: 0}
+  roomBuffer: 2.5
 --- !u!1 &989149701
 GameObject:
   m_ObjectHideFlags: 0
