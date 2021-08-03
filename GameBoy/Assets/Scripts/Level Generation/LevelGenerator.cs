@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class LevelGenerator : MonoBehaviour
 {
 
@@ -18,10 +17,13 @@ public class LevelGenerator : MonoBehaviour
 
     public GameObject wall; 
     public GameObject backgroundWall; 
-    public GameObject collisionDetector;
+    public GameObject collisionDetectorPrefab;
     public GameObject roomCenterPrefab;
 
     public GameObject splitPrefab;
+    public GameObject collisionDetector;
+    public GameObject [,] grid;
+
     public float tilePixelCount = 1.25f;
     public Vector4 color;
     public float roomBuffer = 2.5f;
@@ -31,7 +33,8 @@ public class LevelGenerator : MonoBehaviour
     {
         color = splitPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().color;
         maxTreeLength = Mathf.Log(numberOfRooms,2);
-        
+        collisionDetector = Instantiate(collisionDetector,new Vector3(1000,1000,0),Quaternion.identity);
+        grid = new GameObject [rows,cols];
     }
 
     void Update(){
@@ -43,7 +46,6 @@ public class LevelGenerator : MonoBehaviour
            generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
            generateRooms();
         }
-        Debug.Log(finalDungeonList.Count);
         
     }
 
@@ -51,11 +53,12 @@ public class LevelGenerator : MonoBehaviour
     {
         
         GameObject blockHolder = new GameObject ("BlockHolder");
-        for (float i = 0f; i<cols*tilePixelCount; i+=tilePixelCount)
+        for (int i = 0; i<cols; i++)
         {
-            for (float j =0f; j< rows*tilePixelCount; j+=tilePixelCount)
+            for (int j = 0; j< rows; j++)
             {
-                Instantiate(backgroundWall, new Vector3(j,i,0), Quaternion.identity, blockHolder.transform);
+                grid[j,i] = Instantiate(backgroundWall, new Vector3(j*tilePixelCount,i*tilePixelCount,0), Quaternion.identity, blockHolder.transform);
+  
             }
         }
     }
@@ -65,27 +68,6 @@ public class LevelGenerator : MonoBehaviour
     **/
     public Split doSplit(float x_Min, float x_Max, float y_Min, float y_Max)
     {
-        Vector4[] ColorList  = new Vector4[6];
-        
-        ColorList[0] = (Color.black);
-        ColorList[1] = (Color.blue);
-        ColorList[2] = (Color.gray);
-        ColorList[3] = (Color.white);
-        ColorList[4] = (Color.green);
-        ColorList[5] = (Color.yellow);
-
-        int k = 0;
-        if(dungeonCount-1<6){
-            k = dungeonCount-1;
-        }else{
-            k=5;
-        }
-        
-        color = ColorList[k];
-        if(dungeonCount == 15){
-            color = Color.red;
-        }
-        splitPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().color = color;
 
         float width = x_Max - x_Min;
         float height = y_Max - y_Min;
@@ -100,7 +82,9 @@ public class LevelGenerator : MonoBehaviour
             horizontal = (Random.Range(0,2)==1);
 
 
-        }else{
+        }
+        else
+        {
             if((width>height)&&(width/height>=1.25))
             {
                 horizontal = false;
@@ -124,13 +108,7 @@ public class LevelGenerator : MonoBehaviour
             yPos = Random.Range((y_Min + (minRoomSize+2)*tilePixelCount),(y_Max - (minRoomSize+2)*tilePixelCount));
 
             yPos = round(yPos);
-            
 
-            for (float i = x_Min; i<x_Max;i+=tilePixelCount)
-            {
-                Instantiate(splitPrefab, new Vector3(i,yPos,0), Quaternion.identity);
-            }
-            
         }
         else
         {
@@ -141,12 +119,6 @@ public class LevelGenerator : MonoBehaviour
 
             xPos = round(xPos);
 
-            
-            for (float i = y_Min; i<y_Max;i+=tilePixelCount)
-            {
-                Instantiate(splitPrefab, new Vector3(xPos,i,0), Quaternion.identity);
-            }
-            
         }
 
         return new Split(xPos,yPos,horizontal);
@@ -224,8 +196,6 @@ public class LevelGenerator : MonoBehaviour
                 float x_Center = round((x_Min + (x_Max-x_Min)/2));
                 float y_Center = round((y_Min + (y_Max-y_Min)/2));
                 Vector2 dungeonCenter = new Vector2(x_Center,y_Center);
-                
-                Debug.Log(count + ": " + dungeonCenter);
 
                 bool right = Random.Range(0,2)==1;
                 bool up = Random.Range(0,2)==1;
@@ -235,35 +205,27 @@ public class LevelGenerator : MonoBehaviour
 
                 Vector2 roomCenter = new Vector2(round(dungeonCenter.x + x_offSet),round(dungeonCenter.y + y_offSet));
 
-                Debug.Log(count + ": " + roomCenter);
-
                 float roomX_Min = round((roomCenter.x-roomWidth/2)+roomBuffer);
                 float roomY_Min = round((roomCenter.y-roomHeight/2)+roomBuffer);
                 float roomX_Max = round((roomCenter.x+roomWidth/2)-roomBuffer);
                 float roomY_Max = round((roomCenter.y+roomHeight/2)-roomBuffer);
-                
-                Debug.Log(count + ": Width " + roomWidth);
-                Debug.Log(count + ": Height " + roomHeight);
-                Debug.Log("Room Bottom Left " + count + ": " + new Vector2(roomX_Min, roomY_Min));
-                Debug.Log("Room Bottom Right " + count + ": " + new Vector2(roomX_Max, roomY_Max));
 
                 GameObject roomCenter_ = roomCenterPrefab;
                 roomCenter_.GetComponent<Transform>().GetChild(0).GetComponent<Room>().roomNumber=count;
                 Instantiate(roomCenter_, new Vector3(roomCenter.x,roomCenter.y, 0), Quaternion.identity);
 
+                
                 for (float i = roomY_Min; i<=roomY_Max; i+=tilePixelCount)
                 {
                     
                     for (float j = roomX_Min; j<=roomX_Max; j+=tilePixelCount)
                     {
 
-                        collisionDetector.GetComponent<Transform>().position = new Vector3(j,i,0);
-                        
+                        Destroy(grid[(int)(j/1.25),(int)(i/1.25)]);
+
                         if(i==roomY_Min||i>=roomY_Max||j==roomX_Min||j>=roomX_Max)
                         {
                             Instantiate(wall, new Vector3(j,i,0), Quaternion.identity);
-                            Debug.Log("i= " + (i-roomY_Min) + "Room Height: " + roomHeight);
-                            Debug.Log("j= " + (j-roomX_Min) + "Room Width: " + roomWidth);
                         }
 
                     }

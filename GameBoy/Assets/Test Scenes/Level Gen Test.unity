@@ -179,7 +179,6 @@ MonoBehaviour:
   tilePixelCount: 1.25
   color: {x: 0, y: 0, z: 0, w: 0}
   roomBuffer: 2.5
-  A_star: {fileID: 4587899969770753889, guid: c21e670b3c6f27f43a48f435c99c01f5, type: 3}
 --- !u!1 &989149701
 GameObject:
   m_ObjectHideFlags: 0

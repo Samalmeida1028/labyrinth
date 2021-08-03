@@ -5,11 +5,11 @@ using UnityEngine;
 public class CollisionScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Background Wall")
+        if(other.gameObject.tag == "Deleter")
         {
-            Destroy(other);
+            Destroy(this.gameObject);
         }
     }
 
