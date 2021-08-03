@@ -38,6 +38,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6426195160766542295}
     m_Modifications:
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_InstanceId
+      value: -2610146
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_HasRenderer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_CastsShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePathHash
+      value: 764802325
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[0].x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[0].y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[1].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[1].y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[2].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[2].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[3].x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ShapePath.Array.data[3].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6686995741023828259, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4732285097254974212, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
       propertyPath: m_Name
       value: SplitBlock
@@ -97,6 +153,14 @@ PrefabInstance:
     - target: {fileID: 6832547045498284910, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832547045498284910, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832547045498284910, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -296950311
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce4608099c564384bb2df2faa2cd7294, type: 3}

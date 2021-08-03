@@ -156,7 +156,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000e9dd8770
   m_LightCookieSprite: {fileID: 0}
@@ -193,7 +193,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &517076927
 PrefabInstance:
@@ -226,9 +226,17 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 8126542238273668237, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126542238273668237, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8126542238273668239, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8126542238273668239, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
       propertyPath: m_LocalPosition.x
@@ -306,7 +314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &969528118
 MonoBehaviour:
@@ -507,16 +515,16 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.525
-  m_Color: {r: 0.5754717, g: 0.35095364, b: 0.08957815, a: 1}
-  m_Intensity: 10
+  m_Color: {r: 0.28826985, g: 0.7735849, b: 0.74800634, a: 1}
+  m_Intensity: 5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000e9dd8770
+  m_ApplyToSortingLayers: 00000000e9dd8770d9e54cee
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 1
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 1
   m_PointLightInnerAngle: 67
   m_PointLightOuterAngle: 180
   m_PointLightInnerRadius: 1
@@ -562,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 453367210233092071, guid: 7692f6bd7897f6a4ebf03a626dfdcdc5, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 453367210233092071, guid: 7692f6bd7897f6a4ebf03a626dfdcdc5, type: 3}
       propertyPath: m_LocalPosition.x
