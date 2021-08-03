@@ -25,20 +25,16 @@ public class LevelGenerator : MonoBehaviour
     public float tilePixelCount = 1.25f;
     public Vector4 color;
     public float roomBuffer = 2.5f;
-    public GameObject A_star;
+
     // Start is called before the first frame update
     void Start()
     {
         color = splitPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().color;
         maxTreeLength = Mathf.Log(numberOfRooms,2);
-        dungeonCount=0;
-           generateBoard();
-           generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
-           Instantiate(A_star, new Vector3(70,70,0),Quaternion.identity);
         
     }
 
-    /*void Update(){
+    void Update(){
 
         if(Input.GetKey(KeyCode.Space))
         {
@@ -50,7 +46,6 @@ public class LevelGenerator : MonoBehaviour
         Debug.Log(finalDungeonList.Count);
         
     }
-    */
 
     public void generateBoard()
     {
@@ -247,10 +242,6 @@ public class LevelGenerator : MonoBehaviour
                 float roomX_Max = round((roomCenter.x+roomWidth/2)-roomBuffer);
                 float roomY_Max = round((roomCenter.y+roomHeight/2)-roomBuffer);
                 
-
-                float xDif = roomX_Max-roomX_Min;
-                float yDif = roomY_Max-roomY_Min;
-
                 Debug.Log(count + ": Width " + roomWidth);
                 Debug.Log(count + ": Height " + roomHeight);
                 Debug.Log("Room Bottom Left " + count + ": " + new Vector2(roomX_Min, roomY_Min));
