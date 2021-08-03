@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969528116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.390486, y: 42.97902, z: -113.96948}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -178,6 +178,8 @@ MonoBehaviour:
   splitPrefab: {fileID: 6426195160766542294, guid: 9ac368364df679b4e8c64c5f3bbdfebb, type: 3}
   tilePixelCount: 1.25
   color: {x: 0, y: 0, z: 0, w: 0}
+  roomBuffer: 2.5
+  A_star: {fileID: 4587899969770753889, guid: c21e670b3c6f27f43a48f435c99c01f5, type: 3}
 --- !u!1 &989149701
 GameObject:
   m_ObjectHideFlags: 0
