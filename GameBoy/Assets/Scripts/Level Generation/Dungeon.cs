@@ -16,6 +16,8 @@ public class Dungeon
 
     public Split split = null;
 
+    public bool failSplit = false;
+
     public Dungeon (Vector2 botLeft, Vector2 topRight, int depth)
     {
         this.botLeft = botLeft;
@@ -25,6 +27,7 @@ public class Dungeon
         height = topRight.y-botLeft.y;
 
         this.split = null;
+        this.parentDungeon = null;
         this.dungeonList = new List <Dungeon>();
         
         this.depth = depth;
@@ -41,4 +44,8 @@ public class Dungeon
         return s;
     }
 
+    public void setParent(Dungeon d)
+    {
+        this.parentDungeon = d;
+    }
 }
