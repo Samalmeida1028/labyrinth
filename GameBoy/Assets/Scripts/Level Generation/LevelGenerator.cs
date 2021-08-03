@@ -16,15 +16,20 @@ public class LevelGenerator : MonoBehaviour
     public Vector4 color;
     //private float offSet = .2f;
     public int minRoomSize = 8;
+    public GameObject A_star;
     // Start is called before the first frame update
     void Start()
     {
         color = splitPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().color;
         maxTreeLength = Mathf.Log(numberOfRooms,2);
+        dungeonCount=0;
+           generateBoard();
+           generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
+           Instantiate(A_star, new Vector3(70,70,0),Quaternion.identity);
         
     }
 
-    void Update(){
+    /*void Update(){
 
         if(Input.GetKey(KeyCode.Space))
         {
@@ -34,6 +39,7 @@ public class LevelGenerator : MonoBehaviour
         }
         
     }
+    */
 
     public void generateBoard()
     {

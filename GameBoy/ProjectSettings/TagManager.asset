@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Enemy
+  - Split
   layers:
   - Default
   - TransparentFX
@@ -13,9 +14,9 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Floor
+  - Player
+  - Wall
   - 
   - 
   - 
@@ -42,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background/Floor
+    uniqueID: 1887952361
     locked: 0
