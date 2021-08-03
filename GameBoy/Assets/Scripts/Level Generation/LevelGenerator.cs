@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    public int numberOfRooms = 8;
+    public int numberOfRooms = 16;
     public float maxTreeLength;
     public int dungeonCount = 0;
     public int cols;
@@ -13,41 +13,31 @@ public class LevelGenerator : MonoBehaviour
     public GameObject wall; 
     public GameObject splitPrefab;
     public float tilePixelCount = 1.25f;
-    private float offSet = .2f;
-    public int minRoomSize = 6;
+    public Vector4 color;
+    //private float offSet = .2f;
+    public int minRoomSize = 8;
     // Start is called before the first frame update
     void Start()
     {
+        color = splitPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().color;
         maxTreeLength = Mathf.Log(numberOfRooms,2);
-        generateBoard();
-        //generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
-        //dungeonCount++;
-        dungeonCount++;
-        Split split1 = doSplit(0,cols*tilePixelCount,0,cols*tilePixelCount);
-        if(split1.horizontal){
-          doSplit(0,cols*tilePixelCount,split1.y,cols*tilePixelCount);
-          doSplit(0,cols*tilePixelCount,0,split1.y);
-        }else{
-            doSplit(0,split1.x,0,cols*tilePixelCount);
-            doSplit(split1.x,cols*tilePixelCount,0,cols*tilePixelCount);
-        }
-        
-        //doSplit(0,cols*tilePixelCount,0,rows*tilePixelCount);
         
     }
 
     void Update(){
 
-        //if(Input.GetKey(KeyCode.Space)){
-        //    dungeonCount=0;
-           //generateBoard();
-          // generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
-       // }
+        if(Input.GetKey(KeyCode.Space))
+        {
+           dungeonCount=0;
+           generateBoard();
+           generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
+        }
         
     }
 
     public void generateBoard()
     {
+        
         GameObject blockHolder = new GameObject ("BlockHolder");
         for (float i = 0f; i<cols*tilePixelCount; i+=tilePixelCount)
         {
@@ -63,43 +53,77 @@ public class LevelGenerator : MonoBehaviour
     **/
     public Split doSplit(float x_Min, float x_Max, float y_Min, float y_Max)
     {
+        Vector4[] ColorList  = new Vector4[6];
+        
+        ColorList[0] = (Color.black);
+        ColorList[1] = (Color.blue);
+        ColorList[2] = (Color.gray);
+        ColorList[3] = (Color.white);
+        ColorList[4] = (Color.green);
+        ColorList[5] = (Color.yellow);
+
+        int k = 0;
+        if(dungeonCount-1<6){
+            k = dungeonCount-1;
+        }else{
+            k=5;
+        }
+        
+        color = ColorList[k];
+        if(dungeonCount == 15){
+            color = Color.red;
+        }
+        splitPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().color = color;
+
+        float width = x_Max - x_Min;
+        float height = y_Max - y_Min;
 
         float xPos = 0;
         float yPos = 0;
 
-        bool horizontal = (Random.Range(0,2)==1);
+        bool horizontal;
 
         if(dungeonCount==1)
         {
-            x_Min+=(.4f*cols*tilePixelCount);
-            y_Min+=(.4f*rows*tilePixelCount);
-        }
+            horizontal = (Random.Range(0,2)==1);
 
 
-        if(checkSplitBoundary(y_Max-y_Min))
-        {
-            horizontal = false;
+        }else{
+            if((width>height)&&(width/height>=1.25))
+            {
+                horizontal = false;
+            }
+            else if((height>width)&&(height/width>=1.25))
+            {
+                horizontal = true;
+            }
+            else
+            {
+                horizontal = (Random.Range(0,2)==1);
+            }
         }
-        else if(checkSplitBoundary(x_Max-x_Min))
-        {
-            horizontal = true;
-        }
+
+        
 
         if(horizontal)
         {
-             Debug.Log("Yert 2");
-            yPos = Random.Range(y_Min,y_Max);
+
+            y_Min+=((.45f/Mathf.Sqrt(dungeonCount+1))*rows*tilePixelCount);
+            y_Max-=((.45f/Mathf.Sqrt(dungeonCount+1))*rows*tilePixelCount);
+
+            yPos = Random.Range((y_Min + (minRoomSize+2)*tilePixelCount),(y_Max - (minRoomSize+2)*tilePixelCount));
             
-            if(!(checkSplitBoundary(yPos-y_Min)||checkSplitBoundary(y_Max-yPos))){
+            /**if(!(checkSplitBoundary(yPos-y_Min)||checkSplitBoundary(y_Max-yPos))){
                 bool canFit = false;
                 while(canFit==false){
                     yPos = Random.Range(y_Min,y_Max);
-                    canFit = checkSplitBoundary(yPos);
+                    canFit = (!(checkSplitBoundary(yPos-y_Min)||checkSplitBoundary(y_Max-yPos)));
                 }    
-            }
+            }**/
 
             yPos = yPos - yPos%.625f;
             
+
             for (float i = x_Min; i<x_Max;i+=tilePixelCount)
             {
                 Instantiate(splitPrefab, new Vector3(i,yPos,0), Quaternion.identity);
@@ -108,16 +132,18 @@ public class LevelGenerator : MonoBehaviour
         }
         else
         {
-            Debug.Log("Yert 3");
-            xPos = Random.Range(x_Min,x_Max);
+            x_Min+=((.45f/Mathf.Sqrt(dungeonCount+1))*cols*tilePixelCount);
+            x_Max-=((.45f/Mathf.Sqrt(dungeonCount+1))*cols*tilePixelCount);
 
-            if(!(checkSplitBoundary(xPos-x_Min)||checkSplitBoundary(x_Max-xPos))){
+            xPos = Random.Range((x_Min+(minRoomSize+2)*tilePixelCount),(x_Max-(minRoomSize+2)*tilePixelCount));
+
+            /**if(!(checkSplitBoundary(xPos-x_Min)||checkSplitBoundary(x_Max-xPos))){
                 bool canFit = false;
                 while(canFit==false){
                     xPos = Random.Range(x_Min,x_Max);
-                    canFit = checkSplitBoundary(xPos);
+                    canFit = (!(checkSplitBoundary(xPos-x_Min)||checkSplitBoundary(x_Max-xPos)));
                 }    
-            }
+            }**/
 
             xPos = xPos - xPos%.625f;
 
@@ -171,7 +197,7 @@ public class LevelGenerator : MonoBehaviour
 
     public bool checkSplitBoundary(float val)
     {
-        return (val<=((minRoomSize+2)*tilePixelCount));
+        return (val>((minRoomSize+2)*tilePixelCount));
     }
 
 }
