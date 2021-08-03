@@ -8,22 +8,19 @@ public class InventoryUI : MonoBehaviour
 
     // Start is called before the first frame update
  void Start(){
-     GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+     GameObject player = GameObject.FindGameObjectWithTag("Player");
 
      for(int i = 0; i<4; i++){
-         display[i].sprite = player[0].GetComponent<Inventory>().inventory[i].GetComponent<SpriteRenderer>().sprite;
+         display[i].sprite = player.GetComponent<PlayerInventory>().inventory[i].GetComponent<SpriteRenderer>().sprite;
          
      }
-
  }
 
 
-public void updateDisplay(){
-    GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
-
-     for(int i = 0; i<4; i++){
-         display[i].sprite = player[0].GetComponent<Inventory>().inventory[i].GetComponent<SpriteRenderer>().sprite;
-         
-     }
+public void updateDisplay(Item temp){
+    Debug.Log(temp.itemType);
+    GameObject player = GameObject.FindGameObjectWithTag("Player");
+         display[temp.itemType].GetComponent<SpriteRenderer>().sprite = temp.GetComponent<SpriteRenderer>().sprite;
 }
+
 }

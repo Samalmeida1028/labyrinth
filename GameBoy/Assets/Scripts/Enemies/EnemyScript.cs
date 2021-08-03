@@ -8,7 +8,6 @@ public class EnemyScript : MonoBehaviour
     private Transform target;
     public Camera cam;
     public Rigidbody2D enemyrb;
-    Rigidbody2D player = null;
     public int health = 100;
 
 
