@@ -57,28 +57,28 @@ public class ChestActiveItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("e"))
+
+        if(Input.GetKey("e"))
         {
+
             if(player.GetComponent<PlayerInventory>().AddItem(activeItem))
             {
                 hasInteract = true;
             }
-        else{
-            Debug.Log("Do you want to add item?");
-            while(Input.GetKeyDown("e"))
+            else if(!hasInteract)
             {
+                Debug.Log("Do you want to add item?");
                 time += Time.deltaTime;
                 if(time>confirm)
                 {
                 player.GetComponent<PlayerInventory>().askToAdd = true;
+                player.GetComponent<PlayerInventory>().AddItem(activeItem);
+                hasInteract = true;
                 }
-                else if(!Input.GetKeyDown("e")){
+                else if(!Input.GetKey("e")){
                     time = 0;
                 }
-            }
-
+            }    
         }
-        }
-        
     }
 }

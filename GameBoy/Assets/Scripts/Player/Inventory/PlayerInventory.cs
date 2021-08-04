@@ -11,6 +11,7 @@ public class PlayerInventory : MonoBehaviour
     public bool AddItem(Item item){
         Item temp = item;
         if(inventory[temp.itemType]==null||askToAdd){
+            Debug.Log("Added!");
             askToAdd = false;
             inventory[temp.itemType] = temp;
             inventoryUI.GetComponent<InventoryUI>().updateDisplay(temp);
