@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 8126542238273668239, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
+  target: {fileID: 7525007403944515299, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
 --- !u!58 &3860387390683015497
 CircleCollider2D:
   m_ObjectHideFlags: 0
