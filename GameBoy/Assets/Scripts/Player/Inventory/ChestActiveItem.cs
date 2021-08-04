@@ -12,6 +12,8 @@ public class ChestActiveItem : MonoBehaviour
     public int tier;
     public int itemInTier;
     public float tierVal;
+    public float confirm = 3f;
+    public float time = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +37,8 @@ public class ChestActiveItem : MonoBehaviour
         activeItem = chestPool[tier,itemInTier];
     }
 
-    private void OnTriggerEnter2D(Collider2D other){
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         Debug.Log("hello");
 
         if(other.gameObject.tag == "Player")
@@ -44,7 +47,9 @@ public class ChestActiveItem : MonoBehaviour
             canInteract = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D other){
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        time = 0;
         canInteract = false;
         if(hasInteract) Destroy(gameObject);
     }
@@ -52,11 +57,27 @@ public class ChestActiveItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("e")){
-            if(canInteract){
+        if(Input.GetKeyDown("e"))
+        {
+            if(player.GetComponent<PlayerInventory>().AddItem(activeItem))
+            {
                 hasInteract = true;
-            player.GetComponent<PlayerInventory>().AddItem(activeItem);
             }
+        else{
+            Debug.Log("Do you want to add item?");
+            while(Input.GetKeyDown("e"))
+            {
+                time += Time.deltaTime;
+                if(time>confirm)
+                {
+                player.GetComponent<PlayerInventory>().askToAdd = true;
+                }
+                else if(!Input.GetKeyDown("e")){
+                    time = 0;
+                }
+            }
+
+        }
         }
         
     }
