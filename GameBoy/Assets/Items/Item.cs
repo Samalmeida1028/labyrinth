@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+public int value;
 public string itemName;
 public int rarity;
 public bool isMelee;

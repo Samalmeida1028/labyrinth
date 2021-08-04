@@ -7,6 +7,7 @@ public class PlayerInventory : MonoBehaviour
     public Item[] inventory = new Item[4];
     public GameObject inventoryUI;
     public bool askToAdd = false;
+    public int gold=0;
 
     public bool AddItem(Item item){
         Item temp = item;
@@ -29,4 +30,7 @@ public class PlayerInventory : MonoBehaviour
         }
 
     }
+        public void AddGold(){
+        gold += 2;
+        }
 }

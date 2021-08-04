@@ -5,6 +5,8 @@ using UnityEngine;
 public class ChestActiveItem : MonoBehaviour
 {
     public Item[,] chestPool = new Item[4,4];
+    public bool isShop;
+    private int price;
     public Item activeItem;
     public bool canInteract;
     public bool hasInteract;
@@ -35,6 +37,8 @@ public class ChestActiveItem : MonoBehaviour
         hasInteract = false;
         canInteract = false;
         activeItem = chestPool[tier,itemInTier];
+        if(isShop) price = activeItem.value;
+        else{price = 0;}
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -59,7 +63,7 @@ public class ChestActiveItem : MonoBehaviour
             GetComponent<SpriteRenderer>().color = interactedColor;
         }
 
-        if(Input.GetKey("e"))
+        if(canInteract&&Input.GetKey("e")&&player.GetComponent<PlayerInventory>().gold >= price)
         {
 
             if(player.GetComponent<PlayerInventory>().AddItem(activeItem))
@@ -81,5 +85,6 @@ public class ChestActiveItem : MonoBehaviour
                 }
             }    
         }
+        else if(canInteract&&Input.GetKey("e")&&player.GetComponent<PlayerInventory>().gold <= price) Debug.Log("Not Enough Dough");
     }
 }
