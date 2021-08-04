@@ -14,6 +14,7 @@ public class ChestActiveItem : MonoBehaviour
     public float tierVal;
     public float confirm = 3f;
     public float time = 0f;
+    public Color interactedColor = Color.blue;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,6 @@ public class ChestActiveItem : MonoBehaviour
         }
         Random.seed=Random.Range(0,100);
         itemInTier= Random.Range(0,4);
-        Debug.Log("Row" +tier + " " + "Col" +itemInTier);
         hasInteract = false;
         canInteract = false;
         activeItem = chestPool[tier,itemInTier];
@@ -39,8 +39,6 @@ public class ChestActiveItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hello");
-
         if(other.gameObject.tag == "Player")
         {
             player = GameObject.FindGameObjectWithTag("Player");
@@ -57,6 +55,9 @@ public class ChestActiveItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(hasInteract){
+            GetComponent<SpriteRenderer>().color = interactedColor;
+        }
 
         if(Input.GetKey("e"))
         {

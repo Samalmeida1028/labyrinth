@@ -10,7 +10,6 @@ public class ChestInventory : MonoBehaviour
     void Start()
     {
         for( int i = 0; i<16; i++){
-            Debug.Log("Col"+(int)i/4 + "Row" + i%4);
             storage[(int)i/4,i%4]= itemInputInv[i];
 
         }
