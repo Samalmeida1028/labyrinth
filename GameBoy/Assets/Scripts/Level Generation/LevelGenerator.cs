@@ -164,14 +164,11 @@ public class LevelGenerator : MonoBehaviour
                 if(dun.depth==maxTreeLength)
                 {
                     generateRoom(dun);
+                }else if(dun.depth<maxTreeLength){
+                    generateHall(dun);
                 }
             }
         }
-    }
-
-    public bool checkSplitBoundary(float val)
-    {
-        return (val>((minRoomSize+roomBuffer)*tilePixelCount));
     }
 
     public void generateRoom(Dungeon dungeon)
@@ -236,12 +233,24 @@ public class LevelGenerator : MonoBehaviour
         else
         {
             dungeon.failSplit = true;
+            Debug.Log("Fail Gen");
         }
 
+    }
+
+    public void generateHall(Dungeon d)
+    {
+        Dungeon leftDungeon = d.dungeonList[0];
+        Dungeon rightDungeon = d.dungeonList[1];
     }
 
     public float round(float f)
     {
         return (f - (f%(tilePixelCount)));
     }   
+
+    public bool checkSplitBoundary(float val)
+    {
+        return (val>((minRoomSize+roomBuffer)*tilePixelCount));
+    }
 }
