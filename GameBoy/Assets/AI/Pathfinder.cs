@@ -15,8 +15,10 @@ public Pathfinder(int width, int height){
 
 private  List<Node> FindPath(int startX, int startY, int endX, int endY){
     Node startNode = grid.GetGridOBJ(startX,startY);
-    openList = new List<Node>();
+    openList = new List<Node>{startNode};
     closeList = new List<Node>();
+
+    for(int x)
 
 
 }
