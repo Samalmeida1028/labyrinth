@@ -27,6 +27,7 @@ public class LevelGenerator : MonoBehaviour
     public float tilePixelCount = 1.25f;
     public Vector4 color;
     public float roomBuffer = 2.5f;
+    GridOBJ<int> gridObj;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class LevelGenerator : MonoBehaviour
         maxTreeLength = Mathf.Log(numberOfRooms,2);
         collisionDetector = Instantiate(collisionDetector,new Vector3(1000,1000,0),Quaternion.identity);
         grid = new GameObject [rows,cols];
-        GridOBJ<int> gridObj = new GridOBJ<int>(rows,cols, tilePixelCount, new Vector3(0,0,0), (GridOBJ<int> gridObj_,rows,cols) => Object(gridObj_, rows,cols));
+        gridObj = new GridOBJ<int>(rows,cols, tilePixelCount, new Vector3(0,0,0));
     }
 
     void Update(){
@@ -58,7 +59,7 @@ public class LevelGenerator : MonoBehaviour
             for (int j = 0; j< rows; j++)
             {
                 grid[j,i] = Instantiate(backgroundWall, new Vector3(j*tilePixelCount,i*tilePixelCount,0), Quaternion.identity, blockHolder.transform);
-  
+                gridObj.SetGridOBJ(new Vector3(j*tilePixelCount,i*tilePixelCount, 0),1);
             }
         }
     }
