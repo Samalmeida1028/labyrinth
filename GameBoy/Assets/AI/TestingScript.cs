@@ -18,6 +18,11 @@ public class TestingScript : MonoBehaviour
             grid.SetVal(UtilsClass.GetMouseWorldPosition(),1);
 
         }
+        if(Input.GetMouseButtonDown(1)){
+            Debug.Log(grid.GetVal(UtilsClass.GetMouseWorldPosition()));
+
+        }
+
 
     }
 }
