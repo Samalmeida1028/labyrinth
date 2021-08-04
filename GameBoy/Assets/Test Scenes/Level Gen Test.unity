@@ -173,9 +173,9 @@ MonoBehaviour:
   maxRoomSize: 24
   wall: {fileID: 554929236547824443, guid: 6009fbb85a01577409667953eb6c0d56, type: 3}
   backgroundWall: {fileID: 7849657900422638728, guid: efe7f709e06dacb4d88a791d3bf205be, type: 3}
-  collisionDetector: {fileID: 5025811305482736715, guid: 412d0c27c2c3d57409438427c85ba4e3, type: 3}
-  roomCenterPrefab: {fileID: 1015322964689828911, guid: 96c82e7830bfe524fbee90e7332cb1d3, type: 3}
+  roomCenterPrefab: {fileID: 594253614803464199, guid: 9f9076b81cb37774d870d8d11d5ea015, type: 3}
   splitPrefab: {fileID: 6426195160766542294, guid: 9ac368364df679b4e8c64c5f3bbdfebb, type: 3}
+  collisionDetector: {fileID: 5025811305482736715, guid: 412d0c27c2c3d57409438427c85ba4e3, type: 3}
   tilePixelCount: 1.25
   color: {x: 0, y: 0, z: 0, w: 0}
   roomBuffer: 2.5

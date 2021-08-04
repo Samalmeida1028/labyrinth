@@ -13,11 +13,11 @@ public class LevelGenerator : MonoBehaviour
 
     private float maxTreeLength;
     private int dungeonCount = 0;
+    int roomCount = 0;
     public List<Dungeon> finalDungeonList = new List<Dungeon>();
 
     public GameObject wall; 
     public GameObject backgroundWall; 
-    public GameObject collisionDetectorPrefab;
     public GameObject roomCenterPrefab;
 
     public GameObject splitPrefab;
@@ -44,7 +44,6 @@ public class LevelGenerator : MonoBehaviour
            dungeonCount=0;
            generateBoard();
            generateDungeonTree(new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0));
-           generateRooms();
         }
         
     }
@@ -164,7 +163,7 @@ public class LevelGenerator : MonoBehaviour
 
                 if(dun.depth==maxTreeLength)
                 {
-                    finalDungeonList.Add(dun);
+                    generateRoom(dun);
                 }
             }
         }
@@ -175,68 +174,70 @@ public class LevelGenerator : MonoBehaviour
         return (val>((minRoomSize+roomBuffer)*tilePixelCount));
     }
 
-    public void generateRooms()
+    public void generateRoom(Dungeon dungeon)
     {
-        int count = 0;
-        foreach(Dungeon dungeon in finalDungeonList)
-        {   
-            count++;
-            if(checkSplitBoundary(dungeon.width) && checkSplitBoundary(dungeon.height))
+        roomCount++;
+        if(checkSplitBoundary(dungeon.width) && checkSplitBoundary(dungeon.height))
+        {
+            float roomBuffer = 5f;
+
+            float roomWidth = round(Random.Range((minRoomSize+roomBuffer)*tilePixelCount,((dungeon.width<(maxRoomSize+1)*tilePixelCount) ? dungeon.width:(maxRoomSize+1)*tilePixelCount)));
+            float roomHeight = round(Random.Range((minRoomSize+roomBuffer)*tilePixelCount,((dungeon.height<(maxRoomSize+1)*tilePixelCount) ? dungeon.height:(maxRoomSize+1)*tilePixelCount)));
+            
+            float x_Min = dungeon.botLeft.x;
+            float x_Max = dungeon.topRight.x;
+            float y_Min = dungeon.botLeft.y;
+            float y_Max = dungeon.topRight.y;
+    
+            float x_Center = round((x_Min + (x_Max-x_Min)/2));
+            float y_Center = round((y_Min + (y_Max-y_Min)/2));
+            Vector2 dungeonCenter = new Vector2(x_Center,y_Center);
+
+            bool right = Random.Range(0,2)==1;
+            bool up = Random.Range(0,2)==1;
+
+            float x_offSet = (right ? Random.Range(dungeonCenter.x+roomWidth/2,x_Max)-(dungeonCenter.x+roomWidth/2) : -(Random.Range(x_Min,dungeonCenter.x-roomWidth/2)-(x_Min)));
+            float y_offSet = (up ? Random.Range(dungeonCenter.y+roomHeight/2,y_Max)-(dungeonCenter.y+roomHeight/2) : -(Random.Range(y_Min,dungeonCenter.y-roomHeight/2)-(y_Min)));
+
+            Vector2 roomCenter = new Vector2((dungeonCenter.x + x_offSet),(dungeonCenter.y + y_offSet));
+
+            float roomX_Min = round((roomCenter.x-roomWidth/2)+roomBuffer);
+            float roomY_Min = round((roomCenter.y-roomHeight/2)+roomBuffer);
+            float roomX_Max = round((roomCenter.x+roomWidth/2)-roomBuffer);
+            float roomY_Max = round((roomCenter.y+roomHeight/2)-roomBuffer);
+
+            float roomFinalWidth = roomX_Max-roomX_Min;
+            float roomFinalHeight = roomY_Max-roomY_Min;
+            Vector2 roomFinalCenter = new Vector2((roomFinalWidth/2 + roomX_Min)+tilePixelCount/2, (roomFinalHeight/2 + roomY_Min)+tilePixelCount/2);
+
+            GameObject [,] roomGrid = new GameObject [(int)(roomFinalWidth/tilePixelCount)+1,(int)(roomFinalHeight/tilePixelCount)+1];
+            
+            for (float i = roomY_Min; i<=roomY_Max; i+=tilePixelCount)
             {
-                float roomBuffer = 5f;
-
-                float roomWidth = Random.Range((minRoomSize+roomBuffer)*tilePixelCount,((dungeon.width<(maxRoomSize+1)*tilePixelCount) ? dungeon.width:(maxRoomSize+1)*tilePixelCount));
-                float roomHeight = Random.Range((minRoomSize+roomBuffer)*tilePixelCount,((dungeon.height<(maxRoomSize+1)*tilePixelCount) ? dungeon.height:(maxRoomSize+1)*tilePixelCount));
                 
-                float x_Min = dungeon.botLeft.x;
-                float x_Max = dungeon.topRight.x;
-                float y_Min = dungeon.botLeft.y;
-                float y_Max = dungeon.topRight.y;
-        
-                float x_Center = round((x_Min + (x_Max-x_Min)/2));
-                float y_Center = round((y_Min + (y_Max-y_Min)/2));
-                Vector2 dungeonCenter = new Vector2(x_Center,y_Center);
-
-                bool right = Random.Range(0,2)==1;
-                bool up = Random.Range(0,2)==1;
-
-                float x_offSet = (right ? Random.Range(dungeonCenter.x+roomWidth/2,x_Max)-(dungeonCenter.x+roomWidth/2) : -(Random.Range(x_Min,dungeonCenter.x-roomWidth/2)-(x_Min)));
-                float y_offSet = (up ? Random.Range(dungeonCenter.y+roomHeight/2,y_Max)-(dungeonCenter.y+roomHeight/2) : -(Random.Range(y_Min,dungeonCenter.y-roomHeight/2)-(y_Min)));
-
-                Vector2 roomCenter = new Vector2(round(dungeonCenter.x + x_offSet),round(dungeonCenter.y + y_offSet));
-
-                float roomX_Min = round((roomCenter.x-roomWidth/2)+roomBuffer);
-                float roomY_Min = round((roomCenter.y-roomHeight/2)+roomBuffer);
-                float roomX_Max = round((roomCenter.x+roomWidth/2)-roomBuffer);
-                float roomY_Max = round((roomCenter.y+roomHeight/2)-roomBuffer);
-
-                GameObject roomCenter_ = roomCenterPrefab;
-                roomCenter_.GetComponent<Transform>().GetChild(0).GetComponent<Room>().roomNumber=count;
-                Instantiate(roomCenter_, new Vector3(roomCenter.x,roomCenter.y, 0), Quaternion.identity);
-
-                
-                for (float i = roomY_Min; i<=roomY_Max; i+=tilePixelCount)
-                {
+                for (float j = roomX_Min; j<=roomX_Max; j+=tilePixelCount)
+                {   
                     
-                    for (float j = roomX_Min; j<=roomX_Max; j+=tilePixelCount)
+                    Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
+
+                    if(i==roomY_Min||i>=roomY_Max||j==roomX_Min||j>=roomX_Max)
                     {
-
-                        Destroy(grid[(int)(j/1.25),(int)(i/1.25)]);
-
-                        if(i==roomY_Min||i>=roomY_Max||j==roomX_Min||j>=roomX_Max)
-                        {
-                            Instantiate(wall, new Vector3(j,i,0), Quaternion.identity);
-                        }
-
+                        roomGrid[(int)((j-roomX_Min)/tilePixelCount),(int)((i-roomY_Min)/tilePixelCount)] = Instantiate(wall, new Vector3(j,i,0), Quaternion.identity);
                     }
+
                 }
             }
-            else
-            {
-                dungeon.failSplit = true;
-            }
-
+            GameObject roomObj = roomCenterPrefab;
+            dungeon.setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
+            roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setRoom(dungeon.room);
+            roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setGrid(roomGrid);
+            Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity);
         }
+        else
+        {
+            dungeon.failSplit = true;
+        }
+
     }
 
     public float round(float f)
