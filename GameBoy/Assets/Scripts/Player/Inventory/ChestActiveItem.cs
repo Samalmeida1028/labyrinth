@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChestActiveItem : MonoBehaviour
+{
+    public Item[,] chestPool = new Item[4,4];
+    public Item activeItem;
+    public bool canInteract;
+    public bool hasInteract;
+    public GameObject player;
+    public int tier;
+    public int itemInTier;
+    public float tierVal;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Random.InitState(Random.Range(0,1000));
+        chestPool = GetComponent<ChestInventory>().storage;
+        //tierVal = 1.2f;
+        tier = (int)(tierVal-Random.Range(0f,4f));
+        if(tier<0){
+            tier = 0;
+        }
+        else if(tier>3){
+            tier = 3;
+
+        }
+        Random.seed=Random.Range(0,100);
+        itemInTier= Random.Range(0,4);
+        Debug.Log("Row" +tier + " " + "Col" +itemInTier);
+        hasInteract = false;
+        canInteract = false;
+        activeItem = chestPool[tier,itemInTier];
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("hello");
+
+        if(other.gameObject.tag == "Player")
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            canInteract = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other){
+        canInteract = false;
+        if(hasInteract) Destroy(gameObject);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown("e")){
+            if(canInteract){
+                hasInteract = true;
+            player.GetComponent<PlayerInventory>().AddItem(activeItem);
+            }
+        }
+        
+    }
+}

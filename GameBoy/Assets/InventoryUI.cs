@@ -11,7 +11,6 @@ public class InventoryUI : MonoBehaviour
      GameObject player = GameObject.FindGameObjectWithTag("Player");
 
      for(int i = 0; i<4; i++){
-         Debug.Log(i);
          display[i].sprite = player.GetComponent<PlayerInventory>().inventory[i].GetComponent<SpriteRenderer>().sprite;
          
      }
