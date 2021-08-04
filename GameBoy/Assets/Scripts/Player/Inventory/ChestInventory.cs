@@ -21,15 +21,15 @@ public class ChestInventory : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         Debug.Log("hello");
 
-        if(other.gameObject.tag == "Player" && !hasInteract)
+        if(other.gameObject.tag == "Player")
         {
             player = GameObject.FindGameObjectWithTag("Player");
             canInteract = true;
-
         }
     }
     private void OnTriggerExit2D(Collider2D other){
         canInteract = false;
+        if(hasInteract) Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -40,11 +40,6 @@ public class ChestInventory : MonoBehaviour
                 hasInteract = true;
             player.GetComponent<PlayerInventory>().AddItem(activeItem);
             }
-            if(canInteract && hasInteract )
-            {
-                Destroy(gameObject);
-            }
-
         }
         
     }

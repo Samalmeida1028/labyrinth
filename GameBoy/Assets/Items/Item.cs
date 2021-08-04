@@ -10,8 +10,6 @@ public bool isMelee;
 public float attackSpeed; 
 public SpriteRenderer sprite;
 public int damageTimes;
-
-
 //-----------------
 public int itemType;
 /*
@@ -21,5 +19,4 @@ public int itemType;
 3 = potion
 */
 //-------------------
-
 }
