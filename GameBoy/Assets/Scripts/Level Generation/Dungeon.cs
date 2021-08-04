@@ -18,6 +18,8 @@ public class Dungeon
 
     public bool failSplit = false;
 
+    public Room room = null;
+
     public Dungeon (Vector2 botLeft, Vector2 topRight, int depth)
     {
         this.botLeft = botLeft;
@@ -47,5 +49,10 @@ public class Dungeon
     public void setParent(Dungeon d)
     {
         this.parentDungeon = d;
+    }
+
+    public void setRoom(Room r){
+        this.room = r;
+    
     }
 }
