@@ -23,7 +23,7 @@ public class ChestActiveItem : MonoBehaviour
     {
         Random.InitState(Random.Range(0,1000));
         chestPool = GetComponent<ChestInventory>().storage;
-        //tierVal = 1.2f;
+        tierVal = 1.2f;
         tier = (int)(tierVal-Random.Range(0f,4f));
         if(tier<0){
             tier = 0;
@@ -38,7 +38,7 @@ public class ChestActiveItem : MonoBehaviour
         canInteract = false;
         activeItem = chestPool[tier,itemInTier];
         if(isShop) price = activeItem.value;
-        else{price = 0;}
+        else price = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
