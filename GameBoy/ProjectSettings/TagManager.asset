@@ -3,17 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Bullet
+  - Background Wall
+  - Deleter
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Floor
+  - Player
+  - Wall
   - 
   - 
   - 
@@ -40,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background/Floor
+    uniqueID: 1887952361
+    locked: 0
+  - name: Walls
+    uniqueID: 3998016985
     locked: 0
