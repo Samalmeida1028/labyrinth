@@ -40,10 +40,10 @@ public class LevelGenerator : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
            dungeonCount=0;
-           generateBoard();
+           //generateBoard();
            generateDungeonTree(startDungeon);
            generateRoom(startDungeon);
         }
@@ -248,7 +248,7 @@ public class LevelGenerator : MonoBehaviour
                 dungeon.setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
                 //Debug.Log(dungeon.room.roomNumber);
                 Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity);
-                
+
             }
             else
             {
@@ -263,18 +263,104 @@ public class LevelGenerator : MonoBehaviour
     public void generateHall(Dungeon lDungeon, Dungeon rDungeon)
     {
         
-        if(!(lDungeon.failSplit&&rDungeon.failSplit))
+        if(!(lDungeon.failSplit||rDungeon.failSplit))
         { 
             Room lRoom = lDungeon.getRoom();
             Room rRoom = rDungeon.getRoom();
+
+
+            Vector2 dirVector = lRoom.roomCenter-rRoom.roomCenter;
+            int side = 0;
+            /**
+            *   Calculate which side of the room to create the corridor on
+            **/
+            if(Mathf.Abs(dirVector.x)>Mathf.Abs(dirVector.y))
+            {
+                
+                //horizontal
+                if(dirVector.x>0)
+                {
+                    //Left Side
+                    side = 0;
+                }
+                else
+                {
+                    //Right Side
+                    side = 2;
+                }
+            }
+            else
+            {
+                //vertical
+                if(dirVector.y>0)
+                {
+                    //Top Side
+                    side = 1;
+                }
+                else
+                {
+                    //Bottom Side
+                    side = 3;
+                }
+
+            }
+
+            Vector2 vertRange = new Vector2(0,0);
+            Vector2 horzRange = new Vector2(0,0);
+
+            Vector2 startPos = new Vector2(0,0);
+            Vector2 meetPos = new Vector2(0,0); 
+            Vector2 endPos = new Vector2(0,0);
             
-            Debug.Log(lRoom.roomNumber);
-            Debug.Log(rRoom.roomNumber);
+            bool turn = ((Mathf.Abs(dirVector.x) - (lRoom.roomDimensions.width/2 + rRoom.roomDimensions.width/2)) <=0 || (Mathf.Abs(dirVector.y) - (lRoom.roomDimensions.height/2 + rRoom.roomDimensions.height/2)) <=0 );
+
+            if(turn)
+            {
+                
+                Debug.Log("Fuck You");
+                /**if(side == 0||side ==2)
+                {
+                    vertRange = new Vector2(lRoom.roomDimensions.yMin,lRoom.roomDimensions.yMax);
+                    horzRange = new Vector2(rRoom.roomDimensions.xMin,rRoom.roomDimensions.xMax);
+                }
+                else if (side ==1||side ==3)
+                {
+                    vertRange = new Vector2(rRoom.roomDimensions.yMin,rRoom.roomDimensions.yMax);
+                    horzRange = new Vector2(lRoom.roomDimensions.xMin,lRoom.roomDimensions.xMax);
+                }**/
+            }
+            else
+            {
+
+                if(side == 0||side ==2)
+                {
+                    vertRange = new Vector2((lRoom.topRight.y>rRoom.topRight.y ? rRoom.topRight.y : lRoom.topRight.y), (lRoom.botLeft.y>rRoom.botLeft.y ? rRoom.botLeft.y : lRoom.botLeft.y));
+                    startPos = new Vector2((side==0 ? lRoom.roomDimensions.xMin : lRoom.roomDimensions.xMax),round(Random.Range(vertRange.x+tilePixelCount,vertRange.y-tilePixelCount)));
+                    endPos = new Vector2((side==0 ? rRoom.roomDimensions.xMax : rRoom.roomDimensions.xMin),startPos.y);
+                }
+                else if (side ==1||side ==3)
+                {
+                    horzRange = new Vector2((lRoom.topRight.x>rRoom.topRight.x ? rRoom.topRight.x : lRoom.topRight.x), (lRoom.botLeft.x>rRoom.botLeft.x ? rRoom.botLeft.x : lRoom.botLeft.x));
+                    startPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount,horzRange.y-tilePixelCount)),(side==1 ? lRoom.roomDimensions.yMax : lRoom.roomDimensions.yMin));
+                    endPos = new Vector2(startPos.x, (side==1 ? rRoom.roomDimensions.yMin : rRoom.roomDimensions.yMax));
+                }
+
+            }
+
+            for (float i = startPos.y; i<=endPos.y; i+=tilePixelCount)
+            {
+                
+                for (float j = startPos.x; j<=endPos.x; j+=tilePixelCount)
+                {   
+                    
+                    Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
+
+                    Instantiate(wall, new Vector3(j,i,0), Quaternion.identity);
 
 
-            Vector2 direction = lRoom.roomCenter-rRoom.roomCenter;
-
-            Debug.Log(direction);
+                }
+            }
+            Debug.Log("Room: " + lRoom.roomNumber + " Start: " + startPos + "End: " + endPos);
         }
     }
 
