@@ -12,11 +12,14 @@ public class Dungeon
     public int depth;
 
     public Dungeon parentDungeon;
-    public List <Dungeon> dungeonList;
+    public Dungeon leftDungeon;
+    public Dungeon rightDungeon;
 
     public Split split = null;
 
     public bool failSplit = false;
+
+    public Room room = null;
 
     public Dungeon (Vector2 botLeft, Vector2 topRight, int depth)
     {
@@ -28,14 +31,18 @@ public class Dungeon
 
         this.split = null;
         this.parentDungeon = null;
-        this.dungeonList = new List <Dungeon>();
         
         this.depth = depth;
     }
 
-    public void addDungeon(Dungeon d)
+    public void setRightDungeon(Dungeon d)
     {
-        dungeonList.Add(d);
+        rightDungeon = (d);
+    }
+
+    public void setLeftDungeon(Dungeon d)
+    {
+        leftDungeon = (d);
     }
 
     public Split setSplit(Split s)
@@ -47,5 +54,51 @@ public class Dungeon
     public void setParent(Dungeon d)
     {
         this.parentDungeon = d;
+    }
+
+    public void setRoom(Room r){
+        this.room = r;
+    }
+
+    public Room getRoom()
+    {
+        
+        if(room!=null)
+        {
+            return room;
+        }
+        Room leftRoom=null;
+        Room rightRoom=null;
+
+        if(leftDungeon!=null)
+        {
+            leftRoom = leftDungeon.getRoom();
+        }
+
+        if(rightDungeon!=null)
+        {
+            rightRoom = rightDungeon.getRoom();
+        }
+
+        if(leftRoom == null && rightRoom == null)
+        {
+            return null;
+        }
+        else if(leftRoom==null)
+        {
+            return rightRoom;
+        }
+        else if(rightRoom==null)
+        {
+            return leftRoom;
+        }
+        else if(Random.Range(0,2)==1)
+        {
+            return leftRoom;
+        }
+        else
+        {
+            return rightRoom;
+        }
     }
 }
