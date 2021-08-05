@@ -4,52 +4,58 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-
+    [Header("Level Dimensions")]
     public int numberOfRooms = 16;
     public int cols;
     public int rows;
     public int minRoomSize = 8;
     public int maxRoomSize = 24;
 
-    private float maxTreeLength;
-    private int dungeonCount = 1;
-    int roomCount = 0;
-    public List<Dungeon> finalDungeonList = new List<Dungeon>();
-
-    public GameObject wall; 
-    public GameObject backgroundWall; 
+    [Header("Object Prefabs")]
+    public GameObject wall;  
     public GameObject roomCenterPrefab;
 
-    public GameObject splitPrefab;
-    public GameObject collisionDetector;
+    [Header("Counter Variables")]
+    private float maxTreeLength;
+    private int dungeonCount = 0;
+    private int roomCount = 0;
+
+    [Header("Grid Snap Settings")]
+    public float tilePixelCount = 1.25f;
+    private float roomBuffer;
+
+    //The starting Dungeon
+    private Dungeon startDungeon;
+
+    //The grid that holds all the impassable objects
     public GameObject [,] grid;
 
-    public float tilePixelCount = 1.25f;
-    public float roomBuffer = 2.5f;
-    Dungeon startDungeon;
-
-    // Start is called before the first frame update
     void Start()
-    {
+    {   
+        roomBuffer = 2*tilePixelCount;
+        //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
         startDungeon = new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0);
+        //Calculate the maximum length of the Binary Dungeon Tree based off the number of rooms
         maxTreeLength = Mathf.Log(numberOfRooms,2);
-        collisionDetector = Instantiate(collisionDetector,new Vector3(1000,1000,0),Quaternion.identity);
+
         grid = new GameObject [rows,cols];
+
+        //First generate the grid of wall objects
+        generateBoard();
+        //Then generate the Binary Tree and partition the grid into randomly sized parts equal to the number of rooms
+        generateDungeonTree(startDungeon);
+        //Lastly generate the rooms in the grid partitions and connect them with hallways
+        generateRoom(startDungeon);
     }
 
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-           dungeonCount=0;
-           //generateBoard();
-           generateDungeonTree(startDungeon);
-           generateRoom(startDungeon);
-        }
-        
     }
 
+    /**
+    *   Generates a cols*rows sized board of walls and stores them in a grid of game objects
+    **/
     public void generateBoard()
     {
         
@@ -58,7 +64,7 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int j = 0; j< rows; j++)
             {
-                grid[j,i] = Instantiate(backgroundWall, new Vector3(j*tilePixelCount,i*tilePixelCount,0), Quaternion.identity, blockHolder.transform);
+                grid[j,i] = Instantiate(wall, new Vector3(j*tilePixelCount,i*tilePixelCount,0), Quaternion.identity, blockHolder.transform);
   
             }
         }
@@ -126,7 +132,8 @@ public class LevelGenerator : MonoBehaviour
     }
 
     /**
-    *   The generateDungeonTree method recursively generates a binary tree of "dungeons" until the dungeon counter is reached
+    *   The generateDungeonTree method recursively generates a binary tree of "dungeons" until the dungeon depth is reached
+    *   on each recursive call the root dungeon is split into two subdungeons using the doSplit method
     *   a dungeon is a datatype which holds information on a randomly sized space in which a room can be generated
     *   see Dungeon class for more details
     **/
@@ -134,7 +141,6 @@ public class LevelGenerator : MonoBehaviour
     {
         Dungeon lDungeon;
         Dungeon rDungeon;
-        //Debug.Log(dungeonCount);
         if(d.depth<maxTreeLength)
         {
             dungeonCount++;
@@ -160,16 +166,23 @@ public class LevelGenerator : MonoBehaviour
                 rDungeon = (new Dungeon(new Vector2(newSplit.x, y_Min), d.topRight,d.depth+1));
             }
 
+            //Set the parent and children of the dungeons
             lDungeon.setParent(d);
             rDungeon.setParent(d);
             d.setLeftDungeon(lDungeon);
             d.setRightDungeon(rDungeon);
+
+            //make a recursive call on each subdungeon
             generateDungeonTree(lDungeon);
             generateDungeonTree(rDungeon);
 
         }
     }
 
+    /**
+    *   Generates a Room datatype that fits within the bounds of the given split
+    *   Once all possible rooms are generated, the generateHall method is called to connect the rooms
+    **/
     public void generateRoom(Dungeon dungeon)
     {
         if(dungeon.leftDungeon!=null||dungeon.rightDungeon!=null)
@@ -225,41 +238,29 @@ public class LevelGenerator : MonoBehaviour
                 Vector2 roomFinalCenter = new Vector2((roomFinalWidth/2 + roomX_Min)+tilePixelCount/2, (roomFinalHeight/2 + roomY_Min)+tilePixelCount/2);
 
                 GameObject [,] roomGrid = new GameObject [(int)(roomFinalWidth/tilePixelCount)+1,(int)(roomFinalHeight/tilePixelCount)+1];
-                
-                for (float i = roomY_Min; i<=roomY_Max; i+=tilePixelCount)
-                {
-                    
-                    for (float j = roomX_Min; j<=roomX_Max; j+=tilePixelCount)
-                    {   
-                        
-                        Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
-
-                        if(i==roomY_Min||i>=roomY_Max||j==roomX_Min||j>=roomX_Max)
-                        {
-                            roomGrid[(int)((j-roomX_Min)/tilePixelCount),(int)((i-roomY_Min)/tilePixelCount)] = Instantiate(wall, new Vector3(j,i,0), Quaternion.identity);
-                        }
-
-                    }
-                }
-
                 GameObject roomObj = roomCenterPrefab;
                 roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
                 roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setGrid(roomGrid);
                 dungeon.setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
-                //Debug.Log(dungeon.room.roomNumber);
-                Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity);
+                GameObject roomHolder = new GameObject ("Room " + dungeon.room.roomNumber);
+                Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity, roomHolder.transform);
+
+                drawRoom(new Vector2(roomX_Min,roomY_Min),new Vector2(roomX_Max,roomY_Max));
 
             }
             else
             {
                 dungeon.failSplit = true;
-                Debug.Log("Fail Gen");
             }
         }
         
         
     }
 
+    /**
+    *   Connects all the rooms with a hall by first connecting each sister leaf at the bottom of the Binary tree, 
+    *   then moving up the tree and connecting those sisters
+    **/
     public void generateHall(Dungeon lDungeon, Dungeon rDungeon)
     {
         
@@ -271,6 +272,7 @@ public class LevelGenerator : MonoBehaviour
 
             Vector2 dirVector = lRoom.roomCenter-rRoom.roomCenter;
             int side = 0;
+               
             /**
             *   Calculate which side of the room to create the corridor on
             **/
@@ -292,7 +294,7 @@ public class LevelGenerator : MonoBehaviour
             else
             {
                 //vertical
-                if(dirVector.y>0)
+                if(dirVector.y<0)
                 {
                     //Top Side
                     side = 1;
@@ -312,66 +314,110 @@ public class LevelGenerator : MonoBehaviour
             Vector2 meetPos = new Vector2(0,0); 
             Vector2 endPos = new Vector2(0,0);
             
-            bool turn = ((Mathf.Abs(dirVector.x) - (lRoom.roomDimensions.width/2 + rRoom.roomDimensions.width/2)) <=0 || (Mathf.Abs(dirVector.y) - (lRoom.roomDimensions.height/2 + rRoom.roomDimensions.height/2)) <=0 );
+            //Calculate whether or not the hall will have to make a turn in order to reach the desired room
+            bool turn = ((Mathf.Abs(dirVector.x) - (lRoom.roomDimensions.width/2 + rRoom.roomDimensions.width/2)) >=0 && (Mathf.Abs(dirVector.y) - (lRoom.roomDimensions.height/2 + rRoom.roomDimensions.height/2)) >=0 );
 
+            //If the hall must turn, three points must be randomly generated, the start point, meet point and end point
             if(turn)
             {
                 
-                Debug.Log("Fuck You");
-                /**if(side == 0||side ==2)
+                if(side == 0||side ==2)
                 {
                     vertRange = new Vector2(lRoom.roomDimensions.yMin,lRoom.roomDimensions.yMax);
                     horzRange = new Vector2(rRoom.roomDimensions.xMin,rRoom.roomDimensions.xMax);
+
+                    startPos = new Vector2((side==0 ? lRoom.roomDimensions.xMin : lRoom.roomDimensions.xMax),round(Random.Range(vertRange.x+tilePixelCount*2,vertRange.y-tilePixelCount)));
+                    meetPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount*2,horzRange.y-tilePixelCount)),startPos.y);
+                    endPos = new Vector2(meetPos.x,(dirVector.y>0 ? rRoom.roomDimensions.yMax : rRoom.roomDimensions.yMin));
                 }
                 else if (side ==1||side ==3)
                 {
                     vertRange = new Vector2(rRoom.roomDimensions.yMin,rRoom.roomDimensions.yMax);
                     horzRange = new Vector2(lRoom.roomDimensions.xMin,lRoom.roomDimensions.xMax);
-                }**/
+                    startPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount*2,horzRange.y-tilePixelCount)),(side==1 ? lRoom.roomDimensions.yMax : lRoom.roomDimensions.yMin));
+                    meetPos = new Vector2(startPos.x,round(Random.Range(vertRange.x+tilePixelCount*2,vertRange.y-tilePixelCount)));
+                    endPos = new Vector2((dirVector.x>0 ? rRoom.roomDimensions.xMax : rRoom.roomDimensions.xMin),meetPos.y);
+                }
+                drawHall(startPos,meetPos);
+                drawHall(meetPos,endPos);
             }
+            //If the hall doesn't have to turn only a start and end point are reandomly generated
             else
             {
 
                 if(side == 0||side ==2)
                 {
-                    vertRange = new Vector2((lRoom.topRight.y>rRoom.topRight.y ? rRoom.topRight.y : lRoom.topRight.y), (lRoom.botLeft.y>rRoom.botLeft.y ? rRoom.botLeft.y : lRoom.botLeft.y));
-                    startPos = new Vector2((side==0 ? lRoom.roomDimensions.xMin : lRoom.roomDimensions.xMax),round(Random.Range(vertRange.x+tilePixelCount,vertRange.y-tilePixelCount)));
+                    vertRange = new Vector2((lRoom.botLeft.y>rRoom.botLeft.y ? lRoom.botLeft.y : rRoom.botLeft.y),(lRoom.topRight.y>rRoom.topRight.y ? rRoom.topRight.y : lRoom.topRight.y));
+                    startPos = new Vector2((side==0 ? lRoom.roomDimensions.xMin : lRoom.roomDimensions.xMax),round(Random.Range(vertRange.x+tilePixelCount*2,vertRange.y-tilePixelCount)));
                     endPos = new Vector2((side==0 ? rRoom.roomDimensions.xMax : rRoom.roomDimensions.xMin),startPos.y);
                 }
                 else if (side ==1||side ==3)
                 {
-                    horzRange = new Vector2((lRoom.topRight.x>rRoom.topRight.x ? rRoom.topRight.x : lRoom.topRight.x), (lRoom.botLeft.x>rRoom.botLeft.x ? rRoom.botLeft.x : lRoom.botLeft.x));
-                    startPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount,horzRange.y-tilePixelCount)),(side==1 ? lRoom.roomDimensions.yMax : lRoom.roomDimensions.yMin));
+                    horzRange = new Vector2((lRoom.botLeft.x>rRoom.botLeft.x ? lRoom.botLeft.x : rRoom.botLeft.x),(lRoom.topRight.x>rRoom.topRight.x ? rRoom.topRight.x : lRoom.topRight.x));
+                    startPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount*2,horzRange.y-tilePixelCount)),(side==1 ? lRoom.roomDimensions.yMax : lRoom.roomDimensions.yMin));
                     endPos = new Vector2(startPos.x, (side==1 ? rRoom.roomDimensions.yMin : rRoom.roomDimensions.yMax));
                 }
-
+                drawHall(startPos,endPos);
             }
-
-            for (float i = startPos.y; i<=endPos.y; i+=tilePixelCount)
-            {
-                
-                for (float j = startPos.x; j<=endPos.x; j+=tilePixelCount)
-                {   
-                    
-                    Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
-
-                    Instantiate(wall, new Vector3(j,i,0), Quaternion.identity);
-
-
-                }
-            }
-            Debug.Log("Room: " + lRoom.roomNumber + " Start: " + startPos + "End: " + endPos);
+ 
         }
     }
 
+    /**
+    *   Carves a room from the grid of walls
+    **/
+    public void drawRoom(Vector2 min, Vector2 max)
+    {
+        for (float i =min.y; i<=max.y; i+=tilePixelCount)
+        {
+            
+            for (float j = min.x; j<=max.x; j+=tilePixelCount)
+            {   
+                Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
+
+            }
+        }
+    }
+
+    /**
+    *   Carves a hallway from the grid of walls
+    **/
+    public void drawHall(Vector2 startPos, Vector2 endPos)
+    {
+        if(startPos.y>endPos.y||startPos.x>endPos.x)
+        {
+            Vector2 temp = new Vector2(0,0);
+            temp = endPos;
+            endPos= startPos;
+            startPos = temp;
+        }
+        for (float i =startPos.y; i<=endPos.y; i+=tilePixelCount)
+        {
+            
+            for (float j = startPos.x; j<=endPos.x; j+=tilePixelCount)
+            {   
+                Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
+
+            }
+        }
+        
+    }
+
+    /**
+    *   Rounds the given float to the nearest tile
+    *   useful for making sure objects snap to the grid
+    **/
     public float round(float f)
     {
         return (f - (f%(tilePixelCount)));
     }   
 
+    /**
+    *   Calculates if a value will fit within it's split
+    **/
     public bool checkSplitBoundary(float val)
     {
         return (val>((minRoomSize+roomBuffer)*tilePixelCount));
     }
-
+    
 }
