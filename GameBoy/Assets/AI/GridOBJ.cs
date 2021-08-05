@@ -116,7 +116,7 @@ public class GridOBJ<TGridObject>
     }
 
 
-    private void GetXY(Vector3 worldPos, out int x, out int y)
+    public void GetXY(Vector3 worldPos, out int x, out int y)
     {
 
         x = Mathf.FloorToInt((worldPos - origin).x / cellSize);
@@ -167,6 +167,14 @@ public class GridOBJ<TGridObject>
         return GetGridOBJ(x, y);
 
 
+    }
+
+    public int GetWidth(){
+        return width;
+    }
+
+        public int GetHeight(){
+        return height;
     }
 
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Node 
 {
-private int x;
-private int y;
+public int x;
+public int y;
 private GridOBJ<Node> grid;
 
 public int gCost;
@@ -18,6 +18,12 @@ public Node(GridOBJ<Node> grid,int x, int y){
     this.x = x;
     this.y = y;
 
+
+
+}
+
+public void CalculateFCost(){
+    fCost = gCost + hCost;
 
 
 }
