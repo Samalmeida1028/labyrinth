@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class LevelGenerator : MonoBehaviour
     public int maxRoomSize = 24;
 
     [Header("Object Prefabs")]
+    public TileBase tile;
     public GameObject wall;  
     public GameObject roomCenterPrefab;
 
