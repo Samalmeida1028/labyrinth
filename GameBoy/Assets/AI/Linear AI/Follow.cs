@@ -62,7 +62,6 @@ public class Follow : MonoBehaviour
     }
     public void SetTargetPosition(Vector3 tPosition){
         pathVectorList = Pathfinder.Instance.FindPath(GetPosition(),tPosition);
-        Debug.Log("lengthof move" + pathVectorList.Count);
         currentPathIndex = 0;
         if(pathVectorList != null && pathVectorList.Count >1){
             pathVectorList.RemoveAt(0);
