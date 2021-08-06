@@ -17,30 +17,44 @@ public class LevelGenerator : MonoBehaviour
     public GameObject wall;  
     public GameObject roomCenterPrefab;
 
+    [Header("Tile Prefabs")]
+    //public Tile wallTile;
+
     [Header("Counter Variables")]
     private float maxTreeLength;
     private int dungeonCount = 0;
     private int roomCount = 0;
 
-    [Header("Grid Snap Settings")]
+    [Header("Grid Settings")]
     public float tilePixelCount = 1.25f;
     private float roomBuffer;
+
+    [Header("Tilemaps")]
+    public Grid foregroundGrid;
+    public TileBase wallTile;
+    public TileBase floorTile;
+    public Tilemap foregroundTiles;
+    public Tilemap backgroundTiles;
 
     //The starting Dungeon
     private Dungeon startDungeon;
 
     //The grid that holds all the impassable objects
-    public GameObject [,] grid;
+    public int [,] grid;
 
     void Start()
     {   
+        foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
+        foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
+        backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
+
         roomBuffer = 2*tilePixelCount;
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
         startDungeon = new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0);
         //Calculate the maximum length of the Binary Dungeon Tree based off the number of rooms
         maxTreeLength = Mathf.Log(numberOfRooms,2);
 
-        grid = new GameObject [rows,cols];
+        grid = new int [rows,cols];
 
         //First generate the grid of wall objects
         generateBoard();
@@ -61,12 +75,13 @@ public class LevelGenerator : MonoBehaviour
     public void generateBoard()
     {
         
-        GameObject blockHolder = new GameObject ("BlockHolder");
+        //GameObject blockHolder = new GameObject ("BlockHolder");
         for (int i = 0; i<cols; i++)
         {
             for (int j = 0; j< rows; j++)
             {
-                grid[j,i] = Instantiate(wall, new Vector3(j*tilePixelCount,i*tilePixelCount,0), Quaternion.identity, blockHolder.transform);
+                grid[j,i] = 1;
+                foregroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j*tilePixelCount,i*tilePixelCount,0)),wallTile);
   
             }
         }
@@ -375,7 +390,9 @@ public class LevelGenerator : MonoBehaviour
             
             for (float j = min.x; j<=max.x; j+=tilePixelCount)
             {   
-                Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
+                grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=0;
+                foregroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),null);
+                backgroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),floorTile);
 
             }
         }
@@ -398,7 +415,9 @@ public class LevelGenerator : MonoBehaviour
             
             for (float j = startPos.x; j<=endPos.x; j+=tilePixelCount)
             {   
-                Destroy(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]);
+                grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=0;
+                foregroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),null);
+                backgroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),floorTile);
 
             }
         }
