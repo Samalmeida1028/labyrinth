@@ -18,6 +18,8 @@ public class ShopActiveItem : MonoBehaviour
     public float time = 0f;
     public Color interactedColor = Color.blue;
 
+    public GameObject Chest;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,27 +33,28 @@ public class ShopActiveItem : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
             canInteract = true;
-            Debug.Log("Player went to next level");
         }
     }
 
-    private void onTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-            canInteract = false;
-        }
+        time = 0;
+        canInteract = false;
+        if (hasInteract) Destroy(gameObject);
+        Instantiate(Chest);
+        Instantiate(Chest);
+        Instantiate(Chest);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (hasInteract) { 
+            GetComponent<SpriteRenderer>().color = interactedColor;
+        }
         if (canInteract && Input.GetKey("e")) {
-            ChestActiveItem Chest1 = new ChestActiveItem();
-            ChestActiveItem Chest2 = new ChestActiveItem();
-            ChestActiveItem Chest3 = new ChestActiveItem();
-
+            hasInteract = true;
+            
         }
     }
 }

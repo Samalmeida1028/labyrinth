@@ -8,7 +8,6 @@ public class LevelChangeScript : MonoBehaviour
     public bool canInteract;
     public bool hasInteract;
     public GameObject player;
-    public float time = 0f;
 
 
 
