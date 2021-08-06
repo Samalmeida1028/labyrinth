@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &546024047 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3214523897745084330, guid: 5141d8c62919be44082ca1206e794ce1, type: 3}
+  m_PrefabInstance: {fileID: 649480210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &649480210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +241,7 @@ MonoBehaviour:
   rows: 128
   minRoomSize: 8
   maxRoomSize: 32
+  tile: {fileID: 0}
   wall: {fileID: 554929236547824443, guid: 6009fbb85a01577409667953eb6c0d56, type: 3}
   roomCenterPrefab: {fileID: 594253614803464199, guid: 9f9076b81cb37774d870d8d11d5ea015, type: 3}
   tilePixelCount: 1.25
@@ -570,7 +576,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107793223129915914, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107793223129915917, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4107793223129915917, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
       propertyPath: m_SortingLayer
@@ -578,6 +588,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107793223129915917, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
       propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107793223129915917, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4107793223129915917, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
@@ -635,7 +649,7 @@ PrefabInstance:
     - target: {fileID: 7525007403944515327, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 3214523897745084330, guid: 5141d8c62919be44082ca1206e794ce1, type: 3}
+      objectReference: {fileID: 546024047}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66b3eca6de595464aafdac00fc956287, type: 3}
 --- !u!4 &1896881021 stripped
