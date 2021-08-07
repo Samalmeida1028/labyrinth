@@ -95,13 +95,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17b723b15ef35d42a69142ef64dbdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomNumber: 16
+  roomNumber: 8
   roomDimensions:
     serializedVersion: 2
-    x: 97.5
-    y: 7.5
-    width: 21.25
-    height: 25
-  botLeft: {x: 97.5, y: 7.5}
-  topRight: {x: 108.75, y: 22.5}
-  roomCenter: {x: 104.19034, y: 15.943138}
+    x: 66.25
+    y: 5
+    width: 7.5
+    height: 27.5
+  botLeft: {x: 66.25, y: 5}
+  topRight: {x: 73.75, y: 32.5}
+  roomCenter: {x: 70.625, y: 19.375}
+  isSpawnRoom: 0
+  isEndRoom: 0
+  isShop: 0

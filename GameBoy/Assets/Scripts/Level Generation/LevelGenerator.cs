@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class LevelGenerator : MonoBehaviour
 {
-    [Header("Level Dimensions")]
+    [Header("Level Settings")]
+    public int levelDifficulty = 0;
     public int numberOfRooms = 16;
     public int cols;
     public int rows;
@@ -13,12 +14,10 @@ public class LevelGenerator : MonoBehaviour
     public int maxRoomSize = 24;
 
     [Header("Object Prefabs")]
+    public GameObject player;
     public TileBase tile;
     public GameObject wall;  
     public GameObject roomCenterPrefab;
-
-    [Header("Tile Prefabs")]
-    //public Tile wallTile;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -42,11 +41,22 @@ public class LevelGenerator : MonoBehaviour
     //The grid that holds all the impassable objects
     public int [,] grid;
 
+    [Header ("Room Population Variables")]
+    public List<RoomObj> roomList;
+    public RoomObj spawnRoom;
+    public RoomObj exitRoom;
+    public RoomObj shopRoom;
+
     void Start()
     {   
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
         backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
+        roomList = new List<RoomObj>(); 
+
+        //Find the player
+        player = GameObject.FindWithTag("Player");
+        Debug.Log(player);
 
         roomBuffer = 2*tilePixelCount;
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
@@ -60,8 +70,12 @@ public class LevelGenerator : MonoBehaviour
         generateBoard();
         //Then generate the Binary Tree and partition the grid into randomly sized parts equal to the number of rooms
         generateDungeonTree(startDungeon);
-        //Lastly generate the rooms in the grid partitions and connect them with hallways
+        //Next generate the rooms in the grid partitions and connect them with hallways
         generateRoom(startDungeon);
+        //Randomly select one room to become the spawn room and the farthest room from that to become the end room
+        setSpawnRoom();
+        generateSpawn();
+        
     }
 
     void Update()
@@ -260,7 +274,7 @@ public class LevelGenerator : MonoBehaviour
                 roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setGrid(roomGrid);
                 dungeon.setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
                 GameObject roomHolder = new GameObject ("Room " + dungeon.room.roomNumber);
-                Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity, roomHolder.transform);
+                roomList.Add(Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity, roomHolder.transform).GetComponent<RoomObj>());
 
                 drawRoom(new Vector2(roomX_Min,roomY_Min),new Vector2(roomX_Max,roomY_Max));
 
@@ -441,4 +455,56 @@ public class LevelGenerator : MonoBehaviour
         return (val>((minRoomSize+roomBuffer)*tilePixelCount));
     }
     
+    /**
+    *   Randomly picks a room from the room list to set as the spawn room
+    *   the end room is the farthest room from the spawn room
+    **/
+    public void setSpawnRoom()
+    {
+        spawnRoom = roomList[Random.Range(0,numberOfRooms)];
+
+        RoomObj farthestRoom = spawnRoom;
+        RoomObj smallestRoom = roomCenterPrefab.GetComponent<RoomObj>();
+        smallestRoom.setRoom(new Room(-1,100f,100f,new Vector2(0,0),new Vector2(1000000,1000000),new Vector2(-10,-10)));
+
+        foreach(RoomObj room in roomList)
+        {   
+            if((room.roomCenter-spawnRoom.roomCenter).magnitude>=((farthestRoom.roomCenter-spawnRoom.roomCenter).magnitude))
+            {
+                farthestRoom = room;
+            }
+        }
+
+        spawnRoom.isSpawnRoom=true;
+        exitRoom = farthestRoom;
+        exitRoom.isEndRoom=true;
+
+        roomList.Remove(spawnRoom);
+        roomList.Remove(exitRoom);
+
+        foreach(RoomObj room in roomList)
+        { 
+            if((room.roomDimensions.width*room.roomDimensions.height)<=(smallestRoom.roomDimensions.width*smallestRoom.roomDimensions.height))
+            {
+                smallestRoom=room;
+            }
+        }    
+
+        shopRoom = smallestRoom;
+        shopRoom.isShop=true;
+    }
+
+    public void generateShop()
+    {
+
+    }
+
+    public void generateSpawn()
+    {
+        player.transform.position = new Vector3(spawnRoom.roomCenter.x,spawnRoom.roomCenter.y,0);
+    }
+    public void generateExit()
+    {
+
+    }
 }

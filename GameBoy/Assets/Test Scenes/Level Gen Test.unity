@@ -309,9 +309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fd1dabfb0e0b84096b913adbd9bcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfRooms: 16
-  cols: 128
-  rows: 128
+  numberOfRooms: 8
+  cols: 64
+  rows: 64
   minRoomSize: 8
   maxRoomSize: 32
   tile: {fileID: 0}
