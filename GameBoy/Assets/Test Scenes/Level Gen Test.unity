@@ -156,17 +156,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d380f6fc66863a40a4343106573cc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  cam: {fileID: 0}
-  enemyrb: {fileID: 304381455}
-  health: 100
-  target: {fileID: 0}
-  updateTime: 0.2
-  tempTime: 0
-  waitTime: 5
-  attackRange: 2
   enemyType: 0
+  updateTime: 0.2
+  waitTime: 5
+  health: 100
+  speed: 3
+  targetRange: 5
+  attackRange: 2
   canShoot: 0
+  enemyrb: {fileID: 304381455}
+  target: {fileID: 0}
 --- !u!212 &304381452
 SpriteRenderer:
   m_ObjectHideFlags: 0
