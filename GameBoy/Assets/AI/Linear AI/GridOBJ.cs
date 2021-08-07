@@ -49,7 +49,9 @@ public class GridOBJ<TGridObject>
             }
             Debug.DrawLine(GetWorldPos(0, height), GetWorldPos(width, height), Color.white, 30f);
             Debug.DrawLine(GetWorldPos(width, 0), GetWorldPos(width, height), Color.white, 30f);
-         OnGridOBJValueChanged += (object sender, OnGridOBJValueChangedEventArgs eventArgs) =>
+
+
+            OnGridOBJValueChanged += (object sender, OnGridOBJValueChangedEventArgs eventArgs) =>
             {
                 debugGridArray[eventArgs.x, eventArgs.y].text = gridArray[eventArgs.x, eventArgs.y]?.ToString();
             };
@@ -108,13 +110,13 @@ public class GridOBJ<TGridObject>
     }
 
 
-    private Vector3 GetWorldPos(int x, int y)
+    public Vector3 GetWorldPos(int x, int y)
     {
         return ((new Vector3(x, y) * cellSize) + origin);
     }
 
 
-    private void GetXY(Vector3 worldPos, out int x, out int y)
+    public void GetXY(Vector3 worldPos, out int x, out int y)
     {
 
         x = Mathf.FloorToInt((worldPos - origin).x / cellSize);
@@ -149,6 +151,7 @@ public class GridOBJ<TGridObject>
 
     public TGridObject GetGridOBJ(int x, int y)
     {
+
         if (x >= 0 && y >= 0 && x < width && y < height)
         {
             return gridArray[x, y];
@@ -160,11 +163,25 @@ public class GridOBJ<TGridObject>
 
     public TGridObject GetGridOBJ(Vector3 pos)
     {
+        Debug.Log(pos);
         int x, y;
         GetXY(pos, out x, out y);
         return GetGridOBJ(x, y);
 
 
     }
+
+    public int GetWidth(){
+        return width;
+    }
+
+        public int GetHeight(){
+        return height;
+    }
+
+    public float GetCellSize(){
+        return cellSize;
+    }
+
 
 }

@@ -21,6 +21,5 @@ public class Room
         this.roomDimensions = new Rect(botLeft.x,botLeft.y,width,height);
 
     }
-    
 
 }
