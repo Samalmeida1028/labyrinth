@@ -26,7 +26,8 @@ public class EnemyScript : MonoBehaviour
     public int targetRange;
     public int attackRange;
     public bool canShoot;
-    private enum State {
+    private enum State
+    {
 
         Roaming,
         Transition,
@@ -69,30 +70,34 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
-        switch(state){
+        switch (state)
+        {
             default:
             case State.Roaming:
-            transform.rotation =Quaternion.identity;
-                    target = roamPos;
-        if(Vector3.Distance(transform.position,target)<2f){
-             roamPos = transform.position + UtilsClass.GetRandomDir() * Random.Range(1f,7f);
-             if(NavMesh.CalculatePath(transform.position,roamPos,-1,path)){
-                 agent.SetDestination(roamPos);
-             }
-             else{
-                 roamPos = transform.position;
-             }
-        }
-            break;
+                transform.rotation = Quaternion.identity;
+                target = roamPos;
+                if (Vector3.Distance(transform.position, target) < 2f)
+                {
+                    roamPos = transform.position + UtilsClass.GetRandomDir() * Random.Range(1f, 7f);
+                    if (NavMesh.CalculatePath(transform.position, roamPos, -1, path))
+                    {
+                        agent.SetDestination(roamPos);
+                    }
+                    else
+                    {
+                        roamPos = transform.position;
+                    }
+                }
+                break;
             case State.Chase:
                 agent.SetDestination(player.position);
                 PointAtPlayer();
                 break;
 
             case State.Transition:
-            roamPos = transform.position;
-            Roaming();
-            break;
+                roamPos = transform.position;
+                Roaming();
+                break;
 
         }
     }
@@ -108,7 +113,8 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-    void OnTriggerExit2D(Collider2D other){
+    void OnTriggerExit2D(Collider2D other)
+    {
         if (other.tag == "Player")
         {
             state = State.Transition;
@@ -141,7 +147,8 @@ public class EnemyScript : MonoBehaviour
         GetComponent<Rigidbody2D>().rotation = angle;
     }
 
-    void Roaming(){
+    void Roaming()
+    {
         state = State.Roaming;
 
     }
