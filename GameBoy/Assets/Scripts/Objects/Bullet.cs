@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject hit;
-    public float time = 0;
-    public float lifeTime = 3f;
-    void Update(){
-        time += Time.deltaTime;
-        if(time>lifeTime){
-            Destroy(gameObject);
-        }
+    public int damage;
+    public void SetDamage(int totalDamage){
+        damage = totalDamage;
+
+        Debug.Log(totalDamage);
 
     }
 
-void OnCollisionEnter2D(Collision2D collision){
-    Debug.Log("HIT");
-    //GameObject effect = Instantiate(hit, transform.position, Quaternion.identity); 
-    Destroy(gameObject);
-    //Destroy(effect, 5f);
-}
 }

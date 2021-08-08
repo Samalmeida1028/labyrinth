@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {   
-    public float moveSpeed;   
+ 
     Vector2 movement;
     public Rigidbody2D rb;
     public Camera cam;
-    public bool canShoot;
     Vector2 mousePos;
+
+
 
     void Update(){
         checkInput();  
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        rb.velocity = movement*moveSpeed;
+        rb.velocity = movement*GetComponent<PlayerStats>().moveSpeed;
         PointToMouse();
  
     }
