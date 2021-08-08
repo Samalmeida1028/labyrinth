@@ -17,6 +17,7 @@ public class ShopActiveItem : MonoBehaviour
     public float confirm = 3f;
     public float time = 0f;
     public Color interactedColor = Color.blue;
+    private Vector3 chestpos;
 
     public GameObject Chest;
 
@@ -38,12 +39,15 @@ public class ShopActiveItem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        chestpos = transform.position;
         time = 0;
         canInteract = false;
-        if (hasInteract) Destroy(gameObject);
-        Instantiate(Chest);
-        Instantiate(Chest);
-        Instantiate(Chest);
+        if (hasInteract) {
+            Instantiate(Chest, new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z), transform.rotation);
+            Instantiate(Chest, new Vector3(transform.position.x, transform.position.y - 1.5f, transform.position.z), transform.rotation);
+            Instantiate(Chest, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -52,9 +56,9 @@ public class ShopActiveItem : MonoBehaviour
         if (hasInteract) { 
             GetComponent<SpriteRenderer>().color = interactedColor;
         }
-        if (canInteract && Input.GetKey("e")) {
+        if (canInteract && Input.GetKey("e"))
+        {
             hasInteract = true;
-            
         }
     }
 }
