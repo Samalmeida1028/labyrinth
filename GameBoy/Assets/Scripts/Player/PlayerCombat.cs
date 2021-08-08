@@ -69,6 +69,7 @@ public class PlayerCombat : MonoBehaviour
         else
         {
             GameObject melee = Instantiate(meleeAttack, attackPoint.position, attackPoint.rotation);
+            bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
             Destroy(melee, .1f);
         }
     }
