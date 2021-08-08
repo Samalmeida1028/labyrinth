@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     Vector2 mousePos;
 
-    public string lookDir;
+    public int lookDir;
+    public int angle;
 
 
 
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
      void PointToMouse(){
         Vector2 lookDir = mousePos - rb.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
-        float angle = Mathf.Round((Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f)/45)*45;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
+        angle = (int)Mathf.Round((Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f)/45)*45;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
         rb.rotation = angle;    //sets look angle to previously found angle
         if(counter>.1){
             counter = 0;
@@ -64,16 +65,16 @@ public class PlayerMovement : MonoBehaviour
 
     void FacingDirection(float angle){
         if(angle==0){
-            lookDir = "UP"; 
+            lookDir = 0; 
         }
         if(angle == -180){
-            lookDir = "DOWN";
+            lookDir = 1;
         }
         if(angle == -90){
-            lookDir = "RIGHT";
+            lookDir = 2;
         }
         if(angle == 90){
-            lookDir = "LEFT";
+            lookDir = 3;
         }
 
 

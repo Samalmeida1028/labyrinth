@@ -60,7 +60,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (isRanged)
         {
-            int force = projectileSpeed;
+            int force = -projectileSpeed;
             GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
             bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
             Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();

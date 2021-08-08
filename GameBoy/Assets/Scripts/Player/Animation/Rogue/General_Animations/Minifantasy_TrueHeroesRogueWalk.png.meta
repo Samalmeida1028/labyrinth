@@ -310,10 +310,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 112
-        width: 8
-        height: 8
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
-        width: 8
-        height: 8
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 112
-        width: 8
-        height: 8
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
-        width: 8
-        height: 8
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,10 +394,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 112
-        width: 8
-        height: 8
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,10 +415,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 112
-        width: 8
-        height: 8
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,10 +436,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_6
       rect:
         serializedVersion: 2
-        x: 104
-        y: 112
-        width: 8
-        height: 8
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,10 +457,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
-        width: 8
-        height: 8
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,10 +478,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_8
       rect:
         serializedVersion: 2
-        x: 8
-        y: 104
-        width: 8
-        height: 8
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +499,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_9
       rect:
         serializedVersion: 2
-        x: 16
-        y: 104
-        width: 8
-        height: 8
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,10 +520,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_10
       rect:
         serializedVersion: 2
-        x: 40
-        y: 104
-        width: 8
-        height: 8
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,10 +541,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_11
       rect:
         serializedVersion: 2
-        x: 48
-        y: 104
-        width: 8
-        height: 8
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,10 +562,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_12
       rect:
         serializedVersion: 2
-        x: 72
-        y: 104
-        width: 8
-        height: 8
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,10 +583,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_13
       rect:
         serializedVersion: 2
-        x: 80
-        y: 104
-        width: 8
-        height: 8
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,10 +604,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_14
       rect:
         serializedVersion: 2
-        x: 104
-        y: 104
-        width: 8
-        height: 8
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,10 +625,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueWalk_15
       rect:
         serializedVersion: 2
-        x: 112
-        y: 104
-        width: 8
-        height: 8
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,1014 +638,6 @@ TextureImporter:
       bones: []
       spriteID: 6a1a26d6e5f870fe0800000000000000
       internalID: -1222851138082922074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_16
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 798a8b2b2a4bb8b70800000000000000
-      internalID: 8902407699304065175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_17
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 768ace641ffd15080800000000000000
-      internalID: -9200326336371185561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_18
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf69f5b1b79c678e0800000000000000
-      internalID: -1695946679081003269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_19
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e792dab7b36e65110800000000000000
-      internalID: 1249439089794296190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_20
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a8f0f7ec2852ac10800000000000000
-      internalID: 2063308529182242978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_21
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7805362747fa3cb0800000000000000
-      internalID: -4883318960974133121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_22
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a87e8ee732803b260800000000000000
-      internalID: 7112037185094215562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_23
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a488492cd51a6c00800000000000000
-      internalID: 894551511316071584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_24
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bec0ea457045b0cd0800000000000000
-      internalID: -2590884770159391509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_25
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fccd150714c5b38c0800000000000000
-      internalID: -4018516806370992945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_26
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9964c453700da7ce0800000000000000
-      internalID: -1406583204222318951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_27
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0f9d447b5c540f70800000000000000
-      internalID: 9152541890586713867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_28
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 468cb7914058bf700800000000000000
-      internalID: 575199630073776228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_29
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58fbf43ca6dbe3ae0800000000000000
-      internalID: -1567607354037387387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_30
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 078aec56564146380800000000000000
-      internalID: -8979029331337631632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_31
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff37dcdb0eecbec90800000000000000
-      internalID: -7139385319613434881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_32
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dda066c901bf73670800000000000000
-      internalID: 8518553268956564189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_33
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c7ef09939f4b4ed0800000000000000
-      internalID: -2428760078689507392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_34
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebae128f54ddfbf20800000000000000
-      internalID: 3440711932919802558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_35
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 536d0550a31239570800000000000000
-      internalID: 8472151857095038517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_36
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 948e847ccb982d680800000000000000
-      internalID: -8731765283627669431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_37
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a87e2eb0c054a73b0800000000000000
-      internalID: -5514018875720407158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_38
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c98e839a6bf0c060800000000000000
-      internalID: 6971848658330225088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_39
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01662e921b38e4800800000000000000
-      internalID: 598560597422007824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_40
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cdff3f79bd30fe30800000000000000
-      internalID: 4535192691675233730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_41
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61ccdc97f15f3d680800000000000000
-      internalID: -8731365737004938218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_42
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 390b71863bc1d7e90800000000000000
-      internalID: -7026428286756999021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_43
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 891afb052899e4b60800000000000000
-      internalID: 7732286395221254552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_44
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69ab2194c52ee9c70800000000000000
-      internalID: 8979863593014180502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_45
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7f45a13ad03e57e0800000000000000
-      internalID: -1774927489443475590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_46
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f33cb782a3c5fa110800000000000000
-      internalID: 1274338624426197823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_47
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8ca657b3509f3bf0800000000000000
-      internalID: -342396357424272244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_48
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a14f739759819c290800000000000000
-      internalID: -7869731843590327270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_49
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b530aa6ca920208c0800000000000000
-      internalID: -4034659452389293221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_50
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1833449faaec3870800000000000000
-      internalID: 8664057822981601310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_51
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bda94bf7941899a0800000000000000
-      internalID: -6226203841851183689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_52
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40bd643934cbef780800000000000000
-      internalID: -8647267236085048572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_53
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 078940ea255962420800000000000000
-      internalID: 2604933616819804272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_54
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b516d6b5522e5410800000000000000
-      internalID: 1467648280104408497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_55
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99f092f16b3668800800000000000000
-      internalID: 614288033040633753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_56
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42625e21658f387d0800000000000000
-      internalID: -2917215085038066140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_57
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6253445e4d774b190800000000000000
-      internalID: -7947595686138858202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_58
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98f67b28ab10140b0800000000000000
-      internalID: -5746309748979437687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_59
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16fe3b6e609d1bd60800000000000000
-      internalID: 7904337444675514209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_60
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b4028901652f0200800000000000000
-      internalID: 148378411428086965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_61
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73c12a7420d0d8d20800000000000000
-      internalID: 3282294006865861687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_62
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c17a3f5aa90791180800000000000000
-      internalID: -9144153758887598308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueWalk_63
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4808241e48ff9d470800000000000000
-      internalID: 8420041924525850756
       vertices: []
       indices: 
       edges: []

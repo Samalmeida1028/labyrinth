@@ -310,10 +310,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 112
-        width: 8
-        height: 8
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
-        width: 8
-        height: 8
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 112
-        width: 8
-        height: 8
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
-        width: 8
-        height: 8
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,10 +394,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 112
-        width: 8
-        height: 8
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,10 +415,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 112
-        width: 8
-        height: 8
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,10 +436,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_6
       rect:
         serializedVersion: 2
-        x: 104
-        y: 112
-        width: 8
-        height: 8
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,10 +457,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
-        width: 8
-        height: 8
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,10 +478,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_8
       rect:
         serializedVersion: 2
-        x: 8
-        y: 104
-        width: 8
-        height: 8
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +499,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_9
       rect:
         serializedVersion: 2
-        x: 16
-        y: 104
-        width: 8
-        height: 8
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,10 +520,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_10
       rect:
         serializedVersion: 2
-        x: 40
-        y: 104
-        width: 8
-        height: 8
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,10 +541,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_11
       rect:
         serializedVersion: 2
-        x: 48
-        y: 104
-        width: 8
-        height: 8
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,10 +562,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_12
       rect:
         serializedVersion: 2
-        x: 72
-        y: 104
-        width: 8
-        height: 8
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,10 +583,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_13
       rect:
         serializedVersion: 2
-        x: 80
-        y: 104
-        width: 8
-        height: 8
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,10 +604,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_14
       rect:
         serializedVersion: 2
-        x: 104
-        y: 104
-        width: 8
-        height: 8
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,10 +625,10 @@ TextureImporter:
       name: Minifantasy_TrueHeroesRogueDmg_15
       rect:
         serializedVersion: 2
-        x: 112
-        y: 104
-        width: 8
-        height: 8
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,1014 +638,6 @@ TextureImporter:
       bones: []
       spriteID: faeef8286ed066db0800000000000000
       internalID: -4799133069232574801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_16
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 196677eae97ffb040800000000000000
-      internalID: 4665719999883077265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_17
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79082c8b5582c2ea0800000000000000
-      internalID: -5896293463497736041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_18
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a09360d06af9ec60800000000000000
-      internalID: 7848079119389790374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_19
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba32fa53788701f50800000000000000
-      internalID: 6850107555347112875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_20
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c649420853f17940800000000000000
-      internalID: 5292278596458071744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_21
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b2a8fe0da0a84210800000000000000
-      internalID: 1317479556146832050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_22
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23515e9e415688400800000000000000
-      internalID: 326622113482216754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_23
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 80
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 896bda04e48d62ed0800000000000000
-      internalID: -2439024317570369896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_24
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edaaf679aa765f010800000000000000
-      internalID: 1221996856283736798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_25
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6687b5b106f693280800000000000000
-      internalID: -9063090316539889562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_26
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dc0412e473c92310800000000000000
-      internalID: 1380849667542355154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_27
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: caf5ab9fe70a58630800000000000000
-      internalID: 3928722717166690220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_28
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 422ba9fccd79172d0800000000000000
-      internalID: -3282675678744759772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_29
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3391a9c45943f6a40800000000000000
-      internalID: 5363563497061488947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_30
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2f65dbe533d9dad0800000000000000
-      internalID: -2676876274951688401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_31
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27b63432f6358ea30800000000000000
-      internalID: 4244734385594788722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_32
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56e707cc6150646d0800000000000000
-      internalID: -3006710105745883547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_33
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d32bbef8fd892660800000000000000
-      internalID: 7361571166478869464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_34
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c1a5a5cfdc844620800000000000000
-      internalID: 2757483764579148226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_35
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a61c5b00440ffd40800000000000000
-      internalID: 5620215533096670882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_36
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6be00f7deb95f57a0800000000000000
-      internalID: -6386287070386581834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_37
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12030afaccd2254f0800000000000000
-      internalID: -841559823221772255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_38
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d19518f0b828fd10800000000000000
-      internalID: 2159520761865671126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_39
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 939cd3d84e3c7d6b0800000000000000
-      internalID: -5271529452424279751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_40
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 219a34e049975cce0800000000000000
-      internalID: -1385567633545123566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_41
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80ad94e3a626fa2c0800000000000000
-      internalID: -4418204500976084472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_42
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fa8387a876432010800000000000000
-      internalID: 1162850612812155640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_43
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d65381ac6033a8fe0800000000000000
-      internalID: -1186079447605299859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_44
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38499abe442ec0440800000000000000
-      internalID: 4903542879939040387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_45
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66f0040d57c4d6250800000000000000
-      internalID: 5939487552460296038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_46
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 499654eda7849bd90800000000000000
-      internalID: -7081549246511093356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_47
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0ab74e336c5bb1d0800000000000000
-      internalID: -3333969517821314546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_48
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2556add9cc95adde0800000000000000
-      internalID: -1307634006441171630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_49
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52caad2753a7f2e80800000000000000
-      internalID: -8201202026439594971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_50
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 883ded9f11c7d0ea0800000000000000
-      internalID: -5904927119764434040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_51
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 825d774f60e7c4b60800000000000000
-      internalID: 7731693228624696616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_52
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d164b2645a3fb200800000000000000
-      internalID: 197941042735243733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_53
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e8244921a1578830800000000000000
-      internalID: 4073314140603820257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_54
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee744293d723775f0800000000000000
-      internalID: -759082498777659410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_55
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efc54da64470d5890800000000000000
-      internalID: -7467804616678941442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_56
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b2ed95ca3915f3e0800000000000000
-      internalID: -2020681117591543111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_57
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 536a218757fe81310800000000000000
-      internalID: 1376112973966386741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_58
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abc3c511852b67850800000000000000
-      internalID: 6374478413907639482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_59
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 656a4f7656d9f9670800000000000000
-      internalID: 8547723676633835094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_60
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 725b7d16b659448b0800000000000000
-      internalID: -5168842183878920921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_61
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6aff1741b613c810800000000000000
-      internalID: 1784294828027148910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_62
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c5711cafe7743ad0800000000000000
-      internalID: -2723420003384592951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_TrueHeroesRogueDmg_63
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a06f2adece9703150800000000000000
-      internalID: 5850309974460397066
       vertices: []
       indices: 
       edges: []
