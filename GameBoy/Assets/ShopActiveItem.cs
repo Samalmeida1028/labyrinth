@@ -43,6 +43,7 @@ public class ShopActiveItem : MonoBehaviour
         time = 0;
         canInteract = false;
         if (hasInteract) {
+            Chest.GetComponent<ChestActiveItem>().isShop = true;
             Instantiate(Chest, new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z), transform.rotation);
             Instantiate(Chest, new Vector3(transform.position.x, transform.position.y - 1.5f, transform.position.z), transform.rotation);
             Instantiate(Chest, transform.position, transform.rotation);

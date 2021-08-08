@@ -39,4 +39,7 @@ public class PlayerStats : MonoBehaviour
 
 
     }
+    public void UpgradeDamageMult() { 
+    
+    }
 }

@@ -98,13 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de1e99202f10494589f72a4bb4bc6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isShop: 0
   activeItem: {fileID: 0}
   canInteract: 0
   hasInteract: 0
   player: {fileID: 0}
+  hasEntered: 0
   tier: 0
   itemInTier: 0
   tierVal: 0
+  confirm: 3
+  time: 0
+  interactedColor: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &3369847709989721291
 MonoBehaviour:
   m_ObjectHideFlags: 0
