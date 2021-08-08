@@ -7,7 +7,7 @@ public class EnemyScript : MonoBehaviour
 {
 
 
-     private enum State
+    private enum State
     {
 
         Roaming,
@@ -22,7 +22,7 @@ public class EnemyScript : MonoBehaviour
     public int enemyType;
     public GameObject attackType;
     public Transform firePoint;
-    public float enemyTier= 1.2f;
+    public float enemyTier = 1.2f;
     [Space(10)]
 
 
@@ -36,18 +36,20 @@ public class EnemyScript : MonoBehaviour
 
     [Header("Enemy Stats")]
     [Space(5)]
-    private int health = 100 ;
+    public int enemyDamage;
+    public float projectileLife = .5f;
+    public bool isRanged;
+    private int health = 100;
     public float attackSpeed;
     public int force;
     public float speed = 100f;
     public int targetRange;
     public int attackRange;
-    public bool canShoot;
 
     [Space(10)]
     [Header("References")]
     [Space(5)]
-    public float counter=0;
+    public float counter = 0;
     private State state;
     private NavMeshPath path;
     private Vector3 startingPosition;
@@ -63,8 +65,8 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
-        gameObject.GetComponent<HittableStats>().health = (int)(health*enemyTier);
-        
+        gameObject.GetComponent<HittableStats>().health = (int)(health * enemyTier);
+
         path = new NavMeshPath();
         startingPosition = transform.position;
         roamPos = startingPosition;
@@ -85,6 +87,7 @@ public class EnemyScript : MonoBehaviour
         {
             default:
             case State.Roaming:
+                Debug.Log("Roaming");
                 transform.rotation = Quaternion.identity;
                 if (CheckForPlayer()) state = State.Chase;
                 target = roamPos;
@@ -102,28 +105,39 @@ public class EnemyScript : MonoBehaviour
                 }
                 break;
             case State.Chase:
+                Debug.Log("Chasing");
+
                 tempTime += Time.deltaTime;
                 if (tempTime > waitTime)
                 {
+                    if(CheckForPlayer()){
+                    PointAtPlayer();
                     agent.SetDestination(player.position);
                     Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
                     foreach (Collider2D col in cast)
                     {
                         if (col.tag == "Player")
                         {
-                            PointAtPlayer();
                             state = State.Attack;
                         }
                     }
                 }
+                 else{
+                    state = State.Transition;
+                }
+                }
                 break;
 
             case State.Attack:
-                    Attack();
-                    state = State.Transition;
+                Debug.Log("Attacking");
+
+                Attack();
+                state = State.Transition;
                 break;
 
             case State.Transition:
+                Debug.Log("Transitioning");
+
                 roamPos = transform.position;
                 if (CheckForPlayer()) state = State.Chase;
                 else state = State.Roaming;
@@ -140,13 +154,18 @@ public class EnemyScript : MonoBehaviour
         agent.enabled = false;
 
 
-        if (counter >= 1/attackSpeed)
+        if (counter >= 1 / attackSpeed)
         {
             counter = 0;
 
             GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
+            attack.GetComponent<EnemyAttack>().SetDamage(enemyDamage);
             Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-            attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+            Destroy(attack,projectileLife);
+            if (isRanged)
+            {
+                attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+            }
         }
         agent.enabled = true;
 
@@ -158,22 +177,9 @@ public class EnemyScript : MonoBehaviour
 
     void PointAtPlayer()
     {
-        bool playerInRange = false;
         Vector2 lookDir = player.position - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
         GetComponent<Rigidbody2D>().rotation = angle;
-        Collider2D[] array = Physics2D.OverlapCircleAll(transform.position, attackRange);
-        foreach (Collider2D col in array)
-        {
-            if (col.tag == "Player")
-            {
-                playerInRange = true;
-            }
-        }
-        if (!playerInRange)
-        {
-            state = State.Transition;
-        }
     }
 
 

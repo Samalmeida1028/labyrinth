@@ -16,6 +16,9 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<HittableStats>().TakeDamage(damage);
             Destroy(gameObject);
         }
+        else{
+            Destroy(gameObject);
+        }
 
     }
 

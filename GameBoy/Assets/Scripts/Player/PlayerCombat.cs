@@ -95,8 +95,8 @@ public class PlayerCombat : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyAttack")
         {
-            TakeDamage(other.gameObject.GetComponent<EnemyDamage>().damage);
-            Destroy(other.gameObject);
+            Debug.Log(other.gameObject.GetComponent<EnemyAttack>().damage);
+            TakeDamage(other.gameObject.GetComponent<EnemyAttack>().damage);
         }
     }
 

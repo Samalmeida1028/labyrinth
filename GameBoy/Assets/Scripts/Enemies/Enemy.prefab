@@ -86,17 +86,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  attackType: {fileID: 7834550219962668319, guid: eadde3070056ef141beb4eb119694d1b, type: 3}
+  attackType: {fileID: 6776609541719931588, guid: aa77355743c8bfc46848d47cc2103f4f, type: 3}
   firePoint: {fileID: 6828982072027182137}
+  enemyTier: 1.2
   updateTime: 0.2
   waitTime: 1
-  health: 100
+  projectileLife: 0.5
+  isRanged: 0
   attackSpeed: 10
   force: 10
   speed: 3
   targetRange: 5
   attackRange: 3
-  canShoot: 0
   counter: 0
   target: {x: 0, y: 0, z: 0}
   agent: {fileID: 0}
