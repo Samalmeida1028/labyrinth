@@ -8,7 +8,6 @@ public class EnemyAttack : MonoBehaviour
 
     public void SetDamage(int enemyDamage){
         damage = enemyDamage;
-        Debug.Log(damage);
     }
     void OnCollisionEnter2D(Collision2D other){
         Destroy(gameObject);

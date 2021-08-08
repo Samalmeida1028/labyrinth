@@ -1,7 +1,775 @@
 fileFormatVersion: 2
 guid: 3da52fe351e9c904e9d3d576dc501f0c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3656756913067813815
+    second: Minifantasy_TrueHeroesRogueIdle_0
+  - first:
+      213: 1628370655887064534
+    second: Minifantasy_TrueHeroesRogueIdle_1
+  - first:
+      213: 5346518759513405428
+    second: Minifantasy_TrueHeroesRogueIdle_2
+  - first:
+      213: 3956905342054066393
+    second: Minifantasy_TrueHeroesRogueIdle_3
+  - first:
+      213: -6883601383344784883
+    second: Minifantasy_TrueHeroesRogueIdle_4
+  - first:
+      213: 1511100440972488517
+    second: Minifantasy_TrueHeroesRogueIdle_5
+  - first:
+      213: -3215661105637146089
+    second: Minifantasy_TrueHeroesRogueIdle_6
+  - first:
+      213: 6294870689430975059
+    second: Minifantasy_TrueHeroesRogueIdle_7
+  - first:
+      213: 7838166343102474776
+    second: Minifantasy_TrueHeroesRogueIdle_8
+  - first:
+      213: -8449433655035548807
+    second: Minifantasy_TrueHeroesRogueIdle_9
+  - first:
+      213: 4002505861882514848
+    second: Minifantasy_TrueHeroesRogueIdle_10
+  - first:
+      213: -1248065687118002953
+    second: Minifantasy_TrueHeroesRogueIdle_11
+  - first:
+      213: 808294885969380763
+    second: Minifantasy_TrueHeroesRogueIdle_12
+  - first:
+      213: 793860549226677215
+    second: Minifantasy_TrueHeroesRogueIdle_13
+  - first:
+      213: -4653788753821508036
+    second: Minifantasy_TrueHeroesRogueIdle_14
+  - first:
+      213: 5673497338550901953
+    second: Minifantasy_TrueHeroesRogueIdle_15
+  - first:
+      213: 4221784859992031871
+    second: Minifantasy_TrueHeroesRogueIdle_16
+  - first:
+      213: -6478272402993623918
+    second: Minifantasy_TrueHeroesRogueIdle_17
+  - first:
+      213: 2167272931060459593
+    second: Minifantasy_TrueHeroesRogueIdle_18
+  - first:
+      213: -4282846475900999189
+    second: Minifantasy_TrueHeroesRogueIdle_19
+  - first:
+      213: -8259091601398188539
+    second: Minifantasy_TrueHeroesRogueIdle_20
+  - first:
+      213: 1936708102373605694
+    second: Minifantasy_TrueHeroesRogueIdle_21
+  - first:
+      213: -8748481545835593968
+    second: Minifantasy_TrueHeroesRogueIdle_22
+  - first:
+      213: 5854764192571926539
+    second: Minifantasy_TrueHeroesRogueIdle_23
+  - first:
+      213: -5355262193886479719
+    second: Minifantasy_TrueHeroesRogueIdle_24
+  - first:
+      213: 2059931276298406732
+    second: Minifantasy_TrueHeroesRogueIdle_25
+  - first:
+      213: -6969051566305650561
+    second: Minifantasy_TrueHeroesRogueIdle_26
+  - first:
+      213: -5722601855969425884
+    second: Minifantasy_TrueHeroesRogueIdle_27
+  - first:
+      213: 2908480950863776480
+    second: Minifantasy_TrueHeroesRogueIdle_28
+  - first:
+      213: -6144640731763616490
+    second: Minifantasy_TrueHeroesRogueIdle_29
+  - first:
+      213: 7942896463111279293
+    second: Minifantasy_TrueHeroesRogueIdle_30
+  - first:
+      213: 6804982981475277752
+    second: Minifantasy_TrueHeroesRogueIdle_31
+  - first:
+      213: -525463868401388396
+    second: Minifantasy_TrueHeroesRogueIdle_32
+  - first:
+      213: -1213504450209754395
+    second: Minifantasy_TrueHeroesRogueIdle_33
+  - first:
+      213: -404671143456718633
+    second: Minifantasy_TrueHeroesRogueIdle_34
+  - first:
+      213: -4792831236981147600
+    second: Minifantasy_TrueHeroesRogueIdle_35
+  - first:
+      213: -4239195022383715085
+    second: Minifantasy_TrueHeroesRogueIdle_36
+  - first:
+      213: 20721897573997908
+    second: Minifantasy_TrueHeroesRogueIdle_37
+  - first:
+      213: 3890008779648931716
+    second: Minifantasy_TrueHeroesRogueIdle_38
+  - first:
+      213: 6065311993206293093
+    second: Minifantasy_TrueHeroesRogueIdle_39
+  - first:
+      213: 3372170544399746361
+    second: Minifantasy_TrueHeroesRogueIdle_40
+  - first:
+      213: 663262046480462851
+    second: Minifantasy_TrueHeroesRogueIdle_41
+  - first:
+      213: -351728748855378498
+    second: Minifantasy_TrueHeroesRogueIdle_42
+  - first:
+      213: 6086040147363307422
+    second: Minifantasy_TrueHeroesRogueIdle_43
+  - first:
+      213: 3762728577102673157
+    second: Minifantasy_TrueHeroesRogueIdle_44
+  - first:
+      213: -3100708094837060109
+    second: Minifantasy_TrueHeroesRogueIdle_45
+  - first:
+      213: -6048682510791957335
+    second: Minifantasy_TrueHeroesRogueIdle_46
+  - first:
+      213: 2594338929941117529
+    second: Minifantasy_TrueHeroesRogueIdle_47
+  - first:
+      213: 9166114764857658666
+    second: Minifantasy_TrueHeroesRogueIdle_48
+  - first:
+      213: -5290344787616292261
+    second: Minifantasy_TrueHeroesRogueIdle_49
+  - first:
+      213: 882978089745102976
+    second: Minifantasy_TrueHeroesRogueIdle_50
+  - first:
+      213: 7957439468128412372
+    second: Minifantasy_TrueHeroesRogueIdle_51
+  - first:
+      213: 8150339004648715575
+    second: Minifantasy_TrueHeroesRogueIdle_52
+  - first:
+      213: 93975521548098476
+    second: Minifantasy_TrueHeroesRogueIdle_53
+  - first:
+      213: 6639954934037989334
+    second: Minifantasy_TrueHeroesRogueIdle_54
+  - first:
+      213: 2661534883709250583
+    second: Minifantasy_TrueHeroesRogueIdle_55
+  - first:
+      213: -6771075060554766202
+    second: Minifantasy_TrueHeroesRogueIdle_56
+  - first:
+      213: -5051106356656462170
+    second: Minifantasy_TrueHeroesRogueIdle_57
+  - first:
+      213: 1743898891947328901
+    second: Minifantasy_TrueHeroesRogueIdle_58
+  - first:
+      213: -4925684479588128719
+    second: Minifantasy_TrueHeroesRogueIdle_59
+  - first:
+      213: -6991231314578229094
+    second: Minifantasy_TrueHeroesRogueIdle_60
+  - first:
+      213: 936911546858168353
+    second: Minifantasy_TrueHeroesRogueIdle_61
+  - first:
+      213: -6898267247890321085
+    second: Minifantasy_TrueHeroesRogueIdle_62
+  - first:
+      213: -8457594970897983243
+    second: Minifantasy_TrueHeroesRogueIdle_63
+  - first:
+      213: -557525397258056943
+    second: Minifantasy_TrueHeroesRogueIdle_64
+  - first:
+      213: 2863104267417679113
+    second: Minifantasy_TrueHeroesRogueIdle_65
+  - first:
+      213: 2159814383291976888
+    second: Minifantasy_TrueHeroesRogueIdle_66
+  - first:
+      213: -1966149992881789363
+    second: Minifantasy_TrueHeroesRogueIdle_67
+  - first:
+      213: 741792779478017277
+    second: Minifantasy_TrueHeroesRogueIdle_68
+  - first:
+      213: -3693027871648464896
+    second: Minifantasy_TrueHeroesRogueIdle_69
+  - first:
+      213: -3995007578043461374
+    second: Minifantasy_TrueHeroesRogueIdle_70
+  - first:
+      213: 6864957679143637873
+    second: Minifantasy_TrueHeroesRogueIdle_71
+  - first:
+      213: -38239328520851248
+    second: Minifantasy_TrueHeroesRogueIdle_72
+  - first:
+      213: -4236926694523750283
+    second: Minifantasy_TrueHeroesRogueIdle_73
+  - first:
+      213: 2774033269413667938
+    second: Minifantasy_TrueHeroesRogueIdle_74
+  - first:
+      213: 5888664672553491746
+    second: Minifantasy_TrueHeroesRogueIdle_75
+  - first:
+      213: 3262054492213091485
+    second: Minifantasy_TrueHeroesRogueIdle_76
+  - first:
+      213: -6091157971983145759
+    second: Minifantasy_TrueHeroesRogueIdle_77
+  - first:
+      213: 4767375642644014103
+    second: Minifantasy_TrueHeroesRogueIdle_78
+  - first:
+      213: 7463240265752105459
+    second: Minifantasy_TrueHeroesRogueIdle_79
+  - first:
+      213: 1859279057708219682
+    second: Minifantasy_TrueHeroesRogueIdle_80
+  - first:
+      213: 6424865139456732827
+    second: Minifantasy_TrueHeroesRogueIdle_81
+  - first:
+      213: -493697457431465875
+    second: Minifantasy_TrueHeroesRogueIdle_82
+  - first:
+      213: -2667500093659097312
+    second: Minifantasy_TrueHeroesRogueIdle_83
+  - first:
+      213: -2034078230089454435
+    second: Minifantasy_TrueHeroesRogueIdle_84
+  - first:
+      213: -7621423922645580444
+    second: Minifantasy_TrueHeroesRogueIdle_85
+  - first:
+      213: 2158593137853268864
+    second: Minifantasy_TrueHeroesRogueIdle_86
+  - first:
+      213: -6032396177184564006
+    second: Minifantasy_TrueHeroesRogueIdle_87
+  - first:
+      213: 3544386935908196009
+    second: Minifantasy_TrueHeroesRogueIdle_88
+  - first:
+      213: 3639478588031473398
+    second: Minifantasy_TrueHeroesRogueIdle_89
+  - first:
+      213: 5477401574330228400
+    second: Minifantasy_TrueHeroesRogueIdle_90
+  - first:
+      213: 158241729477591503
+    second: Minifantasy_TrueHeroesRogueIdle_91
+  - first:
+      213: 8143199959283343308
+    second: Minifantasy_TrueHeroesRogueIdle_92
+  - first:
+      213: 7566938554419479778
+    second: Minifantasy_TrueHeroesRogueIdle_93
+  - first:
+      213: -7309364623551514960
+    second: Minifantasy_TrueHeroesRogueIdle_94
+  - first:
+      213: 3201032103944395759
+    second: Minifantasy_TrueHeroesRogueIdle_95
+  - first:
+      213: -638488473363045931
+    second: Minifantasy_TrueHeroesRogueIdle_96
+  - first:
+      213: -8295470091613519185
+    second: Minifantasy_TrueHeroesRogueIdle_97
+  - first:
+      213: -4375758667257075895
+    second: Minifantasy_TrueHeroesRogueIdle_98
+  - first:
+      213: 1674847288916127621
+    second: Minifantasy_TrueHeroesRogueIdle_99
+  - first:
+      213: -5792876014859969231
+    second: Minifantasy_TrueHeroesRogueIdle_100
+  - first:
+      213: 3631784741784630393
+    second: Minifantasy_TrueHeroesRogueIdle_101
+  - first:
+      213: -1648447296430183434
+    second: Minifantasy_TrueHeroesRogueIdle_102
+  - first:
+      213: 8849591956465552029
+    second: Minifantasy_TrueHeroesRogueIdle_103
+  - first:
+      213: 2516768228052552567
+    second: Minifantasy_TrueHeroesRogueIdle_104
+  - first:
+      213: -7700036230582926991
+    second: Minifantasy_TrueHeroesRogueIdle_105
+  - first:
+      213: 2371050081025813096
+    second: Minifantasy_TrueHeroesRogueIdle_106
+  - first:
+      213: -808587156814737813
+    second: Minifantasy_TrueHeroesRogueIdle_107
+  - first:
+      213: -6060213992264113506
+    second: Minifantasy_TrueHeroesRogueIdle_108
+  - first:
+      213: 7447355163915602590
+    second: Minifantasy_TrueHeroesRogueIdle_109
+  - first:
+      213: -38966903983941590
+    second: Minifantasy_TrueHeroesRogueIdle_110
+  - first:
+      213: 3728007613802518808
+    second: Minifantasy_TrueHeroesRogueIdle_111
+  - first:
+      213: 7483771417178762794
+    second: Minifantasy_TrueHeroesRogueIdle_112
+  - first:
+      213: -4933607767327695117
+    second: Minifantasy_TrueHeroesRogueIdle_113
+  - first:
+      213: 7574488390152456669
+    second: Minifantasy_TrueHeroesRogueIdle_114
+  - first:
+      213: 7953284538109142211
+    second: Minifantasy_TrueHeroesRogueIdle_115
+  - first:
+      213: -3447055646720715583
+    second: Minifantasy_TrueHeroesRogueIdle_116
+  - first:
+      213: 5467252555386276377
+    second: Minifantasy_TrueHeroesRogueIdle_117
+  - first:
+      213: -8281593160034237953
+    second: Minifantasy_TrueHeroesRogueIdle_118
+  - first:
+      213: -8714475653469129653
+    second: Minifantasy_TrueHeroesRogueIdle_119
+  - first:
+      213: -3305890867004557847
+    second: Minifantasy_TrueHeroesRogueIdle_120
+  - first:
+      213: 1311520578001391532
+    second: Minifantasy_TrueHeroesRogueIdle_121
+  - first:
+      213: 4352778111034818052
+    second: Minifantasy_TrueHeroesRogueIdle_122
+  - first:
+      213: -7994575728545382866
+    second: Minifantasy_TrueHeroesRogueIdle_123
+  - first:
+      213: -5164662409678776812
+    second: Minifantasy_TrueHeroesRogueIdle_124
+  - first:
+      213: -3945264967222967831
+    second: Minifantasy_TrueHeroesRogueIdle_125
+  - first:
+      213: -2005114939669315644
+    second: Minifantasy_TrueHeroesRogueIdle_126
+  - first:
+      213: -4803663477335783820
+    second: Minifantasy_TrueHeroesRogueIdle_127
+  - first:
+      213: 7102239532020729887
+    second: Minifantasy_TrueHeroesRogueIdle_128
+  - first:
+      213: 5838145643634902987
+    second: Minifantasy_TrueHeroesRogueIdle_129
+  - first:
+      213: 6465575703239269570
+    second: Minifantasy_TrueHeroesRogueIdle_130
+  - first:
+      213: -7055998600339318931
+    second: Minifantasy_TrueHeroesRogueIdle_131
+  - first:
+      213: -2195039739844143055
+    second: Minifantasy_TrueHeroesRogueIdle_132
+  - first:
+      213: 612806875969506355
+    second: Minifantasy_TrueHeroesRogueIdle_133
+  - first:
+      213: 990390895810718503
+    second: Minifantasy_TrueHeroesRogueIdle_134
+  - first:
+      213: 1181914229597199757
+    second: Minifantasy_TrueHeroesRogueIdle_135
+  - first:
+      213: -7881866130549880896
+    second: Minifantasy_TrueHeroesRogueIdle_136
+  - first:
+      213: 3444583751316758252
+    second: Minifantasy_TrueHeroesRogueIdle_137
+  - first:
+      213: 2382172464826950456
+    second: Minifantasy_TrueHeroesRogueIdle_138
+  - first:
+      213: -3636803447271456740
+    second: Minifantasy_TrueHeroesRogueIdle_139
+  - first:
+      213: 6587875894194959926
+    second: Minifantasy_TrueHeroesRogueIdle_140
+  - first:
+      213: 2141459640081572864
+    second: Minifantasy_TrueHeroesRogueIdle_141
+  - first:
+      213: 2500970102139208512
+    second: Minifantasy_TrueHeroesRogueIdle_142
+  - first:
+      213: 266683499460646949
+    second: Minifantasy_TrueHeroesRogueIdle_143
+  - first:
+      213: 7007487237087581647
+    second: Minifantasy_TrueHeroesRogueIdle_144
+  - first:
+      213: 3660627856496396851
+    second: Minifantasy_TrueHeroesRogueIdle_145
+  - first:
+      213: 7395769476776322367
+    second: Minifantasy_TrueHeroesRogueIdle_146
+  - first:
+      213: 1609326399985452104
+    second: Minifantasy_TrueHeroesRogueIdle_147
+  - first:
+      213: 8647840416994442781
+    second: Minifantasy_TrueHeroesRogueIdle_148
+  - first:
+      213: 6673775972637196203
+    second: Minifantasy_TrueHeroesRogueIdle_149
+  - first:
+      213: -1745165291358954699
+    second: Minifantasy_TrueHeroesRogueIdle_150
+  - first:
+      213: 5744201997310342425
+    second: Minifantasy_TrueHeroesRogueIdle_151
+  - first:
+      213: -7089161013254694998
+    second: Minifantasy_TrueHeroesRogueIdle_152
+  - first:
+      213: 6969140101670591933
+    second: Minifantasy_TrueHeroesRogueIdle_153
+  - first:
+      213: -8062066397730626188
+    second: Minifantasy_TrueHeroesRogueIdle_154
+  - first:
+      213: 3601465706602113567
+    second: Minifantasy_TrueHeroesRogueIdle_155
+  - first:
+      213: 2393674562973462105
+    second: Minifantasy_TrueHeroesRogueIdle_156
+  - first:
+      213: 569465966979024271
+    second: Minifantasy_TrueHeroesRogueIdle_157
+  - first:
+      213: -1815246542899301069
+    second: Minifantasy_TrueHeroesRogueIdle_158
+  - first:
+      213: -5165747602429705596
+    second: Minifantasy_TrueHeroesRogueIdle_159
+  - first:
+      213: -8460359363312713024
+    second: Minifantasy_TrueHeroesRogueIdle_160
+  - first:
+      213: -4135482020077882611
+    second: Minifantasy_TrueHeroesRogueIdle_161
+  - first:
+      213: -3822981376272042221
+    second: Minifantasy_TrueHeroesRogueIdle_162
+  - first:
+      213: -7280900753875360439
+    second: Minifantasy_TrueHeroesRogueIdle_163
+  - first:
+      213: 2141069386771218297
+    second: Minifantasy_TrueHeroesRogueIdle_164
+  - first:
+      213: 4974704775387360226
+    second: Minifantasy_TrueHeroesRogueIdle_165
+  - first:
+      213: -4447742557762964967
+    second: Minifantasy_TrueHeroesRogueIdle_166
+  - first:
+      213: 6854700095339827018
+    second: Minifantasy_TrueHeroesRogueIdle_167
+  - first:
+      213: -9120465033457661536
+    second: Minifantasy_TrueHeroesRogueIdle_168
+  - first:
+      213: 5064267749222601547
+    second: Minifantasy_TrueHeroesRogueIdle_169
+  - first:
+      213: 6049622102332107093
+    second: Minifantasy_TrueHeroesRogueIdle_170
+  - first:
+      213: 8676558918740610120
+    second: Minifantasy_TrueHeroesRogueIdle_171
+  - first:
+      213: -2991028101255502075
+    second: Minifantasy_TrueHeroesRogueIdle_172
+  - first:
+      213: 6992085578379937803
+    second: Minifantasy_TrueHeroesRogueIdle_173
+  - first:
+      213: -186329042193439871
+    second: Minifantasy_TrueHeroesRogueIdle_174
+  - first:
+      213: -1014366963459704937
+    second: Minifantasy_TrueHeroesRogueIdle_175
+  - first:
+      213: -5723125360059777189
+    second: Minifantasy_TrueHeroesRogueIdle_176
+  - first:
+      213: -988389837301860480
+    second: Minifantasy_TrueHeroesRogueIdle_177
+  - first:
+      213: 5930382168581794347
+    second: Minifantasy_TrueHeroesRogueIdle_178
+  - first:
+      213: -5575219323868415929
+    second: Minifantasy_TrueHeroesRogueIdle_179
+  - first:
+      213: -1685541016344298266
+    second: Minifantasy_TrueHeroesRogueIdle_180
+  - first:
+      213: 3191161153531765329
+    second: Minifantasy_TrueHeroesRogueIdle_181
+  - first:
+      213: -2113983352813481970
+    second: Minifantasy_TrueHeroesRogueIdle_182
+  - first:
+      213: 346594981473487656
+    second: Minifantasy_TrueHeroesRogueIdle_183
+  - first:
+      213: 6459739847071561832
+    second: Minifantasy_TrueHeroesRogueIdle_184
+  - first:
+      213: -8522882345927817133
+    second: Minifantasy_TrueHeroesRogueIdle_185
+  - first:
+      213: 2380702219937572662
+    second: Minifantasy_TrueHeroesRogueIdle_186
+  - first:
+      213: -6778747258280276880
+    second: Minifantasy_TrueHeroesRogueIdle_187
+  - first:
+      213: -519498276386311098
+    second: Minifantasy_TrueHeroesRogueIdle_188
+  - first:
+      213: 4465466893293581863
+    second: Minifantasy_TrueHeroesRogueIdle_189
+  - first:
+      213: 5406756584881604585
+    second: Minifantasy_TrueHeroesRogueIdle_190
+  - first:
+      213: 6736638207859354256
+    second: Minifantasy_TrueHeroesRogueIdle_191
+  - first:
+      213: -2811015263399295660
+    second: Minifantasy_TrueHeroesRogueIdle_192
+  - first:
+      213: -475492363836668296
+    second: Minifantasy_TrueHeroesRogueIdle_193
+  - first:
+      213: -4704098782536389362
+    second: Minifantasy_TrueHeroesRogueIdle_194
+  - first:
+      213: -5871147725935772963
+    second: Minifantasy_TrueHeroesRogueIdle_195
+  - first:
+      213: -3809987192480760260
+    second: Minifantasy_TrueHeroesRogueIdle_196
+  - first:
+      213: -5355450106515770787
+    second: Minifantasy_TrueHeroesRogueIdle_197
+  - first:
+      213: -967165441561424436
+    second: Minifantasy_TrueHeroesRogueIdle_198
+  - first:
+      213: -6415009397071761661
+    second: Minifantasy_TrueHeroesRogueIdle_199
+  - first:
+      213: 8877701451935069413
+    second: Minifantasy_TrueHeroesRogueIdle_200
+  - first:
+      213: -4285663336162936264
+    second: Minifantasy_TrueHeroesRogueIdle_201
+  - first:
+      213: -6172155565267094782
+    second: Minifantasy_TrueHeroesRogueIdle_202
+  - first:
+      213: -1640177202318715632
+    second: Minifantasy_TrueHeroesRogueIdle_203
+  - first:
+      213: -6134461046422284986
+    second: Minifantasy_TrueHeroesRogueIdle_204
+  - first:
+      213: 2587687810285889142
+    second: Minifantasy_TrueHeroesRogueIdle_205
+  - first:
+      213: -4089201726300262535
+    second: Minifantasy_TrueHeroesRogueIdle_206
+  - first:
+      213: 622264934099923018
+    second: Minifantasy_TrueHeroesRogueIdle_207
+  - first:
+      213: -434290985093271747
+    second: Minifantasy_TrueHeroesRogueIdle_208
+  - first:
+      213: -8527314422378284963
+    second: Minifantasy_TrueHeroesRogueIdle_209
+  - first:
+      213: -7871354987457604223
+    second: Minifantasy_TrueHeroesRogueIdle_210
+  - first:
+      213: -5900364197121692476
+    second: Minifantasy_TrueHeroesRogueIdle_211
+  - first:
+      213: -87398651934985798
+    second: Minifantasy_TrueHeroesRogueIdle_212
+  - first:
+      213: -1286429653549346059
+    second: Minifantasy_TrueHeroesRogueIdle_213
+  - first:
+      213: 118101756349738646
+    second: Minifantasy_TrueHeroesRogueIdle_214
+  - first:
+      213: 8644371011020716094
+    second: Minifantasy_TrueHeroesRogueIdle_215
+  - first:
+      213: -5677778568762320995
+    second: Minifantasy_TrueHeroesRogueIdle_216
+  - first:
+      213: -1482343194147555274
+    second: Minifantasy_TrueHeroesRogueIdle_217
+  - first:
+      213: -188173008899363404
+    second: Minifantasy_TrueHeroesRogueIdle_218
+  - first:
+      213: 3989776151796431997
+    second: Minifantasy_TrueHeroesRogueIdle_219
+  - first:
+      213: -2902815381441800315
+    second: Minifantasy_TrueHeroesRogueIdle_220
+  - first:
+      213: 2958432408841293689
+    second: Minifantasy_TrueHeroesRogueIdle_221
+  - first:
+      213: -6298195286562059447
+    second: Minifantasy_TrueHeroesRogueIdle_222
+  - first:
+      213: 2241507821817088180
+    second: Minifantasy_TrueHeroesRogueIdle_223
+  - first:
+      213: 7674372640643780754
+    second: Minifantasy_TrueHeroesRogueIdle_224
+  - first:
+      213: 8007333942115352641
+    second: Minifantasy_TrueHeroesRogueIdle_225
+  - first:
+      213: 4088851271850981532
+    second: Minifantasy_TrueHeroesRogueIdle_226
+  - first:
+      213: 1115457132843986270
+    second: Minifantasy_TrueHeroesRogueIdle_227
+  - first:
+      213: 4328936541736434024
+    second: Minifantasy_TrueHeroesRogueIdle_228
+  - first:
+      213: -1447730939199459190
+    second: Minifantasy_TrueHeroesRogueIdle_229
+  - first:
+      213: 2303582787867363322
+    second: Minifantasy_TrueHeroesRogueIdle_230
+  - first:
+      213: 1826935359000904740
+    second: Minifantasy_TrueHeroesRogueIdle_231
+  - first:
+      213: 6771263175811377147
+    second: Minifantasy_TrueHeroesRogueIdle_232
+  - first:
+      213: -2227741964557756875
+    second: Minifantasy_TrueHeroesRogueIdle_233
+  - first:
+      213: 9079699843619544418
+    second: Minifantasy_TrueHeroesRogueIdle_234
+  - first:
+      213: -8075185854743233099
+    second: Minifantasy_TrueHeroesRogueIdle_235
+  - first:
+      213: -489044585316642504
+    second: Minifantasy_TrueHeroesRogueIdle_236
+  - first:
+      213: -3776271427671780664
+    second: Minifantasy_TrueHeroesRogueIdle_237
+  - first:
+      213: -671534121910213616
+    second: Minifantasy_TrueHeroesRogueIdle_238
+  - first:
+      213: 6940424286169867121
+    second: Minifantasy_TrueHeroesRogueIdle_239
+  - first:
+      213: 4332372438526840138
+    second: Minifantasy_TrueHeroesRogueIdle_240
+  - first:
+      213: -5053365468029429417
+    second: Minifantasy_TrueHeroesRogueIdle_241
+  - first:
+      213: -2153992247935756882
+    second: Minifantasy_TrueHeroesRogueIdle_242
+  - first:
+      213: -3838240500256854187
+    second: Minifantasy_TrueHeroesRogueIdle_243
+  - first:
+      213: 174973178651496065
+    second: Minifantasy_TrueHeroesRogueIdle_244
+  - first:
+      213: 2104108919995101280
+    second: Minifantasy_TrueHeroesRogueIdle_245
+  - first:
+      213: -7157104735022272538
+    second: Minifantasy_TrueHeroesRogueIdle_246
+  - first:
+      213: -4488168224556893655
+    second: Minifantasy_TrueHeroesRogueIdle_247
+  - first:
+      213: 2598033904196203269
+    second: Minifantasy_TrueHeroesRogueIdle_248
+  - first:
+      213: -806890302389013445
+    second: Minifantasy_TrueHeroesRogueIdle_249
+  - first:
+      213: -2865309432593691659
+    second: Minifantasy_TrueHeroesRogueIdle_250
+  - first:
+      213: 4108921249976101421
+    second: Minifantasy_TrueHeroesRogueIdle_251
+  - first:
+      213: -1157134618193454232
+    second: Minifantasy_TrueHeroesRogueIdle_252
+  - first:
+      213: 5487113285405803484
+    second: Minifantasy_TrueHeroesRogueIdle_253
+  - first:
+      213: 8388914219481187193
+    second: Minifantasy_TrueHeroesRogueIdle_254
+  - first:
+      213: -5971894057614487385
+    second: Minifantasy_TrueHeroesRogueIdle_255
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +800,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +809,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +836,43 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +881,1351 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb6c51c9096fb230800000000000000
+      internalID: 3656756913067813815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd71daeb72299610800000000000000
+      internalID: 1628370655887064534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f732c51c76a23a40800000000000000
+      internalID: 5346518759513405428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d86afaa170c9e630800000000000000
+      internalID: 3956905342054066393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ab85243098870a0800000000000000
+      internalID: -6883601383344784883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fe91c48d188f410800000000000000
+      internalID: 1511100440972488517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7124570034daf53d0800000000000000
+      internalID: -3215661105637146089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3523d865a8fdb5750800000000000000
+      internalID: 6294870689430975059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81aab0bb2c2c6cc60800000000000000
+      internalID: 7838166343102474776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b20669bd49dba80800000000000000
+      internalID: -8449433655035548807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad0dec00e1cb8730800000000000000
+      internalID: 4002505861882514848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f44afebedafdaee0800000000000000
+      internalID: -1248065687118002953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9548ff8ae3a73b00800000000000000
+      internalID: 808294885969380763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd34ad5a6fb540b00800000000000000
+      internalID: 793860549226677215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ed2c409cb6a6fb0800000000000000
+      internalID: -4653788753821508036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc537a15cf4cbe40800000000000000
+      internalID: 5673497338550901953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7282f156fac69a30800000000000000
+      internalID: 4221784859992031871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c4955a29d8816a0800000000000000
+      internalID: -6478272402993623918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948ad238f33b31e10800000000000000
+      internalID: 2167272931060459593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9236852d54094c0800000000000000
+      internalID: -4282846475900999189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506bf3372ffc16d80800000000000000
+      internalID: -8259091601398188539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31899b02c190ea10800000000000000
+      internalID: 1936708102373605694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fb860b266279680800000000000000
+      internalID: -8748481545835593968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b082de5630d404150800000000000000
+      internalID: 5854764192571926539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a315678694ea5b0800000000000000
+      internalID: -5355262193886479719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bcb71f498569c10800000000000000
+      internalID: 2059931276298406732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78d8f82684f84f90800000000000000
+      internalID: -6969051566305650561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_27
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42683ff7eeb3590b0800000000000000
+      internalID: -5722601855969425884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eac938d3000d5820800000000000000
+      internalID: 2908480950863776480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_29
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61555d66fc9d9baa0800000000000000
+      internalID: -6144640731763616490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_30
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2547bff36da3e60800000000000000
+      internalID: 7942896463111279293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb9961a7f7207e50800000000000000
+      internalID: 6804982981475277752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494f1ad456d25b8f0800000000000000
+      internalID: -525463868401388396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e254e7c124c82fe0800000000000000
+      internalID: -1213504450209754395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d049633db1526af0800000000000000
+      internalID: -404671143456718633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038b75b22617c7db0800000000000000
+      internalID: -4792831236981147600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fce63d569a5b25c0800000000000000
+      internalID: -4239195022383715085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d58ffb47e994000800000000000000
+      internalID: 20721897573997908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487102cff561cf530800000000000000
+      internalID: 3890008779648931716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5624af65f115c2450800000000000000
+      internalID: 6065311993206293093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9358bfc5e3b5cce20800000000000000
+      internalID: 3372170544399746361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_41
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30477713151643900800000000000000
+      internalID: 663262046480462851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_42
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdbe2301986e1bf0800000000000000
+      internalID: -351728748855378498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f1b50d445f57450800000000000000
+      internalID: 6086040147363307422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5057a6084b5e73430800000000000000
+      internalID: 3762728577102673157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_45
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd0f0f7a6218f4d0800000000000000
+      internalID: -3100708094837060109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_46
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4a021cd43ce0ca0800000000000000
+      internalID: -6048682510791957335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a7b1ae281f00420800000000000000
+      internalID: 2594338929941117529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2dcdc180d4943f70800000000000000
+      internalID: 9166114764857658666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52aac2f17be496b0800000000000000
+      internalID: -5290344787616292261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088b5b7f4e7f04c00800000000000000
+      internalID: 882978089745102976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2a77339018e6e60800000000000000
+      internalID: 7957439468128412372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735f8137422db1170800000000000000
+      internalID: 8150339004648715575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabd47b2d3edd4100800000000000000
+      internalID: 93975521548098476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7cfef15dbd52c50800000000000000
+      internalID: 6639954934037989334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cecc410ebafe420800000000000000
+      internalID: 2661534883709250583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688602c6b1f4802a0800000000000000
+      internalID: -6771075060554766202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a626c0d78dd6e9b0800000000000000
+      internalID: -5051106356656462170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585c7ba7dc2933810800000000000000
+      internalID: 1743898891947328901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_59
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138ae7e201474abb0800000000000000
+      internalID: -4925684479588128719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a983af719282afe90800000000000000
+      internalID: -6991231314578229094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_61
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12061708614900d00800000000000000
+      internalID: 936911546858168353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_62
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34139c39c7e6440a0800000000000000
+      internalID: -6898267247890321085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_TrueHeroesRogueIdle_63
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8de792f2690aa80800000000000000
+      internalID: -8457594970897983243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

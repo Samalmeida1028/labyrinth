@@ -29,8 +29,8 @@ public class EnemyScript : MonoBehaviour
     [Header("Update for Attack Animation and Pathing")]
     [Space(5)]
 
-    public float updateTime;
-    public float waitTime;
+    //public float updateTime;
+    //public float waitTime;
     private float tempTime;
     [Space(10)]
 
@@ -50,6 +50,7 @@ public class EnemyScript : MonoBehaviour
     [Header("References")]
     [Space(5)]
     public float counter = 0;
+    float updateCounter;
     private State state;
     private NavMeshPath path;
     private Vector3 startingPosition;
@@ -76,69 +77,42 @@ public class EnemyScript : MonoBehaviour
         agent.updateUpAxis = false;
         agent.angularSpeed = 100;
         agent.enabled = true;
-        float tempUpdateTime = updateTime;
+        //float tempUpdateTime = updateTime;
         state = State.Roaming;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         counter += Time.deltaTime;
+        updateCounter += Time.deltaTime;
         switch (state)
         {
             default:
             case State.Roaming:
-                Debug.Log("Roaming");
-                transform.rotation = Quaternion.identity;
-                if (CheckForPlayer()) state = State.Chase;
-                target = roamPos;
-                if (Vector3.Distance(transform.position, target) < 2f)
+                if (updateCounter > .2)
                 {
-                    roamPos = transform.position + UtilsClass.GetRandomDir() * Random.Range(1f, 7f);
-                    if (NavMesh.CalculatePath(transform.position, roamPos, -1, path))
-                    {
-                        agent.SetDestination(roamPos);
-                    }
-                    else
-                    {
-                        roamPos = transform.position;
-                    }
+                    updateCounter = 0;
+                    Roam();
                 }
+
                 break;
             case State.Chase:
-                Debug.Log("Chasing");
 
-                tempTime += Time.deltaTime;
-                if (tempTime > waitTime)
+                if (updateCounter < .2)
                 {
-                    if(CheckForPlayer()){
-                    PointAtPlayer();
-                    agent.SetDestination(player.position);
-                    Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
-                    foreach (Collider2D col in cast)
-                    {
-                        if (col.tag == "Player")
-                        {
-                            state = State.Attack;
-                        }
-                    }
-                }
-                 else{
-                    state = State.Transition;
-                }
+                    updateCounter = 0;
+                    Chase();
                 }
                 break;
 
             case State.Attack:
-                Debug.Log("Attacking");
-
-                Attack();
-                state = State.Transition;
+                    Attack();
+                    state = State.Transition;
                 break;
 
             case State.Transition:
-                Debug.Log("Transitioning");
-
                 roamPos = transform.position;
+                updateCounter = 0;
                 if (CheckForPlayer()) state = State.Chase;
                 else state = State.Roaming;
                 break;
@@ -161,7 +135,7 @@ public class EnemyScript : MonoBehaviour
             GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
             attack.GetComponent<EnemyAttack>().SetDamage(enemyDamage);
             Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-            Destroy(attack,projectileLife);
+            Destroy(attack, projectileLife);
             if (isRanged)
             {
                 attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
@@ -195,6 +169,49 @@ public class EnemyScript : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void Roam()
+    {
+        transform.rotation = Quaternion.identity;
+        if (CheckForPlayer()) state = State.Chase;
+        target = roamPos;
+        if (Vector3.Distance(transform.position, target) < 2f)
+        {
+            roamPos = transform.position + UtilsClass.GetRandomDir() * Random.Range(1f, 7f);
+            if (NavMesh.CalculatePath(transform.position, roamPos, -1, path))
+            {
+                agent.SetDestination(roamPos);
+            }
+            else
+            {
+                roamPos = transform.position;
+            }
+        }
+
+    }
+
+    void Chase()
+    {
+        if (CheckForPlayer())
+        {
+            PointAtPlayer();
+            agent.SetDestination(player.position);
+            Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
+            foreach (Collider2D col in cast)
+            {
+                if (col.tag == "Player")
+                {
+                    state = State.Attack;
+                }
+            }
+        }
+        else
+        {
+            state = State.Transition;
+        }
+
+
     }
 
 

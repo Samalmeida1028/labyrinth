@@ -19,28 +19,6 @@ public class ChestActiveItem : MonoBehaviour
     public float time = 0f;
     public Color interactedColor = Color.blue;
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        Random.InitState(Random.Range(0,1000));
-        chestPool = GetComponent<ChestInventory>().storage;
-        tierVal = 1.2f;
-        tier = (int)(tierVal-Random.Range(0f,4f));
-        if(tier<0){
-            tier = 0;
-        }
-        else if(tier>3){
-            tier = 3;
-
-        }
-        Random.seed=Random.Range(0,100);
-        itemInTier= Random.Range(0,4);
-        hasInteract = false;
-        canInteract = false;
-        activeItem = chestPool[tier,itemInTier];
-        if(isShop) price = activeItem.value;
-        else price = 0;
-    }*/
 
     private void OnTriggerEnter2D(Collider2D other)
     {
