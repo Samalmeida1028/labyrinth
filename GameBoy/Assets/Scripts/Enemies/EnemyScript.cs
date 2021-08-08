@@ -22,6 +22,7 @@ public class EnemyScript : MonoBehaviour
     public int enemyType;
     public GameObject attackType;
     public Transform firePoint;
+    public float enemyTier= 1.2f;
     [Space(10)]
 
 
@@ -35,9 +36,9 @@ public class EnemyScript : MonoBehaviour
 
     [Header("Enemy Stats")]
     [Space(5)]
+    private int health = 100 ;
     public float attackSpeed;
     public int force;
-    public int health;
     public float speed = 100f;
     public int targetRange;
     public int attackRange;
@@ -62,7 +63,8 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
-        health = 100;
+        gameObject.GetComponent<HittableStats>().health = (int)(health*enemyTier);
+        
         path = new NavMeshPath();
         startingPosition = transform.position;
         roamPos = startingPosition;
@@ -189,20 +191,7 @@ public class EnemyScript : MonoBehaviour
         return false;
     }
 
-    void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "AttackType"){
-            TakeDamage(other.gameObject.GetComponent<Bullet>().damage);
-        }
 
-    }
-
-    public void TakeDamage(int damage){
-        Debug.Log("oww");
-        health -= damage;
-        if(health<=0){
-            Destroy(gameObject);
-        }
-    }
 
 }
 

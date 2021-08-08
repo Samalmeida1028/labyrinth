@@ -11,5 +11,12 @@ public class Bullet : MonoBehaviour
         Debug.Log(totalDamage);
 
     }
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.tag == "Enemy"){
+            other.gameObject.GetComponent<HittableStats>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+
+    }
 
 }

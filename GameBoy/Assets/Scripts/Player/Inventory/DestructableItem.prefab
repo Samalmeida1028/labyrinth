@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 8255462458080766987}
   - component: {fileID: 4788256501039196830}
   - component: {fileID: 7338054691325702937}
+  - component: {fileID: 1243425488069950214}
   - component: {fileID: 2770667487060123945}
   m_Layer: 0
   m_Name: DestructableItem
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,19 @@ MonoBehaviour:
   health: 50
   coin: {fileID: 6044979972517161727, guid: d876bf743a79c2e45b2b529cf161266d, type: 3}
   isDestroyed: 0
+--- !u!114 &1243425488069950214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767552186978078429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f06f923d8d8b743b36b298a34efd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!70 &2770667487060123945
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

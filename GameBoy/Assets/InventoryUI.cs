@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+ using UnityEngine.Experimental.Rendering.Universal;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -21,8 +22,12 @@ public void AddItemDisplay(Item temp){
 public void RefreshDisplay(int slot){
     for(int i = 0; i<display.Length; i++){
         display[i].GetComponent<SpriteRenderer>().color = Color.white;
+        display[i].GetComponent<Light2D>().intensity = 0;
+
     }
     display[slot].GetComponent<SpriteRenderer>().color = Color.blue;
+    display[slot].GetComponent<Light2D>().intensity = 3;
+
 }
 
 }

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 0, g: 1, b: 0.9825597, a: 1}
-  m_Intensity: 3
+  m_Intensity: 0
   m_LightVolumeOpacity: 0.003
   m_ApplyToSortingLayers: 00000000e9dd8770d9e54cee
   m_LightCookieSprite: {fileID: 0}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 0, g: 1, b: 0.9825597, a: 1}
-  m_Intensity: 3
+  m_Intensity: 0
   m_LightVolumeOpacity: 0.003
   m_ApplyToSortingLayers: 00000000e9dd8770d9e54cee
   m_LightCookieSprite: {fileID: 0}
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 0, g: 1, b: 0.9825597, a: 1}
-  m_Intensity: 3
+  m_Intensity: 0
   m_LightVolumeOpacity: 0.003
   m_ApplyToSortingLayers: 00000000e9dd8770d9e54cee
   m_LightCookieSprite: {fileID: 0}
@@ -558,6 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8916593905170285751}
   bullet: {fileID: 4431474331355272264, guid: 8174b4253208cc948b840a15e52979e9, type: 3}
+  player: {fileID: 0}
   force: 20
 --- !u!114 &8916593905483766324
 MonoBehaviour:
@@ -872,7 +873,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 0, g: 1, b: 0.9825597, a: 1}
-  m_Intensity: 3
+  m_Intensity: 0
   m_LightVolumeOpacity: 0.003
   m_ApplyToSortingLayers: 00000000e9dd8770d9e54cee
   m_LightCookieSprite: {fileID: 0}

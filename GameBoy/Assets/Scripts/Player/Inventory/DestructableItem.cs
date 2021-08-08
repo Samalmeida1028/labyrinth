@@ -8,20 +8,14 @@ public class DestructableItem : MonoBehaviour
     public GameObject coin;
     public bool isDestroyed= false;
 
-    
+    void Start(){
+        GetComponent<HittableStats>().health = 50;
+    }
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "AttackType"){
-            TakeDamage(other.gameObject.GetComponent<Bullet>().damage);
-        }
-
-    }
-
-    public void TakeDamage(int damage){
-        Debug.Log("oww");
-        health -= damage;
-        if(health<=0){
-            Instantiate(coin,transform.position,Quaternion.identity);
-            Destroy(gameObject);
+        Vector3 random = new Vector3(Random.Range(1,4),Random.Range(1,4),Random.Range(1,4));
+        Vector3 position = transform.position;
+        Instantiate(coin,position+random,Quaternion.identity);
         }
     }
 }

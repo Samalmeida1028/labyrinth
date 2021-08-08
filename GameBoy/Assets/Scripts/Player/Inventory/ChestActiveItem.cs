@@ -57,7 +57,6 @@ public class ChestActiveItem : MonoBehaviour
             tier = 3;
 
         }
-        Random.seed=Random.Range(0,100);
         itemInTier= Random.Range(0,4);
         hasInteract = false;
         canInteract = false;
