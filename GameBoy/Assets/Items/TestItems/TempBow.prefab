@@ -95,10 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810b76d8ec0bd4d94f7b49aeb672e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
   itemName: 
   rarity: 0
   isMelee: 0
   attackSpeed: 0
   sprite: {fileID: 0}
-  damageTimes: 0
+  damage: 20
+  armorVal: 0
   itemType: 1

@@ -191,15 +191,14 @@ public class EnemyScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "AttackType"){
-            Debug.Log("OWWW");
             TakeDamage(other.gameObject.GetComponent<Bullet>().damage);
         }
 
     }
 
     public void TakeDamage(int damage){
+        Debug.Log("oww");
         health -= damage;
-        Debug.Log(damage);
         if(health<=0){
             Destroy(gameObject);
         }
