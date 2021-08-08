@@ -75,8 +75,8 @@ MonoBehaviour:
   attackType: {fileID: 7834550219962668319, guid: eadde3070056ef141beb4eb119694d1b, type: 3}
   firePoint: {fileID: 6828982072027182137}
   updateTime: 0.2
-  waitTime: 0.3
-  attackSpeed: 3
+  waitTime: 1
+  attackSpeed: 10
   force: 10
   health: 100
   speed: 3
