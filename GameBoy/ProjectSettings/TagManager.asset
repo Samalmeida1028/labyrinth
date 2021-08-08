@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Background Wall
   - Deleter
+  - AttackType
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX

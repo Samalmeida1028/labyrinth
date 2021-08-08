@@ -5,6 +5,18 @@ using UnityEngine.AI;
 using CodeMonkey.Utils;
 public class EnemyScript : MonoBehaviour
 {
+
+
+     private enum State
+    {
+
+        Roaming,
+        Transition,
+        Chase,
+        Attack
+
+    }
+
     [Header("Enemy Type")]
     [Space(5)]
     public int enemyType;
@@ -25,20 +37,12 @@ public class EnemyScript : MonoBehaviour
     [Space(5)]
     public float attackSpeed;
     public int force;
-    public int health = 100;
+    public int health;
     public float speed = 100f;
     public int targetRange;
     public int attackRange;
     public bool canShoot;
-    private enum State
-    {
 
-        Roaming,
-        Transition,
-        Chase,
-        Attack
-
-    }
     [Space(10)]
     [Header("References")]
     [Space(5)]
@@ -47,12 +51,9 @@ public class EnemyScript : MonoBehaviour
     private NavMeshPath path;
     private Vector3 startingPosition;
     private Vector3 roamPos;
-    public bool Attacked;
-    public Rigidbody2D enemyrb;
     [SerializeField] Vector3 target;
     Transform player;
     [SerializeField] NavMeshAgent agent;
-    public Camera cam;
 
 
 
@@ -61,6 +62,7 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
+        health = 100;
         path = new NavMeshPath();
         startingPosition = transform.position;
         roamPos = startingPosition;
@@ -131,22 +133,12 @@ public class EnemyScript : MonoBehaviour
 
 
 
-    /*void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            state = State.Transition;
-        }
-
-
-    }*/
-
     void Attack()
     {
         agent.enabled = false;
 
 
-        if (counter >= attackSpeed)
+        if (counter >= 1/attackSpeed)
         {
             counter = 0;
 
@@ -195,6 +187,22 @@ public class EnemyScript : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.tag == "AttackType"){
+            Debug.Log("OWWW");
+            TakeDamage(other.gameObject.GetComponent<Bullet>().damage);
+        }
+
+    }
+
+    public void TakeDamage(int damage){
+        health -= damage;
+        Debug.Log(damage);
+        if(health<=0){
+            Destroy(gameObject);
+        }
     }
 
 }

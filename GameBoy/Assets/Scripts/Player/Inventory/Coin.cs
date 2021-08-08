@@ -7,12 +7,14 @@ public class Coin : MonoBehaviour
     public int goldAmount;
     void Start()
     {
-        goldAmount = Random.Range(0,10);
+        goldAmount = Random.Range(0, 10);
     }
 
-    void OnTriggerEnter2D(Collider2D other){
-        if(other.tag == "Player"){
-            other.GetComponent<PlayerInventory>().gold += goldAmount;
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            other.GetComponent<PlayerInventory>().AddGold(goldAmount);
             Destroy(gameObject);
         }
     }
