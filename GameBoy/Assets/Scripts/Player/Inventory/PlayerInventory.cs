@@ -26,7 +26,7 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log("Added!");
             askToAdd = false;
             inventory[temp.itemType] = temp;
-            inventoryUI.GetComponent<InventoryUI>().updateDisplay(temp);
+            inventoryUI.GetComponent<InventoryUI>().AddItemDisplay(temp);
 
             return true;
         }
@@ -51,8 +51,9 @@ public class PlayerInventory : MonoBehaviour
 
 
     public void ChangeActiveItem(int slot){
+
         if(inventory[slot]!=null){
-            Debug.Log(slot);
+            inventoryUI.GetComponent<InventoryUI>().RefreshDisplay(slot);
             activeItem = inventory[slot];
             GetComponent<PlayerCombat>().ChangeDamage();
             if(slot == 1){
