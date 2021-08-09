@@ -106,8 +106,8 @@ public class EnemyScript : MonoBehaviour
                 break;
 
             case State.Attack:
-                    Attack();
-                    state = State.Transition;
+                Attack();
+                state = State.Transition;
                 break;
 
             case State.Transition:

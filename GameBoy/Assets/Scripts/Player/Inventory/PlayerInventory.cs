@@ -23,6 +23,9 @@ public class PlayerInventory : MonoBehaviour
         Item temp = item;
         if (inventory[temp.itemType] == null || askToAdd)
         {
+            if(temp.itemType==0 || temp.itemType ==1){
+                GetComponent<PlayerCombat>().canAttack = false;
+            }
             Debug.Log("Added!");
             askToAdd = false;
             inventory[temp.itemType] = temp;
