@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.AI;
 
-
 public class LevelGenerator : MonoBehaviour
 {
     [Header("Level Settings")]
@@ -396,7 +395,6 @@ public class LevelGenerator : MonoBehaviour
                 }
                 drawHall(startPos,endPos);
             }
- 
         }
     }
 
@@ -405,14 +403,47 @@ public class LevelGenerator : MonoBehaviour
     **/
     public void drawRoom(Vector2 min, Vector2 max)
     {
+        grid[(int)(min.x/tilePixelCount),(int)(min.y/tilePixelCount)]=1;
+        grid[(int)(min.x/tilePixelCount),(int)(max.y/tilePixelCount)]=1;
+        grid[(int)(max.x/tilePixelCount),(int)(min.y/tilePixelCount)]=1;
+        grid[(int)(max.x/tilePixelCount),(int)(max.y/tilePixelCount)]=1;
+        Instantiate(lightSourceObj,new Vector3(min.x,min.y,0),Quaternion.identity);
+        Instantiate(lightSourceObj,new Vector3(min.x,max.y,0),Quaternion.identity);
+        Instantiate(lightSourceObj,new Vector3(max.x,min.y,0),Quaternion.identity);
+        Instantiate(lightSourceObj,new Vector3(max.x,max.y,0),Quaternion.identity);
+        
+        
         for (float i =min.y; i<=max.y; i+=tilePixelCount)
         {
             
             for (float j = min.x; j<=max.x; j+=tilePixelCount)
             {   
+                
                 grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=0;
                 foregroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),null);
                 backgroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),floorTile);
+
+                if(i-min.y==0||j-min.x==0||i-min.y==tilePixelCount||j-min.x==tilePixelCount||i==max.y-tilePixelCount||j==max.x-tilePixelCount)
+                {
+                    bool spawnChance = false;
+
+                    if((i<max.y/4&&j<max.x/4) || ((i>(max.y-max.y/4)&&(j>(max.x-max.x/4)))))
+                    {
+                        spawnChance = Random.Range(0,10)<3;
+                    }else if((i<max.y/2.5&&j<max.x/2.5) || ((i>max.y-max.y/2.5&&j>max.x-max.x/2.5)))
+                    {
+                        spawnChance = Random.Range(0,10)<1;
+                    }else if((i<max.y/2&&j<max.x/2) ||(i>max.y/2&&j>max.x/2))
+                    {
+                        spawnChance = Random.Range(0,10)<0;
+                    }
+                    if(spawnChance&& grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
+                    {   
+                        grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=1;
+                        Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
+                    }
+                }
+
 
             }
         }
@@ -435,10 +466,17 @@ public class LevelGenerator : MonoBehaviour
             
             for (float j = startPos.x; j<=endPos.x; j+=tilePixelCount)
             {   
+                bool spawnChance = Random.Range(0,10)==0;
                 grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=0;
                 foregroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),null);
                 backgroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),floorTile);
 
+                if(spawnChance && grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
+                {   
+                    grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=1;
+                    Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
+                }
+                
             }
         }
         
