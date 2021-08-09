@@ -262,7 +262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fd1dabfb0e0b84096b913adbd9bcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDifficulty: 0
+  levelDifficulty: 1
+  chestCount: 0
+  enemyCount: 0
   numberOfRooms: 16
   cols: 128
   rows: 128
@@ -274,6 +276,7 @@ MonoBehaviour:
   roomCenterPrefab: {fileID: 594253614803464199, guid: 9f9076b81cb37774d870d8d11d5ea015, type: 3}
   destructableObj: {fileID: 7946784774398615641, guid: 8e02eefc630ca8b4590d2c94aac3f3e1, type: 3}
   lightSourceObj: {fileID: 2507652181171789533, guid: c376c87e5401c574b81e9dc4673c5ebc, type: 3}
+  chestPrefab: {fileID: 7692698751698659144, guid: 51838b20595c39341aed986d2d82df72, type: 3}
   tilePixelCount: 1.25
   surface: {fileID: 0}
   foregroundGrid: {fileID: 1893650812}

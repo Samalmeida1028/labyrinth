@@ -8,7 +8,11 @@ using UnityEditor;
 public class LevelGenerator : MonoBehaviour
 {
     [Header("Level Settings")]
-    public int levelDifficulty = 0;
+    public int levelDifficulty = 1;
+    public int chestCount;
+    private int numChest;
+    public int enemyCount;
+    private int numEnemy;
     public int numberOfRooms = 16;
     public int cols;
     public int rows;
@@ -22,6 +26,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject roomCenterPrefab;
     public GameObject destructableObj;
     public GameObject lightSourceObj;
+    public GameObject chestPrefab;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -54,6 +59,8 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {   
+        chestCount = levelDifficulty*3;
+        enemyCount = levelDifficulty*10;
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
         backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
@@ -80,6 +87,7 @@ public class LevelGenerator : MonoBehaviour
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
         generateSpawn();
+        populateRoom();
         
         surface = gameObject.GetComponent<NavMeshSurface2d>();
         surface.BuildNavMesh();
@@ -553,39 +561,49 @@ public class LevelGenerator : MonoBehaviour
     }
     public void populateRoom()
     {
-        bool spawnChance = false;
+        
+        GameObject chest = chestPrefab;
         foreach (RoomObj room in roomList)
         {
-            room.roomGrid[0,0]=lightSourceObj;
-            room.roomGrid[0,room.roomGrid.GetLength(0)-1]=lightSourceObj;
-            room.roomGrid[room.roomGrid.GetLength(1)-1,0]=lightSourceObj;
-            room.roomGrid[room.roomGrid.GetLength(1)-1,room.roomGrid.GetLength(0)-1]=lightSourceObj;
+            Vector2 min = room.botLeft;
+            Vector2 max = room.topRight;
+            
+            bool pickChestSpawn = false;
+            Vector3 chestSpawn = new Vector3(0,0,0);
 
-            for(int i=0; i<room.roomGrid.GetLength(1); i++)
+            bool spawnChest = true;
+
+            if(numChest<=chestCount&&spawnChest)
             {
-                for(int j=0; j<room.roomGrid.GetLength(0); j++)
+                while(!pickChestSpawn)
                 {
-                    if(i==0||j==0||i==1||j==1||i==room.roomGrid.GetLength(1)-1||i==room.roomGrid.GetLength(1)-2||j==room.roomGrid.GetLength(0)-1||j==room.roomGrid.GetLength(0)-2)
-                    {   
-                        spawnChance = false;
-
-                        if(i<room.roomDimensions.width/4||j<room.roomDimensions.height/4)
-                        {
-                            spawnChance = Random.Range(0,11)<10;
-                        }else if(i<room.roomDimensions.width/2.5||j<room.roomDimensions.height/2.5)
-                        {
-                            spawnChance = Random.Range(0,11)<6;
-                        }else if(i<room.roomDimensions.width/2||j<room.roomDimensions.height/2)
-                        {
-                            spawnChance = Random.Range(0,11)<2;
-                        }
-                        if(spawnChance)
-                        {
-                            room.roomGrid[i,j]=destructableObj;
-                        }
+                    float x = Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount);
+                    float y = Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount);
+                    if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+                    {
+                        pickChestSpawn = true;
+                        chestSpawn = new Vector3(x,y,0);
                     }
+                
+                }
+            
+                grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
+                chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = levelDifficulty*1.2f;
+                Instantiate(chest,chestSpawn,Quaternion.identity);
+                numChest++;
 
-                    Instantiate(room.roomGrid[i,j],(new Vector3(((i*tilePixelCount)+room.botLeft.y),((j*tilePixelCount)+room.botLeft.x),0)),Quaternion.identity);
+            }
+            
+            for (float i =min.y; i<=max.y; i+=tilePixelCount)
+            {
+            
+                for (float j = min.x; j<=max.x; j+=tilePixelCount)
+                {   
+                    if(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
+                    {
+
+                    }
+                 
                 }
             }
         }

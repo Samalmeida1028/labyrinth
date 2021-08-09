@@ -14,7 +14,7 @@ public class ChestActiveItem : MonoBehaviour
     public bool hasEntered;
     public int tier;
     public int itemInTier;
-    public float tierVal;
+    public float tierVal= 1.2f;
     public float confirm = 3f;
     public float time = 0f;
     public Color interactedColor = Color.blue;
@@ -27,7 +27,6 @@ public class ChestActiveItem : MonoBehaviour
             hasEntered = true;
             Random.InitState(Random.Range(0, 1000));
             chestPool = GetComponent<ChestInventory>().storage;
-            tierVal = 1.2f;
             tier = (int)(tierVal - Random.Range(0f, 4f));
             if (tier < 0)
             {
