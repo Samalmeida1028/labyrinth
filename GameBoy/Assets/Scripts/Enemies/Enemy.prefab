@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4650401089833380439}
   - component: {fileID: 4650401089833380436}
-  - component: {fileID: 8362289475870957021}
   - component: {fileID: 4650401089833380434}
+  - component: {fileID: 8362289475870957021}
   - component: {fileID: 4650401089833380437}
   - component: {fileID: 4650401089833380438}
   - component: {fileID: 4650401089833380425}
@@ -60,19 +60,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8362289475870957021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4650401089833380435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54f06f923d8d8b743b36b298a34efd38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
 --- !u!114 &4650401089833380434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,8 +76,7 @@ MonoBehaviour:
   attackType: {fileID: 6776609541719931588, guid: aa77355743c8bfc46848d47cc2103f4f, type: 3}
   firePoint: {fileID: 6828982072027182137}
   enemyTier: 1.2
-  updateTime: 0.2
-  waitTime: 1
+  enemyDamage: 0
   projectileLife: 0.5
   isRanged: 0
   attackSpeed: 10
@@ -100,7 +86,20 @@ MonoBehaviour:
   attackRange: 3
   counter: 0
   target: {x: 0, y: 0, z: 0}
-  agent: {fileID: 0}
+  agent: {fileID: 4650401089833380436}
+--- !u!114 &8362289475870957021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650401089833380435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f06f923d8d8b743b36b298a34efd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!212 &4650401089833380437
 SpriteRenderer:
   m_ObjectHideFlags: 0

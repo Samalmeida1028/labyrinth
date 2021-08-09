@@ -19,6 +19,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
+        canAttack = true;
+        isRanged = false;
         projectileSpeed = 10;
         ChangeDamage();
         ChangeArmor();
@@ -58,6 +60,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack()
     {
+        Debug.Log("AAAH");
         if (isRanged)
         {
             int force = -projectileSpeed;
