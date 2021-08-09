@@ -47,7 +47,7 @@ public class LevelGenerator : MonoBehaviour
     public int [,] grid;
 
     [Header ("Room Population Variables")]
-    public List<GameObject> roomList;
+    public List<RoomObj> roomList;
     public RoomObj spawnRoom;
     public RoomObj exitRoom;
     public RoomObj shopRoom;
@@ -57,7 +57,7 @@ public class LevelGenerator : MonoBehaviour
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
         backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
-        roomList = new List<GameObject>(); 
+        roomList = new List<RoomObj>(); 
 
         //Find the player
         player = GameObject.FindWithTag("Player");
@@ -80,7 +80,6 @@ public class LevelGenerator : MonoBehaviour
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
         generateSpawn();
-        populateRoom();
         
         surface.BuildNavMesh();
     }
@@ -281,7 +280,7 @@ public class LevelGenerator : MonoBehaviour
                 roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setGrid(roomGrid);
                 dungeon.setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
                 GameObject roomHolder = new GameObject ("Room " + dungeon.room.roomNumber);
-                roomList.Add(Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity, roomHolder.transform));
+                roomList.Add(Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity, roomHolder.transform).GetComponent<RoomObj>());
 
                 drawRoom(new Vector2(roomX_Min,roomY_Min),new Vector2(roomX_Max,roomY_Max));
 
@@ -468,15 +467,14 @@ public class LevelGenerator : MonoBehaviour
     **/
     public void setSpawnRoom()
     {
-        spawnRoom = roomList[Random.Range(0,numberOfRooms)].GetComponent<RoomObj>();
+        spawnRoom = roomList[Random.Range(0,numberOfRooms)];
 
         RoomObj farthestRoom = spawnRoom;
         RoomObj smallestRoom = roomCenterPrefab.GetComponent<RoomObj>();
         smallestRoom.setRoom(new Room(-1,100f,100f,new Vector2(0,0),new Vector2(1000000,1000000),new Vector2(-10,-10)));
 
-        foreach(GameObject obj in roomList)
+        foreach(RoomObj room in roomList)
         {   
-            RoomObj room = obj.GetComponent<RoomObj>();
             if((room.roomCenter-spawnRoom.roomCenter).magnitude>=((farthestRoom.roomCenter-spawnRoom.roomCenter).magnitude))
             {
                 farthestRoom = room;
@@ -487,12 +485,11 @@ public class LevelGenerator : MonoBehaviour
         exitRoom = farthestRoom;
         exitRoom.isEndRoom=true;
 
-        roomList.Remove(spawnRoom.transform.parent.gameObject);
-        roomList.Remove(exitRoom.transform.parent.gameObject);
+        roomList.Remove(spawnRoom);
+        roomList.Remove(exitRoom);
 
-        foreach(GameObject obj in roomList)
+        foreach(RoomObj room in roomList)
         { 
-            RoomObj room = obj.GetComponent<RoomObj>();
             if((room.roomDimensions.width*room.roomDimensions.height)<=(smallestRoom.roomDimensions.width*smallestRoom.roomDimensions.height))
             {
                 smallestRoom=room;
@@ -519,10 +516,8 @@ public class LevelGenerator : MonoBehaviour
     public void populateRoom()
     {
         bool spawnChance = false;
-        for (int k=0; k<roomList.Count; k++)
+        foreach (RoomObj room in roomList)
         {
-            RoomObj room = roomList[k].GetComponent<RoomObj>();
-            Debug.Log(room);
             room.roomGrid[0,0]=lightSourceObj;
             room.roomGrid[0,room.roomGrid.GetLength(0)-1]=lightSourceObj;
             room.roomGrid[room.roomGrid.GetLength(1)-1,0]=lightSourceObj;
@@ -535,7 +530,7 @@ public class LevelGenerator : MonoBehaviour
                     if(i==0||j==0||i==1||j==1||i==room.roomGrid.GetLength(1)-1||i==room.roomGrid.GetLength(1)-2||j==room.roomGrid.GetLength(0)-1||j==room.roomGrid.GetLength(0)-2)
                     {   
                         spawnChance = false;
-                        if((i==0&&j==0)||(i==0&&j==room.roomGrid.GetLength(0)-1)||(i==room.roomGrid.GetLength(1)-1&&j==0)||(i==room.roomGrid.GetLength(1)-1&&j==room.roomGrid.GetLength(0)-1))
+
                         if(i<room.roomDimensions.width/4||j<room.roomDimensions.height/4)
                         {
                             spawnChance = Random.Range(0,11)<10;
@@ -551,7 +546,7 @@ public class LevelGenerator : MonoBehaviour
                             room.roomGrid[i,j]=destructableObj;
                         }
                     }
-                    Debug.Log(room.roomGrid[i,j]);
+
                     Instantiate(room.roomGrid[i,j],(new Vector3(((i*tilePixelCount)+room.botLeft.y),((j*tilePixelCount)+room.botLeft.x),0)),Quaternion.identity);
                 }
             }
