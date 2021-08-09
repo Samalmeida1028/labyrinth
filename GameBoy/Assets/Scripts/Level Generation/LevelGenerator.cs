@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.AI;
+using UnityEditor;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -80,6 +81,7 @@ public class LevelGenerator : MonoBehaviour
         setSpawnRoom();
         generateSpawn();
         
+        surface = gameObject.GetComponent<NavMeshSurface2d>();
         surface.BuildNavMesh();
     }
 
@@ -443,8 +445,6 @@ public class LevelGenerator : MonoBehaviour
                         Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
                     }
                 }
-
-
             }
         }
     }
