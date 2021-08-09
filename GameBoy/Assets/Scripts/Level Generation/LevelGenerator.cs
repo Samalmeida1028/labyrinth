@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.AI;
+
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -29,6 +31,7 @@ public class LevelGenerator : MonoBehaviour
     private float roomBuffer;
 
     [Header("Tilemaps")]
+    public NavMeshSurface2d surface; 
     public Grid foregroundGrid;
     public TileBase wallTile;
     public TileBase floorTile;
@@ -76,6 +79,7 @@ public class LevelGenerator : MonoBehaviour
         setSpawnRoom();
         generateSpawn();
         
+        surface.BuildNavMesh();
     }
 
     void Update()

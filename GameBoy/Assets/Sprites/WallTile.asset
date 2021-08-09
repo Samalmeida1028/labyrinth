@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WallTile
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 3899612455587163182, guid: b3fabd6676d4ca7448422d4417059171, type: 3}
-  m_DefaultGameObject: {fileID: 0}
+  m_DefaultGameObject: {fileID: 554929236547824443, guid: 6009fbb85a01577409667953eb6c0d56, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []

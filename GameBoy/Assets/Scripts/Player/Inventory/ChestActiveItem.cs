@@ -11,6 +11,7 @@ public class ChestActiveItem : MonoBehaviour
     public bool canInteract;
     public bool hasInteract;
     public GameObject player;
+    public bool hasEntered;
     public int tier;
     public int itemInTier;
     public float tierVal;
@@ -18,10 +19,12 @@ public class ChestActiveItem : MonoBehaviour
     public float time = 0f;
     public Color interactedColor = Color.blue;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Random.InitState(Random.Range(0,1000));
+        if(!hasEntered){
+            hasEntered = true;
+             Random.InitState(Random.Range(0,1000));
         chestPool = GetComponent<ChestInventory>().storage;
         tierVal = 1.2f;
         tier = (int)(tierVal-Random.Range(0f,4f));
@@ -32,17 +35,14 @@ public class ChestActiveItem : MonoBehaviour
             tier = 3;
 
         }
-        Random.seed=Random.Range(0,100);
         itemInTier= Random.Range(0,4);
         hasInteract = false;
         canInteract = false;
         activeItem = chestPool[tier,itemInTier];
         if(isShop) price = activeItem.value;
         else price = 0;
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
+        }
         if(other.gameObject.tag == "Player")
         {
             player = GameObject.FindGameObjectWithTag("Player");
