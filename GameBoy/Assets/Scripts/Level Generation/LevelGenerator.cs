@@ -20,6 +20,8 @@ public class LevelGenerator : MonoBehaviour
     public TileBase tile;
     public GameObject wall;  
     public GameObject roomCenterPrefab;
+    public GameObject destructableObj;
+    public GameObject lightSourceObj;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -511,4 +513,44 @@ public class LevelGenerator : MonoBehaviour
     {
 
     }
+    public void populateRoom()
+    {
+        bool spawnChance = false;
+        foreach (RoomObj room in roomList)
+        {
+            room.roomGrid[0,0]=lightSourceObj;
+            room.roomGrid[0,room.roomGrid.GetLength(0)-1]=lightSourceObj;
+            room.roomGrid[room.roomGrid.GetLength(1)-1,0]=lightSourceObj;
+            room.roomGrid[room.roomGrid.GetLength(1)-1,room.roomGrid.GetLength(0)-1]=lightSourceObj;
+
+            for(int i=0; i<room.roomGrid.GetLength(1); i++)
+            {
+                for(int j=0; j<room.roomGrid.GetLength(0); j++)
+                {
+                    if(i==0||j==0||i==1||j==1||i==room.roomGrid.GetLength(1)-1||i==room.roomGrid.GetLength(1)-2||j==room.roomGrid.GetLength(0)-1||j==room.roomGrid.GetLength(0)-2)
+                    {   
+                        spawnChance = false;
+
+                        if(i<room.roomDimensions.width/4||j<room.roomDimensions.height/4)
+                        {
+                            spawnChance = Random.Range(0,11)<10;
+                        }else if(i<room.roomDimensions.width/2.5||j<room.roomDimensions.height/2.5)
+                        {
+                            spawnChance = Random.Range(0,11)<6;
+                        }else if(i<room.roomDimensions.width/2||j<room.roomDimensions.height/2)
+                        {
+                            spawnChance = Random.Range(0,11)<2;
+                        }
+                        if(spawnChance)
+                        {
+                            room.roomGrid[i,j]=destructableObj;
+                        }
+                    }
+
+                    Instantiate(room.roomGrid[i,j],(new Vector3(((i*tilePixelCount)+room.botLeft.y),((j*tilePixelCount)+room.botLeft.x),0)),Quaternion.identity);
+                }
+            }
+        }
+    }
+
 }
