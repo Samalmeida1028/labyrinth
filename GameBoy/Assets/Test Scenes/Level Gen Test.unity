@@ -391,6 +391,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &621371588
 MonoBehaviour:
+<<<<<<< HEAD
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -511,11 +512,18 @@ MonoBehaviour:
 <<<<<<< HEAD
 --- !u!43 &1224009136
 Mesh:
+=======
+>>>>>>> parent of 7e58b9b8 (Revert "Changed ui to better fit")
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621371584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cddb0a880a713b438ed265fbc1b4653, type: 3}
   m_Name: 
+<<<<<<< HEAD
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -675,6 +683,116 @@ Mesh:
     path: 
 =======
 >>>>>>> parent of 7bc46e2d (Revert "Merge branch 'main' into SamsBranch")
+=======
+  m_EditorClassIdentifier: 
+  playerPosition: {fileID: 831859280}
+--- !u!4 &831859280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4265934024302475530, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
+  m_PrefabInstance: {fileID: 8027993168817996626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &969528116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969528117}
+  - component: {fileID: 969528118}
+  - component: {fileID: 969528119}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969528117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969528116}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &969528118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969528116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fd1dabfb0e0b84096b913adbd9bcd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelDifficulty: 0
+  numberOfRooms: 16
+  cols: 128
+  rows: 128
+  minRoomSize: 8
+  maxRoomSize: 32
+  player: {fileID: 0}
+  tile: {fileID: 0}
+  wall: {fileID: 554929236547824443, guid: 6009fbb85a01577409667953eb6c0d56, type: 3}
+  roomCenterPrefab: {fileID: 594253614803464199, guid: 9f9076b81cb37774d870d8d11d5ea015, type: 3}
+  destructableObj: {fileID: 7946784774398615641, guid: 8e02eefc630ca8b4590d2c94aac3f3e1, type: 3}
+  lightSourceObj: {fileID: 2507652181171789533, guid: c376c87e5401c574b81e9dc4673c5ebc, type: 3}
+  tilePixelCount: 1.25
+  surface: {fileID: 969528119}
+  foregroundGrid: {fileID: 1893650812}
+  wallTile: {fileID: 11400000, guid: 040db259355fd6944a7e6d2ef4af0804, type: 2}
+  floorTile: {fileID: 11400000, guid: f6dc1b0611386fe4b9887c48a80f9972, type: 2}
+  foregroundTiles: {fileID: 0}
+  backgroundTiles: {fileID: 0}
+  roomList: []
+  spawnRoom: {fileID: 0}
+  exitRoom: {fileID: 0}
+  shopRoom: {fileID: 0}
+--- !u!114 &969528119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969528116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148387606d0ccd84fa326ca211f274ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_OverrideByGrid: 1
+  m_UseMeshPrefab: {fileID: 0}
+  m_CompressBounds: 0
+  m_OverrideVector: {x: 1, y: 1, z: 1}
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 1
+  m_VoxelSize: 0.1
+  m_BuildHeightMesh: 0
+  m_HideEditorLogs: 0
+  m_NavMeshData: {fileID: 0}
+>>>>>>> parent of 7e58b9b8 (Revert "Changed ui to better fit")
 --- !u!1 &1325756940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1370,7 @@ MonoBehaviour:
   m_ShapePathHash: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Mesh: {fileID: 1224009136}
   m_InstanceId: 22006
 =======
@@ -1259,6 +1378,8 @@ MonoBehaviour:
   m_InstanceId: 41048
 >>>>>>> parent of 7bc46e2d (Revert "Merge branch 'main' into SamsBranch")
 =======
+=======
+>>>>>>> parent of 7e58b9b8 (Revert "Changed ui to better fit")
   m_Mesh: {fileID: 1832051447}
   m_InstanceId: 24028
 --- !u!43 &1832051447
@@ -1425,6 +1546,9 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< HEAD
+>>>>>>> parent of 7e58b9b8 (Revert "Changed ui to better fit")
+=======
 >>>>>>> parent of 7e58b9b8 (Revert "Changed ui to better fit")
 --- !u!1 &1893650811
 GameObject:
