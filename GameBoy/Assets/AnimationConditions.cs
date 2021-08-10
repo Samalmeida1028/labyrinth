@@ -7,10 +7,9 @@ public class AnimationConditions : MonoBehaviour
     public GameObject player;
     public Animator animator;
 
-    void FixedUpdate()
-    {
+    void FixedUpdate(){ 
         Debug.Log(player.GetComponent<PlayerMovement>().lookDir);
         animator.SetInteger("lookDir", player.GetComponent<PlayerMovement>().lookDir);
-        animator.SetInteger("Angle", player.GetComponent<PlayerMovement>().angle);
-    }
+        animator.SetInteger("Angle",player.GetComponent<PlayerMovement>().angle);
+       }
 }
