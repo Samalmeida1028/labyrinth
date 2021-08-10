@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.AI;
+using Pathfinding;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class LevelGenerator : MonoBehaviour
     public int rows;
     public int minRoomSize = 8;
     public int maxRoomSize = 24;
+
+    public GameObject Astar;
 
     [Header("Object Prefabs")]
     public GameObject player;
@@ -101,6 +104,14 @@ public class LevelGenerator : MonoBehaviour
   
             }
         }
+    }
+
+    public void generateAstarPaths()
+    {
+        foreach (var p in AstarPath.active.ScanAsync()) {
+            Debug.Log(p);
+        }
+       // AstarPath.active.Scan(graphToScan);
     }
     /**
     *   The split method splits the current dungeon into 2 randomly sized dungeons 
