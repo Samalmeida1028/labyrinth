@@ -32,7 +32,6 @@ public class LevelGenerator : MonoBehaviour
     private float roomBuffer;
 
     [Header("Tilemaps")]
-    public NavMeshSurface2d surface; 
     public Grid foregroundGrid;
     public TileBase wallTile;
     public TileBase floorTile;
@@ -79,8 +78,6 @@ public class LevelGenerator : MonoBehaviour
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
         generateSpawn();
-        
-        surface.BuildNavMesh();
     }
 
     void Update()
