@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 1887952361
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6107607814864778204, guid: 561d2f09ae515784bb53821a26acbcf2, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,12 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810b76d8ec0bd4d94f7b49aeb672e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
   itemName: 
   rarity: 0
   isMelee: 0
   attackSpeed: 0
-  sprite: {fileID: 2189585171996535096}
-  damage: 0
-  armorVal: 0
+  sprite: {fileID: 0}
+  damageTimes: 0
   itemType: 0

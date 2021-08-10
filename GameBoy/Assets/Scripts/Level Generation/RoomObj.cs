@@ -10,9 +10,6 @@ public class RoomObj : MonoBehaviour
     public Vector2 topRight;
     public Vector2 roomCenter;
     public GameObject [,] roomGrid;
-    public bool isSpawnRoom = false;
-    public bool isEndRoom = false;
-    public bool isShop = false;
 
     void Start()
     {
