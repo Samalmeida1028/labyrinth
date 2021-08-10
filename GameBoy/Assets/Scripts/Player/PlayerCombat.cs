@@ -19,6 +19,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
+        canAttack = true;
+        isRanged = false;
         projectileSpeed = 10;
         ChangeDamage();
         ChangeArmor();
@@ -58,16 +60,19 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack()
     {
+        Debug.Log("AAAH");
         if (isRanged)
         {
-            int force = projectileSpeed;
+            int force = -projectileSpeed;
             GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
+            bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
             Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
             rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
         }
         else
         {
             GameObject melee = Instantiate(meleeAttack, attackPoint.position, attackPoint.rotation);
+            melee.GetComponent<Bullet>().SetDamage(totalDamage);
             Destroy(melee, .1f);
         }
     }
@@ -93,8 +98,8 @@ public class PlayerCombat : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyAttack")
         {
-            TakeDamage(other.gameObject.GetComponent<EnemyDamage>().damage);
-            Destroy(other.gameObject);
+            Debug.Log(other.gameObject.GetComponent<EnemyAttack>().damage);
+            TakeDamage(other.gameObject.GetComponent<EnemyAttack>().damage);
         }
     }
 
