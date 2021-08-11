@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 4788256501039196830, guid: 6a9d738849c79fa45801001eab2d4821, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: e55885d70b225fb4bbfa3b1ca0d46dd2, type: 3}
+      objectReference: {fileID: -708347240892218557, guid: a89aaae72c0d6b54fa438f2aef8d807b, type: 3}
     - target: {fileID: 6767552186978078429, guid: 6a9d738849c79fa45801001eab2d4821, type: 3}
       propertyPath: m_Name
       value: DestructableItem

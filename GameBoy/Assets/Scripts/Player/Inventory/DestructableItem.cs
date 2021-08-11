@@ -19,7 +19,6 @@ public class DestructableItem : MonoBehaviour
         for(int i = 0; i<=randomAmount; i++){
         Vector3 random = new Vector2(Random.Range(1,4),Random.Range(0,2));
         Instantiate(coin,transform.position+random,Quaternion.identity);
-        coin.GetComponent<Rigidbody2D>().AddForce(selfPos.up*random.x,ForceMode2D.Impulse);
         }
         Destroy(gameObject);
         }
