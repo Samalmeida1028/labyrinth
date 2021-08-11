@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<HittableStats>().TakeDamage(damage);
             Destroy(gameObject);
         }
-        else{
+        else if (other.gameObject.tag != "Coin"){
             Destroy(gameObject);
         }
 

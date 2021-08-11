@@ -648,6 +648,7 @@ public class LevelGenerator : MonoBehaviour
                 {
                     grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
                     chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = Random.Range(levelDifficulty,levelDifficulty*2f);
+                    chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().isShop=false;
                     Instantiate(chest,chestSpawn,Quaternion.identity);
                     numChest++;
                     room.chestCount--;
