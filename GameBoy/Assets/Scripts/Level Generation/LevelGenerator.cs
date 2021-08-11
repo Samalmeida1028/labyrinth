@@ -27,6 +27,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject destructableObj;
     public GameObject lightSourceObj;
     public GameObject chestPrefab;
+    public GameObject shopkeep;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -562,12 +563,9 @@ public class LevelGenerator : MonoBehaviour
         Vector2 min = shopRoom.botLeft;
         Vector2 max = shopRoom.topRight;
 
-        Debug.Log("Shop");
-        Debug.Log(chestCount);
-        Debug.Log(shopRoom.chestCount);
         while(shopRoom.chestCount>0)
         {
-            Debug.Log("Shop2");
+
             pickChestSpawn=false;
 
             while(!pickChestSpawn)
@@ -592,6 +590,20 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        pickChestSpawn=false;
+        while(!pickChestSpawn)
+        {
+            float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+            float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
+            if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+            {
+                pickChestSpawn = true;
+                chestSpawn = new Vector3(x,y,0);
+            }
+        }
+        grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
+        Instantiate(shopkeep,chestSpawn,Quaternion.identity);
     }
 
     public void generateSpawn()

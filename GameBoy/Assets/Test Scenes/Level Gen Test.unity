@@ -155,7 +155,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.41509432, g: 0.35312063, b: 0.30348876, a: 1}
+  m_Color: {r: 0.122641504, g: 0.115300566, b: 0.109336056, a: 1}
   m_Intensity: 0.1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000e9dd8770
@@ -277,6 +277,7 @@ MonoBehaviour:
   destructableObj: {fileID: 7946784774398615641, guid: 8e02eefc630ca8b4590d2c94aac3f3e1, type: 3}
   lightSourceObj: {fileID: 2507652181171789533, guid: c376c87e5401c574b81e9dc4673c5ebc, type: 3}
   chestPrefab: {fileID: 7692698751698659144, guid: 51838b20595c39341aed986d2d82df72, type: 3}
+  shopkeep: {fileID: 6601006645558920382, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
   tilePixelCount: 1.25
   foregroundGrid: {fileID: 1893650812}
   wallTile: {fileID: 11400000, guid: 040db259355fd6944a7e6d2ef4af0804, type: 2}
@@ -907,60 +908,3 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8027993168963707371, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
---- !u!1001 &8359599305097898095
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 33.401466
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.32668
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -462.1714
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3133083143217365927, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6601006645558920382, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-      propertyPath: m_Name
-      value: ShopkeeperPos
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
