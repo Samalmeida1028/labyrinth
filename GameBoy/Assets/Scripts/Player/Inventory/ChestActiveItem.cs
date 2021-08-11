@@ -41,6 +41,7 @@ public class ChestActiveItem : MonoBehaviour
             hasInteract = false;
             canInteract = false;
             activeItem = chestPool[tier, itemInTier];
+            Debug.Log(activeItem);
             if (isShop) price = activeItem.value;
             else price = 0;
 

@@ -88,6 +88,7 @@ public class LevelGenerator : MonoBehaviour
         setSpawnRoom();
         generateSpawn();
         populateRoom();
+        generateShop();
         
         surface = gameObject.GetComponent<NavMeshSurface2d>();
         surface.BuildNavMesh();
@@ -544,10 +545,51 @@ public class LevelGenerator : MonoBehaviour
 
         shopRoom = smallestRoom;
         shopRoom.isShop=true;
+        roomList.Remove(shopRoom);
+
+        for(int i = 0; i<=chestCount; i++)
+        {
+            roomList[Random.Range(0,roomList.Count)].chestCount++;
+        }
+        
     }
 
     public void generateShop()
     {
+        GameObject chest = chestPrefab;
+        bool pickChestSpawn = false;
+        Vector3 chestSpawn = new Vector3(0,0,0);
+
+        Vector2 min = shopRoom.botLeft;
+        Vector2 max = shopRoom.topRight;
+
+        shopRoom.chestCount=chestCount;
+
+        while(shopRoom.chestCount>0)
+        {
+            pickChestSpawn=false;
+
+            while(!pickChestSpawn)
+            {
+                float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+                float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
+                if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+                {
+                    pickChestSpawn = true;
+                    chestSpawn = new Vector3(x,y,0);
+                }
+            }
+
+            if(pickChestSpawn&&shopRoom.chestCount>0)
+            {
+                grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
+                chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = Random.Range(levelDifficulty+1,levelDifficulty*2f);
+                chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().isShop=true;
+                Instantiate(chest,chestSpawn,Quaternion.identity);
+                shopRoom.chestCount--;
+            }
+        }
 
     }
 
@@ -555,10 +597,12 @@ public class LevelGenerator : MonoBehaviour
     {
         player.transform.position = new Vector3(spawnRoom.roomCenter.x,spawnRoom.roomCenter.y,0);
     }
+    
     public void generateExit()
     {
 
     }
+
     public void populateRoom()
     {
         
@@ -571,42 +615,30 @@ public class LevelGenerator : MonoBehaviour
             bool pickChestSpawn = false;
             Vector3 chestSpawn = new Vector3(0,0,0);
 
-            bool spawnChest = true;
-
-            if(numChest<=chestCount&&spawnChest)
+            while(room.chestCount>0)
             {
+                pickChestSpawn=false;
+
                 while(!pickChestSpawn)
                 {
-                    float x = Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount);
-                    float y = Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount);
+                    float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+                    float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
                     if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
                     {
                         pickChestSpawn = true;
                         chestSpawn = new Vector3(x,y,0);
                     }
-                
                 }
-            
-                grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
-                chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = levelDifficulty*1.2f;
-                Instantiate(chest,chestSpawn,Quaternion.identity);
-                numChest++;
 
-            }
-            
-            for (float i =min.y; i<=max.y; i+=tilePixelCount)
-            {
-            
-                for (float j = min.x; j<=max.x; j+=tilePixelCount)
-                {   
-                    if(grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
-                    {
-
-                    }
-                 
+                if(pickChestSpawn&&room.chestCount>0)
+                {
+                    grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
+                    chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = Random.Range(levelDifficulty,levelDifficulty*2f);
+                    Instantiate(chest,chestSpawn,Quaternion.identity);
+                    numChest++;
+                    room.chestCount--;
                 }
-            }
+            }      
         }
     }
-
 }
