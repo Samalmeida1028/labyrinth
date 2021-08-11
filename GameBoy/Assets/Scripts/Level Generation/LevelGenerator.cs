@@ -29,6 +29,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject chestPrefab;
     public GameObject shopkeep;
     public GameObject enemyPrefab;
+    public GameObject levelChange;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -62,7 +63,7 @@ public class LevelGenerator : MonoBehaviour
     {   
         chestCount = levelDifficulty*3;
         Debug.Log("Chest Count " + chestCount);
-        enemyCount = levelDifficulty*10;
+        enemyCount =0;
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
         backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
@@ -70,7 +71,6 @@ public class LevelGenerator : MonoBehaviour
 
         //Find the player
         player = GameObject.FindWithTag("Player");
-        Debug.Log(player);
 
         roomBuffer = 2*tilePixelCount;
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
@@ -91,6 +91,7 @@ public class LevelGenerator : MonoBehaviour
         generateSpawn();
         populateRoom();
         generateShop();
+        generateExit();
         
     }
 
@@ -547,7 +548,7 @@ public class LevelGenerator : MonoBehaviour
         shopRoom.isShop=true;
         shopRoom.setChestCount(chestCount);
         roomList.Remove(shopRoom);
-
+        roomList.Add(exitRoom);
         for(int i = 0; i<=chestCount; i++)
         {
             roomList[Random.Range(0,roomList.Count)].chestCount++;
@@ -615,6 +616,7 @@ public class LevelGenerator : MonoBehaviour
     
     public void generateExit()
     {
+        Instantiate(levelChange,new Vector3(exitRoom.roomCenter.x,exitRoom.roomCenter.y,0), Quaternion.identity);
         
     }
 
@@ -625,7 +627,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject enemy = enemyPrefab;
         foreach (RoomObj room in roomList)
         {
-            room.enemyCount = Random.Range(levelDifficulty*3,levelDifficulty*6);
+            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*4f));
 
             Vector2 min = room.botLeft;
             Vector2 max = room.topRight;
@@ -685,6 +687,7 @@ public class LevelGenerator : MonoBehaviour
                         enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1,levelDifficulty*1.2f);
                         Instantiate(enemy,enemySpawn,Quaternion.identity);
                         room.enemyCount--;
+                        enemyCount++;
                     }
                 }
             }       
