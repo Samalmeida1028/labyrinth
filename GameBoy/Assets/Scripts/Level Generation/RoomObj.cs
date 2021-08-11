@@ -13,6 +13,7 @@ public class RoomObj : MonoBehaviour
     public bool isSpawnRoom = false;
     public bool isEndRoom = false;
     public bool isShop = false;
+    public int chestCount = 0;
 
     void Start()
     {
@@ -45,5 +46,9 @@ public class RoomObj : MonoBehaviour
             }
         }
 
+    }
+    public void setChestCount(int c)
+    {
+        this.chestCount = c;
     }
 }
