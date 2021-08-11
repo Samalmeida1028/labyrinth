@@ -17,11 +17,13 @@ public class ChestActiveItem : MonoBehaviour
     public float tierVal= 1.2f;
     public float confirm = 3f;
     public float time = 0f;
-    public Color interactedColor = Color.blue;
+    public Sprite interacted;
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.tag == "Player"){
+            gameObject.GetComponent<ChestInventory>().AddItems();
         if (!hasEntered)
         {
             hasEntered = true;
@@ -32,7 +34,7 @@ public class ChestActiveItem : MonoBehaviour
             {
                 tier = 0;
             }
-            else if (tier > 3)
+            else if (tier >= 3)
             {
                 tier = 3;
 
@@ -51,6 +53,7 @@ public class ChestActiveItem : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player");
             canInteract = true;
         }
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -64,7 +67,7 @@ public class ChestActiveItem : MonoBehaviour
     {
         if (hasInteract)
         {
-            GetComponent<SpriteRenderer>().color = interactedColor;
+            GetComponent<SpriteRenderer>().sprite = interacted;
         }
 
         if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
