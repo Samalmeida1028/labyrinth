@@ -205,7 +205,7 @@ MonoBehaviour:
   radius: 0.5
   height: 2
   repathRate: 0.5
-  canSearch: 1
+  canSearch: 0
   canMove: 1
   maxSpeed: 5
   gravity: {x: NaN, y: NaN, z: NaN}
