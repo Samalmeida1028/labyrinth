@@ -14,12 +14,16 @@ public class DestructableItem : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         Transform selfPos = gameObject.transform;
         if(other.gameObject.tag == "AttackType"){
-        int randomAmount = Random.Range(0,5);
+        int randomAmount = 0;
+        int spawnChance = Random.Range(1,14);
+        if(spawnChance<=3)
+        {   
+            randomAmount=spawnChance;
+        }   
         Vector3 position = transform.position;
         for(int i = 0; i<=randomAmount; i++){
-        Vector3 random = new Vector2(Random.Range(1,4),Random.Range(0,2));
-        Instantiate(coin,transform.position+random,Quaternion.identity);
-        coin.GetComponent<Rigidbody2D>().AddForce(selfPos.up*random.x,ForceMode2D.Impulse);
+            Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
+            Instantiate(coin,transform.position+random,Quaternion.identity);
         }
         Destroy(gameObject);
         }

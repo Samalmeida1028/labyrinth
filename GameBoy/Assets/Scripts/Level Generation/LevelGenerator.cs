@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.AI;
+using UnityEditor;
 
 public class LevelGenerator : MonoBehaviour
 {
     [Header("Level Settings")]
-    public int levelDifficulty = 0;
+    public int levelDifficulty = 1;
+    public int chestCount;
+    private int numChest;
+    public int enemyCount;
+    private int numEnemy;
     public int numberOfRooms = 16;
     public int cols;
     public int rows;
@@ -21,6 +26,8 @@ public class LevelGenerator : MonoBehaviour
     public GameObject roomCenterPrefab;
     public GameObject destructableObj;
     public GameObject lightSourceObj;
+    public GameObject chestPrefab;
+    public GameObject shopkeep;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -32,7 +39,6 @@ public class LevelGenerator : MonoBehaviour
     private float roomBuffer;
 
     [Header("Tilemaps")]
-    public NavMeshSurface2d surface; 
     public Grid foregroundGrid;
     public TileBase wallTile;
     public TileBase floorTile;
@@ -53,6 +59,9 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {   
+        chestCount = levelDifficulty*3;
+        Debug.Log("Chest Count " + chestCount);
+        enemyCount = levelDifficulty*10;
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
         backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
@@ -79,8 +88,9 @@ public class LevelGenerator : MonoBehaviour
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
         generateSpawn();
+        populateRoom();
+        generateShop();
         
-        surface.BuildNavMesh();
     }
 
     void Update()
@@ -443,8 +453,6 @@ public class LevelGenerator : MonoBehaviour
                         Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
                     }
                 }
-
-
             }
         }
     }
@@ -505,7 +513,7 @@ public class LevelGenerator : MonoBehaviour
     **/
     public void setSpawnRoom()
     {
-        spawnRoom = roomList[Random.Range(0,numberOfRooms)];
+        spawnRoom = roomList[Random.Range(0,roomList.Count)];
 
         RoomObj farthestRoom = spawnRoom;
         RoomObj smallestRoom = roomCenterPrefab.GetComponent<RoomObj>();
@@ -536,59 +544,116 @@ public class LevelGenerator : MonoBehaviour
 
         shopRoom = smallestRoom;
         shopRoom.isShop=true;
+        shopRoom.setChestCount(chestCount);
+        roomList.Remove(shopRoom);
+
+        for(int i = 0; i<=chestCount; i++)
+        {
+            roomList[Random.Range(0,roomList.Count)].chestCount++;
+        }
+        
     }
 
     public void generateShop()
     {
+        GameObject chest = chestPrefab;
+        bool pickChestSpawn = false;
+        Vector3 chestSpawn = new Vector3(0,0,0);
+        Vector3 shopkeepSpawn = new Vector3(0,0,0);
 
+        Vector2 min = shopRoom.botLeft;
+        Vector2 max = shopRoom.topRight;
+
+        while(shopRoom.chestCount>0)
+        {
+
+            pickChestSpawn=false;
+
+            while(!pickChestSpawn)
+            {
+                float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+                float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
+                if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+                {
+                    pickChestSpawn = true;
+                    chestSpawn = new Vector3(x,y,0);
+                }
+            }
+
+            if(pickChestSpawn&&shopRoom.chestCount>0)
+            {
+                grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
+                chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = Random.Range(levelDifficulty+1,levelDifficulty*2f);
+                chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().isShop=true;
+                Instantiate(chest,chestSpawn,Quaternion.identity);
+                shopRoom.chestCount--;
+            }
+        }
+
+        pickChestSpawn=false;
+        while(!pickChestSpawn)
+        {
+            float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+            float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
+            if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+            {
+                pickChestSpawn = true;
+                shopkeepSpawn = new Vector3(x,y,0);
+            }
+        }
+        grid[(int)(shopkeepSpawn.x/tilePixelCount),(int)(shopkeepSpawn.y/tilePixelCount)]=1;
+        Instantiate(shopkeep,shopkeepSpawn,Quaternion.identity);
     }
 
     public void generateSpawn()
     {
         player.transform.position = new Vector3(spawnRoom.roomCenter.x,spawnRoom.roomCenter.y,0);
     }
+    
     public void generateExit()
     {
 
     }
+
     public void populateRoom()
     {
-        bool spawnChance = false;
+        
+        GameObject chest = chestPrefab;
         foreach (RoomObj room in roomList)
         {
-            room.roomGrid[0,0]=lightSourceObj;
-            room.roomGrid[0,room.roomGrid.GetLength(0)-1]=lightSourceObj;
-            room.roomGrid[room.roomGrid.GetLength(1)-1,0]=lightSourceObj;
-            room.roomGrid[room.roomGrid.GetLength(1)-1,room.roomGrid.GetLength(0)-1]=lightSourceObj;
+            Vector2 min = room.botLeft;
+            Vector2 max = room.topRight;
+            
+            bool pickChestSpawn = false;
+            Vector3 chestSpawn = new Vector3(0,0,0);
 
-            for(int i=0; i<room.roomGrid.GetLength(1); i++)
+            while(room.chestCount>0)
             {
-                for(int j=0; j<room.roomGrid.GetLength(0); j++)
+                pickChestSpawn=false;
+
+                while(!pickChestSpawn)
                 {
-                    if(i==0||j==0||i==1||j==1||i==room.roomGrid.GetLength(1)-1||i==room.roomGrid.GetLength(1)-2||j==room.roomGrid.GetLength(0)-1||j==room.roomGrid.GetLength(0)-2)
-                    {   
-                        spawnChance = false;
-
-                        if(i<room.roomDimensions.width/4||j<room.roomDimensions.height/4)
-                        {
-                            spawnChance = Random.Range(0,11)<10;
-                        }else if(i<room.roomDimensions.width/2.5||j<room.roomDimensions.height/2.5)
-                        {
-                            spawnChance = Random.Range(0,11)<6;
-                        }else if(i<room.roomDimensions.width/2||j<room.roomDimensions.height/2)
-                        {
-                            spawnChance = Random.Range(0,11)<2;
-                        }
-                        if(spawnChance)
-                        {
-                            room.roomGrid[i,j]=destructableObj;
-                        }
+                    float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+                    float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+                    if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+                    {
+                        pickChestSpawn = true;
+                        chestSpawn = new Vector3(x,y,0);
                     }
-
-                    Instantiate(room.roomGrid[i,j],(new Vector3(((i*tilePixelCount)+room.botLeft.y),((j*tilePixelCount)+room.botLeft.x),0)),Quaternion.identity);
                 }
-            }
+
+                if(pickChestSpawn&&room.chestCount>0)
+                {
+                    grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
+                    chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = Random.Range(levelDifficulty,levelDifficulty*2f);
+                    chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().isShop=false;
+                    Instantiate(chest,chestSpawn,Quaternion.identity);
+                    numChest++;
+                    room.chestCount--;
+                }
+            }      
         }
     }
-
 }

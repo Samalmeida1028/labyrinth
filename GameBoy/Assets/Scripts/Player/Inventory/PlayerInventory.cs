@@ -55,7 +55,8 @@ public class PlayerInventory : MonoBehaviour
 
     public void ChangeActiveItem(int slot){
 
-        if(inventory[slot]!=null){
+        if(slot!=3){
+            if(inventory[slot]!=null){
             inventoryUI.GetComponent<InventoryUI>().RefreshDisplay(slot);
             activeItem = inventory[slot];
             GetComponent<PlayerCombat>().ChangeDamage();
@@ -67,7 +68,16 @@ public class PlayerInventory : MonoBehaviour
             GetComponent<PlayerCombat>().canAttack = true;
             GetComponent<PlayerCombat>().isRanged = false;
         }
-        else GetComponent<PlayerCombat>().canAttack = false;
+        else if(slot == 2){
+            if(inventory[0]!=null || inventory[1]!=null){
+            GetComponent<PlayerCombat>().canAttack = false;
+            }
+            GetComponent<PlayerCombat>().isPotion = true;
+        }
+        else{
+            GetComponent<PlayerCombat>().canAttack = false;
+        }
+        }
         }
         else{
             Debug.Log("Can't switch!");

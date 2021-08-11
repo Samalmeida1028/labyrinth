@@ -8,6 +8,7 @@ public class Coin : MonoBehaviour
     void Start()
     {
         goldAmount = Random.Range(0, 10);
+        GetComponent<Rigidbody2D>().AddForce(UnityEngine.Random.insideUnitCircle/2,ForceMode2D.Impulse);
     }
 
     void OnTriggerEnter2D(Collider2D other)

@@ -1,0 +1,3372 @@
+fileFormatVersion: 2
+guid: 4f81bb75ebd18fb46bdea115694965ae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7676733596584913574
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_0
+  - first:
+      213: -6606298120129300183
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_1
+  - first:
+      213: 1460984129572828099
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_2
+  - first:
+      213: -6463981899366285678
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_3
+  - first:
+      213: -8550887863066185562
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_4
+  - first:
+      213: -2498445566324685584
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_5
+  - first:
+      213: -2306374729328070440
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_6
+  - first:
+      213: 3017251291515090721
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_7
+  - first:
+      213: -3075749981272947968
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_8
+  - first:
+      213: 2161427577121769259
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_9
+  - first:
+      213: 5008474999620486314
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_10
+  - first:
+      213: 3807871557761381945
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_11
+  - first:
+      213: 3798030529205165614
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_12
+  - first:
+      213: 2909828535780876916
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_13
+  - first:
+      213: -77708745615112332
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_14
+  - first:
+      213: 4922460273725216256
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_15
+  - first:
+      213: -870678475567267937
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_16
+  - first:
+      213: -6481377677428585960
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_17
+  - first:
+      213: -1735863421882117649
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_18
+  - first:
+      213: -7997067947878077386
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_19
+  - first:
+      213: -748236844264468674
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_20
+  - first:
+      213: 387791252178017931
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_21
+  - first:
+      213: 6021496179812403078
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_22
+  - first:
+      213: 4079022925167019463
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_23
+  - first:
+      213: 7457534964388147270
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_24
+  - first:
+      213: 4185545663318753248
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_25
+  - first:
+      213: 2785303954313266791
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_26
+  - first:
+      213: -6260777594397685081
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_27
+  - first:
+      213: 2072220599810305110
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_28
+  - first:
+      213: 6206263922965793503
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_29
+  - first:
+      213: -5484883346361570468
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_30
+  - first:
+      213: 5807223443245488506
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_31
+  - first:
+      213: -2900157603874801635
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_32
+  - first:
+      213: 3103237903795540247
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_33
+  - first:
+      213: 7148029990366838360
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_34
+  - first:
+      213: 6775832965383525334
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_35
+  - first:
+      213: -8257588756558141250
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_36
+  - first:
+      213: -2474278674033286847
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_37
+  - first:
+      213: 2113916591428087660
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_38
+  - first:
+      213: -5280798400832941626
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_39
+  - first:
+      213: 8004761744966347067
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_40
+  - first:
+      213: -8743287020896524679
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_41
+  - first:
+      213: -1809488757490143424
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_42
+  - first:
+      213: -3780091198073577609
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_43
+  - first:
+      213: 8703079810718010667
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_44
+  - first:
+      213: 7612361687480514048
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_45
+  - first:
+      213: -8332265508052073196
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_46
+  - first:
+      213: -4782365997560939781
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_47
+  - first:
+      213: 95098005560400411
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_48
+  - first:
+      213: -5805637062577352799
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_49
+  - first:
+      213: 6229194587218831329
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_50
+  - first:
+      213: 2927592223844239178
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_51
+  - first:
+      213: -5800324142153221431
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_52
+  - first:
+      213: 1433525911116966344
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_53
+  - first:
+      213: 4346136472427485877
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_54
+  - first:
+      213: -4697200728519638803
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_55
+  - first:
+      213: 3795905951839256343
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_56
+  - first:
+      213: -3882430101832833404
+    second: Coin
+  - first:
+      213: 624206727304655697
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_58
+  - first:
+      213: 3600337084163993310
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_59
+  - first:
+      213: -5304546237234167080
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_60
+  - first:
+      213: 6792428905066257649
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_61
+  - first:
+      213: 1013601652715768421
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_62
+  - first:
+      213: 6834936230900113117
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_63
+  - first:
+      213: -4786053899969259181
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_64
+  - first:
+      213: -5454478590283853562
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_65
+  - first:
+      213: -660597694780219008
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_66
+  - first:
+      213: -6552750675598795052
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_67
+  - first:
+      213: -5056755802580018065
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_68
+  - first:
+      213: -4460150684625225071
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_69
+  - first:
+      213: -6838678823100655138
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_70
+  - first:
+      213: 2898723538618958109
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_71
+  - first:
+      213: 7975878902970524615
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_72
+  - first:
+      213: 3083765230922267941
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_73
+  - first:
+      213: 1611587132657780888
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_74
+  - first:
+      213: -1302312563475962230
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_75
+  - first:
+      213: -3020084909398575954
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_76
+  - first:
+      213: -7398732023880454982
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_77
+  - first:
+      213: 9210474452826104805
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_78
+  - first:
+      213: 9107447264208595844
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_79
+  - first:
+      213: 5779680424372154913
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_80
+  - first:
+      213: -2241165187562809304
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_81
+  - first:
+      213: 5014045746735788650
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_82
+  - first:
+      213: -1812349084142071545
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_83
+  - first:
+      213: 7085881085053466147
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_84
+  - first:
+      213: 96625071077257608
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_85
+  - first:
+      213: 7265360961123314036
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_86
+  - first:
+      213: -2649467148582357070
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_87
+  - first:
+      213: 5737357589977485947
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_88
+  - first:
+      213: 4837877146641890902
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_89
+  - first:
+      213: -8041147741427467551
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_90
+  - first:
+      213: 98469153878049719
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_91
+  - first:
+      213: 7105690746198267375
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_92
+  - first:
+      213: -3314365248838459259
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_93
+  - first:
+      213: 4642954583430900435
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_94
+  - first:
+      213: -4348105044297463382
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_95
+  - first:
+      213: 3288736402741102478
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_96
+  - first:
+      213: 5074341139353891964
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_97
+  - first:
+      213: 3742692526379274566
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_98
+  - first:
+      213: 9098586307881742136
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_99
+  - first:
+      213: 2399051223128241617
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_100
+  - first:
+      213: 6814665387353487594
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_101
+  - first:
+      213: -450933596304206538
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_102
+  - first:
+      213: 3110708400324863799
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_103
+  - first:
+      213: -9087378400721792600
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_104
+  - first:
+      213: -3729390824880539512
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_105
+  - first:
+      213: 4468039121329008094
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_106
+  - first:
+      213: -8855966844312250807
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_107
+  - first:
+      213: -178957344515345488
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_108
+  - first:
+      213: 1545481285426598620
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_109
+  - first:
+      213: -8268745663860593907
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_110
+  - first:
+      213: -3826233136942091163
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_111
+  - first:
+      213: 1353017544111431137
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_112
+  - first:
+      213: 4389306563812153628
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_113
+  - first:
+      213: -1406026624386531303
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_114
+  - first:
+      213: 6044942604967100891
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_115
+  - first:
+      213: -561000572847348784
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_116
+  - first:
+      213: 4643909733491684786
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_117
+  - first:
+      213: 9218901164181337569
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_118
+  - first:
+      213: 1891049828673947859
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_119
+  - first:
+      213: -7164524313979289453
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_120
+  - first:
+      213: -911425493787673939
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_121
+  - first:
+      213: 3735916049285513012
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_122
+  - first:
+      213: -5925738409900364584
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_123
+  - first:
+      213: -4007807248313275552
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_124
+  - first:
+      213: -7765953786141222423
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_125
+  - first:
+      213: -3966743716392519797
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_126
+  - first:
+      213: 9076796298927805926
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_127
+  - first:
+      213: 5515273255498021238
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_128
+  - first:
+      213: 6202091090024382494
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_129
+  - first:
+      213: 7987739455007814532
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_130
+  - first:
+      213: 3901960303900062675
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_131
+  - first:
+      213: -8561669693715940616
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_132
+  - first:
+      213: -4952500586668007778
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_133
+  - first:
+      213: 4627438034675672169
+    second: Minifantasy_CraftingAndProfessions2HuntingTraps_134
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa20c3788c398a60800000000000000
+      internalID: 7676733596584913574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929bc558cd6b154a0800000000000000
+      internalID: -6606298120129300183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3fba14355764410800000000000000
+      internalID: 1460984129572828099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29eb7bdc5b25b46a0800000000000000
+      internalID: -6463981899366285678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0bdb70bc4255980800000000000000
+      internalID: -8550887863066185562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f44198aefcb35dd0800000000000000
+      internalID: -2498445566324685584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d07673476c1effd0800000000000000
+      internalID: -2306374729328070440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12778d4401e6fd920800000000000000
+      internalID: 3017251291515090721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003cf4420bdb055d0800000000000000
+      internalID: -3075749981272947968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27831efdeeeefd10800000000000000
+      internalID: 2161427577121769259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4cdc2e97da18540800000000000000
+      internalID: 5008474999620486314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_11
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9363eaeb10748d430800000000000000
+      internalID: 3807871557761381945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2edc5bb4a055b430800000000000000
+      internalID: 3798030529205165614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_13
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472a388e2a9c16820800000000000000
+      internalID: 2909828535780876916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4778badbe4cebeef0800000000000000
+      internalID: -77708745615112332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_15
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0061d54e987105440800000000000000
+      internalID: 4922460273725216256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_16
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ffb3e1a8abae3f0800000000000000
+      internalID: -870678475567267937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a09b997558d06a0800000000000000
+      internalID: -6481377677428585960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe15f103a69f8e7e0800000000000000
+      internalID: -1735863421882117649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ca01a5215b40190800000000000000
+      internalID: -7997067947878077386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fc1c1fd8abd95f0800000000000000
+      internalID: -748236844264468674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e1319d616b16500800000000000000
+      internalID: 387791252178017931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687071e4fd6a09350800000000000000
+      internalID: 6021496179812403078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c541452db99b9830800000000000000
+      internalID: 4079022925167019463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_24
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6403964d98c7e7760800000000000000
+      internalID: 7457534964388147270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_25
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef7a45da9b061a30800000000000000
+      internalID: 4185545663318753248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7664554703367a620800000000000000
+      internalID: 2785303954313266791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa833ce2ff3d19a0800000000000000
+      internalID: -6260777594397685081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_28
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ca0fb08a102cc10800000000000000
+      internalID: 2072220599810305110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_29
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdac2bed724112650800000000000000
+      internalID: 6206263922965793503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_30
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ba9a918a7c1e3b0800000000000000
+      internalID: -5484883346361570468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_31
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79d7f124f6679050800000000000000
+      internalID: 5807223443245488506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_32
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18f464660290c7d0800000000000000
+      internalID: -2900157603874801635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711d24d8e6ae01b20800000000000000
+      internalID: 3103237903795540247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_34
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e77a38767e23360800000000000000
+      internalID: 7148029990366838360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_35
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3111f9e28980e50800000000000000
+      internalID: 6775832965383525334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_36
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8a718c6c6276d80800000000000000
+      internalID: -8257588756558141250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_37
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141ebeeb7a899add0800000000000000
+      internalID: -2474278674033286847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_38
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f20ec90f3265d10800000000000000
+      internalID: 2113916591428087660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_39
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1d6e355d5d6b6b0800000000000000
+      internalID: -5280798400832941626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39ea506560a61f60800000000000000
+      internalID: 8004761744966347067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_41
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976ed2647ca99a680800000000000000
+      internalID: -8743287020896524679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_42
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04facb8ef8763e6e0800000000000000
+      internalID: -1809488757490143424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f5e38451b6a8bc0800000000000000
+      internalID: -3780091198073577609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_44
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d88b91afc87c870800000000000000
+      internalID: 8703079810718010667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_45
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006b11c6f9a84a960800000000000000
+      internalID: 7612361687480514048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415015aaaa8dd5c80800000000000000
+      internalID: -8332265508052073196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_47
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa3979967f91adb0800000000000000
+      internalID: -4782365997560939781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_48
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a9648d12bd15100800000000000000
+      internalID: 95098005560400411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_49
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af0c36e9db3e6fa0800000000000000
+      internalID: -5805637062577352799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_50
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7e6ff297b827650800000000000000
+      internalID: 6229194587218831329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_51
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a478e65dd95e0a820800000000000000
+      internalID: 2927592223844239178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cab5d49ceb118fa0800000000000000
+      internalID: -5800324142153221431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_53
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9e1749838e4e310800000000000000
+      internalID: 1433525911116966344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_54
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bad8684814905c30800000000000000
+      internalID: 4346136472427485877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_55
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de081e103d030deb0800000000000000
+      internalID: -4697200728519638803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f7b240a54cda430800000000000000
+      internalID: 3795905951839256343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48668f27466de1ac0800000000000000
+      internalID: -3882430101832833404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_58
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153376716b0a9a800800000000000000
+      internalID: 624206727304655697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_59
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edea24da087f6f130800000000000000
+      internalID: 3600337084163993310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_60
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2c50b4d477266b0800000000000000
+      internalID: -5304546237234167080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcd190f91e834e50800000000000000
+      internalID: 6792428905066257649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_62
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a4fd53559011e00800000000000000
+      internalID: 1013601652715768421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_63
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde9f39f9429ade50800000000000000
+      internalID: 6834936230900113117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3599578e555849db0800000000000000
+      internalID: -4786053899969259181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_65
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60158270f9ccd44b0800000000000000
+      internalID: -5454478590283853562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_66
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081ee2785e515d6f0800000000000000
+      internalID: -660597694780219008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_67
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de9b3f7af3ff05a0800000000000000
+      internalID: -6552750675598795052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_68
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c925fa36bc2d9b0800000000000000
+      internalID: -5056755802580018065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_69
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ab23e459c5a12c0800000000000000
+      internalID: -4460150684625225071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_70
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed95910e7d12811a0800000000000000
+      internalID: -6838678823100655138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_71
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11427543b55a3820800000000000000
+      internalID: 2898723538618958109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_72
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3271faa9300be60800000000000000
+      internalID: 7975878902970524615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_73
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d72d7932cbbca20800000000000000
+      internalID: 3083765230922267941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_74
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89848a665f18d5610800000000000000
+      internalID: 1611587132657780888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_75
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86ac7b9f914dede0800000000000000
+      internalID: -1302312563475962230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_76
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4b7c7a6c08616d0800000000000000
+      internalID: -3020084909398575954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_77
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc6c48ac6c625990800000000000000
+      internalID: -7398732023880454982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_78
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3a28537bd22df70800000000000000
+      internalID: 9210474452826104805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ba1c19807246e70800000000000000
+      internalID: 9107447264208595844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_80
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1223bf159bc853050800000000000000
+      internalID: 5779680424372154913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_81
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828d858d228c5e0e0800000000000000
+      internalID: -2241165187562809304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_82
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62beb58a08759540800000000000000
+      internalID: 5014045746735788650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_83
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70115b63c1e39d6e0800000000000000
+      internalID: -1812349084142071545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_84
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3267543ed4b165260800000000000000
+      internalID: 7085881085053466147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_85
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881f4fd7df7475100800000000000000
+      internalID: 96625071077257608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_86
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479eeb4fc4fb3d460800000000000000
+      internalID: 7265360961123314036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_87
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b77ea47aa33b3bd0800000000000000
+      internalID: -2649467148582357070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_88
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72dffb84503f9f40800000000000000
+      internalID: 5737357589977485947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_89
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ef198f1a7932340800000000000000
+      internalID: 4837877146641890902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_90
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaf7c5abba186090800000000000000
+      internalID: -8041147741427467551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_91
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b30c3a7c25dd5100800000000000000
+      internalID: 98469153878049719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_92
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe59dea061c7c9260800000000000000
+      internalID: 7105690746198267375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_93
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580a51fcd520102d0800000000000000
+      internalID: -3314365248838459259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_94
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3daabad18961f6040800000000000000
+      internalID: 4642954583430900435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_95
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9c09cdf7d68a3c0800000000000000
+      internalID: -4348105044297463382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_96
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8787457550f3ad20800000000000000
+      internalID: 3288736402741102478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_97
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74f658916eab6640800000000000000
+      internalID: 5074341139353891964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_98
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641985ae507b0f330800000000000000
+      internalID: 3742692526379274566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_99
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f26876a0ca44e70800000000000000
+      internalID: 9098586307881742136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_100
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5768070642b4120800000000000000
+      internalID: 2399051223128241617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_101
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8ba5c601e829e50800000000000000
+      internalID: 6814665387353487594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_102
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6359ff68846fdb9f0800000000000000
+      internalID: -450933596304206538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_103
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737ef211fc47b2b20800000000000000
+      internalID: 3110708400324863799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_104
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a19b65dd7523e180800000000000000
+      internalID: -9087378400721792600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_105
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888f46ecdca8e3cc0800000000000000
+      internalID: -3729390824880539512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_106
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd2d5d78e9a10e30800000000000000
+      internalID: 4468039121329008094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_107
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94691267319491580800000000000000
+      internalID: -8855966844312250807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_108
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3373a4e37348df0800000000000000
+      internalID: -178957344515345488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_109
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2ddd07a07a27510800000000000000
+      internalID: 1545481285426598620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_110
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ba98fd0a38f3d80800000000000000
+      internalID: -8268745663860593907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_111
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564fcb4fb3d76eac0800000000000000
+      internalID: -3826233136942091163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_112
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed12aba942e6c210800000000000000
+      internalID: 1353017544111431137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_113
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1950527013f9ec30800000000000000
+      internalID: 4389306563812153628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_114
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91003bc0c3acc7ce0800000000000000
+      internalID: -1406026624386531303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_115
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd140b09543f3e350800000000000000
+      internalID: 6044942604967100891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_116
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3a4a883fce638f0800000000000000
+      internalID: -561000572847348784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_117
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b530c15c4b727040800000000000000
+      internalID: 4643909733491684786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_118
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5b676d3cd10ff70800000000000000
+      internalID: 9218901164181337569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_119
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d88caacccb5e3a10800000000000000
+      internalID: 1891049828673947859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_120
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3908d90881f729c90800000000000000
+      internalID: -7164524313979289453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_121
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daafc83a757f953f0800000000000000
+      internalID: -911425493787673939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_122
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ff7546ad3a8d330800000000000000
+      internalID: 3735916049285513012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_123
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc2006ef4c83cda0800000000000000
+      internalID: -5925738409900364584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_124
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b2d0cba886168c0800000000000000
+      internalID: -4007807248313275552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_125
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9d3f26d2ac93490800000000000000
+      internalID: -7765953786141222423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_126
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87396d4b9b43f8c0800000000000000
+      internalID: -3966743716392519797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_127
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e51c28942247fd70800000000000000
+      internalID: 9076796298927805926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_128
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679fb210ecf2a8c40800000000000000
+      internalID: 5515273255498021238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_129
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10c48d7cf0421650800000000000000
+      internalID: 6202091090024382494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_130
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483fc16a6b62ade60800000000000000
+      internalID: 7987739455007814532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_131
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d373a1193c862630800000000000000
+      internalID: 3901960303900062675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_132
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa75d576c6de2980800000000000000
+      internalID: -8561669693715940616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_133
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e5db5b4fe254bb0800000000000000
+      internalID: -4952500586668007778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CraftingAndProfessions2HuntingTraps_134
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964a9f41066f73040800000000000000
+      internalID: 4627438034675672169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

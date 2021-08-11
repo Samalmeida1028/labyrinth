@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int health;
+    public int currentHealth;
+    public int maxHealth;
     public int baseDamage;
     public int damageMult;
     public float armor;
     public int moveSpeed;
 
     void Start(){
-        health = 100;
+        maxHealth = 100;
+        currentHealth = maxHealth;
         baseDamage = 5;
         armor = 1;
 
