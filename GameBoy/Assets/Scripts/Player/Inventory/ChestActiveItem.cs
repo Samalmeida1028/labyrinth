@@ -75,6 +75,7 @@ public class ChestActiveItem : MonoBehaviour
 
             if (player.GetComponent<PlayerInventory>().AddItem(activeItem))
             {
+                player.GetComponent<PlayerInventory>().gold -= price;
                 hasInteract = true;
             }
             else if (!hasInteract)

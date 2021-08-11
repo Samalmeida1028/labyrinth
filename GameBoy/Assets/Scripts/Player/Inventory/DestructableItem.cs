@@ -17,7 +17,7 @@ public class DestructableItem : MonoBehaviour
         int randomAmount = Random.Range(0,5);
         Vector3 position = transform.position;
         for(int i = 0; i<=randomAmount; i++){
-        Vector3 random = new Vector2(Random.Range(1,4),Random.Range(0,2));
+        Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
         Instantiate(coin,transform.position+random,Quaternion.identity);
         }
         Destroy(gameObject);
