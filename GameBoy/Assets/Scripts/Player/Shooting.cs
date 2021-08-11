@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
 public Transform firePoint;//this is an empty gameobject used for transform
 public GameObject bullet;
+public GameObject player;
 
 public float force =20f;
 
@@ -13,16 +14,15 @@ public float force =20f;
     void Update()
     {
         if(Input.GetButtonDown("Fire1")){ 
-            Debug.Log(Time.deltaTime);  //Fire1 is M1
+             //Fire1 is M1
             Shoot();
-
-
         }
         
     }
 
     void Shoot(){
         GameObject bulletSpawn = Instantiate(bullet, firePoint.position, firePoint.rotation);//makes the prefab at the fire point, uses the rotation of the player to determine the shooting angle
+        bulletSpawn.GetComponent<Bullet>().SetDamage(player.GetComponent<PlayerCombat>().totalDamage);
         Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();//temp rigidbody for force
         rb.AddForce(firePoint.up*force, ForceMode2D.Impulse);//applies a force to bullet prefab so it go go (impulse means it is instantaneous not continuous)
 
