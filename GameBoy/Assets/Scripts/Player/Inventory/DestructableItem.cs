@@ -15,13 +15,13 @@ public class DestructableItem : MonoBehaviour
         Transform selfPos = gameObject.transform;
         if(other.gameObject.tag == "AttackType"){
         int randomAmount = 0;
-        int spawnChance = Random.Range(1,14);
+        int spawnChance = Random.Range(1,10);
         if(spawnChance<=3)
         {   
             randomAmount=spawnChance;
         }   
         Vector3 position = transform.position;
-        for(int i = 0; i<=randomAmount; i++){
+        for(int i = 0; i<randomAmount; i++){
             Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
             Instantiate(coin,transform.position+random,Quaternion.identity);
         }
