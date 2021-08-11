@@ -28,6 +28,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject lightSourceObj;
     public GameObject chestPrefab;
     public GameObject shopkeep;
+    public GameObject enemyPrefab;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -614,20 +615,26 @@ public class LevelGenerator : MonoBehaviour
     
     public void generateExit()
     {
-
+        
     }
 
     public void populateRoom()
     {
         
         GameObject chest = chestPrefab;
+        GameObject enemy = enemyPrefab;
         foreach (RoomObj room in roomList)
         {
+            room.enemyCount = Random.Range(levelDifficulty*3,levelDifficulty*6);
+
             Vector2 min = room.botLeft;
             Vector2 max = room.topRight;
             
             bool pickChestSpawn = false;
+            bool pickEnemySpawn = false;
+
             Vector3 chestSpawn = new Vector3(0,0,0);
+            Vector3 enemySpawn = new Vector3(0,0,0);
 
             while(room.chestCount>0)
             {
@@ -637,6 +644,7 @@ public class LevelGenerator : MonoBehaviour
                 {
                     float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
                     float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
                     if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
                     {
                         pickChestSpawn = true;
@@ -653,7 +661,33 @@ public class LevelGenerator : MonoBehaviour
                     numChest++;
                     room.chestCount--;
                 }
-            }      
+            }   
+
+            while(room.enemyCount>0)
+            {
+                pickEnemySpawn = false;
+
+                while(!pickEnemySpawn)
+                {
+                    float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+                    float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
+                    if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+                    {
+                        pickEnemySpawn = true;
+                        enemySpawn = new Vector3(x,y,0);
+                    }
+
+                    if(pickEnemySpawn&&room.enemyCount>0)
+                    {
+                        grid[(int)(enemySpawn.x/tilePixelCount),(int)(enemySpawn.y/tilePixelCount)]=1;
+                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().isRanged = Random.Range(0,10)<=3;
+                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1,levelDifficulty*1.2f);
+                        Instantiate(enemy,enemySpawn,Quaternion.identity);
+                        room.enemyCount--;
+                    }
+                }
+            }       
         }
     }
 }
