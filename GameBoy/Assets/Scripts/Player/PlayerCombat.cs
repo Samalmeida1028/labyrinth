@@ -15,6 +15,7 @@ public class PlayerCombat : MonoBehaviour
     public int projectileSpeed;
     public bool isRanged;
     public bool canAttack;
+    public bool isPotion;
     int itemDamage;
 
     void Start()
@@ -33,6 +34,9 @@ public class PlayerCombat : MonoBehaviour
         {
             if (canAttack) Attack();
         }
+        else if (isPotion){
+            Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount);
+        }
     }
     public void ChangeDamage()
     {
@@ -49,7 +53,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (GetComponent<PlayerInventory>().inventory[3] != null)
         {
-            totalArmor = GetComponent<PlayerStats>().armor + GetComponent<PlayerInventory>().inventory[3].armorVal;
+            totalArmor = GetComponent<PlayerStats>().armor * GetComponent<PlayerInventory>().inventory[3].armorVal;
 
         }
         else
@@ -80,8 +84,8 @@ public class PlayerCombat : MonoBehaviour
     void TakeDamage(int damage)
     {
         totalArmor = GetComponent<PlayerStats>().armor;
-        GetComponent<PlayerStats>().health -= (int)(damage / totalArmor);
-        if (GetComponent<PlayerStats>().health <= 0)
+        GetComponent<PlayerStats>().currentHealth -= (int)(damage / totalArmor);
+        if (GetComponent<PlayerStats>().currentHealth <= 0)
         {
             Debug.Log("Ouch");
             Die();
@@ -100,6 +104,22 @@ public class PlayerCombat : MonoBehaviour
         {
             Debug.Log(other.gameObject.GetComponent<EnemyAttack>().damage);
             TakeDamage(other.gameObject.GetComponent<EnemyAttack>().damage);
+        }
+    }
+    public bool Heal(int health){
+        int difference = 0;
+        if(gameObject.GetComponent<PlayerStats>().currentHealth + health < gameObject.GetComponent<PlayerStats>().maxHealth){
+            gameObject.GetComponent<PlayerStats>().currentHealth += health;
+            return true;
+        }
+        else if(gameObject.GetComponent<PlayerStats>().maxHealth - gameObject.GetComponent<PlayerStats>().currentHealth != 0){
+            difference = gameObject.GetComponent<PlayerStats>().maxHealth - gameObject.GetComponent<PlayerStats>().currentHealth;
+             gameObject.GetComponent<PlayerStats>().currentHealth += difference;
+             return true;
+        }
+        else{
+            Debug.Log("AKLJHLKDFJH");
+            return false;
         }
     }
 
