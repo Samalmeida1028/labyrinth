@@ -62,7 +62,7 @@ public class LevelGenerator : MonoBehaviour
     {   
         chestCount = levelDifficulty*3;
         Debug.Log("Chest Count " + chestCount);
-        enemyCount = levelDifficulty*10;
+        enemyCount =0;
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
         backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
@@ -70,7 +70,6 @@ public class LevelGenerator : MonoBehaviour
 
         //Find the player
         player = GameObject.FindWithTag("Player");
-        Debug.Log(player);
 
         roomBuffer = 2*tilePixelCount;
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
@@ -625,7 +624,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject enemy = enemyPrefab;
         foreach (RoomObj room in roomList)
         {
-            room.enemyCount = Random.Range(levelDifficulty*3,levelDifficulty*6);
+            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*4f));
 
             Vector2 min = room.botLeft;
             Vector2 max = room.topRight;
@@ -685,6 +684,7 @@ public class LevelGenerator : MonoBehaviour
                         enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1,levelDifficulty*1.2f);
                         Instantiate(enemy,enemySpawn,Quaternion.identity);
                         room.enemyCount--;
+                        enemyCount++;
                     }
                 }
             }       
