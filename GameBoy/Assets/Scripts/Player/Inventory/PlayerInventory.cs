@@ -8,7 +8,7 @@ public class PlayerInventory : MonoBehaviour
     public Item activeItem;
     public GameObject inventoryUI;
     public bool askToAdd = false;
-    public int gold;
+    public int gold = 0;
 
     void Update(){
         if(Input.GetKeyDown("1")) {

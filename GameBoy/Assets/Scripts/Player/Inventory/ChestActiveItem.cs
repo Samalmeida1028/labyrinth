@@ -14,7 +14,7 @@ public class ChestActiveItem : MonoBehaviour
     public bool hasEntered;
     public int tier;
     public int itemInTier;
-    public float tierVal;
+    public float tierVal= 1.2f;
     public float confirm = 3f;
     public float time = 0f;
     public Sprite interacted;
@@ -29,7 +29,6 @@ public class ChestActiveItem : MonoBehaviour
             hasEntered = true;
             Random.InitState(Random.Range(0, 1000));
             chestPool = GetComponent<ChestInventory>().storage;
-            tierVal = 1.2f;
             tier = (int)(tierVal - Random.Range(0f, 4f));
             if (tier < 0)
             {
@@ -44,6 +43,7 @@ public class ChestActiveItem : MonoBehaviour
             hasInteract = false;
             canInteract = false;
             activeItem = chestPool[tier, itemInTier];
+            Debug.Log(activeItem);
             if (isShop) price = activeItem.value;
             else price = 0;
 
@@ -75,6 +75,7 @@ public class ChestActiveItem : MonoBehaviour
 
             if (player.GetComponent<PlayerInventory>().AddItem(activeItem))
             {
+                player.GetComponent<PlayerInventory>().gold -= price;
                 hasInteract = true;
             }
             else if (!hasInteract)

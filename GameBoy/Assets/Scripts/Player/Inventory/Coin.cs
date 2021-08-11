@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int goldAmount;
+    public int goldAmount = 1;
     void Start()
     {
-        goldAmount = Random.Range(0, 10);
+        GetComponent<Rigidbody2D>().AddForce(UnityEngine.Random.insideUnitCircle/2,ForceMode2D.Impulse);
+        goldAmount = 1;
     }
 
     void OnTriggerEnter2D(Collider2D other)

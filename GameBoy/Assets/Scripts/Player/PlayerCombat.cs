@@ -35,7 +35,10 @@ public class PlayerCombat : MonoBehaviour
             if (canAttack) Attack();
         }
         else if (isPotion){
-            Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount);
+           if(Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount))
+           {
+               Destroy(GetComponent<PlayerInventory>().activeItem);
+           }
         }
     }
     public void ChangeDamage()
