@@ -7,7 +7,9 @@ public class DestructableItem : MonoBehaviour
     public int health;
     public GameObject coin;
     public bool isDestroyed= false;
-    public ParticleSystem particle;
+    public ParticleSystem particleGold;
+    public ParticleSystem particleNoGold;
+
 
     void Start(){
         GetComponent<HittableStats>().health = 50;
@@ -26,7 +28,8 @@ public class DestructableItem : MonoBehaviour
             Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
             Instantiate(coin,transform.position+random,Quaternion.identity);
         }
-        if(randomAmount>0) Instantiate(particle,transform.position,Quaternion.identity);
+        if(randomAmount>0) Instantiate(particleGold,transform.position,Quaternion.identity);
+        else Instantiate(particleNoGold,transform.position,Quaternion.identity);
         Destroy(gameObject);
         }
     }

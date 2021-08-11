@@ -100,6 +100,8 @@ MonoBehaviour:
   health: 50
   coin: {fileID: 6044979972517161727, guid: d876bf743a79c2e45b2b529cf161266d, type: 3}
   isDestroyed: 0
+  particleGold: {fileID: 3641680453045485311, guid: 1476efe4a1c0bb94a80daaf07e2094dc, type: 3}
+  particleNoGold: {fileID: 4465480220818960768, guid: 3910665701cbd784bbc8fc7613c73d04, type: 3}
 --- !u!114 &1243425488069950214
 MonoBehaviour:
   m_ObjectHideFlags: 0
