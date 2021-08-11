@@ -29,6 +29,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject chestPrefab;
     public GameObject shopkeep;
     public GameObject enemyPrefab;
+    public GameObject levelChange;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -90,6 +91,7 @@ public class LevelGenerator : MonoBehaviour
         generateSpawn();
         populateRoom();
         generateShop();
+        generateExit();
         
     }
 
@@ -546,7 +548,7 @@ public class LevelGenerator : MonoBehaviour
         shopRoom.isShop=true;
         shopRoom.setChestCount(chestCount);
         roomList.Remove(shopRoom);
-
+        roomList.Add(exitRoom);
         for(int i = 0; i<=chestCount; i++)
         {
             roomList[Random.Range(0,roomList.Count)].chestCount++;
@@ -614,6 +616,7 @@ public class LevelGenerator : MonoBehaviour
     
     public void generateExit()
     {
+        Instantiate(levelChange,new Vector3(exitRoom.roomCenter.x,exitRoom.roomCenter.y,0), Quaternion.identity);
         
     }
 
