@@ -47,4 +47,8 @@ public class RoomObj : MonoBehaviour
         }
 
     }
+    public void setChestCount(int c)
+    {
+        this.chestCount = c;
+    }
 }

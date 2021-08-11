@@ -59,6 +59,7 @@ public class LevelGenerator : MonoBehaviour
     void Start()
     {   
         chestCount = levelDifficulty*3;
+        Debug.Log("Chest Count " + chestCount);
         enemyCount = levelDifficulty*10;
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
@@ -542,6 +543,7 @@ public class LevelGenerator : MonoBehaviour
 
         shopRoom = smallestRoom;
         shopRoom.isShop=true;
+        shopRoom.setChestCount(chestCount);
         roomList.Remove(shopRoom);
 
         for(int i = 0; i<=chestCount; i++)
@@ -560,10 +562,12 @@ public class LevelGenerator : MonoBehaviour
         Vector2 min = shopRoom.botLeft;
         Vector2 max = shopRoom.topRight;
 
-        shopRoom.chestCount=chestCount;
-
+        Debug.Log("Shop");
+        Debug.Log(chestCount);
+        Debug.Log(shopRoom.chestCount);
         while(shopRoom.chestCount>0)
         {
+            Debug.Log("Shop2");
             pickChestSpawn=false;
 
             while(!pickChestSpawn)
