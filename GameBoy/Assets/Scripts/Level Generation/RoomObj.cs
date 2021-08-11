@@ -14,6 +14,7 @@ public class RoomObj : MonoBehaviour
     public bool isEndRoom = false;
     public bool isShop = false;
     public int chestCount = 0;
+    public int enemyCount = 0;
 
     void Start()
     {
