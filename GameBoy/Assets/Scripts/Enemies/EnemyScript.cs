@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using CodeMonkey.Utils;
+using Pathfinding;
+
 public class EnemyScript : MonoBehaviour
 {
 
@@ -55,28 +57,27 @@ public class EnemyScript : MonoBehaviour
     private NavMeshPath path;
     private Vector3 startingPosition;
     private Vector3 roamPos;
+    public float radius = 200;
+
     [SerializeField] Vector3 target;
     Transform player;
-    [SerializeField] NavMeshAgent agent;
+
+    IAstarAI ai;
 
 
+    Vector3 PickRandomPoint() {
+        var point = Random.insideUnitSphere * radius;
 
-
-
+        point.y = 0;
+        point += transform.position;
+        return point;
+    }
 
     void Start()
     {
         gameObject.GetComponent<HittableStats>().health = (int)(health * enemyTier);
+        ai = GetComponent<IAstarAI>();
 
-        path = new NavMeshPath();
-        startingPosition = transform.position;
-        roamPos = startingPosition;
-        agent = GetComponent<NavMeshAgent>();
-        agent.GetComponent<CircleCollider2D>().radius = targetRange;
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        agent.angularSpeed = 100;
-        agent.enabled = true;
         //float tempUpdateTime = updateTime;
         state = State.Roaming;
     }
@@ -85,6 +86,7 @@ public class EnemyScript : MonoBehaviour
     {
         counter += Time.deltaTime;
         updateCounter += Time.deltaTime;
+        Debug.Log(state);
         switch (state)
         {
             default:
@@ -125,8 +127,6 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        agent.enabled = false;
-
 
         if (counter >= 1 / attackSpeed)
         {
@@ -141,10 +141,6 @@ public class EnemyScript : MonoBehaviour
                 attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
             }
         }
-        agent.enabled = true;
-
-
-
 
     }
 
@@ -173,22 +169,16 @@ public class EnemyScript : MonoBehaviour
 
     void Roam()
     {
-        transform.rotation = Quaternion.identity;
+        ai.canSearch = true;
+        
         if (CheckForPlayer()) state = State.Chase;
-        target = roamPos;
-        if (Vector3.Distance(transform.position, target) < 2f)
         {
-            roamPos = transform.position + UtilsClass.GetRandomDir() * Random.Range(1f, 7f);
-            if (NavMesh.CalculatePath(transform.position, roamPos, -1, path))
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
             {
-                agent.SetDestination(roamPos);
-            }
-            else
-            {
-                roamPos = transform.position;
+                ai.destination = PickRandomPoint();
+                ai.SearchPath();
             }
         }
-
     }
 
     void Chase()
@@ -196,7 +186,6 @@ public class EnemyScript : MonoBehaviour
         if (CheckForPlayer())
         {
             PointAtPlayer();
-            agent.SetDestination(player.position);
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
             {

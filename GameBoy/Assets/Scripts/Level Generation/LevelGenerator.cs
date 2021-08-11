@@ -65,8 +65,10 @@ public class LevelGenerator : MonoBehaviour
         Debug.Log(player);
 
         roomBuffer = 2*tilePixelCount;
+
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
         startDungeon = new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0);
+
         //Calculate the maximum length of the Binary Dungeon Tree based off the number of rooms
         maxTreeLength = Mathf.Log(numberOfRooms,2);
 
@@ -81,6 +83,8 @@ public class LevelGenerator : MonoBehaviour
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
         generateSpawn();
+
+        generateAstarPaths();
     }
 
     void Update()
@@ -108,11 +112,9 @@ public class LevelGenerator : MonoBehaviour
 
     public void generateAstarPaths()
     {
-        foreach (var p in AstarPath.active.ScanAsync()) {
-            Debug.Log(p);
-        }
-       // AstarPath.active.Scan(graphToScan);
+        AstarPath.active.Scan();
     }
+
     /**
     *   The split method splits the current dungeon into 2 randomly sized dungeons 
     *   within the input bounds
