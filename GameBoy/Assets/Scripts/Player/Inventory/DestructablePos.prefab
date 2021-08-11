@@ -46,6 +46,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestructableItem
       objectReference: {fileID: 0}
+    - target: {fileID: 7338054691325702937, guid: 6a9d738849c79fa45801001eab2d4821, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3641680453045485311, guid: 1476efe4a1c0bb94a80daaf07e2094dc, type: 3}
     - target: {fileID: 8255462458080766987, guid: 6a9d738849c79fa45801001eab2d4821, type: 3}
       propertyPath: m_RootOrder
       value: 0
