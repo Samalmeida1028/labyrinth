@@ -513,7 +513,7 @@ public class LevelGenerator : MonoBehaviour
     **/
     public void setSpawnRoom()
     {
-        spawnRoom = roomList[Random.Range(0,numberOfRooms)];
+        spawnRoom = roomList[Random.Range(0,roomList.Count)];
 
         RoomObj farthestRoom = spawnRoom;
         RoomObj smallestRoom = roomCenterPrefab.GetComponent<RoomObj>();
@@ -559,6 +559,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject chest = chestPrefab;
         bool pickChestSpawn = false;
         Vector3 chestSpawn = new Vector3(0,0,0);
+        Vector3 shopkeepSpawn = new Vector3(0,0,0);
 
         Vector2 min = shopRoom.botLeft;
         Vector2 max = shopRoom.topRight;
@@ -599,11 +600,11 @@ public class LevelGenerator : MonoBehaviour
             if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
             {
                 pickChestSpawn = true;
-                chestSpawn = new Vector3(x,y,0);
+                shopkeepSpawn = new Vector3(x,y,0);
             }
         }
-        grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
-        Instantiate(shopkeep,chestSpawn,Quaternion.identity);
+        grid[(int)(shopkeepSpawn.x/tilePixelCount),(int)(shopkeepSpawn.y/tilePixelCount)]=1;
+        Instantiate(shopkeep,shopkeepSpawn,Quaternion.identity);
     }
 
     public void generateSpawn()
