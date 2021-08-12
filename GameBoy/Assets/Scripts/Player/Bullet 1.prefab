@@ -135,9 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f78b07f7ebc7464db61b28b822f5da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hit: {fileID: 3234010003048597390, guid: 1b9bf6046c0158345a75f20c35da75c8, type: 3}
-  time: 0
-  lifeTime: 0.5
+  damage: 0
+  onShot: {fileID: 2540107549158218881, guid: 7f085461ff38ecb4da4fbba435890b46, type: 3}
 --- !u!1 &8132606024513210930
 GameObject:
   m_ObjectHideFlags: 0

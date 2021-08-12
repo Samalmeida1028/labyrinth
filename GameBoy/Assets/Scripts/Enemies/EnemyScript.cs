@@ -196,7 +196,6 @@ public class EnemyScript : MonoBehaviour
         if (CheckForPlayer())
         {
             PointAtPlayer();
-            agent.SetDestination(player.position);
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
             {
