@@ -6,7 +6,7 @@ public class DestructableItem : MonoBehaviour
 {
     public int health;
     public GameObject coin;
-    public bool isDestroyed= false;
+    public GameObject ammo;
     public ParticleSystem particleGold;
     public ParticleSystem particleNoGold;
 
@@ -27,6 +27,7 @@ public class DestructableItem : MonoBehaviour
         for(int i = 0; i<randomAmount; i++){
             Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
             Instantiate(coin,transform.position+random,Quaternion.identity);
+            Instantiate(ammo,transform.position+random,Quaternion.identity);
         }
         if(randomAmount>0) Instantiate(particleGold,transform.position,Quaternion.identity);
         else Instantiate(particleNoGold,transform.position,Quaternion.identity);
