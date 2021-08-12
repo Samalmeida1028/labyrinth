@@ -96,5 +96,6 @@ public class PlayerInventory : MonoBehaviour
             inventory[i] = null;
             inventoryUI.GetComponent<InventoryUI>().clear(i);
         }
+        activeItem=null;
     }
 }

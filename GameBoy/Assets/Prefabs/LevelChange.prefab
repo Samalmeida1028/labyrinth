@@ -42,14 +42,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7711098792456152296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54af95419951f6a4ea3cd3a635c09ac4, type: 3}
+  m_Script: {fileID: 11500000, guid: 34a4ea8edd064f04cb6c118a276e87ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
   hasInteract: 0
   player: {fileID: 0}
   loadScreen: {fileID: 2572100522012379936, guid: 8f310c1585043c44ab52d13215c299cd, type: 3}
-  text: {fileID: 0}
+  text: 
 --- !u!212 &-6119699839915069233
 SpriteRenderer:
   m_ObjectHideFlags: 0
