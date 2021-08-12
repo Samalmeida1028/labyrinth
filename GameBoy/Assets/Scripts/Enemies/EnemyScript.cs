@@ -168,7 +168,6 @@ public class EnemyScript : MonoBehaviour
     }
 
 
-
     bool CheckForPlayer()
     {
         Collider2D[] array = Physics2D.OverlapCircleAll(transform.position, targetRange);
