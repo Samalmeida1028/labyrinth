@@ -61,6 +61,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {   
+        
         chestCount = levelDifficulty*3;
         Debug.Log("Chest Count " + chestCount);
         enemyCount =0;

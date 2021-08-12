@@ -48,6 +48,8 @@ MonoBehaviour:
   canInteract: 0
   hasInteract: 0
   player: {fileID: 0}
+  loadScreen: {fileID: 2572100522012379936, guid: 8f310c1585043c44ab52d13215c299cd, type: 3}
+  text: {fileID: 0}
 --- !u!212 &-6119699839915069233
 SpriteRenderer:
   m_ObjectHideFlags: 0
