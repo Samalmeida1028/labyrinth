@@ -65,6 +65,24 @@ public class EnemyScript : MonoBehaviour
     float lastPathed = 0;
     bool chasing = false;
 
+    //Public stuff
+
+    //Other Variables
+    private SpriteRenderer enemySprite;
+    private Animator animator;
+
+    private bool isFacingBack;
+    private bool isFacingRight;
+
+    private bool isAttacking = false;
+
+    private string currentState;
+
+
+    //Animation States
+    const string MONSTER_WALK_F = "Walk_Forward";
+    const string MONSTER_WALK_B = "Walk_Backward";
+
     Vector3 PickRandomPoint() {
         var point = Random.insideUnitSphere * radius;
 
@@ -75,12 +93,60 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
+        GetComponent<Rigidbody2D>().freezeRotation = true;
+
+        //Get Animator
+        animator = GetComponent<Animator>();
+        enemySprite = GetComponent<SpriteRenderer>();
+
         //Get Enemy Stats
         gameObject.GetComponent<HittableStats>().health = (int)(health * enemyTier);
         ai = GetComponent<IAstarAI>();
 
         //float tempUpdateTime = updateTime;
         state = State.Roaming;
+    }
+
+    void Update()
+    {
+
+        
+        //Change Sprite Direction/Animation
+        if (isFacingRight)
+        {
+            enemySprite.flipX = false;
+
+        }
+        else
+        {
+            enemySprite.flipX = true;
+        }
+
+        if (!isAttacking)
+        {
+            if (isFacingRight) //If the monster is facing right
+            {
+               if (isFacingBack)
+               {
+                   ChangeAnimationState(MONSTER_WALK_B);
+               }
+               else
+               {
+                    ChangeAnimationState(MONSTER_WALK_F);
+               }
+            }
+            else //If the monster is facing left
+            {
+                if (isFacingBack)
+               {
+                   ChangeAnimationState(MONSTER_WALK_B);
+               }
+               else
+               {
+                    ChangeAnimationState(MONSTER_WALK_F);
+               }
+            }
+        }
     }
 
     void FixedUpdate()
@@ -153,14 +219,16 @@ public class EnemyScript : MonoBehaviour
     {
         Vector2 lookDir = player.position - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
-        GetComponent<Rigidbody2D>().rotation = angle;
+        FacingDirection(angle);
+        //GetComponent<Rigidbody2D>().rotation = angle;
     }
     
     void PointAtTargPos()
     {
         Vector2 lookDir = targPosition - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
-        GetComponent<Rigidbody2D>().rotation = angle;
+        FacingDirection(angle);
+        //GetComponent<Rigidbody2D>().rotation = angle;
     }
 
 
@@ -241,6 +309,37 @@ public class EnemyScript : MonoBehaviour
 
     }
 
+    // Changes the Monsters's current animation state
+    void ChangeAnimationState(string newState)
+    {
+        //Stop the same animation from fucking itself
+        if (currentState == newState) return;
+
+        //pLAY THAT MF
+        animator.Play(newState);
+    }
+
+    void FacingDirection(float angle)
+    {
+
+        if (angle <= -90)
+        {
+            isFacingBack = false;
+        }
+        else if (angle > -90 )
+        {
+            isFacingBack = true;
+        }
+
+        if (angle <= 0 && angle != -225 && angle != -270)
+        {
+            isFacingRight = true;
+        }
+        else
+        {
+            isFacingRight = false;
+        }
+    }
 
 
 }
