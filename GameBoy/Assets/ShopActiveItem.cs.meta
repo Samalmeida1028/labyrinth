@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 76564dc7b6aeacc458080067099d6c03
+<<<<<<< HEAD:GameBoy/Assets/ShopActiveItem.cs.meta
+guid: 38f38f7e96992f349a8a3248373207e5
+=======
+guid: bd2cfff5dfa8c4244aa00fea9675adb2
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Core/Misc/NodeLink2.cs.meta
 MonoImporter:
-  externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using CodeMonkey.Utils;
+using Pathfinding;
+
 public class EnemyScript : MonoBehaviour
 {
 
@@ -54,29 +56,32 @@ public class EnemyScript : MonoBehaviour
     private State state;
     private NavMeshPath path;
     private Vector3 startingPosition;
+    private Vector3 targPosition;
     private Vector3 roamPos;
+    public float radius = 10;
+
     [SerializeField] Vector3 target;
     Transform player;
-    [SerializeField] NavMeshAgent agent;
 
+    IAstarAI ai;
 
+    float lastPathed = 0;
+    bool chasing = false;
 
+    Vector3 PickRandomPoint() {
+        var point = Random.insideUnitSphere * radius;
 
-
+        //point.y = 0;
+        point += transform.position;
+        return point;
+    }
 
     void Start()
     {
+        //Get Enemy Stats
         gameObject.GetComponent<HittableStats>().health = (int)(health * enemyTier);
+        ai = GetComponent<IAstarAI>();
 
-        path = new NavMeshPath();
-        startingPosition = transform.position;
-        roamPos = startingPosition;
-        agent = GetComponent<NavMeshAgent>();
-        agent.GetComponent<CircleCollider2D>().radius = targetRange;
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        agent.angularSpeed = 100;
-        agent.enabled = true;
         //float tempUpdateTime = updateTime;
         state = State.Roaming;
     }
@@ -85,6 +90,7 @@ public class EnemyScript : MonoBehaviour
     {
         counter += Time.deltaTime;
         updateCounter += Time.deltaTime;
+        Debug.Log(state);
         switch (state)
         {
             default:
@@ -112,6 +118,7 @@ public class EnemyScript : MonoBehaviour
 
             case State.Transition:
                 roamPos = transform.position;
+                chasing = false;
                 updateCounter = 0;
                 if (CheckForPlayer()) state = State.Chase;
                 else state = State.Roaming;
@@ -125,9 +132,10 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        agent.enabled = false;
-
-
+        ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+        ai.SetPath(null);
+    
+        PointAtPlayer();
         if (counter >= 1 / attackSpeed)
         {
             counter = 0;
@@ -141,10 +149,6 @@ public class EnemyScript : MonoBehaviour
                 attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
             }
         }
-        agent.enabled = true;
-
-
-
 
     }
 
@@ -155,6 +159,14 @@ public class EnemyScript : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
         GetComponent<Rigidbody2D>().rotation = angle;
     }
+    
+    void PointAtTargPos()
+    {
+        Vector2 lookDir = targPosition - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
+        GetComponent<Rigidbody2D>().rotation = angle;
+    }
+
 
 
     bool CheckForPlayer()
@@ -173,28 +185,49 @@ public class EnemyScript : MonoBehaviour
 
     void Roam()
     {
-        transform.rotation = Quaternion.identity;
         if (CheckForPlayer()) state = State.Chase;
-        target = roamPos;
-        if (Vector3.Distance(transform.position, target) < 2f)
         {
-            roamPos = transform.position + UtilsClass.GetRandomDir() * Random.Range(1f, 7f);
-            if (NavMesh.CalculatePath(transform.position, roamPos, -1, path))
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
             {
-                agent.SetDestination(roamPos);
+                lastPathed = Time.fixedTime;
+                ai.destination = PickRandomPoint();
+
+                targPosition = ai.destination;
+                PointAtTargPos();
+
+                ai.SearchPath();
             }
-            else
+            else if ((Time.fixedTime - lastPathed) > 4)
             {
-                roamPos = transform.position;
+                lastPathed = Time.fixedTime;
+                ai.destination = PickRandomPoint();
+
+                targPosition = ai.destination;
+                PointAtTargPos();
+
+                ai.SearchPath();
             }
         }
-
     }
 
     void Chase()
     {
         if (CheckForPlayer())
         {
+            if (chasing == false)
+            {
+                ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+                ai.SetPath(null);
+                chasing = true;
+            }
+
+
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            {
+                lastPathed = Time.fixedTime;
+                ai.destination = player.transform.position;
+                ai.SearchPath();
+            }   
             PointAtPlayer();
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)

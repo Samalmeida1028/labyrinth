@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.AI;
 using UnityEditor;
+using Pathfinding;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -53,6 +54,7 @@ public class LevelGenerator : MonoBehaviour
     //The grid that holds all the impassable objects
     public int [,] grid;
 
+
     [Header ("Room Population Variables")]
     public List<RoomObj> roomList;
     public RoomObj spawnRoom;
@@ -94,11 +96,23 @@ public class LevelGenerator : MonoBehaviour
         generateShop();
         generateExit();
         
+
+        //Generate Pathfinding Graph
+        StartCoroutine(GenerateGraph());
     }
 
     void Update()
     {
 
+    }
+
+    /**
+    *   Scans pathfinding graph
+    **/
+    public IEnumerator GenerateGraph()
+    {
+        yield return WaitFor.Frames(5);
+        AstarPath.active.Scan();
     }
 
     /**

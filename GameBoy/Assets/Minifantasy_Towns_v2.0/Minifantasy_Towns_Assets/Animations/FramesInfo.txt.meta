@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 565d7563b2d7357419468334b7907641
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/FramesInfo.txt.meta
+guid: 9c26b9cf515fe9e409d40d1e5bff3f68
+=======
+guid: 3ac1373cf6a4265d5aa9dfad713bbbb7
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/package.json.meta
 TextScriptImporter:
   externalObjects: {}
   userData: 

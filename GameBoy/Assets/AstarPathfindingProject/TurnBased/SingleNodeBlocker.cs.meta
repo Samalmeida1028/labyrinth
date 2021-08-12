@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:GameBoy/Assets/LevelChangeScript.cs.meta
+guid: 4b94fc313792b634fbdc7123af456c68
+=======
+guid: b45e20632f1604fc6bb73e0e79cd7368
+timeCreated: 1451482127
+licenseType: Free
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/TurnBased/SingleNodeBlocker.cs.meta
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
