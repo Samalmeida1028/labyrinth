@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c8333a3009e2f4c962b8e559bc198e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counter: 0.099999994
+  counter: 0
   rb: {fileID: 2623393137211046302}
   cam: {fileID: 1439970833671186548}
   lookDir: 3
@@ -266,7 +266,7 @@ MonoBehaviour:
   attackPoint: {fileID: 3803791377501997988}
   totalDamage: 5
   totalArmor: 1
-  attackSpeed: 0
+  attackSpeed: 2
   projectileSpeed: 10
   isRanged: 0
   canAttack: 1

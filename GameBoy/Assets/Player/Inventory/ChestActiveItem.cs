@@ -73,7 +73,7 @@ public class ChestActiveItem : MonoBehaviour
         if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
         {
 
-            if (player.GetComponent<PlayerInventory>().AddItem(activeItem))
+            if (player.GetComponent<PlayerInventory>().AddItem(activeItem))//checks to see if player added item to take money
             {
                 player.GetComponent<PlayerInventory>().gold -= price;
                 hasInteract = true;
@@ -84,7 +84,7 @@ public class ChestActiveItem : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > confirm)
                 {
-                    player.GetComponent<PlayerInventory>().askToAdd = true;
+                    player.GetComponent<PlayerInventory>().askToAdd = true;//sets askToAdd true so the AddItem metlhod will trigger
                     player.GetComponent<PlayerInventory>().AddItem(activeItem);
                     hasInteract = true;
                 }

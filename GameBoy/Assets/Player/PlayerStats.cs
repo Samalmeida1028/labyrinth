@@ -54,10 +54,10 @@ public class PlayerStats : MonoBehaviour
     
     }
 
-    public IEnumerator Die()
+    public IEnumerator Die()//move this to PlayerCombat
     {
         currentHealth=maxHealth;
-        gameObject.GetComponent<PlayerInventory>().clear();
+        gameObject.GetComponent<PlayerInventory>().Clear();
         Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
 
         bool continueNext = false;

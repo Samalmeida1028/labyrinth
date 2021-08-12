@@ -6,13 +6,14 @@ public class PlayerCombat : MonoBehaviour
 {
 
 
-    public GameObject rangedAttack;
-    public GameObject meleeAttack;
-    public Transform attackPoint;
-    public int totalDamage;
-    public float totalArmor;
-    public int attackSpeed;
-    public int projectileSpeed;
+    public GameObject rangedAttack;//ranged prefab
+    public GameObject meleeAttack;//melee prefab
+    public Transform attackPoint;//where prefabs spawn from
+    public int totalDamage;//damage of base damage and item
+    public float totalArmor;//base armor and item armor
+    public float updateCounter;//used for attackSpeed
+    public int attackSpeed;//amount of times you can attack per second or per .7 seconds for melee
+    public int projectileSpeed;//speed of arrows
     public bool isRanged;
     public bool canAttack;
     public bool isPotion;
@@ -22,7 +23,6 @@ public class PlayerCombat : MonoBehaviour
     {
         canAttack = true;
         isRanged = false;
-        projectileSpeed = 10;
         ChangeDamage();
         ChangeArmor();
 
@@ -34,17 +34,24 @@ public class PlayerCombat : MonoBehaviour
         {
             if (canAttack) Attack();
         }
-        else if (isPotion){
-           if(Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount))
-           {
-               Destroy(GetComponent<PlayerInventory>().activeItem);
-           }
+        else if (isPotion)
+        {
+            if (Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount))//method for potion
+            {
+                Destroy(GetComponent<PlayerInventory>().activeItem);
+            }
         }
     }
-    public void ChangeDamage()
+
+    void FixedUpdate(){
+        updateCounter += Time.fixedDeltaTime;
+        Debug.Log(updateCounter);
+    }
+    public void ChangeDamage()//sets damage to the player base damage, item damage, and multiplier
     {
         int baseDamage = GetComponent<PlayerStats>().baseDamage;
         int damageMult = GetComponent<PlayerStats>().damageMult;
+
         if (GetComponent<PlayerInventory>().activeItem != null)
         {
             itemDamage = GetComponent<PlayerInventory>().activeItem.damage;
@@ -67,34 +74,34 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack()
     {
-        Debug.Log("AAAH");
-        if (isRanged)
+        if (isRanged)//this is for the bow stuff, change the bullet 1 prefab if u wanna change that pprojectile
         {
-            if(GetComponent<PlayerInventory>().ammo >0){
-            int force = -projectileSpeed;
-            GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
-            bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
-            Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
-            rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
-            GetComponent<PlayerInventory>().ammo -=1;
+            if (GetComponent<PlayerInventory>().ammo > 0 && updateCounter>(1/attackSpeed))
+            {
+                updateCounter = 0;
+                int force = -projectileSpeed;
+                GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
+                bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
+                Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
+                rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
+                GetComponent<PlayerInventory>().ammo -= 1;
+            }
         }
-        else{}
-        }
-        else
+        else if (updateCounter>(.7/attackSpeed))//this is for melee
         {
+            updateCounter = 0;
             GameObject melee = Instantiate(meleeAttack, attackPoint.position, attackPoint.rotation);
             melee.GetComponent<Bullet>().SetDamage(totalDamage);
-            Destroy(melee, .1f);
+            Destroy(melee, .07f);
         }
     }
 
-    void TakeDamage(int damage)
+    void TakeDamage(int damage)//normal takeDamage, if it is less than 0 then die;
     {
         totalArmor = GetComponent<PlayerStats>().armor;
         GetComponent<PlayerStats>().currentHealth -= (int)(damage / totalArmor);
         if (GetComponent<PlayerStats>().currentHealth <= 0)
         {
-            Debug.Log("Ouch");
             Die();
         }
     }
@@ -113,19 +120,22 @@ public class PlayerCombat : MonoBehaviour
             TakeDamage(other.gameObject.GetComponent<EnemyAttack>().damage);
         }
     }
-    public bool Heal(int health){
+    public bool Heal(int health)//heals player either to the potion amount or to max
+    {
         int difference = 0;
-        if(gameObject.GetComponent<PlayerStats>().currentHealth + health < gameObject.GetComponent<PlayerStats>().maxHealth){
+        if (gameObject.GetComponent<PlayerStats>().currentHealth + health < gameObject.GetComponent<PlayerStats>().maxHealth)
+        {
             gameObject.GetComponent<PlayerStats>().currentHealth += health;
             return true;
         }
-        else if(gameObject.GetComponent<PlayerStats>().maxHealth - gameObject.GetComponent<PlayerStats>().currentHealth != 0){
+        else if (gameObject.GetComponent<PlayerStats>().maxHealth - gameObject.GetComponent<PlayerStats>().currentHealth != 0)
+        {
             difference = gameObject.GetComponent<PlayerStats>().maxHealth - gameObject.GetComponent<PlayerStats>().currentHealth;
-             gameObject.GetComponent<PlayerStats>().currentHealth += difference;
-             return true;
+            gameObject.GetComponent<PlayerStats>().currentHealth += difference;
+            return true;
         }
-        else{
-            Debug.Log("AKLJHLKDFJH");
+        else
+        {
             return false;
         }
     }

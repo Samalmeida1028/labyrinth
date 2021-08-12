@@ -6,14 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {   
  
     Vector2 movement;
-    public float counter;
-    private float rotationSpeed = 1000;
+    private float rotationSpeed = 1000;//how fast player moves to mouse
     public Rigidbody2D rb;
     public Camera cam;
     Vector2 mousePos;
 
-    public int lookDir;
-    public int angle;
+    public int lookDir;//used for animator to set the player look direction
+    public int angle;//full angle
 
 
 
@@ -26,11 +25,8 @@ public class PlayerMovement : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);//conversion to find the location of an object in terms of the camera view, must use this in order for PointToMouse(); to work
     }
 
-    private void FixedUpdate(){
-        counter += Time.fixedDeltaTime;
+    void FixedUpdate(){
         rb.velocity = movement*GetComponent<PlayerStats>().moveSpeed;
-
- 
     }
     
         void checkInput(){
@@ -47,10 +43,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
         angle = (int)Mathf.Round((Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f)/45)*45;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
         rb.rotation = angle;    //sets look angle to previously found angle
-        if(counter>.1){
-            counter = 0;
         FacingDirection(angle);
-        }
 
 
     }
