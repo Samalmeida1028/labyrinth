@@ -87,7 +87,6 @@ public class EnemyScript : MonoBehaviour
     {
         counter += Time.deltaTime;
         updateCounter += Time.deltaTime;
-        Debug.Log(state);
         switch (state)
         {
             default:
