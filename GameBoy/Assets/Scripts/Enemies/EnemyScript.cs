@@ -78,6 +78,7 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
+        //Get Enemy Stats
         gameObject.GetComponent<HittableStats>().health = (int)(health * enemyTier);
         ai = GetComponent<IAstarAI>();
 
@@ -131,12 +132,9 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        //if (chasing == true)
-        //{
-            ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
-            ai.SetPath(null);
-        //}
-        
+        ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+        ai.SetPath(null);
+    
         PointAtPlayer();
         if (counter >= 1 / attackSpeed)
         {
