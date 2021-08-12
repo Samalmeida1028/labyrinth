@@ -28,17 +28,9 @@ public class LevelChangeScript : MonoBehaviour
         }
     }
 
-    private void onTriggerExit2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-            canInteract = false;
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (canInteract) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (canInteract&& Input.GetKey("e")) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
