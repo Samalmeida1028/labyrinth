@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-
-
     public GameObject rangedAttack;
     public GameObject meleeAttack;
     public Transform attackPoint;
