@@ -28,7 +28,14 @@ public class LevelChangeScript : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
             canInteract = true;
-            Debug.Log("Player went to next level");
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            canInteract = false;
         }
     }
 

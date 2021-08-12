@@ -31,7 +31,6 @@ public class PlayerStats : MonoBehaviour
     public void UpgradeArmor()
     {
 
-
     }
 
     public void UpgradeHealth()
@@ -42,12 +41,10 @@ public class PlayerStats : MonoBehaviour
     public void UpgradeSpeed()
     {
 
-
     }
 
     public void UpgradeDamage()
     {
-
 
     }
     public void UpgradeDamageMult() { 

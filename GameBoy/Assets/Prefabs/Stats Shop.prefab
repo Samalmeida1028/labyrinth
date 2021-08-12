@@ -134,3 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0c360f505830e468d2a048dd503439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
+  hasInteract: 0
+  interactedColor: {r: 0, g: 0, b: 1, a: 1}
+  player: {fileID: 0}
+  Panel: {fileID: 4961826301135202762, guid: fd2128d5de1326d44882277cad27c9e6, type: 3}
