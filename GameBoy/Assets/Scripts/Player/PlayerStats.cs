@@ -12,12 +12,23 @@ public class PlayerStats : MonoBehaviour
     public float armor;
     public int moveSpeed;
     public GameObject deathScreen;
+    public bool die;
 
     void Start(){
-        if(FindGameObjectWithTag("Player")!=null)
-        {
+        GameObject[] playerList = GameObject.FindGameObjectsWithTag("Player");
 
-        }else{
+        bool nullPlayer = false;
+        for(int i =0; i<playerList.Length;i++)
+        {
+            if(playerList[i]!=null && playerList[i]!=this.gameObject){
+                nullPlayer=true;
+                Instantiate(playerList[i],this.gameObject.transform.position,Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+        }
+        if(nullPlayer==false)
+        {
+            
             maxHealth = 100;
             currentHealth = maxHealth;
             baseDamage = 5;
