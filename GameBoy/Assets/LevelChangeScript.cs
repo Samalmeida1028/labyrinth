@@ -10,12 +10,14 @@ public class LevelChangeScript : MonoBehaviour
     public bool hasInteract;
     public GameObject player;
     public GameObject loadScreen;
+    public string text ="";
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        text = "Floor " + (SceneManager.GetActiveScene().buildIndex);
         canInteract = false;
         hasInteract = false;
 
@@ -35,8 +37,7 @@ public class LevelChangeScript : MonoBehaviour
     {
         if (canInteract&& Input.GetKey("e"))
         {
-            //Debug.Log((SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex)).name);
-            //loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Floor " + (SceneManager.GetActiveScene().buildIndex +1);
+            loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = text;
             Instantiate(loadScreen, player.transform.position, Quaternion.identity);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
