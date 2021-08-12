@@ -414,10 +414,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1370557679667925954, guid: e665880eca5ce54408ed37eee0a75d7b, type: 3}
-      propertyPath: meleeAttack
-      value: 
-      objectReference: {fileID: 1234394773410715809, guid: 510fca1cf087f7349b8b4c1fc32d7fe3, type: 3}
     - target: {fileID: 2073306170465246380, guid: e665880eca5ce54408ed37eee0a75d7b, type: 3}
       propertyPath: cam
       value: 
