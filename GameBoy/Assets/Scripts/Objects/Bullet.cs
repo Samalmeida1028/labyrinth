@@ -5,11 +5,15 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int damage;
+    public ParticleSystem onShot;
     public void SetDamage(int totalDamage){
         damage = totalDamage;
 
         Debug.Log(totalDamage);
 
+    }
+    void Start(){
+        Instantiate(onShot,transform.position,Quaternion.identity);
     }
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "Enemy"){

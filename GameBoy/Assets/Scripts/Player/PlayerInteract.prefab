@@ -173,7 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90957c0543f306b418db3b7317de28b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  currentHealth: 0
+  maxHealth: 0
   baseDamage: 5
   damageMult: 1
   armor: 1
@@ -208,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangedAttack: {fileID: 4431474331355272264, guid: 8174b4253208cc948b840a15e52979e9, type: 3}
-  meleeAttack: {fileID: 4431474331355272264, guid: 8174b4253208cc948b840a15e52979e9, type: 3}
+  meleeAttack: {fileID: 1234394773410715809, guid: 510fca1cf087f7349b8b4c1fc32d7fe3, type: 3}
   attackPoint: {fileID: 841695628614969363}
   totalDamage: 0
   totalArmor: 0
@@ -216,6 +217,7 @@ MonoBehaviour:
   projectileSpeed: 0
   isRanged: 0
   canAttack: 0
+  isPotion: 0
 --- !u!50 &1949970149280979497
 Rigidbody2D:
   serializedVersion: 4

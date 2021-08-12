@@ -9,6 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public GameObject inventoryUI;
     public bool askToAdd = false;
     public int gold = 0;
+    public int ammo = 10;
 
     void Update(){
         if(Input.GetKeyDown("1")) {
@@ -50,6 +51,9 @@ public class PlayerInventory : MonoBehaviour
     public void AddGold(int goldAmount)
     {
         gold += goldAmount;
+    }
+    public void AddAmmo(int ammoAmount){
+        ammo += ammoAmount;
     }
 
 
