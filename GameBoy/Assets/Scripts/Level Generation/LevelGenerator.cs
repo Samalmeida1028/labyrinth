@@ -96,9 +96,9 @@ public class LevelGenerator : MonoBehaviour
         generateShop();
         generateExit();
         
-
         //Generate Pathfinding Graph
         StartCoroutine(GenerateGraph());
+        player.GetComponent<PlayerInventory>().inventoryUI.SetActive(true);
     }
 
     void Update()

@@ -6,12 +6,14 @@ public class PurchaseMenuScript : MonoBehaviour
 {
     public GameObject player;
     private int price=100; // PLACEHOLDER TO SEE IF FUNCTION WORKS
+    public GameObject PlayerInventoryUI;
     PlayerStats stats;
     public GameObject Panel;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        PlayerInventoryUI = player.GetComponent<PlayerInventory>().inventoryUI;
         stats = player.GetComponent<PlayerStats>();
     }
 
@@ -65,7 +67,9 @@ public class PurchaseMenuScript : MonoBehaviour
     }
 
     public void ExitMenu() {
+        
         Panel.SetActive(false);
+        PlayerInventoryUI.SetActive(true);
     }
 
 }

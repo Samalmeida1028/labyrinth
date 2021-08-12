@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Player").transform.position = this.gameObject.transform.position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = this.gameObject.transform.position;
+        player.GetComponent<PlayerInventory>().inventoryUI.SetActive(true);
     }
 
     // Update is called once per frame

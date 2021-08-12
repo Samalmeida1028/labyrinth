@@ -10,6 +10,7 @@ public class LevelChangeScript : MonoBehaviour
     public bool hasInteract;
     public GameObject player;
     public GameObject loadScreen;
+    public GameObject PlayerInventoryUI;
     public string text ="";
 
 
@@ -27,6 +28,7 @@ public class LevelChangeScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player = GameObject.FindGameObjectWithTag("Player");
+            PlayerInventoryUI = player.GetComponent<PlayerInventory>().inventoryUI;
             canInteract = true;
         }
     }
@@ -35,6 +37,7 @@ public class LevelChangeScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player = GameObject.FindGameObjectWithTag("Player");
+            PlayerInventoryUI = player.GetComponent<PlayerInventory>().inventoryUI;
             canInteract = false;
         }
     }
@@ -45,6 +48,7 @@ public class LevelChangeScript : MonoBehaviour
         if (canInteract&& Input.GetKey("e"))
         {
             loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = text;
+            PlayerInventoryUI.SetActive(false);
             Instantiate(loadScreen, player.transform.position, Quaternion.identity);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

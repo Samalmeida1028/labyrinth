@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public int currentHealth;
-    public int maxHealth;
+    public int maxHealth=100;
     public int baseDamage;
     public int damageMult;
     public float armor;
@@ -15,7 +15,6 @@ public class PlayerStats : MonoBehaviour
     public bool die;
 
     void Start(){    
-        maxHealth = 100;
         currentHealth = maxHealth;
         baseDamage = 5;
     }
@@ -54,6 +53,7 @@ public class PlayerStats : MonoBehaviour
     public IEnumerator Die()//move this to PlayerCombat
     {
         currentHealth=maxHealth;
+        gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
         gameObject.GetComponent<PlayerInventory>().Clear();
         Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
 

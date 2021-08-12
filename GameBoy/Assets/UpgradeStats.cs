@@ -9,6 +9,7 @@ public class UpgradeStats : MonoBehaviour
     public Color interactedColor = Color.blue;
     public GameObject player;
     public GameObject Panel;
+    public GameObject PlayerInventoryUI;
 
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class UpgradeStats : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player = GameObject.FindGameObjectWithTag("Player");
+            PlayerInventoryUI = player.GetComponent<PlayerInventory>().inventoryUI;
             canInteract = true;
         }
     }
@@ -44,7 +46,7 @@ public class UpgradeStats : MonoBehaviour
     }
 
     private void OpenPanel() {
-
+        PlayerInventoryUI.SetActive(false);
         Panel.SetActive(true);
     }
 }

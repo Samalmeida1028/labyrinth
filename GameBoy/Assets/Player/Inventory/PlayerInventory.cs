@@ -11,6 +11,12 @@ public class PlayerInventory : MonoBehaviour
     public int gold = 0;
     public int ammo = 10;
 
+    void Start()
+    {
+        inventoryUI.GetComponent<InventoryUI>().RefreshGoldDisplay(gold);
+        inventoryUI.GetComponent<InventoryUI>().RefreshAmmoDisplay(ammo);
+    }
+
     void Update(){
         //sets the current slot for items
         if(Input.GetKeyDown("1")) ChangeActiveItem(0);
@@ -44,11 +50,14 @@ public class PlayerInventory : MonoBehaviour
     public void AddGold(int goldAmount)
     {
         gold += goldAmount;
-    }
-    public void AddAmmo(int ammoAmount){
-        ammo += ammoAmount;
+        inventoryUI.GetComponent<InventoryUI>().RefreshGoldDisplay(gold);
     }
 
+    public void AddAmmo(int ammoAmount)
+    {
+        ammo += ammoAmount;
+        inventoryUI.GetComponent<InventoryUI>().RefreshAmmoDisplay(ammo);
+    }
 
     public void ChangeActiveItem(int slot){
 
@@ -82,6 +91,8 @@ public class PlayerInventory : MonoBehaviour
     }
     public void Clear()
     {
+        ammo=10;
+        AddAmmo(0);
         for(int i=0; i<inventory.Length;i++)
         {
             inventory[i] = null;

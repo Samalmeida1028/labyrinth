@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class InventoryUI : MonoBehaviour
     public GameObject player;
     public Sprite selectedSlot;
     public Sprite unselectedSlot;
+    public TextMeshProUGUI goldCount;
+    public TextMeshProUGUI ammoCount;
 
     // Start is called before the first frame update
     void Start(){
@@ -22,17 +25,18 @@ public class InventoryUI : MonoBehaviour
     Debug.Log("adding ui item");
 
             itemSlots[temp.itemType].GetComponent<Image>().sprite = temp.GetComponent<SpriteRenderer>().sprite;
+            itemSlots[temp.itemType].GetComponent<Image>().enabled = true;
     }
 
     public void RefreshDisplay(int slot){
-    for(int i = 0; i<slots.Length; i++){
-        if(slots[i].GetComponent<Image>().sprite == selectedSlot)
-        {
-            slots[i].GetComponent<Image>().sprite = unselectedSlot;
-        }
+        for(int i = 0; i<slots.Length; i++){
+            if(slots[i].GetComponent<Image>().sprite == selectedSlot)
+            {
+                slots[i].GetComponent<Image>().sprite = unselectedSlot;
+            }
 
-    }
-    slots[slot].GetComponent<Image>().sprite = selectedSlot;
+        }
+        slots[slot].GetComponent<Image>().sprite = selectedSlot;
 
     }
 
@@ -40,7 +44,21 @@ public class InventoryUI : MonoBehaviour
     {
 
         itemSlots[i].GetComponent<Image>().sprite = null;
-        slots[i].GetComponent<Image>().sprite = unselectedSlot;
+        itemSlots[i].GetComponent<Image>().enabled = false;
+        if(i<3)
+        {
+            slots[i].GetComponent<Image>().sprite = unselectedSlot;
+        }
 
+    }
+
+    public void RefreshGoldDisplay(int gCount)
+    {
+        goldCount.text = "x " + gCount;
+    }
+
+    public void RefreshAmmoDisplay(int aCount)
+    {
+        ammoCount.text = "x " + aCount;
     }
 }

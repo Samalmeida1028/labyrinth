@@ -83,7 +83,7 @@ public class PlayerCombat : MonoBehaviour
                 bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
                 Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
                 rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
-                GetComponent<PlayerInventory>().ammo -= 1;
+                GetComponent<PlayerInventory>().AddAmmo(-1);
             }
         }
         else if (updateCounter>(.7/attackSpeed))//this is for melee
@@ -108,6 +108,7 @@ public class PlayerCombat : MonoBehaviour
     void Die()
     {
         GetComponent<PlayerStats>().moveSpeed = 0;
+        canAttack=false;
     }
 
 
