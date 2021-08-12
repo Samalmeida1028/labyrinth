@@ -161,6 +161,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 0}
   askToAdd: 0
   gold: 0
+  ammo: 10
 --- !u!114 &8357557771043315033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +180,7 @@ MonoBehaviour:
   damageMult: 1
   armor: 1
   moveSpeed: 10
+  deathScreen: {fileID: 7473076834788339596, guid: 19db57215d8ee1549a06f864e2c2161b, type: 3}
 --- !u!114 &2073306170465246380
 MonoBehaviour:
   m_ObjectHideFlags: 0

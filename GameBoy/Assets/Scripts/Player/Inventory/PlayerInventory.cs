@@ -89,4 +89,12 @@ public class PlayerInventory : MonoBehaviour
 
 
     }
+    public void clear()
+    {
+        for(int i=0; i<inventory.Length;i++)
+        {
+            inventory[i] = null;
+            inventoryUI.GetComponent<InventoryUI>().clear(i);
+        }
+    }
 }

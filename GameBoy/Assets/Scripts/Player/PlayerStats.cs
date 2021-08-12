@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     public int damageMult;
     public float armor;
     public int moveSpeed;
+    public GameObject deathScreen;
 
     void Start(){
         maxHealth = 100;
@@ -17,6 +19,14 @@ public class PlayerStats : MonoBehaviour
         baseDamage = 5;
         armor = 1;
 
+    }
+
+    void Update()
+    {
+        if(currentHealth<=0)
+        {
+            StartCoroutine(Die());
+        }
     }
 
     public void UpgradeArmor()
@@ -43,5 +53,25 @@ public class PlayerStats : MonoBehaviour
     }
     public void UpgradeDamageMult() { 
     
+    }
+
+    public IEnumerator Die()
+    {
+        currentHealth=maxHealth;
+        gameObject.GetComponent<PlayerInventory>().clear();
+        Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
+
+        bool continueNext = false;
+
+        while(continueNext == false)
+        {
+            yield return new WaitForSeconds(.05f);
+            if(Input.GetKeyDown("e"))
+            {
+                continueNext=true;
+            }
+        }
+        SceneManager.LoadScene(1);
+
     }
 }
