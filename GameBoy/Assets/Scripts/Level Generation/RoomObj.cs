@@ -14,6 +14,7 @@ public class RoomObj : MonoBehaviour
     public bool isEndRoom = false;
     public bool isShop = false;
     public int chestCount = 0;
+    public int enemyCount = 0;
 
     void Start()
     {
@@ -25,7 +26,8 @@ public class RoomObj : MonoBehaviour
         
     }
 
-    public void setRoom(Room r){
+    public void setRoom(Room r)
+    {
         this.roomDimensions = r.roomDimensions;
         this.roomNumber = r.roomNumber;
         this.roomCenter = r.roomCenter;
@@ -45,8 +47,8 @@ public class RoomObj : MonoBehaviour
                 this.roomGrid[j,i] = roomGrid[j,i];
             }
         }
-
     }
+
     public void setChestCount(int c)
     {
         this.chestCount = c;
