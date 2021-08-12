@@ -89,7 +89,7 @@ public class LevelGenerator : MonoBehaviour
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
         generateSpawn();
-        populateRoom();
+        //populateRoom();
         generateShop();
         
     }

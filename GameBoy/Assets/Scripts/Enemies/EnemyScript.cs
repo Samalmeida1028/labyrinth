@@ -57,18 +57,20 @@ public class EnemyScript : MonoBehaviour
     private NavMeshPath path;
     private Vector3 startingPosition;
     private Vector3 roamPos;
-    public float radius = 200;
+    public float radius = 10;
 
     [SerializeField] Vector3 target;
     Transform player;
 
     IAstarAI ai;
 
+    float lastPathed = 0;
+    bool chasing = false;
 
     Vector3 PickRandomPoint() {
         var point = Random.insideUnitSphere * radius;
 
-        point.y = 0;
+        //point.y = 0;
         point += transform.position;
         return point;
     }
@@ -114,6 +116,7 @@ public class EnemyScript : MonoBehaviour
 
             case State.Transition:
                 roamPos = transform.position;
+                chasing = false;
                 updateCounter = 0;
                 if (CheckForPlayer()) state = State.Chase;
                 else state = State.Roaming;
@@ -127,6 +130,11 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
+        if (chasing == true)
+        {
+            ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+            ai.SetPath(null);
+        }
 
         if (counter >= 1 / attackSpeed)
         {
@@ -169,12 +177,17 @@ public class EnemyScript : MonoBehaviour
 
     void Roam()
     {
-        ai.canSearch = true;
-        
         if (CheckForPlayer()) state = State.Chase;
         {
             if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
             {
+                lastPathed = Time.fixedTime;
+                ai.destination = PickRandomPoint();
+                ai.SearchPath();
+            }
+            else if ((Time.fixedTime - lastPathed) > 4)
+            {
+                lastPathed = Time.fixedTime;
                 ai.destination = PickRandomPoint();
                 ai.SearchPath();
             }
@@ -185,7 +198,21 @@ public class EnemyScript : MonoBehaviour
     {
         if (CheckForPlayer())
         {
-            PointAtPlayer();
+            if (chasing == false)
+            {
+                ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+                ai.SetPath(null);
+                chasing = true;
+            }
+
+
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            {
+                lastPathed = Time.fixedTime;
+                ai.destination = player.transform.position;
+                ai.SearchPath();
+            }   
+
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
             {
