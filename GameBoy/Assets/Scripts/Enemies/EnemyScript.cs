@@ -56,6 +56,7 @@ public class EnemyScript : MonoBehaviour
     private State state;
     private NavMeshPath path;
     private Vector3 startingPosition;
+    private Vector3 targPosition;
     private Vector3 roamPos;
     public float radius = 10;
 
@@ -130,12 +131,13 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        if (chasing == true)
-        {
+        //if (chasing == true)
+        //{
             ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
             ai.SetPath(null);
-        }
-
+        //}
+        
+        PointAtPlayer();
         if (counter >= 1 / attackSpeed)
         {
             counter = 0;
@@ -159,6 +161,14 @@ public class EnemyScript : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
         GetComponent<Rigidbody2D>().rotation = angle;
     }
+    
+    void PointAtTargPos()
+    {
+        Vector2 lookDir = targPosition - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
+        GetComponent<Rigidbody2D>().rotation = angle;
+    }
+
 
 
     bool CheckForPlayer()
@@ -183,12 +193,20 @@ public class EnemyScript : MonoBehaviour
             {
                 lastPathed = Time.fixedTime;
                 ai.destination = PickRandomPoint();
+
+                targPosition = ai.destination;
+                PointAtTargPos();
+
                 ai.SearchPath();
             }
             else if ((Time.fixedTime - lastPathed) > 4)
             {
                 lastPathed = Time.fixedTime;
                 ai.destination = PickRandomPoint();
+
+                targPosition = ai.destination;
+                PointAtTargPos();
+
                 ai.SearchPath();
             }
         }
@@ -212,7 +230,7 @@ public class EnemyScript : MonoBehaviour
                 ai.destination = player.transform.position;
                 ai.SearchPath();
             }   
-
+            PointAtPlayer();
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
             {
