@@ -14,27 +14,10 @@ public class PlayerStats : MonoBehaviour
     public GameObject deathScreen;
     public bool die;
 
-    void Start(){
-        GameObject[] playerList = GameObject.FindGameObjectsWithTag("Player");
-
-        bool nullPlayer = false;
-        for(int i =0; i<playerList.Length;i++)
-        {
-            if(playerList[i]!=null && playerList[i]!=this.gameObject){
-                nullPlayer=true;
-                Instantiate(playerList[i],this.gameObject.transform.position,Quaternion.identity);
-                Destroy(this.gameObject);
-            }
-        }
-        if(nullPlayer==false)
-        {
-            
-            maxHealth = 100;
-            currentHealth = maxHealth;
-            baseDamage = 5;
-            armor = 1;
-        }
-
+    void Start(){    
+        maxHealth = 100;
+        currentHealth = maxHealth;
+        baseDamage = 5;
     }
 
     void Update()
@@ -48,7 +31,6 @@ public class PlayerStats : MonoBehaviour
     public void UpgradeArmor()
     {
 
-
     }
 
     public void UpgradeHealth()
@@ -59,22 +41,20 @@ public class PlayerStats : MonoBehaviour
     public void UpgradeSpeed()
     {
 
-
     }
 
     public void UpgradeDamage()
     {
-
 
     }
     public void UpgradeDamageMult() { 
     
     }
 
-    public IEnumerator Die()
+    public IEnumerator Die()//move this to PlayerCombat
     {
         currentHealth=maxHealth;
-        gameObject.GetComponent<PlayerInventory>().clear();
+        gameObject.GetComponent<PlayerInventory>().Clear();
         Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
 
         bool continueNext = false;

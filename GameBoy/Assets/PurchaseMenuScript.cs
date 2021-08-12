@@ -9,6 +9,12 @@ public class PurchaseMenuScript : MonoBehaviour
     PlayerStats stats;
     public GameObject Panel;
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        stats = player.GetComponent<PlayerStats>();
+    }
+
     public void UpgradeArmor() { 
         if (player.GetComponent<PlayerInventory>().gold>=price){
             stats.UpgradeArmor();
@@ -61,4 +67,5 @@ public class PurchaseMenuScript : MonoBehaviour
     public void ExitMenu() {
         Panel.SetActive(false);
     }
+
 }

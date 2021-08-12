@@ -5,29 +5,24 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public Item[] inventory = new Item[4];
-    public Item activeItem;
+    public Item activeItem;//item in player's hand
     public GameObject inventoryUI;
-    public bool askToAdd = false;
+    public bool askToAdd = false;//used for shop to determine when to take money from player
     public int gold = 0;
     public int ammo = 10;
 
     void Update(){
-        if(Input.GetKeyDown("1")) {
-            Debug.Log("Hello");
-            ChangeActiveItem(0);}
+        //sets the current slot for items
+        if(Input.GetKeyDown("1")) ChangeActiveItem(0);
         if(Input.GetKeyDown("2")) ChangeActiveItem(1);
         if(Input.GetKeyDown("3")) ChangeActiveItem(2);
         if(Input.GetKeyDown("4")) ChangeActiveItem(3);
     }
-    public bool AddItem(Item item)
+    public bool AddItem(Item item)//checks the itemType and puts it in the designated slot, afterr checking to see if the slot has no item. if the slot hass an item then you have to hold e
     {
         Item temp = item;
-        if (inventory[temp.itemType] == null || askToAdd)
+        if (inventory[temp.itemType] == null || askToAdd)//check chest, chest script sets asktoAdd true which is why we set it false here
         {
-            if(temp.itemType==0 || temp.itemType ==1){
-                GetComponent<PlayerCombat>().canAttack = false;
-            }
-            Debug.Log("Added!");
             askToAdd = false;
             inventory[temp.itemType] = temp;
             inventoryUI.GetComponent<InventoryUI>().AddItemDisplay(temp);
@@ -36,8 +31,6 @@ public class PlayerInventory : MonoBehaviour
         }
         else if (!askToAdd)
         {
-            Debug.Log("Can't Add!");
-
             return false;
 
         }
@@ -64,6 +57,7 @@ public class PlayerInventory : MonoBehaviour
             inventoryUI.GetComponent<InventoryUI>().RefreshDisplay(slot);
             activeItem = inventory[slot];
             GetComponent<PlayerCombat>().ChangeDamage();
+            //these if statements just basically check the itemType, you could set it to that as well, 1 = 0, 2 = 1 etc for slot to itemType
             if(slot == 1){
             GetComponent<PlayerCombat>().canAttack = true;
             GetComponent<PlayerCombat>().isRanged = true;
@@ -78,23 +72,21 @@ public class PlayerInventory : MonoBehaviour
             }
             GetComponent<PlayerCombat>().isPotion = true;
         }
-        else{
-            GetComponent<PlayerCombat>().canAttack = false;
-        }
         }
         }
         else{
-            Debug.Log("Can't switch!");
+            //this s where you would put something to tell the player they cant switch to that slot
         }
 
 
     }
-    public void clear()
+    public void Clear()
     {
         for(int i=0; i<inventory.Length;i++)
         {
             inventory[i] = null;
             inventoryUI.GetComponent<InventoryUI>().clear(i);
         }
+        activeItem=null;
     }
 }

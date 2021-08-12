@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerCombat : MonoBehaviour
 {
+
+
     public GameObject rangedAttack;//ranged prefab
     public GameObject meleeAttack;//melee prefab
     public Transform attackPoint;//where prefabs spawn from
@@ -44,6 +45,7 @@ public class PlayerCombat : MonoBehaviour
 
     void FixedUpdate(){
         updateCounter += Time.fixedDeltaTime;
+        Debug.Log(updateCounter);
     }
     public void ChangeDamage()//sets damage to the player base damage, item damage, and multiplier
     {

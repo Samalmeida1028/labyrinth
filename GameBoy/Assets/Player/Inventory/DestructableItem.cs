@@ -9,6 +9,8 @@ public class DestructableItem : MonoBehaviour
     public GameObject ammo;
     public ParticleSystem particleGold;
     public ParticleSystem particleNoGold;
+    public AudioClip gold;
+    public AudioClip noGold;
 
 
     void Start(){
@@ -29,8 +31,14 @@ public class DestructableItem : MonoBehaviour
             Instantiate(coin,transform.position+random,Quaternion.identity);
             Instantiate(ammo,transform.position+random,Quaternion.identity);
         }
-        if(randomAmount>0) Instantiate(particleGold,transform.position,Quaternion.identity);
-        else Instantiate(particleNoGold,transform.position,Quaternion.identity);
+        if(randomAmount>0){
+            Instantiate(particleGold,transform.position,Quaternion.identity);
+            GetComponent<AudioSource>().PlayOneShot(gold);
+        }
+        else {
+            Instantiate(particleNoGold,transform.position,Quaternion.identity);
+            GetComponent<AudioSource>().PlayOneShot(noGold);
+        }
         Destroy(gameObject);
         }
     }

@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour
 
     [Header("Enemy Type")]
     [Space(5)]
-    public int enemyType;
+    public int enemyType;//THIS IS FOR CALEB
     public GameObject attackType;
     public Transform firePoint;
     public float enemyTier = 1.2f;
@@ -38,13 +38,12 @@ public class EnemyScript : MonoBehaviour
 
     [Header("Enemy Stats")]
     [Space(5)]
-    public int enemyDamage;
+    public float enemyDamage;
     public float projectileLife = .5f;
     public bool isRanged;
     private int health = 100;
     public float attackSpeed;
     public int force;
-    public float speed = 100f;
     public int targetRange;
     public int attackRange;
 
@@ -54,8 +53,6 @@ public class EnemyScript : MonoBehaviour
     public float counter = 0;
     float updateCounter;
     private State state;
-    private NavMeshPath path;
-    private Vector3 startingPosition;
     private Vector3 targPosition;
     private Vector3 roamPos;
     public float radius = 10;
@@ -141,7 +138,7 @@ public class EnemyScript : MonoBehaviour
             counter = 0;
 
             GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
-            attack.GetComponent<EnemyAttack>().SetDamage(enemyDamage);
+            attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
             Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
             Destroy(attack, projectileLife);
             if (isRanged)
