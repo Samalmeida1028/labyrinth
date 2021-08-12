@@ -14,10 +14,15 @@ public class PlayerStats : MonoBehaviour
     public GameObject deathScreen;
 
     void Start(){
-        maxHealth = 100;
-        currentHealth = maxHealth;
-        baseDamage = 5;
-        armor = 1;
+        if(FindGameObjectWithTag("Player")!=null)
+        {
+
+        }else{
+            maxHealth = 100;
+            currentHealth = maxHealth;
+            baseDamage = 5;
+            armor = 1;
+        }
 
     }
 
