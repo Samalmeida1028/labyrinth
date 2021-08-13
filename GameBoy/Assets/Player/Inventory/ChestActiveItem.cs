@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChestActiveItem : MonoBehaviour
 {
@@ -14,11 +15,35 @@ public class ChestActiveItem : MonoBehaviour
     public bool hasEntered;
     public int tier;
     public int itemInTier;
-    public float tierVal= 1.2f;
+    public float tierVal;
     public float confirm = 3f;
     public float time = 0f;
     public Sprite interacted;
+    public Image itemImage;
+    public ParticleSystem itemParticles;
 
+    void Start()
+    {
+        var main = itemParticles.main;
+        itemImage.GetComponent<Image>().enabled = (false);
+        tier = (int)(tierVal - Random.Range(0f, 4f));
+        if(tier <1)
+        {
+            main.startColor = Color.white;
+        }
+        else if(tier<2)
+        {
+            main.startColor = Color.blue;
+        }
+        else if(tier<3)
+        {
+            main.startColor = Color.yellow;
+        }
+        else if(tier>=3)
+        {
+            main.startColor = Color.red;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,7 +54,6 @@ public class ChestActiveItem : MonoBehaviour
             hasEntered = true;
             Random.InitState(Random.Range(0, 1000));
             chestPool = GetComponent<ChestInventory>().storage;
-            tier = (int)(tierVal - Random.Range(0f, 4f));
             if (tier < 0)
             {
                 tier = 0;
@@ -43,7 +67,12 @@ public class ChestActiveItem : MonoBehaviour
             hasInteract = false;
             canInteract = false;
             activeItem = chestPool[tier, itemInTier];
-            if (isShop) price = activeItem.value;
+            if (isShop)
+            {
+                price = activeItem.value;
+                itemImage.sprite = activeItem.GetComponent<SpriteRenderer>().sprite;
+                itemImage.GetComponent<Image>().enabled = (true);
+            } 
             else price = 0;
 
         }
@@ -69,7 +98,7 @@ public class ChestActiveItem : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = interacted;
         }
 
-        if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
+        if (hasInteract==false && canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
         {
 
             if (player.GetComponent<PlayerInventory>().AddItem(activeItem))//checks to see if player added item to take money
@@ -84,4 +113,5 @@ public class ChestActiveItem : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
     }
+
 }

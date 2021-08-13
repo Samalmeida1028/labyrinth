@@ -77,10 +77,6 @@ public class PlayerInventory : MonoBehaviour
         }
         }
         }
-        else{
-            //this s where you would put something to tell the player they cant switch to that slot
-        }
-
 
     }
     public void Clear()
