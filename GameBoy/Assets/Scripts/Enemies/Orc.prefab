@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 5439715717358269802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.6839128, y: 0.7067642, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5439715716977148704}
   m_Father: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   targetRange: 5
   attackRange: 3
   counter: 0
-  radius: 20
+  radius: 10
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &5439715717358269794
 MonoBehaviour:
