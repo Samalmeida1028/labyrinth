@@ -7,7 +7,7 @@ using TMPro;
 public class PurchaseMenuScript : MonoBehaviour
 {
     public GameObject player;
-    private int price=30; // PLACEHOLDER TO SEE IF FUNCTION WORKS
+    private int price=20; // PLACEHOLDER TO SEE IF FUNCTION WORKS
     public GameObject PlayerInventoryUI;
     PlayerStats stats;
 

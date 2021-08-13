@@ -102,4 +102,10 @@ public class PlayerInventory : MonoBehaviour
         inventoryUI.GetComponent<InventoryUI>().clear(slot);
 
     }
+
+    public bool hasItem(Item item)
+    {
+        return (inventory[item.itemType] == item);
+        
+    }
 }

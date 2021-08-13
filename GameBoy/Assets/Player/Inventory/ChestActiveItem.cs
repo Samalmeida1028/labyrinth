@@ -98,11 +98,16 @@ public class ChestActiveItem : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = interacted;
         }
 
-        if (hasInteract==false && canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
+        if(hasInteract==false&&price>0 && player.GetComponent<PlayerInventory>().hasItem(activeItem)&& Input.GetKey("e")&& canInteract)
+        {
+            player.GetComponent<PlayerInventory>().AddItem(activeItem);
+            hasInteract = true;
+        }
+        else if (hasInteract==false && canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
         {
 
             if (player.GetComponent<PlayerInventory>().AddItem(activeItem))//checks to see if player added item to take money
-            {
+            {   
                 player.GetComponent<PlayerInventory>().AddGold(-price);
                 hasInteract = true;
             }
