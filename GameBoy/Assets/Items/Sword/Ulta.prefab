@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810b76d8ec0bd4d94f7b49aeb672e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  value: 80
   itemName: Ulta Sword
   rarity: 3
   isMelee: 0
