@@ -88,8 +88,10 @@ public class PlayerCombat : MonoBehaviour
                     int force = -projectileSpeed;
                     GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
                     bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
+                    
                     Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
                     rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
+
                     GetComponent<PlayerInventory>().ammo -= 1;
                 }
             }
