@@ -24,7 +24,6 @@ public class PlayerInventory : MonoBehaviour
         if(Input.GetKeyDown("1")) ChangeActiveItem(0);
         if(Input.GetKeyDown("2")) ChangeActiveItem(1);
         if(Input.GetKeyDown("3")) ChangeActiveItem(2);
-        if(Input.GetKeyDown("4")) ChangeActiveItem(3);
     }
     public bool AddItem(Item item)
     {

@@ -108,7 +108,7 @@ public class ChestActiveItem : MonoBehaviour
             }
         
         }
-        else if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
+        else if (hasInteract==false&&canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
