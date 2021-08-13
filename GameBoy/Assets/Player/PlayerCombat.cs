@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
 
 
+
     public GameObject rangedAttack;//ranged prefab
     public GameObject meleeAttack;//melee prefab
     public Transform attackPoint;//where prefabs spawn from
@@ -79,13 +80,18 @@ public class PlayerCombat : MonoBehaviour
         {
             if (GetComponent<PlayerInventory>().ammo > 0 && updateCounter>(1/attackSpeed))
             {
-                updateCounter = 0;
-                int force = -projectileSpeed;
-                GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
-                bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
-                Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
-                rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
-                GetComponent<PlayerInventory>().ammo -= 1;
+                // Locks shooting into 3 different angles on either side 
+                // Ethan did this to make everything looks better and more of a "Mechanic"
+                if (GetComponent<PlayerMovement>().angle != 0 && GetComponent<PlayerMovement>().angle != -180)
+                {
+                    updateCounter = 0;
+                    int force = -projectileSpeed;
+                    GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
+                    bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
+                    Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
+                    rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
+                    GetComponent<PlayerInventory>().ammo -= 1;
+                }
             }
         }
         else if (updateCounter>(.7/attackSpeed))//this is for melee

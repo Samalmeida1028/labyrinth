@@ -28,19 +28,22 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_ATTACK_B = "Attack_Melee_B";
 
     const string PLAYER_BOW_ATTACK_F = "Bow_Shoot_Front";
+    const string PLAYER_BOW_ATTACK_B = "Bow_Shoot_Back";
 
     //Other Variables
     private SpriteRenderer playerSprite;
     private Animator animator;
     private Vector2 movement;
 
-    private bool isFacingBack;
-    private bool isFacingRight;
+    public bool isFacingBack;
+    public bool isFacingRight;
 
     public PlayerCombat playerCombatInfo;
 
     private bool isAttackPressed;
     private bool isAttacking;
+
+    private bool isShootingBow;
 
     private string currentState;
 
@@ -51,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private float rotationSpeed = 1000;//how fast player moves to mouse
     public Camera cam;
     private Vector2 mousePos;
+
     public int lookDir;//used for animator to set the player look direction
     public int angle;//full angle
 
@@ -72,8 +76,6 @@ public class PlayerMovement : MonoBehaviour
         //conversion to find the location of an object in terms of the camera view, must use this in order for PointToMouse(); to work
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        // Enable Bow
-
         //Check if player is moving
         if (yAxis != 0 || xAxis != 0)
         {
@@ -86,13 +88,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (isFacingRight)
         {
-            bow.flipX = false;
             playerSprite.flipX = false;
 
         }
         else
         {
-            bow.flipX = true;
             playerSprite.flipX = true;
         }
 
@@ -135,6 +135,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        //
+        if (isShootingBow)
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        }
+
         //Check if player attacks
         if (Input.GetButtonDown("Fire1"))
         {
@@ -164,17 +174,19 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    if (isFacingBack)
+                    if (angle != 0 && angle != -180)
                     {
-                        //ChangeAnimationState(PLAYER_BOW_ATTACK_F);
+                        isShootingBow = true;
+
+                        bow.Shoot();
+                        ChangeAnimationState(PLAYER_BOW_ATTACK_F);
+
+                        Invoke("AttackComplete", 0.7f);
                     }
                     else
                     {
-                        bow.Shoot();
-                        ChangeAnimationState(PLAYER_BOW_ATTACK_F);
+                        isAttacking = false;
                     }
-
-                    Invoke("AttackComplete", 0.7f);
                 }
             }
         }
@@ -184,11 +196,14 @@ public class PlayerMovement : MonoBehaviour
     {
         isAttacking = false;
 
+        if (isShootingBow)
+            isShootingBow = false;
+
     }
 
     void FixedUpdate()
     {
-        RB.velocity = movement*GetComponent<PlayerStats>().moveSpeed;
+        RB.velocity = movement * GetComponent<PlayerStats>().moveSpeed;
     }
     
     void checkInput()

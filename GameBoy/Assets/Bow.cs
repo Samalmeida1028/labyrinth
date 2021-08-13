@@ -7,35 +7,41 @@ public class Bow : MonoBehaviour
 {
 
     public SpriteRenderer Sprite;
-
-    public GameObject d;
+    public GameObject Player;
 
     private Animator Animator;
-
-    public bool flipX;
 
     // Other shit
     private bool isShooting;
     private bool shot;
     private string currentState;
 
+    private PlayerMovement MovementInformation;
+
     // Animaton References
     const string SHOOT_F = "Shoot_Forward";
-    const string SHOOT_B = "Shoot_Backward";
+    const string SHOOT_B = "Shoot_Backwards";
     const string IDLE = "Idle";
 
+    // For rotating the bow
+    private float currentYAxis = -0.16f;
+    private Quaternion baseRotation;
 
     void Start()
     {
+        // Initialization
+        MovementInformation = Player.GetComponent<PlayerMovement>();
         Animator = GetComponent<Animator>();
 
-        transform.position = d.transform.position;
+        // Resets the bows position and saves its base rotation
+        transform.position = Player.transform.position;
+        baseRotation = transform.rotation;
     }
 
 
     void Update()
     {
-
+        // If the player isnt in the middle of shooting then disable the sprite and reset the animation
         if (!isShooting)
         {
             Sprite.enabled = false;
@@ -43,14 +49,14 @@ public class Bow : MonoBehaviour
         }
 
         //Flip Bow
-        if (flipX)
+        if (!MovementInformation.isFacingRight)
         {
-            transform.position = d.transform.position + new Vector3(-0.2f, -0.16f);
+            transform.position = Player.transform.position + new Vector3(-0.2f, currentYAxis);
             Sprite.flipX = true;
         }
         else
         {
-            gameObject.transform.position = d.transform.position + new Vector3(0.2f, -0.16f);
+            gameObject.transform.position = Player.transform.position + new Vector3(0.2f, currentYAxis);
             Sprite.flipX = false;
         }
 
@@ -58,20 +64,71 @@ public class Bow : MonoBehaviour
         if (shot)
         {
             shot = false;
+            rotateBow();
 
             if (!isShooting)
             {
                 isShooting = true;
-
                 Sprite.enabled = true;
 
-                //ChangeAnimationState(SHOOT);
+  
+                ChangeAnimationState(SHOOT_F); 
             }
 
             Invoke("stopShooting", 0.6f);
         }
 
 
+    }
+
+    // Allows the shooting animation to be played again after already shooting
+    void stopShooting()
+    {
+        transform.rotation = baseRotation;
+        isShooting = false;
+    }
+
+    // Shoot the bow(Play the animation)
+    public void Shoot()
+    {
+        shot = true;
+    }
+
+    // Rotate Bow
+    // All hard-coded in I dont care we have a day left this took 5 minutes and was mad easy
+    void rotateBow()
+    {
+        if (MovementInformation.angle == -45)
+        {
+            currentYAxis = 0.05f;
+            transform.Rotate(0.0f, 0.0f, 20f, Space.Self);
+
+        }
+        else if (MovementInformation.angle == -90)
+        {
+            currentYAxis = -0.16f;
+            transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
+        }
+        else if (MovementInformation.angle == -135)
+        {
+            currentYAxis = -0.3f;
+            transform.Rotate(0.0f, 0.0f, -21f, Space.Self);
+        }
+        else if (MovementInformation.angle == 45)
+        {
+            currentYAxis = 0.05f;
+            transform.Rotate(0.0f, 0.0f, -20f, Space.Self);
+        }
+        else if (MovementInformation.angle == 90 || MovementInformation.angle == -270)
+        {
+            currentYAxis = -0.16f;
+            transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
+        }
+        else if (MovementInformation.angle == -225)
+        {
+            currentYAxis = -0.3f;
+            transform.Rotate(0.0f, 0.0f, 21f, Space.Self);
+        }
     }
 
     void ChangeAnimationState(string newState)
@@ -82,16 +139,6 @@ public class Bow : MonoBehaviour
         currentState = newState;
         //pLAY THAT MF
         Animator.Play(newState);
-    }
-
-    void stopShooting()
-    {
-        isShooting = false;
-    }
-
-    public void Shoot()
-    {
-        shot = true;
     }
 
 }
