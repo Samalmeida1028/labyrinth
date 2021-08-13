@@ -239,6 +239,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2567712965304237851, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+      propertyPath: RB
+      value: 
+      objectReference: {fileID: 1127019710}
+    - target: {fileID: 2567712965304237851, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+      propertyPath: playerDisplay
+      value: 
+      objectReference: {fileID: 410866374}
     - target: {fileID: 4568767322909129848, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
       propertyPath: m_Name
       value: PlayerContainer
@@ -520,6 +528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &410866374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4568767322713214331, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+  m_PrefabInstance: {fileID: 117832055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &452288264
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +800,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740489743}
   m_CullTransparentMesh: 1
+--- !u!50 &1127019710 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2623393137211046302, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+  m_PrefabInstance: {fileID: 117832055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1216849870
 GameObject:
   m_ObjectHideFlags: 0
