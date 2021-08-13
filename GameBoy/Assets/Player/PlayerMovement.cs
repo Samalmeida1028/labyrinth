@@ -74,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
 
         // Enable Bow
 
-
         //Check if player is moving
         if (yAxis != 0 || xAxis != 0)
         {
@@ -87,12 +86,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (isFacingRight)
         {
+            bow.flipX = false;
             playerSprite.flipX = false;
 
         }
         else
         {
-         playerSprite.flipX = true;
+            bow.flipX = true;
+            playerSprite.flipX = true;
         }
 
 
@@ -173,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
                         ChangeAnimationState(PLAYER_BOW_ATTACK_F);
                     }
 
-                    Invoke("AttackComplete", 0.4f);
+                    Invoke("AttackComplete", 0.7f);
                 }
             }
         }

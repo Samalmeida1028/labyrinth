@@ -1,65 +1,97 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bow : MonoBehaviour
 {
 
+    public SpriteRenderer Sprite;
 
-    public GameObject FrontLayer;
-    public GameObject BackLayer;
+    public GameObject d;
 
-    private Animator FrontAnimator;
-    private Animator BackAnimator;
+    private Animator Animator;
 
-    private bool shotBow = false;
-    private bool isShooting = false;
+    public bool flipX;
 
-    const string Bow_Front = "Front_Layer";
-    const string Bow_Back = "Back_Layer";
+    // Other shit
+    private bool isShooting;
+    private bool shot;
+    private string currentState;
 
-    // Start is called before the first frame update
+    // Animaton References
+    const string SHOOT_F = "Shoot_Forward";
+    const string SHOOT_B = "Shoot_Backward";
+    const string IDLE = "Idle";
+
+
     void Start()
     {
-        FrontAnimator = FrontLayer.GetComponent<Animator>();
-        BackAnimator = BackLayer.GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
 
-        //gameObject.SetActive(false);
+        transform.position = d.transform.position;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (shotBow)
-        {
-            shotBow = false;
 
-            //Fire Bow
+        if (!isShooting)
+        {
+            Sprite.enabled = false;
+            ChangeAnimationState(IDLE);
+        }
+
+        //Flip Bow
+        if (flipX)
+        {
+            transform.position = d.transform.position + new Vector3(-0.2f, -0.16f);
+            Sprite.flipX = true;
+        }
+        else
+        {
+            gameObject.transform.position = d.transform.position + new Vector3(0.2f, -0.16f);
+            Sprite.flipX = false;
+        }
+
+        //Animate bow shooting
+        if (shot)
+        {
+            shot = false;
+
             if (!isShooting)
             {
                 isShooting = true;
 
-                gameObject.SetActive(true);
+                Sprite.enabled = true;
 
-                FrontAnimator.Play(Bow_Front);
-                BackAnimator.Play(Bow_Back);
-
-                Invoke("StopShooting", 0.6f); 
+                //ChangeAnimationState(SHOOT);
             }
+
+            Invoke("stopShooting", 0.6f);
         }
 
-        //Roate bow with character
+
     }
 
-    void StopShooting()
+    void ChangeAnimationState(string newState)
+    {
+        //Stop the same animation from fucking itself
+        if (currentState == newState) return;
+
+        currentState = newState;
+        //pLAY THAT MF
+        Animator.Play(newState);
+    }
+
+    void stopShooting()
     {
         isShooting = false;
-
-        //gameObject.SetActive(false);
     }
 
     public void Shoot()
     {
-        shotBow = true;
+        shot = true;
     }
+
 }
