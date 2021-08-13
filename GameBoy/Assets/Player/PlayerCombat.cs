@@ -43,9 +43,11 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         updateCounter += Time.fixedDeltaTime;
     }
+    
     public void ChangeDamage()//sets damage to the player base damage, item damage, and multiplier
     {
         int baseDamage = GetComponent<PlayerStats>().baseDamage;

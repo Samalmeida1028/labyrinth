@@ -25,6 +25,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject attackType;
     public Transform firePoint;
     public float enemyTier = 1.2f;
+    public GameObject FirepointAxis;
     [Space(10)]
 
 
@@ -65,6 +66,28 @@ public class EnemyScript : MonoBehaviour
     float lastPathed = 0;
     bool chasing = false;
 
+    //Public stuff
+
+    //Other Variables
+    private SpriteRenderer enemySprite;
+    private Animator animator;
+
+    private bool isFacingBack;
+    private bool isFacingRight;
+
+    private bool isAttacking;
+    private bool isAttackPressed;
+
+    private string currentState;
+
+
+    //Animation States
+    const string MONSTER_WALK_F = "Walk_Forward";
+    const string MONSTER_WALK_B = "Walk_Backward";
+
+    const string MONSTER_ATTACK_F = "Attack_Forward";
+    const string MONSTER_ATTACK_B = "Attack_Backward";
+
     Vector3 PickRandomPoint() {
         var point = Random.insideUnitSphere * radius;
 
@@ -75,6 +98,12 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
+        GetComponent<Rigidbody2D>().freezeRotation = true;
+
+        //Get Animator
+        animator = GetComponent<Animator>();
+        enemySprite = GetComponent<SpriteRenderer>();
+
         //Get Enemy Stats
         gameObject.GetComponent<HittableStats>().health = (int)(health * enemyTier);
         ai = GetComponent<IAstarAI>();
@@ -83,11 +112,79 @@ public class EnemyScript : MonoBehaviour
         state = State.Roaming;
     }
 
+    void Update()
+    {
+        //Keep Firepoint Axis on Enemy
+        FirepointAxis.transform.position = transform.position;
+
+        //Change Sprite Direction/Animation
+        if (isFacingRight)
+        {
+            enemySprite.flipX = false;
+        }
+        else
+        {
+            enemySprite.flipX = true;
+        }
+
+        if (!isAttacking)
+        {
+            if (isFacingRight) //If the monster is facing right
+            {
+               if (isFacingBack)
+               {
+                   ChangeAnimationState(MONSTER_WALK_B);
+               }
+               else
+               {
+                    ChangeAnimationState(MONSTER_WALK_F);
+               }
+            }
+            else //If the monster is facing left
+            {
+                if (isFacingBack)
+               {
+                   ChangeAnimationState(MONSTER_WALK_B);
+               }
+               else
+               {
+                    ChangeAnimationState(MONSTER_WALK_F);
+               }
+            }
+        }
+
+        if (isAttackPressed)
+        {
+            isAttackPressed = false;
+
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                
+                if (isFacingBack)
+                {
+                    ChangeAnimationState(MONSTER_ATTACK_B);
+                }
+                else
+                {
+                    ChangeAnimationState(MONSTER_ATTACK_F);
+                }
+
+                Invoke("AttackComplete", 0.3f);
+            }
+        }
+    }
+
+
+    void AttackComplete()
+    {
+        isAttacking = false;
+    }
+
     void FixedUpdate()
     {
         counter += Time.deltaTime;
         updateCounter += Time.deltaTime;
-        Debug.Log(state);
         switch (state)
         {
             default:
@@ -120,8 +217,6 @@ public class EnemyScript : MonoBehaviour
                 if (CheckForPlayer()) state = State.Chase;
                 else state = State.Roaming;
                 break;
-
-
         }
     }
 
@@ -129,6 +224,8 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
+        isAttackPressed = true;
+
         ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
         ai.SetPath(null);
     
@@ -138,6 +235,7 @@ public class EnemyScript : MonoBehaviour
             counter = 0;
 
             GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
+
             attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
             Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
             Destroy(attack, projectileLife);
@@ -154,14 +252,16 @@ public class EnemyScript : MonoBehaviour
     {
         Vector2 lookDir = player.position - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
-        GetComponent<Rigidbody2D>().rotation = angle;
+        FacingDirection(angle);
+        FirepointAxis.GetComponent<Rigidbody2D>().rotation = angle;
     }
     
     void PointAtTargPos()
     {
         Vector2 lookDir = targPosition - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
-        GetComponent<Rigidbody2D>().rotation = angle;
+        FacingDirection(angle);
+        FirepointAxis.GetComponent<Rigidbody2D>().rotation = angle;
     }
 
 
@@ -242,7 +342,36 @@ public class EnemyScript : MonoBehaviour
 
     }
 
+    // Changes the Monsters's current animation state
+    void ChangeAnimationState(string newState)
+    {
+        //Stop the same animation from fucking itself
+        if (currentState == newState) return;
 
+        //pLAY THAT MF
+        animator.Play(newState);
+    }
 
+    void FacingDirection(float angle)
+    {
+        if (angle <= -90)
+        {
+            isFacingBack = false;
+        }
+        else if (angle > -90 )
+        {
+            isFacingBack = true;
+        }
+ 
+
+        if (angle <= 0 && angle > -180)
+        {
+            isFacingRight = true;
+        }
+        else if (angle < -180 || angle > 0)
+        {
+            isFacingRight = false;
+        }
+    }
 }
 

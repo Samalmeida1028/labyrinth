@@ -9,8 +9,6 @@ public class Bullet : MonoBehaviour
     public void SetDamage(int totalDamage){
         damage = totalDamage;
 
-        Debug.Log(totalDamage);
-
     }
     void Start(){
         Instantiate(onShot,transform.position,Quaternion.identity);
