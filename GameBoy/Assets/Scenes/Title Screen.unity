@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3198320304034230389, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+      propertyPath: canAttack
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4568767322909129848, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
       propertyPath: m_Name
       value: PlayerContainer
@@ -287,6 +291,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5520154406151847662, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+      propertyPath: maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8912269855736630895, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
       propertyPath: ammoCount
       value: 
@@ -295,6 +303,10 @@ PrefabInstance:
       propertyPath: goldCount
       value: 
       objectReference: {fileID: 1401148519}
+    - target: {fileID: 8912269855736630895, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2083559613}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
 --- !u!1 &252253694
@@ -1140,3 +1152,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971110792}
   m_CullTransparentMesh: 1
+--- !u!114 &2083559613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6335350671749715804, guid: a125564571a917043b1ffa1dbdeb337d, type: 3}
+  m_PrefabInstance: {fileID: 117832055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
