@@ -699,7 +699,7 @@ public class LevelGenerator : MonoBehaviour
                     {
                         grid[(int)(enemySpawn.x/tilePixelCount),(int)(enemySpawn.y/tilePixelCount)]=1;
                         enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().isRanged = Random.Range(0,10)<=3;
-                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1,levelDifficulty*1.2f);
+                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1+levelDifficulty/2,levelDifficulty*1.2f);
                         Instantiate(enemy,enemySpawn,Quaternion.identity);
                         room.enemyCount--;
                         enemyCount++;

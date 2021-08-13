@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     public int currentHealth;
     public int maxHealth=100;
     public int baseDamage;
-    public int damageMult;
+    public float damageMult;
     public float armor;
     public int moveSpeed;
     public int maxSpeed;
@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start(){    
         currentHealth = maxHealth;
+        maxSpeed = 8;
         moveSpeed = maxSpeed;
         baseDamage = 5;
         armor = 1f;
@@ -46,30 +47,38 @@ public class PlayerStats : MonoBehaviour
     {
         armorLvl++;
 
-        armor += (armorLvl-1)*.2f;
+        armor = 1+((armorLvl-1)*.2f);
     }
 
     public void UpgradeHealth()
     {
         healthLvl++;
 
-        maxHealth+=25;
+        maxHealth=100+((healthLvl-1)*20);
         currentHealth=maxHealth;
-        inventoryUI.GetComponent<InventoryUI>().SetBarMax(maxHealth);
+        gameObject.GetComponent<PlayerInventory>().inventoryUI.GetComponent<InventoryUI>().SetBarMax(maxHealth);
     }
 
     public void UpgradeSpeed()
     {
         moveSpeedLvl++;
+
+        maxSpeed = (8+moveSpeedLvl-1);
+        moveSpeed=maxSpeed;
     }
 
     public void UpgradeDamage()
     {
         dmgLvl++;
+
+        baseDamage = (dmgLvl*5);
+
     }
     public void UpgradeDamageMult() 
     { 
         dmgMultLvl++;
+
+        damageMult = 1+((dmgMultLvl-1)*.2f);
     }
 
     public void UpdateHealth(int dmg)

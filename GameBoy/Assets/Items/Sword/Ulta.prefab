@@ -101,6 +101,7 @@ MonoBehaviour:
   isMelee: 0
   attackSpeed: 2
   sprite: {fileID: 0}
-  damage: 22
+  damage: 20
   armorVal: 0
   itemType: 0
+  healthAmount: 0
