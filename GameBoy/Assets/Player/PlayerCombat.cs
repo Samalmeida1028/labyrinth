@@ -117,7 +117,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyAttack")
         {
-            Debug.Log(other.gameObject.GetComponent<EnemyAttack>().damage);
+            //Debug.Log(other.gameObject.GetComponent<EnemyAttack>().damage);
             TakeDamage(other.gameObject.GetComponent<EnemyAttack>().damage);
         }
     }

@@ -693,7 +693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c8333a3009e2f4c962b8e559bc198e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 2623393137211046302}
+  RB: {fileID: 0}
+  playerDisplay: {fileID: 0}
+  playerCombatInfo: {fileID: 0}
   cam: {fileID: 1439970833671186548}
   lookDir: 3
   angle: 90
@@ -781,7 +783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3803791377501997989}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.02, y: 1.68, z: -5.0200744}
+  m_LocalPosition: {x: 0.02, y: 0.715, z: -5.0200744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7727341916335822228}
@@ -941,7 +943,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4568767322713214324}
   - component: {fileID: 4568767322713214326}
-  - component: {fileID: 6505946755581493590}
   - component: {fileID: 5211050001647324603}
   - component: {fileID: 1319171601301441425}
   m_Layer: 0
@@ -1016,20 +1017,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6505946755581493590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4568767322713214331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fc2f3ebe00cd714c90cdc1d2b687671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 3734770622734322656}
-  animator: {fileID: 5211050001647324603}
 --- !u!95 &5211050001647324603
 Animator:
   serializedVersion: 3

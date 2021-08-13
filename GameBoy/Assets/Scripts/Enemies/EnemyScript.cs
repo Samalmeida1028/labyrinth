@@ -42,7 +42,7 @@ public class EnemyScript : MonoBehaviour
     public float enemyDamage;
     public float projectileLife = .5f;
     public bool isRanged;
-    private int health = 100;
+    public int health = 100;
     public float attackSpeed;
     public int force;
     public int targetRange;
@@ -169,9 +169,10 @@ public class EnemyScript : MonoBehaviour
                 {
                     ChangeAnimationState(MONSTER_ATTACK_F);
                 }
-
-                Invoke("AttackComplete", 0.3f);
             }
+
+            Invoke("AttackComplete", 0.3f);
+
         }
     }
 
@@ -224,14 +225,13 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        isAttackPressed = true;
-
         ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
         ai.SetPath(null);
     
         PointAtPlayer();
         if (counter >= 1 / attackSpeed)
         {
+            isAttackPressed = true;
             counter = 0;
 
             GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);

@@ -162,10 +162,11 @@ MonoBehaviour:
   firePoint: {fileID: 3060586330379077822}
   enemyTier: 1.2
   FirepointAxis: {fileID: 2391211169288080072}
-  enemyDamage: 0
+  enemyDamage: 1
   projectileLife: 0.5
   isRanged: 0
-  attackSpeed: 10
+  health: 20
+  attackSpeed: 0.8
   force: 10
   targetRange: 5
   attackRange: 1
@@ -251,7 +252,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 2
 --- !u!58 &3060586329696879569
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -267,7 +268,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!114 &3060586329696879570
 MonoBehaviour:
   m_ObjectHideFlags: 0
