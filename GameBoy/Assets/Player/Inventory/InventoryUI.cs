@@ -10,6 +10,7 @@ public class InventoryUI : MonoBehaviour
     public Image[] itemSlots = new Image[4];
     public Image[] slots = new Image[3];
     public GameObject player;
+    public Slider healthBar;
     public Sprite selectedSlot;
     public Sprite unselectedSlot;
     public TextMeshProUGUI goldCount;
@@ -18,6 +19,11 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         player = GameObject.FindGameObjectWithTag("Player");
+        healthBar.wholeNumbers = true;
+        healthBar.maxValue = player.GetComponent<PlayerStats>().maxHealth;
+        healthBar.minValue = 0;
+        ResetHealthBar();
+
     }
 
 
@@ -52,13 +58,23 @@ public class InventoryUI : MonoBehaviour
 
     }
 
+    public void UpdateHealthBar(int cHealth)
+    {
+        healthBar.value = (cHealth);
+    }
+
+    public void ResetHealthBar()
+    {
+        healthBar.value = healthBar.maxValue;
+    }
+
     public void RefreshGoldDisplay(int gCount)
     {
-        goldCount.text = "x " + gCount;
+        goldCount.text = " x " + gCount;
     }
 
     public void RefreshAmmoDisplay(int aCount)
     {
-        ammoCount.text = "x " + aCount;
+        ammoCount.text = " x " + aCount;
     }
 }

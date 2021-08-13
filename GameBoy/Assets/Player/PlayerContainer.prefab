@@ -261,7 +261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.88, y: 2.45}
+  m_AnchoredPosition: {x: 1, y: 2.45}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4277238373993139028
@@ -1116,7 +1116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.88, y: 2.45}
+  m_AnchoredPosition: {x: 1, y: 2.45}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7878926152701749844
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.6801617, y: -0.53148985, z: -12.078958, w: -3.7259972}
+  m_margin: {x: 1.4220402, y: -0.53148985, z: -12.078958, w: -3.7259972}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1348,6 +1348,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   activeItem: {fileID: 0}
+  starterItem: {fileID: 5022578335080980256, guid: 94431c93116653b4e97d84a77f010ca0, type: 3}
   inventoryUI: {fileID: 8912269855736630892}
   askToAdd: 0
   gold: 0
@@ -1370,6 +1371,7 @@ MonoBehaviour:
   damageMult: 1
   armor: 1
   moveSpeed: 10
+  maxSpeed: 0
   deathScreen: {fileID: 7473076834788339596, guid: 19db57215d8ee1549a06f864e2c2161b, type: 3}
   die: 0
 --- !u!114 &2567712965304237851
@@ -1411,6 +1413,7 @@ MonoBehaviour:
   isRanged: 0
   canAttack: 1
   isPotion: 0
+  dead: 0
 --- !u!50 &2623393137211046302
 Rigidbody2D:
   serializedVersion: 4
@@ -2512,6 +2515,7 @@ MonoBehaviour:
   - {fileID: 1995584165482718842}
   - {fileID: 7939500461967725470}
   player: {fileID: 3734770622734322656}
+  healthBar: {fileID: 0}
   selectedSlot: {fileID: 6246630173899943051, guid: fc7fb95fc994d06428a3c7ac021ea490, type: 3}
   unselectedSlot: {fileID: 5236098423434603601, guid: fc7fb95fc994d06428a3c7ac021ea490, type: 3}
   goldCount: {fileID: 4835047500996598359}

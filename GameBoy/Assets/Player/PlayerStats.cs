@@ -11,11 +11,13 @@ public class PlayerStats : MonoBehaviour
     public int damageMult;
     public float armor;
     public int moveSpeed;
+    public int maxSpeed;
     public GameObject deathScreen;
     public bool die;
 
     void Start(){    
         currentHealth = maxHealth;
+        moveSpeed = maxSpeed;
         baseDamage = 5;
     }
 
@@ -50,11 +52,17 @@ public class PlayerStats : MonoBehaviour
     
     }
 
+    public void UpdateHealth(int dmg)
+    {
+        currentHealth-=dmg;
+        gameObject.GetComponent<PlayerInventory>().inventoryUI.GetComponent<InventoryUI>().UpdateHealthBar(currentHealth);
+    }
+
     public IEnumerator Die()//move this to PlayerCombat
     {
-        currentHealth=maxHealth;
         gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
         gameObject.GetComponent<PlayerInventory>().Clear();
+        gameObject.GetComponent<PlayerCombat>().dead = true;
         Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
 
         bool continueNext = false;
@@ -65,8 +73,13 @@ public class PlayerStats : MonoBehaviour
             if(Input.GetKeyDown("e"))
             {
                 continueNext=true;
+                
             }
         }
+        currentHealth=maxHealth;
+        moveSpeed=maxSpeed;
+        gameObject.GetComponent<PlayerInventory>().inventoryUI.GetComponent<InventoryUI>().ResetHealthBar();
+        gameObject.GetComponent<PlayerCombat>().dead = false;
         SceneManager.LoadScene(1);
 
     }

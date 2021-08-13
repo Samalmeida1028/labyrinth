@@ -17,11 +17,12 @@ public class PlayerCombat : MonoBehaviour
     public bool isRanged;
     public bool canAttack;
     public bool isPotion;
+    public bool dead;
     int itemDamage;
 
     void Start()
     {
-        canAttack = true;
+        canAttack = false;
         isRanged = false;
         ChangeDamage();
         ChangeArmor();
@@ -36,9 +37,15 @@ public class PlayerCombat : MonoBehaviour
         }
         else if (isPotion)
         {
-            if (Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount))//method for potion
+            Debug.Log("Potion");
+            if (Input.GetMouseButton(0))
             {
-                Destroy(GetComponent<PlayerInventory>().activeItem);
+                Debug.Log("Potion Motion");
+                if (Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount))//method for potion
+                {
+                    GetComponent<PlayerInventory>().clearSlot(2);
+                    isPotion=false;
+                }
             }
         }
     }
@@ -100,7 +107,7 @@ public class PlayerCombat : MonoBehaviour
     void TakeDamage(int damage)//normal takeDamage, if it is less than 0 then die;
     {
         totalArmor = GetComponent<PlayerStats>().armor;
-        GetComponent<PlayerStats>().currentHealth -= (int)(damage / totalArmor);
+        GetComponent<PlayerStats>().UpdateHealth((int)(damage / totalArmor));
         if (GetComponent<PlayerStats>().currentHealth <= 0)
         {
             Die();
@@ -119,7 +126,10 @@ public class PlayerCombat : MonoBehaviour
         if (other.gameObject.tag == "EnemyAttack")
         {
             Debug.Log(other.gameObject.GetComponent<EnemyAttack>().damage);
-            TakeDamage(other.gameObject.GetComponent<EnemyAttack>().damage);
+            if(dead==false)
+            {
+                TakeDamage(other.gameObject.GetComponent<EnemyAttack>().damage); 
+            }
         }
     }
     public bool Heal(int health)//heals player either to the potion amount or to max
@@ -127,13 +137,13 @@ public class PlayerCombat : MonoBehaviour
         int difference = 0;
         if (gameObject.GetComponent<PlayerStats>().currentHealth + health < gameObject.GetComponent<PlayerStats>().maxHealth)
         {
-            gameObject.GetComponent<PlayerStats>().currentHealth += health;
+            gameObject.GetComponent<PlayerStats>().UpdateHealth(-health);
             return true;
         }
         else if (gameObject.GetComponent<PlayerStats>().maxHealth - gameObject.GetComponent<PlayerStats>().currentHealth != 0)
         {
             difference = gameObject.GetComponent<PlayerStats>().maxHealth - gameObject.GetComponent<PlayerStats>().currentHealth;
-            gameObject.GetComponent<PlayerStats>().currentHealth += difference;
+            gameObject.GetComponent<PlayerStats>().UpdateHealth(-difference);
             return true;
         }
         else

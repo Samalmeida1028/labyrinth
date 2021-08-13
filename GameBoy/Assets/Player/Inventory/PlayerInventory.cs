@@ -6,6 +6,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public Item[] inventory = new Item[4];
     public Item activeItem;//item in player's hand
+    public Item starterItem;
     public GameObject inventoryUI;
     public bool askToAdd = false;//used for shop to determine when to take money from player
     public int gold = 0;
@@ -15,6 +16,7 @@ public class PlayerInventory : MonoBehaviour
     {
         inventoryUI.GetComponent<InventoryUI>().RefreshGoldDisplay(gold);
         inventoryUI.GetComponent<InventoryUI>().RefreshAmmoDisplay(ammo);
+        AddItem(starterItem);
     }
 
     void Update(){
@@ -99,5 +101,18 @@ public class PlayerInventory : MonoBehaviour
             inventoryUI.GetComponent<InventoryUI>().clear(i);
         }
         activeItem=null;
+        AddItem(starterItem);
+    }
+
+    public void clearSlot(int slot)
+    {
+        if(activeItem.itemType==slot)
+        {
+            activeItem=null;
+        }
+
+        inventory[slot]=null;
+        inventoryUI.GetComponent<InventoryUI>().clear(slot);
+
     }
 }
