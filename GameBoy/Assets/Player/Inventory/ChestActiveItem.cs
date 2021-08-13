@@ -43,7 +43,6 @@ public class ChestActiveItem : MonoBehaviour
             hasInteract = false;
             canInteract = false;
             activeItem = chestPool[tier, itemInTier];
-            Debug.Log(activeItem);
             if (isShop) price = activeItem.value;
             else price = 0;
 
@@ -78,22 +77,11 @@ public class ChestActiveItem : MonoBehaviour
                 player.GetComponent<PlayerInventory>().AddGold(-price);
                 hasInteract = true;
             }
-            else if (!hasInteract)
-            {
-                Debug.Log("Do you want to add item?");
-                time += Time.deltaTime;
-                if (time > confirm)
-                {
-                    player.GetComponent<PlayerInventory>().askToAdd = true;//sets askToAdd true so the AddItem metlhod will trigger
-                    player.GetComponent<PlayerInventory>().AddItem(activeItem);
-                    hasInteract = true;
-                }
-                else if (!Input.GetKey("e"))
-                {
-                    time = 0;
-                }
-            }
+        
         }
-        else if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold <= price) Debug.Log("Not Enough Dough");
+        else if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        }
     }
 }
