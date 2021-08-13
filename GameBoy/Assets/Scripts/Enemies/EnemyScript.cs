@@ -77,6 +77,7 @@ public class EnemyScript : MonoBehaviour
 
     private bool isAttacking;
     private bool isAttackPressed;
+    public bool isDamaged;
 
     private string currentState;
 
@@ -87,6 +88,9 @@ public class EnemyScript : MonoBehaviour
 
     const string MONSTER_ATTACK_F = "Attack_Forward";
     const string MONSTER_ATTACK_B = "Attack_Backward";
+
+    const string MONSTER_DAMAGED_F = "Enemy_Damaged_Forward";
+    const string MONSTER_DAMAGED_B = "Enemy_Damaged_Backward";
 
     Vector3 PickRandomPoint() {
         var point = Random.insideUnitSphere * radius;
@@ -127,7 +131,7 @@ public class EnemyScript : MonoBehaviour
             enemySprite.flipX = true;
         }
 
-        if (!isAttacking)
+        if (!isAttacking && !isDamaged)
         {
             if (isFacingRight) //If the monster is facing right
             {
@@ -153,7 +157,8 @@ public class EnemyScript : MonoBehaviour
             }
         }
 
-        if (isAttackPressed)
+        // Player Monster Attack Animation
+        if (isAttackPressed && !isDamaged)
         {
             isAttackPressed = false;
 
@@ -174,8 +179,26 @@ public class EnemyScript : MonoBehaviour
             Invoke("AttackComplete", 0.3f);
 
         }
+
+        if (isDamaged)
+        {
+            if (isFacingBack)
+            {
+                ChangeAnimationState(MONSTER_DAMAGED_B);
+            }
+            else
+            {
+                ChangeAnimationState(MONSTER_DAMAGED_F);
+            }
+
+            Invoke("DamagedComplete", 0.1f);
+        }
     }
 
+    void DamagedComplete()
+    {
+        isDamaged = false;
+    }
 
     void AttackComplete()
     {
@@ -343,7 +366,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     // Changes the Monsters's current animation state
-    void ChangeAnimationState(string newState)
+    public void ChangeAnimationState(string newState)
     {
         //Stop the same animation from fucking itself
         if (currentState == newState) return;
