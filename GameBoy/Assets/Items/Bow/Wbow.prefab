@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810b76d8ec0bd4d94f7b49aeb672e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
+  value: 150
   itemName: Wooden Bow
   rarity: 0
   isMelee: 0
@@ -104,4 +104,3 @@ MonoBehaviour:
   damage: 3
   armorVal: 0
   itemType: 1
-  healthAmount: 0

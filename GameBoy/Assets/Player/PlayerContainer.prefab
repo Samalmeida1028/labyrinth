@@ -1374,11 +1374,6 @@ MonoBehaviour:
   maxSpeed: 0
   deathScreen: {fileID: 7473076834788339596, guid: 19db57215d8ee1549a06f864e2c2161b, type: 3}
   die: 0
-  healthLvl: 0
-  armorLvl: 0
-  moveSpeedLvl: 0
-  dmgLvl: 0
-  dmgMultLvl: 0
 --- !u!114 &2567712965304237851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,7 +1698,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1887952361
   m_SortingLayer: 1
-  m_SortingOrder: 7
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1936708102373605694, guid: 3da52fe351e9c904e9d3d576dc501f0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

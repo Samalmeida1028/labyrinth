@@ -95,13 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810b76d8ec0bd4d94f7b49aeb672e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 60
+  value: 600
   itemName: Ruby Armor
   rarity: 2
   isMelee: 0
   attackSpeed: 0
   sprite: {fileID: 0}
   damage: 0
-  armorVal: 1.5
+  armorVal: 1.3
   itemType: 3
   healthAmount: 0

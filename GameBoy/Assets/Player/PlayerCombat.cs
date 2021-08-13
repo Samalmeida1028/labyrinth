@@ -102,7 +102,7 @@ public class PlayerCombat : MonoBehaviour
 
     void TakeDamage(int damage)//normal takeDamage, if it is less than 0 then die;
     {
-        totalArmor = GetComponent<PlayerStats>().armor + GetComponent<PlayerInventory>().inventory[3].armorVal;
+        totalArmor = GetComponent<PlayerStats>().armor;
         GetComponent<PlayerStats>().UpdateHealth((int)(damage / totalArmor));
         if (GetComponent<PlayerStats>().currentHealth <= 0)
         {
