@@ -15,10 +15,23 @@ public class PlayerStats : MonoBehaviour
     public GameObject deathScreen;
     public bool die;
 
+    public int healthLvl;
+    public int armorLvl;
+    public int moveSpeedLvl;
+    public int dmgLvl;
+    public int dmgMultLvl ;
+
     void Start(){    
         currentHealth = maxHealth;
         moveSpeed = maxSpeed;
         baseDamage = 5;
+        armor = 1f;
+
+        healthLvl = 1;
+        armorLvl = 1;
+        moveSpeedLvl = 1;
+        dmgLvl = 1;
+        dmgMultLvl = 1;
     }
 
     void Update()
@@ -31,25 +44,32 @@ public class PlayerStats : MonoBehaviour
 
     public void UpgradeArmor()
     {
+        armorLvl++;
 
+        armor += (armorLvl-1)*.2f;
     }
 
     public void UpgradeHealth()
     {
+        healthLvl++;
 
+        maxHealth+=25;
+        currentHealth=maxHealth;
+        inventoryUI.GetComponent<InventoryUI>().SetBarMax(maxHealth);
     }
 
     public void UpgradeSpeed()
     {
-
+        moveSpeedLvl++;
     }
 
     public void UpgradeDamage()
     {
-
+        dmgLvl++;
     }
-    public void UpgradeDamageMult() { 
-    
+    public void UpgradeDamageMult() 
+    { 
+        dmgMultLvl++;
     }
 
     public void UpdateHealth(int dmg)
