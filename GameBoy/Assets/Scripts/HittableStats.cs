@@ -7,13 +7,22 @@ public class HittableStats : MonoBehaviour
     public int health;
 
 
-
     public void TakeDamage(int damage){
-        GetComponent<EnemyScript>().isDamaged = true;
+        if (gameObject.layer == 10)
+        {
+            gameObject.GetComponent<EnemyScript>().isDamaged = true;
+        }
 
         gameObject.GetComponent<HittableStats>().health -= damage;
         if(health<=0){
-            Destroy(gameObject);
+            if (gameObject.layer == 10)
+            {
+                GetComponent<EnemyScript>().isKilled = true;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

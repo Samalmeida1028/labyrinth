@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D RB;
     public GameObject playerDisplay;
 
+    public GameObject BowObj;
+
     //Axis Info
     private float xAxis;
     private float yAxis;
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_ATTACK_F = "Attack_Melee_F";
     const string PLAYER_ATTACK_B = "Attack_Melee_B";
 
+    const string PLAYER_BOW_ATTACK_F = "Bow_Shoot_Front";
 
     //Other Variables
     private SpriteRenderer playerSprite;
@@ -42,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private string currentState;
 
     private bool isMoving;
+    private Bow bow;
 
     //Sams Shit
     private float rotationSpeed = 1000;//how fast player moves to mouse
@@ -52,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()    
     {
+        bow = BowObj.GetComponent<Bow>();
         animator = playerDisplay.GetComponent<Animator>();
         playerSprite = playerDisplay.GetComponent<SpriteRenderer>();
     }  
@@ -66,6 +71,9 @@ public class PlayerMovement : MonoBehaviour
 
         //conversion to find the location of an object in terms of the camera view, must use this in order for PointToMouse(); to work
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        // Enable Bow
+
 
         //Check if player is moving
         if (yAxis != 0 || xAxis != 0)
@@ -140,16 +148,33 @@ public class PlayerMovement : MonoBehaviour
             {
                 isAttacking = true;
                 
-                if (isFacingBack)
+                if (!playerCombatInfo.isRanged)
                 {
-                    ChangeAnimationState(PLAYER_ATTACK_B);
+                    if (isFacingBack)
+                    {
+                        ChangeAnimationState(PLAYER_ATTACK_B);
+                    }
+                    else
+                    {
+                        ChangeAnimationState(PLAYER_ATTACK_F);
+                    }
+
+                    Invoke("AttackComplete", 0.3f);
                 }
                 else
                 {
-                    ChangeAnimationState(PLAYER_ATTACK_F);
-                }
+                    if (isFacingBack)
+                    {
+                        //ChangeAnimationState(PLAYER_BOW_ATTACK_F);
+                    }
+                    else
+                    {
+                        bow.Shoot();
+                        ChangeAnimationState(PLAYER_BOW_ATTACK_F);
+                    }
 
-                Invoke("AttackComplete", 0.3f);
+                    Invoke("AttackComplete", 0.4f);
+                }
             }
         }
     }
