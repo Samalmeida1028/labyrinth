@@ -1,5 +1,6 @@
-using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEditor;
 using System;
 
 
@@ -9,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("Title_Music");
+        Play("TitleMusic");
     }
 
     void Awake() {
@@ -21,6 +22,14 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
 
             s.source.pitch = s.pitch;
+            s.source.playOnAwake = false;
+        }
+    }
+
+    void StopAllAudio()
+    {
+        foreach (Sound s in sounds) {
+            s.source.Stop();
         }
     }
 
@@ -30,7 +39,9 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Couldn't find audio!");
             return;
         }
+
         s.source.Play();
     }
+
 
 }
