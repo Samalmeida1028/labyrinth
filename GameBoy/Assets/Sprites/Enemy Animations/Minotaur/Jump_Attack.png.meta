@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: a2bee6a68d9994f4290b47e52217c7af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3142570261431038129
+    second: Jump_Attack_0
+  - first:
+      213: -8765759542455045719
+    second: Jump_Attack_1
+  - first:
+      213: 654750115904419167
+    second: Jump_Attack_2
+  - first:
+      213: -6358637451192962929
+    second: Jump_Attack_3
+  - first:
+      213: 1479005996549410044
+    second: Jump_Attack_4
+  - first:
+      213: -8703052853927317665
+    second: Jump_Attack_5
+  - first:
+      213: -148026116374611845
+    second: Jump_Attack_6
+  - first:
+      213: -5582269710383239994
+    second: Jump_Attack_7
+  - first:
+      213: -1714367210416295130
+    second: Jump_Attack_8
+  - first:
+      213: 549522549151321647
+    second: Jump_Attack_9
+  - first:
+      213: 763646395275393945
+    second: Jump_Attack_10
+  - first:
+      213: 240630626400840178
+    second: Jump_Attack_11
+  - first:
+      213: -5385794316055331423
+    second: Jump_Attack_12
+  - first:
+      213: 3110794771090256407
+    second: Jump_Attack_13
+  - first:
+      213: 2099484786038172560
+    second: Jump_Attack_14
+  - first:
+      213: 8316866082934208966
+    second: Jump_Attack_15
+  - first:
+      213: -3438844566673740802
+    second: Jump_Attack_16
+  - first:
+      213: 6237031335181151741
+    second: Jump_Attack_17
+  - first:
+      213: 6793982056642129913
+    second: Jump_Attack_18
+  - first:
+      213: 2008894024423794399
+    second: Jump_Attack_19
+  - first:
+      213: 2746980598922385757
+    second: Jump_Attack_20
+  - first:
+      213: 1415285118762267298
+    second: Jump_Attack_21
+  - first:
+      213: 4470440826278918977
+    second: Jump_Attack_22
+  - first:
+      213: 6765676728389102767
+    second: Jump_Attack_23
+  - first:
+      213: 706678450630569795
+    second: Jump_Attack_24
+  - first:
+      213: 7057725171990016853
+    second: Jump_Attack_25
+  - first:
+      213: -5547529864039958610
+    second: Jump_Attack_26
+  - first:
+      213: -4206824688999326091
+    second: Jump_Attack_27
+  - first:
+      213: -7543105406090693801
+    second: Jump_Attack_28
+  - first:
+      213: 660024354948331751
+    second: Jump_Attack_29
+  - first:
+      213: -8342422180763073415
+    second: Jump_Attack_30
+  - first:
+      213: -2632988890426016315
+    second: Jump_Attack_31
+  - first:
+      213: 2651404792743884095
+    second: Jump_Attack_32
+  - first:
+      213: 2729068704040034422
+    second: Jump_Attack_33
+  - first:
+      213: 7546511744304353629
+    second: Jump_Attack_34
+  - first:
+      213: 2462581547706488948
+    second: Jump_Attack_35
+  - first:
+      213: 1603048190698211586
+    second: Jump_Attack_36
+  - first:
+      213: -4537751658247832401
+    second: Jump_Attack_37
+  - first:
+      213: -4374117483607570649
+    second: Jump_Attack_38
+  - first:
+      213: 599245713887907066
+    second: Jump_Attack_39
+  - first:
+      213: 3478802695584788906
+    second: Jump_Attack_40
+  - first:
+      213: -6056279235177889060
+    second: Jump_Attack_41
+  - first:
+      213: 4235494653927892453
+    second: Jump_Attack_42
+  - first:
+      213: 4467154753938903426
+    second: Jump_Attack_43
+  - first:
+      213: -3216505568652016240
+    second: Jump_Attack_44
+  - first:
+      213: 716970784661391184
+    second: Jump_Attack_45
+  - first:
+      213: -5544566530264812614
+    second: Jump_Attack_46
+  - first:
+      213: -6685165547580127538
+    second: Jump_Attack_47
+  - first:
+      213: -6241592283096042373
+    second: Jump_Attack_48
+  - first:
+      213: -5648611822608787242
+    second: Jump_Attack_49
+  - first:
+      213: 3181472212014043095
+    second: Jump_Attack_50
+  - first:
+      213: 2411410362829714773
+    second: Jump_Attack_51
+  - first:
+      213: -7975816235774235980
+    second: Jump_Attack_52
+  - first:
+      213: 7296258950232239448
+    second: Jump_Attack_53
+  - first:
+      213: 8475943280305510072
+    second: Jump_Attack_54
+  - first:
+      213: -2399957682226473355
+    second: Jump_Attack_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jump_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 109
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f42bd4ff85364d0800000000000000
+      internalID: -3142570261431038129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 110
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1f97d9324c95680800000000000000
+      internalID: -8765759542455045719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 110
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55f02be2c3261900800000000000000
+      internalID: 654750115904419167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 106
+        width: 19
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80f52a7de491c7a0800000000000000
+      internalID: -6358637451192962929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 104
+        width: 21
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc00052e1c768410800000000000000
+      internalID: 1479005996549410044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 103
+        width: 23
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f66344a8b883780800000000000000
+      internalID: -8703052853927317665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 104
+        width: 25
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78b20c080b12fdf0800000000000000
+      internalID: -148026116374611845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 105
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6233f80fa185538e0800000000000000
+      internalID: -1714367210416295130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

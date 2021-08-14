@@ -20,6 +20,7 @@ public class PlayerStats : MonoBehaviour
     public int moveSpeedLvl;
     public int dmgLvl;
     public int dmgMultLvl ;
+    public bool startDeath = false;
 
     void Start(){    
         currentHealth = maxHealth;
@@ -37,9 +38,10 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        if(currentHealth<=0)
+        if(currentHealth<=0&&startDeath==false)
         {
             StartCoroutine(Die());
+            startDeath = true;
         }
     }
 
@@ -90,12 +92,17 @@ public class PlayerStats : MonoBehaviour
 
     public IEnumerator Die()//move this to PlayerCombat
     {
-        gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
-        gameObject.GetComponent<PlayerInventory>().Clear();
-        gameObject.GetComponent<PlayerCombat>().dead = true;
-        Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
-
         bool continueNext = false;
+        bool finishLoad = false;
+        bool finishClear = false;
+        if(finishClear == false)
+        {
+            gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
+            gameObject.GetComponent<PlayerInventory>().Clear();
+            gameObject.GetComponent<PlayerCombat>().dead = true;
+            Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
+            finishClear = true;
+        }
 
         while(continueNext == false)
         {
@@ -106,10 +113,15 @@ public class PlayerStats : MonoBehaviour
                 
             }
         }
-        currentHealth=maxHealth;
-        moveSpeed=maxSpeed;
-        gameObject.GetComponent<PlayerInventory>().inventoryUI.GetComponent<InventoryUI>().ResetHealthBar();
-        gameObject.GetComponent<PlayerCombat>().dead = false;
-        SceneManager.LoadScene(1);
+
+        if(finishLoad==false)
+        {
+            currentHealth=maxHealth;
+            moveSpeed=maxSpeed;
+            gameObject.GetComponent<PlayerInventory>().inventoryUI.GetComponent<InventoryUI>().ResetHealthBar();
+            gameObject.GetComponent<PlayerCombat>().dead = false;
+            SceneManager.LoadScene(1);
+            finishLoad=true;
+        }
     }
 }

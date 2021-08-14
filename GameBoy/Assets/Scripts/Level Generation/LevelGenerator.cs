@@ -632,7 +632,9 @@ public class LevelGenerator : MonoBehaviour
     
     public void generateExit()
     {
-        Instantiate(levelChange,new Vector3(exitRoom.roomCenter.x,exitRoom.roomCenter.y,0), Quaternion.identity);
+        GameObject lvlChange = levelChange;
+        lvlChange.GetComponent<LevelChangeScript>().open=true;
+        Instantiate(lvlChange,new Vector3(exitRoom.roomCenter.x,exitRoom.roomCenter.y,0), Quaternion.identity);
         
     }
 
