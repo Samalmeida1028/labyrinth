@@ -5,7 +5,8 @@ using UnityEngine;
 public class FollowSelf : MonoBehaviour
 {
     public Transform playerPosition;
-    void LateUpdate(){
+
+    void LateUpdate() {
         transform.position = playerPosition.position;
     }
 }
