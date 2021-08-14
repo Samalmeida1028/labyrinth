@@ -81,7 +81,8 @@ public class PlayerCombat : MonoBehaviour
             if (GetComponent<PlayerInventory>().ammo > 0 && updateCounter>(1/attackSpeed))
             {
                 // Locks shooting into 3 different angles on either side 
-                // Ethan did this to make everything looks better and more of a "Mechanic"
+                // Ethan did this to make everything looks better
+                // This change will make the bow more skillful aswell
                 if (GetComponent<PlayerMovement>().angle != 0 && GetComponent<PlayerMovement>().angle != -180)
                 {
                 updateCounter = 0;

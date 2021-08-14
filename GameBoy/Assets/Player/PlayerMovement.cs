@@ -214,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
                     ChangeAnimationState(PLAYER_DAMAGED_F);
                 }
 
-                Invoke("hitComplete", 0.2f);
+                Invoke("hitComplete", 0.3f);
             }
         }
     }
