@@ -42,7 +42,7 @@ public class EnemyScript : MonoBehaviour
     public float enemyDamage;
     public float projectileLife = .5f;
     public bool isRanged;
-    private int health = 100;
+    public int health = 100;
     public float attackSpeed;
     public int force;
     public int targetRange;
@@ -78,6 +78,11 @@ public class EnemyScript : MonoBehaviour
     private bool isAttacking;
     private bool isAttackPressed;
 
+    private bool killdb = false;
+
+    public bool isDamaged;
+    public bool isKilled;
+
     private string currentState;
 
 
@@ -87,6 +92,11 @@ public class EnemyScript : MonoBehaviour
 
     const string MONSTER_ATTACK_F = "Attack_Forward";
     const string MONSTER_ATTACK_B = "Attack_Backward";
+
+    const string MONSTER_DAMAGED_F = "Enemy_Damaged_Forward";
+    const string MONSTER_DAMAGED_B = "Enemy_Damaged_Backward";
+
+    const string DEAD = "Death";
 
     Vector3 PickRandomPoint() {
         var point = Random.insideUnitSphere * radius;
@@ -118,7 +128,7 @@ public class EnemyScript : MonoBehaviour
         FirepointAxis.transform.position = transform.position;
 
         //Change Sprite Direction/Animation
-        if (isFacingRight)
+        if (isFacingRight && !isKilled)
         {
             enemySprite.flipX = false;
         }
@@ -127,7 +137,7 @@ public class EnemyScript : MonoBehaviour
             enemySprite.flipX = true;
         }
 
-        if (!isAttacking)
+        if (!isAttacking && !isDamaged && !isKilled)
         {
             if (isFacingRight) //If the monster is facing right
             {
@@ -153,7 +163,8 @@ public class EnemyScript : MonoBehaviour
             }
         }
 
-        if (isAttackPressed)
+        // Player Monster Attack Animation
+        if (isAttackPressed && !isDamaged && !isKilled)
         {
             isAttackPressed = false;
 
@@ -169,12 +180,73 @@ public class EnemyScript : MonoBehaviour
                 {
                     ChangeAnimationState(MONSTER_ATTACK_F);
                 }
+            }
 
-                Invoke("AttackComplete", 0.3f);
+            Invoke("AttackComplete", 0.3f);
+
+        }
+
+        // Damaged Animation
+        if (isDamaged && !isKilled)
+        {
+            if (isFacingBack)
+            {
+                ChangeAnimationState(MONSTER_DAMAGED_B);
+            }
+            else
+            {
+                ChangeAnimationState(MONSTER_DAMAGED_F);
+            }
+
+            Invoke("DamagedComplete", 0.2f);
+        }
+        
+
+        // MF DEAD
+        if (isKilled)
+        {
+
+            if (!killdb)
+            {
+                killdb = true;
+
+                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+
+                Component[] CircleCollider2Ds; //nuts
+                CircleCollider2Ds = GetComponents(typeof(CircleCollider2D));
+
+                foreach (CircleCollider2D f in CircleCollider2Ds)
+                    f.enabled = false;
+
+                if (isFacingBack)
+                {
+                    ChangeAnimationState(MONSTER_DAMAGED_B);
+                }
+                else
+                {
+                    ChangeAnimationState(MONSTER_DAMAGED_F);
+                }
+
+                Invoke("deathAnimation", 0.2f);
             }
         }
     }
 
+    void deathAnimation()
+    {
+        ChangeAnimationState(DEAD);
+        Invoke("kill", 0.8f);
+    }
+
+    void kill()
+    {
+        Destroy(gameObject);
+    }
+
+    void DamagedComplete()
+    {
+        isDamaged = false;
+    }
 
     void AttackComplete()
     {
@@ -224,24 +296,26 @@ public class EnemyScript : MonoBehaviour
 
     void Attack()
     {
-        isAttackPressed = true;
-
-        ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
-        ai.SetPath(null);
-    
-        PointAtPlayer();
-        if (counter >= 1 / attackSpeed)
+        if (!isKilled)
         {
-            counter = 0;
-
-            GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
-
-            attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
-            Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-            Destroy(attack, projectileLife);
-            if (isRanged)
+            ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+            ai.SetPath(null);
+        
+            PointAtPlayer();
+            if (counter >= 1 / attackSpeed)
             {
-                attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+                isAttackPressed = true;
+                counter = 0;
+
+                GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
+
+                attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
+                Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
+                Destroy(attack, projectileLife);
+                if (isRanged)
+                {
+                    attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+                }
             }
         }
 
@@ -308,7 +382,7 @@ public class EnemyScript : MonoBehaviour
 
     void Chase()
     {
-        if (CheckForPlayer())
+        if (CheckForPlayer() && !isKilled)
         {
             if (chasing == false)
             {
@@ -343,7 +417,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     // Changes the Monsters's current animation state
-    void ChangeAnimationState(string newState)
+    public void ChangeAnimationState(string newState)
     {
         //Stop the same animation from fucking itself
         if (currentState == newState) return;

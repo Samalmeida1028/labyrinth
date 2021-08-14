@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D RB;
     public GameObject playerDisplay;
 
+    public GameObject BowObj;
+
     //Axis Info
     private float xAxis;
     private float yAxis;
@@ -25,33 +27,46 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_ATTACK_F = "Attack_Melee_F";
     const string PLAYER_ATTACK_B = "Attack_Melee_B";
 
+    const string PLAYER_BOW_ATTACK_F = "Bow_Shoot_Front";
+    const string PLAYER_BOW_ATTACK_B = "Bow_Shoot_Back";
+
+    const string PLAYER_DAMAGED_F = "Damaged_F";
+    const string PLAYER_DAMAGED_B = "Damaged_B";
 
     //Other Variables
     private SpriteRenderer playerSprite;
     private Animator animator;
     private Vector2 movement;
 
-    private bool isFacingBack;
-    private bool isFacingRight;
+    public bool isFacingBack;
+    public bool isFacingRight;
 
     public PlayerCombat playerCombatInfo;
 
     private bool isAttackPressed;
     private bool isAttacking;
 
+    public bool isHit;
+    public bool hitDB = false;
+
+    private bool isShootingBow;
+
     private string currentState;
 
     private bool isMoving;
+    private Bow bow;
 
     //Sams Shit
     private float rotationSpeed = 1000;//how fast player moves to mouse
     public Camera cam;
     private Vector2 mousePos;
+
     public int lookDir;//used for animator to set the player look direction
     public int angle;//full angle
 
     void Start()    
     {
+        bow = BowObj.GetComponent<Bow>();
         animator = playerDisplay.GetComponent<Animator>();
         playerSprite = playerDisplay.GetComponent<SpriteRenderer>();
     }  
@@ -77,19 +92,19 @@ public class PlayerMovement : MonoBehaviour
             isMoving = false;
         }
 
-        if (isFacingRight)
+        if (isFacingRight && !hitDB)
         {
             playerSprite.flipX = false;
 
         }
         else
         {
-         playerSprite.flipX = true;
+            playerSprite.flipX = true;
         }
 
 
         //Change Sprite Direction/Animation
-        if (isMoving && !isAttacking)
+        if (isMoving && !isAttacking && !hitDB)
         {
             if (isFacingRight) //If the player is facing right
             {
@@ -114,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
                }
             }
         }
-        else
+        else if (!hitDB)
         {
             if (isFacingBack && !isAttacking)
             {
@@ -126,13 +141,23 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        //
+        if (isShootingBow)
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        }
+
         //Check if player attacks
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !hitDB)
         {
             isAttackPressed = true;
         };
 
-        if (isAttackPressed)
+        if (isAttackPressed && !hitDB)
         {
             isAttackPressed = false;
 
@@ -140,29 +165,84 @@ public class PlayerMovement : MonoBehaviour
             {
                 isAttacking = true;
                 
-                if (isFacingBack)
+                if (!playerCombatInfo.isRanged)
                 {
-                    ChangeAnimationState(PLAYER_ATTACK_B);
+                    if (isFacingBack)
+                    {
+                        ChangeAnimationState(PLAYER_ATTACK_B);
+                    }
+                    else
+                    {
+                        ChangeAnimationState(PLAYER_ATTACK_F);
+                    }
+
+                    Invoke("AttackComplete", 0.3f);
                 }
                 else
                 {
-                    ChangeAnimationState(PLAYER_ATTACK_F);
-                }
+                    if (angle != 0 && angle != -180)
+                    {
+                        isShootingBow = true;
 
-                Invoke("AttackComplete", 0.3f);
+                        bow.Shoot();
+                        ChangeAnimationState(PLAYER_BOW_ATTACK_F);
+
+                        Invoke("AttackComplete", 0.7f);
+                    }
+                    else
+                    {
+                        isAttacking = false;
+                    }
+                }
             }
         }
+
+        if (isHit)
+        {
+            isHit = false;
+
+            if (!hitDB)
+            {
+                hitDB = true;
+                playerCombatInfo.canAttack = false;
+
+                if (isFacingBack)
+                {
+                    ChangeAnimationState(PLAYER_DAMAGED_B);
+                }
+                else    
+                {
+                    ChangeAnimationState(PLAYER_DAMAGED_F);
+                }
+
+                Invoke("hitComplete", 0.2f);
+            }
+        }
+    }
+
+    void hitComplete()
+    {
+        hitDB = false;
+        playerCombatInfo.canAttack = true;
+    }
+
+    public void TakeDamage()
+    {
+        isHit = true;
     }
 
     void AttackComplete()
     {
         isAttacking = false;
 
+        if (isShootingBow)
+            isShootingBow = false;
+
     }
 
     void FixedUpdate()
     {
-        RB.velocity = movement*GetComponent<PlayerStats>().moveSpeed;
+        RB.velocity = movement * GetComponent<PlayerStats>().moveSpeed;
     }
     
     void checkInput()
