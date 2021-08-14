@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Check if player attacks
-        if (Input.GetButtonDown("Fire1") && !hitDB)
+        if (Input.GetButtonDown("Fire1") && !hitDB && playerCombatInfo.canAttack)
         {
             isAttackPressed = true;
         };
