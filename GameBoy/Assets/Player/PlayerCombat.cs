@@ -90,17 +90,17 @@ public class PlayerCombat : MonoBehaviour
                 // This change will make the bow more skillful aswell
                 if (GetComponent<PlayerMovement>().angle != 0 && GetComponent<PlayerMovement>().angle != -180)
                 {
-                updateCounter = 0;
-                int force = -projectileSpeed;
+                    updateCounter = 0;
+                    int force = -projectileSpeed;
 
-                GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
+                    GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
 
-                bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
+                    bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
 
-                Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
-                rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
+                    Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
+                    rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
    
-                GetComponent<PlayerInventory>().AddAmmo(-1);
+                    GetComponent<PlayerInventory>().AddAmmo(-1);
                 }
             }
         }
@@ -110,6 +110,7 @@ public class PlayerCombat : MonoBehaviour
             GameObject melee = Instantiate(meleeAttack, attackPoint.position, attackPoint.rotation);
             melee.GetComponent<Bullet>().SetDamage(totalDamage);
             Destroy(melee, .07f);
+            FindObjectOfType<AudioManager>().Play("SwordSlash");
         }
     }
 
@@ -118,6 +119,8 @@ public class PlayerCombat : MonoBehaviour
 
         ChangeArmor();
         GetComponent<PlayerStats>().UpdateHealth((int)(damage / totalArmor));
+
+        FindObjectOfType<AudioManager>().PlayOneShot("Enemy_Hit");
 
         GetComponent<PlayerMovement>().TakeDamage();
         if (GetComponent<PlayerStats>().currentHealth <= 0)

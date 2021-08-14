@@ -16,7 +16,9 @@ public class Coin : MonoBehaviour
         if (other.tag == "Player")
         {
             other.GetComponent<PlayerInventory>().AddGold(goldAmount);
+            FindObjectOfType<AudioManager>().Play("CoinPickup");
             Destroy(gameObject);
+
         }
     }
 }

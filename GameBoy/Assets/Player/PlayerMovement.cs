@@ -102,6 +102,9 @@ public class PlayerMovement : MonoBehaviour
             playerSprite.flipX = true;
         }
 
+        if (!isMoving) {
+            FindObjectOfType<AudioManager>().Play("WalkSound");
+        }
 
         //Change Sprite Direction/Animation
         if (isMoving && !isAttacking && !hitDB)

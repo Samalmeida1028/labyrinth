@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
 
     }
     void Start(){
+        
         Instantiate(onShot,transform.position,Quaternion.identity);
     }
     void OnCollisionEnter2D(Collision2D other){

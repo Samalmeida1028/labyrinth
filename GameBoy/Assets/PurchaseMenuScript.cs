@@ -26,8 +26,10 @@ public class PurchaseMenuScript : MonoBehaviour
     public TextMeshProUGUI dmgMultText;
 
 
+
     void Start()
     {
+
         player = GameObject.FindGameObjectWithTag("Player");
         PlayerInventoryUI = player.GetComponent<PlayerInventory>().inventoryUI;
         stats = player.GetComponent<PlayerStats>();
@@ -38,6 +40,7 @@ public class PurchaseMenuScript : MonoBehaviour
 
     public void UpgradeArmor() 
     {
+        FindObjectOfType<AudioManager>().Play("UI_Click");
         prevButton.GetComponent<Image>().color = Color.white; 
         if (player.GetComponent<PlayerInventory>().gold>=(stats.armorLvl*price)&&stats.armorLvl<=5){
             armorButton.GetComponent<Image>().color = Color.green;
@@ -60,6 +63,7 @@ public class PurchaseMenuScript : MonoBehaviour
 
     public void UpgradeHealth() 
     {
+        FindObjectOfType<AudioManager>().Play("UI_Click");
         prevButton.GetComponent<Image>().color = Color.white; 
         if (player.GetComponent<PlayerInventory>().gold>=(stats.healthLvl*price)&&stats.healthLvl<=5){
             healthButton.GetComponent<Image>().color = Color.green;
@@ -81,7 +85,8 @@ public class PurchaseMenuScript : MonoBehaviour
     }
 
     public void UpgradeSpeed()
-    { 
+    {
+        FindObjectOfType<AudioManager>().Play("UI_Click");
         prevButton.GetComponent<Image>().color = Color.white;
         if (player.GetComponent<PlayerInventory>().gold>=(stats.moveSpeedLvl*price)&&stats.moveSpeedLvl<=5){
             moveSpeedButton.GetComponent<Image>().color = Color.green;
@@ -103,7 +108,8 @@ public class PurchaseMenuScript : MonoBehaviour
     }
 
     public void UpgradeDamage()
-    { 
+    {
+        FindObjectOfType<AudioManager>().Play("UI_Click");
         prevButton.GetComponent<Image>().color = Color.white;
         if (player.GetComponent<PlayerInventory>().gold>=(stats.dmgLvl*price)&&stats.dmgLvl<=5){
             dmgButton.GetComponent<Image>().color = Color.green;
@@ -125,6 +131,7 @@ public class PurchaseMenuScript : MonoBehaviour
     }
     public void UpgradeDamageMult()
     {
+        FindObjectOfType<AudioManager>().Play("UI_Click");
         prevButton.GetComponent<Image>().color = Color.white;
         if (player.GetComponent<PlayerInventory>().gold >= (stats.dmgMultLvl*price)&&stats.dmgMultLvl<=5)
         {
@@ -148,7 +155,8 @@ public class PurchaseMenuScript : MonoBehaviour
     }
 
     public void ExitMenu() {
-        
+
+        FindObjectOfType<AudioManager>().Play("UI_Click");
         prevButton.GetComponent<Image>().color = Color.white;
         Panel.SetActive(false);
         PlayerInventoryUI.SetActive(true);

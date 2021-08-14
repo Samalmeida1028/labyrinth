@@ -645,6 +645,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1359687217}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAllAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &452288267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,6 +1295,36 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 366d554adad3b1f4e95c8cc18199d71d, type: 3}
     loop: 0
     volume: 0.54
+    pitch: 1
+    source: {fileID: 0}
+  - name: ChestOpen
+    clip: {fileID: 8300000, guid: 28238ccebf88df74d8be123310965177, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoinPickup
+    clip: {fileID: 8300000, guid: c2e458ce5c512d4428fbc96c5dd12f05, type: 3}
+    loop: 0
+    volume: 0.54
+    pitch: 1
+    source: {fileID: 0}
+  - name: SwordSlash
+    clip: {fileID: 8300000, guid: e1ef28774012b1846b6f76f827861a2b, type: 3}
+    loop: 1
+    volume: 0.54
+    pitch: 1
+    source: {fileID: 0}
+  - name: BowShot
+    clip: {fileID: 8300000, guid: 5e84ff6e4c03e1144aecd0ca9b2ce7a5, type: 3}
+    loop: 0
+    volume: 0.54
+    pitch: 1
+    source: {fileID: 0}
+  - name: WalkSound
+    clip: {fileID: 8300000, guid: 4a251dc66b444b549b5b7d5a02816ad0, type: 3}
+    loop: 1
+    volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1359687218

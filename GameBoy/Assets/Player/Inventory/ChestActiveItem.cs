@@ -109,6 +109,7 @@ public class ChestActiveItem : MonoBehaviour
             player.GetComponent<PlayerInventory>().AddItem(activeItem);
             hasInteract = true;
             spawnCoins(activeItem.value/4);
+            FindObjectOfType<AudioManager>().Play("ChestOpen");
         }
         else if (canInteract&&hasInteract==false && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
         {

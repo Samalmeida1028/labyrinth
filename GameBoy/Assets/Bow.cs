@@ -30,6 +30,7 @@ public class Bow : MonoBehaviour
 
     void Start()
     {
+        
         // Initialization
         MovementInformation = Player.GetComponent<PlayerMovement>();
         Combat = Player.GetComponent<PlayerCombat>();
@@ -72,8 +73,8 @@ public class Bow : MonoBehaviour
             {
                 isShooting = true;
                 Sprite.enabled = true;
+                FindObjectOfType<AudioManager>().Play("BowShot");
 
-  
                 ChangeAnimationState(SHOOT_F); 
                 Invoke("shootBullet", 0.4f);
             }
