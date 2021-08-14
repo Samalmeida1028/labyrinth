@@ -1321,10 +1321,22 @@ MonoBehaviour:
     volume: 0.54
     pitch: 1
     source: {fileID: 0}
-  - name: WalkSound
-    clip: {fileID: 8300000, guid: 4a251dc66b444b549b5b7d5a02816ad0, type: 3}
-    loop: 1
-    volume: 0.003
+  - name: FireThrow
+    clip: {fileID: 8300000, guid: c709ff1f4e631734f9c8f7dcc3baf0d6, type: 3}
+    loop: 0
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - name: FireImpact
+    clip: {fileID: 8300000, guid: 84107deefda4e7e4096d5cd5440c5436, type: 3}
+    loop: 0
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - name: PickupAmmo
+    clip: {fileID: 8300000, guid: c603145998ce98148aceadc0ee76c1c1, type: 3}
+    loop: 0
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1359687218
