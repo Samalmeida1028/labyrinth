@@ -110,6 +110,7 @@ public class MinotaurScript : MonoBehaviour
 
     void Start()
     {
+        AstarPath.active.Scan();
         GetComponent<Rigidbody2D>().freezeRotation = true;
 
         //Get Animator
@@ -353,10 +354,11 @@ public class MinotaurScript : MonoBehaviour
     // Jump Attack Call
     void JumpAttack()
     {
-        GameObject attack = Instantiate(jumpAttack, firePoint.position, firePoint.rotation);
+        GameObject attack = Instantiate(jumpAttack, transform.position, transform.rotation);
 
         attack.GetComponent<EnemyAttack>().SetDamage((int)(jumpDamage));
         Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
+        attackHit.AddForce(firePoint.up-player.position * 200, ForceMode2D.Impulse);
         Destroy(attack, projectileLife);
     }
 
