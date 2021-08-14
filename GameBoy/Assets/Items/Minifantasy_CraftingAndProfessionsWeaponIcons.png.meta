@@ -559,7 +559,7 @@ TextureImporter:
     second: Minifantasy_CraftingAndProfessionsWeaponIcons_184
   - first:
       213: 2060313536525427950
-    second: Minifantasy_CraftingAndProfessionsWeaponIcons_185
+    second: Arrow
   - first:
       213: -8680263480489029165
     second: Minifantasy_CraftingAndProfessionsWeaponIcons_186
@@ -8410,7 +8410,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CraftingAndProfessionsWeaponIcons_185
+      name: Arrow
       rect:
         serializedVersion: 2
         x: 384

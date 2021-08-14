@@ -1,5 +1,11 @@
 fileFormatVersion: 2
-guid: 25ff659bde6c18749a2d7c9b481fc0d6
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsHenIdle.png.meta
+guid: 588d6697d64e85340b19f854a1e0cb94
+=======
+guid: 957d0fd6ae3494da9aed50c5d7d7ce4e
+timeCreated: 1498138222
+licenseType: Pro
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_open@2x.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,7 +13,11 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsHenIdle.png.meta
     sRGBTexture: 1
+=======
+    sRGBTexture: 0
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_open@2x.png.meta
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -31,6 +41,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsHenIdle.png.meta
     serializedVersion: 2
     filterMode: 1
     aniso: 1
@@ -38,6 +49,12 @@ TextureImporter:
     wrapU: 1
     wrapV: 1
     wrapW: 1
+=======
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_open@2x.png.meta
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -52,7 +69,11 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsHenIdle.png.meta
   textureType: 8
+=======
+  textureType: 2
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_open@2x.png.meta
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -68,7 +89,15 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

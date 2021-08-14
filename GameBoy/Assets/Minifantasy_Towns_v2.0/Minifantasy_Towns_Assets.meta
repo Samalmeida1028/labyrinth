@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: 0f6b14282e001c94cb84aed55ccffc1f
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets.meta
+guid: 40bade809cdcc6747b13115d629772c3
+=======
+guid: 3d30537472b53490da7c32973120a523
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/Legacy.meta
 folderAsset: yes
+timeCreated: 1490877053
+licenseType: Pro
 DefaultImporter:
-  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

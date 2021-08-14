@@ -1,6 +1,11 @@
 fileFormatVersion: 2
-guid: bab79b3897e242b4d82a8b90bfbd3c02
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_UserInterface_v1.0/Patreon_Minifantasy.url.meta
+guid: 7a2a764b33b31ed42b1b3d9eb6729fdd
 DefaultImporter:
+=======
+guid: 774e21169c4ac4ec8a01db9cdb98d33b
+AssemblyDefinitionImporter:
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/PackageTools/Editor/PackageToolsEditor.asmdef.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

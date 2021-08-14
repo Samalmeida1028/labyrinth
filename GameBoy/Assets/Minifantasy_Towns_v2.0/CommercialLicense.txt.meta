@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: f35f656c796651f458a3db0494ea98d5
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/CommercialLicense.txt.meta
+guid: 6b12241185bcf954aa360364df86bce8
+=======
+guid: 2b79fd5a5af73e4559215bde8ebd75e9
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Documentation/index.md.meta
 TextScriptImporter:
   externalObjects: {}
   userData: 

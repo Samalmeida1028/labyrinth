@@ -1,0 +1,1680 @@
+fileFormatVersion: 2
+guid: d5dd37f0ef5655f4f9e7310fb4ae4808
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2361968085209849293
+    second: Minifantasy_NPCsBlacksmithIdle_0
+  - first:
+      213: -7612343272893974914
+    second: Minifantasy_NPCsBlacksmithIdle_1
+  - first:
+      213: 8820398810305653440
+    second: Minifantasy_NPCsBlacksmithIdle_2
+  - first:
+      213: 7628206998997080008
+    second: Minifantasy_NPCsBlacksmithIdle_3
+  - first:
+      213: 5359435888045876773
+    second: Minifantasy_NPCsBlacksmithIdle_4
+  - first:
+      213: 4805948443291845651
+    second: Minifantasy_NPCsBlacksmithIdle_5
+  - first:
+      213: -2896919626494918630
+    second: Minifantasy_NPCsBlacksmithIdle_6
+  - first:
+      213: 3366078398239961898
+    second: Minifantasy_NPCsBlacksmithIdle_7
+  - first:
+      213: -3479454795032896862
+    second: Minifantasy_NPCsBlacksmithIdle_8
+  - first:
+      213: -3878460401207042648
+    second: Minifantasy_NPCsBlacksmithIdle_9
+  - first:
+      213: -4874839626313437074
+    second: Minifantasy_NPCsBlacksmithIdle_10
+  - first:
+      213: 7180097666101743925
+    second: Minifantasy_NPCsBlacksmithIdle_11
+  - first:
+      213: 6005675129180130239
+    second: Minifantasy_NPCsBlacksmithIdle_12
+  - first:
+      213: -7180025410084883373
+    second: Minifantasy_NPCsBlacksmithIdle_13
+  - first:
+      213: -7978387577451926582
+    second: Minifantasy_NPCsBlacksmithIdle_14
+  - first:
+      213: -5047461547559713575
+    second: Minifantasy_NPCsBlacksmithIdle_15
+  - first:
+      213: 3905427964419068121
+    second: Minifantasy_NPCsBlacksmithIdle_16
+  - first:
+      213: 1286248378787888395
+    second: Minifantasy_NPCsBlacksmithIdle_17
+  - first:
+      213: -2788701559900729735
+    second: Minifantasy_NPCsBlacksmithIdle_18
+  - first:
+      213: -7156048981606547943
+    second: Minifantasy_NPCsBlacksmithIdle_19
+  - first:
+      213: 1527775770019597858
+    second: Minifantasy_NPCsBlacksmithIdle_20
+  - first:
+      213: -1648189475026347146
+    second: Minifantasy_NPCsBlacksmithIdle_21
+  - first:
+      213: 5133722063334747023
+    second: Minifantasy_NPCsBlacksmithIdle_22
+  - first:
+      213: -6745490994394140748
+    second: Minifantasy_NPCsBlacksmithIdle_23
+  - first:
+      213: -9018692102155015290
+    second: Minifantasy_NPCsBlacksmithIdle_24
+  - first:
+      213: -4918200391777211831
+    second: Minifantasy_NPCsBlacksmithIdle_25
+  - first:
+      213: 1377002272628095108
+    second: Minifantasy_NPCsBlacksmithIdle_26
+  - first:
+      213: -3076643874971547122
+    second: Minifantasy_NPCsBlacksmithIdle_27
+  - first:
+      213: 2684092956475802938
+    second: Minifantasy_NPCsBlacksmithIdle_28
+  - first:
+      213: -5113276632067624179
+    second: Minifantasy_NPCsBlacksmithIdle_29
+  - first:
+      213: 7153025946065811351
+    second: Minifantasy_NPCsBlacksmithIdle_30
+  - first:
+      213: -5407396306888154228
+    second: Minifantasy_NPCsBlacksmithIdle_31
+  - first:
+      213: 8282709860290466531
+    second: Minifantasy_NPCsBlacksmithIdle_32
+  - first:
+      213: -9042213717628951604
+    second: Minifantasy_NPCsBlacksmithIdle_33
+  - first:
+      213: 4815509590815539819
+    second: Minifantasy_NPCsBlacksmithIdle_34
+  - first:
+      213: 5415802332702182721
+    second: Minifantasy_NPCsBlacksmithIdle_35
+  - first:
+      213: -8716831131207931765
+    second: Minifantasy_NPCsBlacksmithIdle_36
+  - first:
+      213: 3882875118771302089
+    second: Minifantasy_NPCsBlacksmithIdle_37
+  - first:
+      213: -7565959587715321901
+    second: Minifantasy_NPCsBlacksmithIdle_38
+  - first:
+      213: -1595533639719609254
+    second: Minifantasy_NPCsBlacksmithIdle_39
+  - first:
+      213: -6137201150786485827
+    second: Minifantasy_NPCsBlacksmithIdle_40
+  - first:
+      213: 989315759124312437
+    second: Minifantasy_NPCsBlacksmithIdle_41
+  - first:
+      213: -4862769584301422543
+    second: Minifantasy_NPCsBlacksmithIdle_42
+  - first:
+      213: 3240429613030104781
+    second: Minifantasy_NPCsBlacksmithIdle_43
+  - first:
+      213: 2736525847269287023
+    second: Minifantasy_NPCsBlacksmithIdle_44
+  - first:
+      213: 4927244366361339096
+    second: Minifantasy_NPCsBlacksmithIdle_45
+  - first:
+      213: 9010780694703382691
+    second: Minifantasy_NPCsBlacksmithIdle_46
+  - first:
+      213: -7602134914535160255
+    second: Minifantasy_NPCsBlacksmithIdle_47
+  - first:
+      213: -1197752006000352608
+    second: Minifantasy_NPCsBlacksmithIdle_48
+  - first:
+      213: -8014985945069690046
+    second: Minifantasy_NPCsBlacksmithIdle_49
+  - first:
+      213: 4643097331176898109
+    second: Minifantasy_NPCsBlacksmithIdle_50
+  - first:
+      213: 4358149087247345656
+    second: Minifantasy_NPCsBlacksmithIdle_51
+  - first:
+      213: -6036866271844811928
+    second: Minifantasy_NPCsBlacksmithIdle_52
+  - first:
+      213: 3884348455646625487
+    second: Minifantasy_NPCsBlacksmithIdle_53
+  - first:
+      213: 4073992378834171749
+    second: Minifantasy_NPCsBlacksmithIdle_54
+  - first:
+      213: 3428033653735286388
+    second: Minifantasy_NPCsBlacksmithIdle_55
+  - first:
+      213: -5176376325247635227
+    second: Minifantasy_NPCsBlacksmithIdle_56
+  - first:
+      213: -948483490648424432
+    second: Minifantasy_NPCsBlacksmithIdle_57
+  - first:
+      213: 8369551396654447176
+    second: Minifantasy_NPCsBlacksmithIdle_58
+  - first:
+      213: -6815877684636388510
+    second: Minifantasy_NPCsBlacksmithIdle_59
+  - first:
+      213: -311301653476870414
+    second: Minifantasy_NPCsBlacksmithIdle_60
+  - first:
+      213: 3504219662754728325
+    second: Minifantasy_NPCsBlacksmithIdle_61
+  - first:
+      213: 2952233865157985010
+    second: Minifantasy_NPCsBlacksmithIdle_62
+  - first:
+      213: -2677551595471002510
+    second: Minifantasy_NPCsBlacksmithIdle_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332e14e6a8a983fd0800000000000000
+      internalID: -2361968085209849293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76f1de00268b5690800000000000000
+      internalID: -7612343272893974914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0caeb894cf9586a70800000000000000
+      internalID: 8820398810305653440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c79e5089d5dcd960800000000000000
+      internalID: 7628206998997080008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526647f6b8a806a40800000000000000
+      internalID: 5359435888045876773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_5
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314804b65a822b240800000000000000
+      internalID: 4805948443291845651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10c9efb2f21cc7d0800000000000000
+      internalID: -2896919626494918630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_7
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23753d0876b6be20800000000000000
+      internalID: 3366078398239961898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_8
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aad8028c4e76bfc0800000000000000
+      internalID: -3479454795032896862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad92a660d0fc2ac0800000000000000
+      internalID: -3878460401207042648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60f6981037195cb0800000000000000
+      internalID: -4874839626313437074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_11
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5311b9819c4d4a360800000000000000
+      internalID: 7180097666101743925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb0e27e5b1785350800000000000000
+      internalID: 6005675129180130239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_13
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354bc915eec6b5c90800000000000000
+      internalID: -7180025410084883373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acba69505c2174190800000000000000
+      internalID: -7978387577451926582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_15
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 109
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d482401770d3f9b0800000000000000
+      internalID: -5047461547559713575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d05313ba0ed23630800000000000000
+      internalID: 3905427964419068121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_17
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0df29ee51ca9d110800000000000000
+      internalID: 1286248378787888395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_18
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e0a89d4ba8c49d0800000000000000
+      internalID: -2788701559900729735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_19
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ebb089d5b90bc90800000000000000
+      internalID: -7156048981606547943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_20
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e8774e7ffb33510800000000000000
+      internalID: 1527775770019597858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_21
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b548aa7647029e0800000000000000
+      internalID: -1648189475026347146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_22
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b27a85405ae3740800000000000000
+      internalID: 5133722063334747023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_23
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf6a830ea33362a0800000000000000
+      internalID: -6745490994394140748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_24
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68bed60f05b27d280800000000000000
+      internalID: -9018692102155015290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_25
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94aaee92dca0fbbb0800000000000000
+      internalID: -4918200391777211831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_26
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48837e275481c1310800000000000000
+      internalID: 1377002272628095108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_27
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a80fb42b09d45d0800000000000000
+      internalID: -3076643874971547122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_28
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a354edea250df3520800000000000000
+      internalID: 2684092956475802938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_29
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03bd439efdf909b0800000000000000
+      internalID: -5113276632067624179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_30
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797b7681337a44360800000000000000
+      internalID: 7153025946065811351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_31
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 77
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c832c2065b115f4b0800000000000000
+      internalID: -5407396306888154228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_32
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e21d38fbb812f270800000000000000
+      internalID: 8282709860290466531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_33
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3ef81188a938280800000000000000
+      internalID: -9042213717628951604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_34
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b620c0d857024d240800000000000000
+      internalID: 4815509590815539819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_35
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d0276078bc82b40800000000000000
+      internalID: 5415802332702182721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_36
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88e8491548970780800000000000000
+      internalID: -8716831131207931765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_37
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cee091295eb2e530800000000000000
+      internalID: 3882875118771302089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_38
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df644557df400790800000000000000
+      internalID: -7565959587715321901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_39
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c9351bb968bd9e0800000000000000
+      internalID: -1595533639719609254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_40
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1c044d11844daa0800000000000000
+      internalID: -6137201150786485827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_41
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571fc49f071cabd00800000000000000
+      internalID: 989315759124312437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_42
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138c32fb3d8f38cb0800000000000000
+      internalID: -4862769584301422543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_43
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dced054809158fc20800000000000000
+      internalID: 3240429613030104781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_44
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64292562c71af520800000000000000
+      internalID: 2736525847269287023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_45
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4238245a6116440800000000000000
+      internalID: 4927244366361339096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_46
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a02eb8fc49bc0d70800000000000000
+      internalID: 9010780694703382691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_47
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1468984b29acf7690800000000000000
+      internalID: -7602134914535160255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_48
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2665185eab06fe0800000000000000
+      internalID: -1197752006000352608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_49
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2436f588fbc05c090800000000000000
+      internalID: -8014985945069690046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_50
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3efc5a2c689f6040800000000000000
+      internalID: 4643097331176898109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_51
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7229f11814b7c30800000000000000
+      internalID: 4358149087247345656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_52
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b37264c1eb83ca0800000000000000
+      internalID: -6036866271844811928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_53
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce77aa175af7e530800000000000000
+      internalID: 3884348455646625487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_54
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5673f0ecb7ab98830800000000000000
+      internalID: 4073992378834171749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_55
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476e9f01272d29f20800000000000000
+      internalID: 3428033653735286388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_56
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e07fd56821d928b0800000000000000
+      internalID: -5176376325247635227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_57
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01004906a4f46d2f0800000000000000
+      internalID: -948483490648424432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_58
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a76f6c6ae962470800000000000000
+      internalID: 8369551396654447176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_59
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2637cbe9b532961a0800000000000000
+      internalID: -6815877684636388510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_60
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6f486abc80eabf0800000000000000
+      internalID: -311301653476870414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_61
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5894f65973d71a030800000000000000
+      internalID: 3504219662754728325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_62
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2ce9a0f0178f820800000000000000
+      internalID: 2952233865157985010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsBlacksmithIdle_63
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 13
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274ab2c920d67dad0800000000000000
+      internalID: -2677551595471002510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
