@@ -49,6 +49,7 @@ public class LevelChangeScript : MonoBehaviour
         {
             loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = text;
             PlayerInventoryUI.SetActive(false);
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
             Instantiate(loadScreen, player.transform.position, Quaternion.identity);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
