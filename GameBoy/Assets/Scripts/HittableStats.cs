@@ -14,7 +14,6 @@ public class HittableStats : MonoBehaviour
         }else if(gameObject.layer == 11)
         {
             gameObject.GetComponent<MinotaurScript>().isDamaged = true;
-            gameObject.GetComponent<MinotaurScript>().UpdateHealthBar(damage);
         }
 
         gameObject.GetComponent<HittableStats>().health -= damage;

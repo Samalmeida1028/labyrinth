@@ -39,11 +39,11 @@ public class MinotaurScript : MonoBehaviour
     [Space(5)]
     public float enemyDamage;
     public float jumpDamage;
-    public float moveSpeed;
-    public float maxSpeed = 5f;
+
     public float projectileLife = .5f;
     public int maxHealth = 1000;
     public float attackSpeed;
+    public float attackSpeedStageTwo;
     public int force;
     public int targetRange;
     public int attackRange;
@@ -70,6 +70,7 @@ public class MinotaurScript : MonoBehaviour
     private SpriteRenderer enemySprite;
     private Animator animator;
 
+
     private bool isFacingBack;
     private bool isFacingRight;
 
@@ -81,11 +82,12 @@ public class MinotaurScript : MonoBehaviour
     public bool isDamaged;
     public bool isKilled;
 
+    public bool isMoving;
+
     private string currentState;
     public IAstarAI ai;
     float lastPathed = 0;
 
-    public Slider healthBar;
     //Animation States
     const string MONSTER_WALK_F = "Walk_Forward";
     const string MONSTER_WALK_B = "Walk_Backward";
@@ -93,13 +95,13 @@ public class MinotaurScript : MonoBehaviour
     const string MONSTER_ATTACK_F = "Attack_Forward";
     const string MONSTER_ATTACK_B = "Attack_Backward";
 
-    const string MONSTER_JUMP_ATTACK_F = "Jump_Attack_Forward";
-    const string MONSTER_JUMP_ATTACK_B = "Jump_Attack_Backward";
+    const string MONSTER_JUMP_ATTACK = "Jump_Attack";
 
-    const string MONSTER_DAMAGED_F = "Enemy_Damaged_Forward";
-    const string MONSTER_DAMAGED_B = "Enemy_Damaged_Backward";
+    const string MONSTER_DAMAGED_F = "Damaged_Front";
+    const string MONSTER_DAMAGED_B = "Damaged_Back";
 
     const string DEAD = "Death";
+    const string IDLE = "Idle";
 
     Vector3 PickRandomPoint() {
         var point = Random.insideUnitSphere * radius;
@@ -112,8 +114,7 @@ public class MinotaurScript : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>().freezeRotation = true;
-        healthBar.maxValue = maxHealth;
-        healthBar.value = maxHealth;
+
         //Get Animator
         animator = GetComponent<Animator>();
         enemySprite = GetComponent<SpriteRenderer>();
@@ -128,6 +129,12 @@ public class MinotaurScript : MonoBehaviour
 
     void Update()
     {
+        // Check for stages
+         if (gameObject.GetComponent<HittableStats>().health <= maxHealth/2)
+         {
+             stageTwo = true;
+         }
+
         //Keep Firepoint Axis on Enemy
         FirepointAxis.transform.position = transform.position;
 
@@ -141,7 +148,12 @@ public class MinotaurScript : MonoBehaviour
             enemySprite.flipX = true;
         }
 
-        if (!isAttacking && !isDamaged && !isKilled)
+        if (!isMoving && !isAttacking)
+        {
+            ChangeAnimationState(IDLE);
+        }
+
+        if (!isAttacking && !isDamaged && !isKilled && isMoving)
         {
             if (isFacingRight) //If the monster is facing right
             {
@@ -168,25 +180,36 @@ public class MinotaurScript : MonoBehaviour
         }
 
         // Player Monster Attack Animation
-        if (isAttackPressed && !isDamaged && !isKilled)
+        if (isAttackPressed && !isDamaged && !isKilled && !isMoving)
         {
             isAttackPressed = false;
 
             if (!isAttacking)
             {
                 isAttacking = true;
-                
-                if (isFacingBack)
+
+                if (!stageTwo)   
                 {
-                    ChangeAnimationState(MONSTER_ATTACK_B);
+                    if (isFacingBack)
+                    {
+                        ChangeAnimationState(MONSTER_ATTACK_B);
+                    }
+                    else
+                    {
+                        ChangeAnimationState(MONSTER_ATTACK_F);
+                    }
+
+                    Invoke("AttackComplete", 0.3f);
                 }
-                else
+                else //STAGE TWO 
                 {
-                    ChangeAnimationState(MONSTER_ATTACK_F);
+                    ChangeAnimationState(MONSTER_JUMP_ATTACK);
+
+                    Invoke("AttackComplete", 0.8f);
                 }
             }
 
-            Invoke("AttackComplete", 0.3f);
+            
 
         }
 
@@ -268,6 +291,7 @@ public class MinotaurScript : MonoBehaviour
                 if (updateCounter > .2)
                 {
                     updateCounter = 0;
+                    isMoving = true;
                     Roam();
                 }
 
@@ -283,12 +307,14 @@ public class MinotaurScript : MonoBehaviour
 
             case State.Attack:
                 Attack();
+                isMoving = false;
                 state = State.Transition;
                 break;
 
             case State.Transition:
                 roamPos = transform.position;
                 chasing = false;
+                isMoving = false;
                 updateCounter = 0;
                 if (CheckForPlayer()) state = State.Chase;
                 else state = State.Roaming;
@@ -304,20 +330,35 @@ public class MinotaurScript : MonoBehaviour
         {
             ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
             ai.SetPath(null);
-        
+
             PointAtPlayer();
-            if (counter >= 1 / attackSpeed)
+            if (!stageTwo)
             {
-                isAttackPressed = true;
-                counter = 0;
+                if (counter >= 1 / attackSpeed)
+                {
+                    isAttackPressed = true;
+                    counter = 0;
 
-                GameObject attack = Instantiate(baseAttack, firePoint.position, firePoint.rotation);
+                    GameObject attack = Instantiate(baseAttack, firePoint.position, firePoint.rotation);
 
-                attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage));
-                Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-                Destroy(attack, projectileLife);
+                    attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage));
+                    Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
+                    Destroy(attack, projectileLife);
+                }
+            }
+            else //STAGE TWO ATTACKS
+            {
+                 if (counter >= 1 / attackSpeedStageTwo)
+                {
+                    isAttackPressed = true;
+                    counter = 0;
 
-                //attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+                    GameObject attack = Instantiate(baseAttack, firePoint.position, firePoint.rotation);
+
+                    attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage));
+                    Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
+                    Destroy(attack, projectileLife);
+                }
             }
         }
 
@@ -400,6 +441,7 @@ public class MinotaurScript : MonoBehaviour
                 ai.destination = player.transform.position;
                 ai.SearchPath();
             }   
+
             PointAtPlayer();
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
@@ -407,8 +449,10 @@ public class MinotaurScript : MonoBehaviour
                 if (col.tag == "Player")
                 {
                     state = State.Attack;
+                    return;
                 }
             }
+            isMoving = true;
         }
         else
         {
@@ -447,11 +491,6 @@ public class MinotaurScript : MonoBehaviour
         {
             isFacingRight = false;
         }
-    }
-
-    public void UpdateHealthBar(int cHealth)
-    {
-        healthBar.value = (cHealth);
     }
 }
 
