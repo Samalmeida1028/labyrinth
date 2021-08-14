@@ -15,6 +15,7 @@ public class AmmoScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().PlayOneShot("PickupAmmo");
             other.GetComponent<PlayerInventory>().AddAmmo(ammoAmount);
             Destroy(gameObject);
         }

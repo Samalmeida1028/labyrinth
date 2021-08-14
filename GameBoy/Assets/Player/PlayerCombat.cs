@@ -21,8 +21,11 @@ public class PlayerCombat : MonoBehaviour
     public bool dead;
     int itemDamage;
 
+    bool playSound;
+
     void Start()
     {
+        playSound = true;
         canAttack = false;
         isRanged = false;
         ChangeDamage();
@@ -106,12 +109,24 @@ public class PlayerCombat : MonoBehaviour
         }
         else if (updateCounter>(.7/attackSpeed))//this is for melee
         {
+            
             updateCounter = 0;
             GameObject melee = Instantiate(meleeAttack, attackPoint.position, attackPoint.rotation);
             melee.GetComponent<Bullet>().SetDamage(totalDamage);
             Destroy(melee, .07f);
-            FindObjectOfType<AudioManager>().PlayOneShot("SwordSlash");
+            if (playSound) {
+                FindObjectOfType<AudioManager>().PlayOneShot("SwordSlash");
+                playSound = false;
+            }
+            
+            if (playSound==false) { StartCoroutine(Wait()); }
+            
         }
+    }
+
+    IEnumerator Wait() {
+        yield return new WaitForSeconds(0.7f);
+        playSound = true;
     }
 
     void TakeDamage(int damage)//normal takeDamage, if it is less than 0 then die;

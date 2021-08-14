@@ -23,7 +23,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (!isImpacted)
         {
-           ChangeAnimationState(HOLDING); 
+           ChangeAnimationState(HOLDING);
         }
     }
 
@@ -43,6 +43,7 @@ public class EnemyAttack : MonoBehaviour
                 
                 ChangeAnimationState(IMPACT);
                 Invoke("destroyProjectile", 0.35f);
+                FindObjectOfType<AudioManager>().Play("FireImpact");
             }
         }
        

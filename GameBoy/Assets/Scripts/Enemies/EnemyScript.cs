@@ -335,6 +335,7 @@ public class EnemyScript : MonoBehaviour
 
                 if (isRanged)
                 {
+                    FindObjectOfType<AudioManager>().Play("FireThrow");
                     attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
                 }
             }
