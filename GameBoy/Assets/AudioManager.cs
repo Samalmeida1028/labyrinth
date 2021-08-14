@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(64,64,false);
         Play("TitleMusic");
     }
 
