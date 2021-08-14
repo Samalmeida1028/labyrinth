@@ -192,14 +192,14 @@ MonoBehaviour:
   firePoint: {fileID: 6950429217054034496}
   enemyTier: 1.2
   FirepointAxis: {fileID: 6950429217183983174}
-  enemyDamage: 5
+  enemyDamage: 20
   projectileLife: 2
   isRanged: 1
-  health: 20
-  attackSpeed: 0.8
+  health: 40
+  attackSpeed: 0.6
   force: 10
-  targetRange: 10
-  attackRange: 5
+  targetRange: 20
+  attackRange: 10
   counter: 0
   radius: 10
   target: {x: 0, y: 0, z: 0}

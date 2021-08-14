@@ -6,7 +6,6 @@ public class UpgradeStats : MonoBehaviour
 {
     public bool canInteract;
     public bool hasInteract;
-    public Color interactedColor = Color.blue;
     public GameObject player;
     public GameObject Panel;
     public GameObject PlayerInventoryUI;
@@ -36,9 +35,7 @@ public class UpgradeStats : MonoBehaviour
         // Update is called once per frame
         void Update()
     {
-        if (hasInteract) {
-            GetComponent<SpriteRenderer>().color = interactedColor;
-        }
+
         if (canInteract && Input.GetKey("e")) {
             OpenPanel();
             hasInteract = true;

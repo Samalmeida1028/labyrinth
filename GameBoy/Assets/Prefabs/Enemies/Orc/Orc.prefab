@@ -195,7 +195,7 @@ MonoBehaviour:
   enemyDamage: 1
   projectileLife: 0.5
   isRanged: 0
-  health: 20
+  health: 40
   attackSpeed: 0.8
   force: 10
   targetRange: 5

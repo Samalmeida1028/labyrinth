@@ -1,0 +1,1680 @@
+fileFormatVersion: 2
+guid: f02dd6ea1b9c9174eb665d5827eec8f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2607660485778310213
+    second: Minifantasy_NPCsJewellerIdle_0
+  - first:
+      213: 1833931172052290101
+    second: Minifantasy_NPCsJewellerIdle_1
+  - first:
+      213: 7081926124300658276
+    second: Minifantasy_NPCsJewellerIdle_2
+  - first:
+      213: 2181697079549865217
+    second: Minifantasy_NPCsJewellerIdle_3
+  - first:
+      213: 2735871377892142897
+    second: Minifantasy_NPCsJewellerIdle_4
+  - first:
+      213: -2962804663551037359
+    second: Minifantasy_NPCsJewellerIdle_5
+  - first:
+      213: 4311352139748203638
+    second: Minifantasy_NPCsJewellerIdle_6
+  - first:
+      213: 6300050413575922613
+    second: Minifantasy_NPCsJewellerIdle_7
+  - first:
+      213: 2930860071338524632
+    second: Minifantasy_NPCsJewellerIdle_8
+  - first:
+      213: 2830791740817275866
+    second: Minifantasy_NPCsJewellerIdle_9
+  - first:
+      213: 4470809148488313665
+    second: Minifantasy_NPCsJewellerIdle_10
+  - first:
+      213: 9189071161529848148
+    second: Minifantasy_NPCsJewellerIdle_11
+  - first:
+      213: 7897472916457959255
+    second: Minifantasy_NPCsJewellerIdle_12
+  - first:
+      213: -6126457820082101345
+    second: Minifantasy_NPCsJewellerIdle_13
+  - first:
+      213: 693840731442825172
+    second: Minifantasy_NPCsJewellerIdle_14
+  - first:
+      213: -2544892296843906790
+    second: Minifantasy_NPCsJewellerIdle_15
+  - first:
+      213: 7641620340338515558
+    second: Minifantasy_NPCsJewellerIdle_16
+  - first:
+      213: -1727908704939362236
+    second: Minifantasy_NPCsJewellerIdle_17
+  - first:
+      213: -5141602466235520608
+    second: Minifantasy_NPCsJewellerIdle_18
+  - first:
+      213: 7660568188304905308
+    second: Minifantasy_NPCsJewellerIdle_19
+  - first:
+      213: -506713736128005004
+    second: Minifantasy_NPCsJewellerIdle_20
+  - first:
+      213: -566485220639353669
+    second: Minifantasy_NPCsJewellerIdle_21
+  - first:
+      213: -8374742657996731090
+    second: Minifantasy_NPCsJewellerIdle_22
+  - first:
+      213: 4373092944477240239
+    second: Minifantasy_NPCsJewellerIdle_23
+  - first:
+      213: -2383458672704712472
+    second: Minifantasy_NPCsJewellerIdle_24
+  - first:
+      213: 660084025807742615
+    second: Minifantasy_NPCsJewellerIdle_25
+  - first:
+      213: 1023833484767007500
+    second: Minifantasy_NPCsJewellerIdle_26
+  - first:
+      213: -9049201551607516136
+    second: Minifantasy_NPCsJewellerIdle_27
+  - first:
+      213: 637597979779868337
+    second: Minifantasy_NPCsJewellerIdle_28
+  - first:
+      213: -2650443944843052769
+    second: Minifantasy_NPCsJewellerIdle_29
+  - first:
+      213: 2524731432982763919
+    second: Minifantasy_NPCsJewellerIdle_30
+  - first:
+      213: -5489693756558660806
+    second: Minifantasy_NPCsJewellerIdle_31
+  - first:
+      213: -786435801578282328
+    second: Minifantasy_NPCsJewellerIdle_32
+  - first:
+      213: 8861385669052583795
+    second: Minifantasy_NPCsJewellerIdle_33
+  - first:
+      213: -6620278025391751988
+    second: Minifantasy_NPCsJewellerIdle_34
+  - first:
+      213: -1170555925169193396
+    second: Minifantasy_NPCsJewellerIdle_35
+  - first:
+      213: 2135362779972228882
+    second: Minifantasy_NPCsJewellerIdle_36
+  - first:
+      213: 8095695949737140807
+    second: Minifantasy_NPCsJewellerIdle_37
+  - first:
+      213: -152557969080525829
+    second: Minifantasy_NPCsJewellerIdle_38
+  - first:
+      213: -8410217958928737365
+    second: Minifantasy_NPCsJewellerIdle_39
+  - first:
+      213: -7812266346421223298
+    second: Minifantasy_NPCsJewellerIdle_40
+  - first:
+      213: 6755407832066878616
+    second: Minifantasy_NPCsJewellerIdle_41
+  - first:
+      213: 8473573407573865584
+    second: Minifantasy_NPCsJewellerIdle_42
+  - first:
+      213: -1730804849772113708
+    second: Minifantasy_NPCsJewellerIdle_43
+  - first:
+      213: -1334190644636538449
+    second: Minifantasy_NPCsJewellerIdle_44
+  - first:
+      213: -341887669492210196
+    second: Minifantasy_NPCsJewellerIdle_45
+  - first:
+      213: -3511825390108059520
+    second: Minifantasy_NPCsJewellerIdle_46
+  - first:
+      213: -7969614418109897608
+    second: Minifantasy_NPCsJewellerIdle_47
+  - first:
+      213: 648751914600733432
+    second: Minifantasy_NPCsJewellerIdle_48
+  - first:
+      213: -1206631514299192095
+    second: Minifantasy_NPCsJewellerIdle_49
+  - first:
+      213: -146465742357210859
+    second: Minifantasy_NPCsJewellerIdle_50
+  - first:
+      213: -2092076162366142727
+    second: Minifantasy_NPCsJewellerIdle_51
+  - first:
+      213: 6960617728788478524
+    second: Minifantasy_NPCsJewellerIdle_52
+  - first:
+      213: -2586573662348015915
+    second: Minifantasy_NPCsJewellerIdle_53
+  - first:
+      213: 607616743587029046
+    second: Minifantasy_NPCsJewellerIdle_54
+  - first:
+      213: 5766242824572284976
+    second: Minifantasy_NPCsJewellerIdle_55
+  - first:
+      213: -7313976745259545682
+    second: Minifantasy_NPCsJewellerIdle_56
+  - first:
+      213: -2209608741610386034
+    second: Minifantasy_NPCsJewellerIdle_57
+  - first:
+      213: -7921807780089015874
+    second: Minifantasy_NPCsJewellerIdle_58
+  - first:
+      213: 1196435547337913927
+    second: Minifantasy_NPCsJewellerIdle_59
+  - first:
+      213: -5019622449917315022
+    second: Minifantasy_NPCsJewellerIdle_60
+  - first:
+      213: 1435870260414280645
+    second: Minifantasy_NPCsJewellerIdle_61
+  - first:
+      213: -3970279047805000274
+    second: Minifantasy_NPCsJewellerIdle_62
+  - first:
+      213: 5792721164068419043
+    second: Minifantasy_NPCsJewellerIdle_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb7c5aaa9abfcbd0800000000000000
+      internalID: -2607660485778310213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a41b43fae637910800000000000000
+      internalID: 1833931172052290101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466ef74d94e084260800000000000000
+      internalID: 7081926124300658276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10da31a4fe1f64e10800000000000000
+      internalID: 2181697079549865217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f6b6ed584c7f520800000000000000
+      internalID: 2735871377892142897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1507b2a2bd002e6d0800000000000000
+      internalID: -2962804663551037359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cdf47bdeff4db30800000000000000
+      internalID: 4311352139748203638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3ee38d8764e6750800000000000000
+      internalID: 6300050413575922613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df328ed4b18ca820800000000000000
+      internalID: 2930860071338524632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbf580171ef84720800000000000000
+      internalID: 2830791740817275866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b6632bb318b0e30800000000000000
+      internalID: 4470809148488313665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451d5ce1983268f70800000000000000
+      internalID: 9189071161529848148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_12
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75faeb066c5799d60800000000000000
+      internalID: 7897472916457959255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_13
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93a79e62137afaa0800000000000000
+      internalID: -6126457820082101345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_14
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7c858187401a900800000000000000
+      internalID: 693840731442825172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_15
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11bdfe70f9beacd0800000000000000
+      internalID: -2544892296843906790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_16
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ed646663d7c0a60800000000000000
+      internalID: 7641620340338515558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_17
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448b8cd003c3508e0800000000000000
+      internalID: -1727908704939362236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_18
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a962cf5ccb55a8b0800000000000000
+      internalID: -5141602466235520608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_19
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5452990e2ecf4a60800000000000000
+      internalID: 7660568188304905308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_20
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c774baa8ac7f8f0800000000000000
+      internalID: -506713736128005004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_21
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4584571b07328f0800000000000000
+      internalID: -566485220639353669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_22
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d4bc08cefe6cb80800000000000000
+      internalID: -8374742657996731090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_23
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab35550dd850bc30800000000000000
+      internalID: 4373092944477240239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_24
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e09c9c17f04ceed0800000000000000
+      internalID: -2383458672704712472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7962e289ce6192900800000000000000
+      internalID: 660084025807742615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0310b04123653e00800000000000000
+      internalID: 1023833484767007500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_27
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814358f2227ca6280800000000000000
+      internalID: -9049201551607516136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_28
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b629460cf339d800800000000000000
+      internalID: 637597979779868337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_29
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f197b8a564bb73bd0800000000000000
+      internalID: -2650443944843052769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_30
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8953389cd5a90320800000000000000
+      internalID: 2524731432982763919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_31
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b24a23d90b0d3b0800000000000000
+      internalID: -5489693756558660806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_32
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2e6402ec40615f0800000000000000
+      internalID: -786435801578282328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_33
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fcd9df057f9fa70800000000000000
+      internalID: 8861385669052583795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_34
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc333e263c0024a0800000000000000
+      internalID: -6620278025391751988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_35
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ebf82869951cfe0800000000000000
+      internalID: -1170555925169193396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_36
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217d5de722552ad10800000000000000
+      internalID: 2135362779972228882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_37
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742a6adc290b95070800000000000000
+      internalID: 8095695949737140807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_38
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbdc4dd55102edf0800000000000000
+      internalID: -152557969080525829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_39
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab117a5357e84b80800000000000000
+      internalID: -8410217958928737365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_40
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7003da2621459390800000000000000
+      internalID: -7812266346421223298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_41
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cec3fa1a700cd50800000000000000
+      internalID: 6755407832066878616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_42
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074f2a88e1e289570800000000000000
+      internalID: 8473573407573865584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_43
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d05fc9c822faf7e0800000000000000
+      internalID: -1730804849772113708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_44
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa92ac37da00c7de0800000000000000
+      internalID: -1334190644636538449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_45
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5a4dad9fe514bf0800000000000000
+      internalID: -341887669492210196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_46
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08859650a6d734fc0800000000000000
+      internalID: -3511825390108059520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_47
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 45
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8746abb59ed366190800000000000000
+      internalID: -7969614418109897608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_48
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa9129dd64d00900800000000000000
+      internalID: 648751914600733432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_49
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eca76fd70f214fe0800000000000000
+      internalID: -1206631514299192095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_50
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519d80fee26a7fdf0800000000000000
+      internalID: -146465742357210859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_51
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f68a1b80d377f2e0800000000000000
+      internalID: -2092076162366142727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_52
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a39b502f4199060800000000000000
+      internalID: 6960617728788478524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_53
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d68d5655f4aa1cd0800000000000000
+      internalID: -2586573662348015915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_54
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630a5118530be6800800000000000000
+      internalID: 607616743587029046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_55
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030b64f4c4fc50050800000000000000
+      internalID: 5766242824572284976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_56
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab465bb6e88f7a90800000000000000
+      internalID: -7313976745259545682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_57
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d07b77e84e551e0800000000000000
+      internalID: -2209608741610386034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_58
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb15ed8abc5101290800000000000000
+      internalID: -7921807780089015874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_59
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746f9b39ac79a9010800000000000000
+      internalID: 1196435547337913927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_60
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2383a161af7b65ab0800000000000000
+      internalID: -5019622449917315022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_61
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c37a8fe46c3de310800000000000000
+      internalID: 1435870260414280645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_62
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea52860dd3cb6e8c0800000000000000
+      internalID: -3970279047805000274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_NPCsJewellerIdle_63
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e57f232531e36050800000000000000
+      internalID: 5792721164068419043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
