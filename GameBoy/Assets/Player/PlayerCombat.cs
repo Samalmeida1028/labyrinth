@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
 
-
+    private AudioManager Audio;
 
     public GameObject rangedAttack;//ranged prefab
     public GameObject meleeAttack;//melee prefab
