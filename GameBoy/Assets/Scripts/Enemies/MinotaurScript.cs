@@ -295,6 +295,7 @@ public class MinotaurScript : MonoBehaviour
                     attack.GetComponent<EnemyAttack>().SetDamage((int)jumpDamage);
                     Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
                     attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+                    FindObjectOfType<AudioManager>().Play("Thud");
                 }
                 else
                 {

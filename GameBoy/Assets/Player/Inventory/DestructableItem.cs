@@ -36,10 +36,12 @@ public class DestructableItem : MonoBehaviour
             }
         }
         if(randomAmount>0){
+            FindObjectOfType<AudioManager>().Play("VaseBreak");
             Instantiate(particleGold,transform.position,Quaternion.identity);
             GetComponent<AudioSource>().PlayOneShot(gold);
         }
         else {
+            FindObjectOfType<AudioManager>().Play("VaseBreak");
             Instantiate(particleNoGold,transform.position,Quaternion.identity);
             GetComponent<AudioSource>().PlayOneShot(noGold);
         }
