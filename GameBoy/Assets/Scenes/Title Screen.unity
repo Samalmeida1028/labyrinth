@@ -19730,6 +19730,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5678489147532654213, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678489147532654213, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678489147532654213, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -513109301
+      objectReference: {fileID: 0}
     - target: {fileID: 8027993169034137830, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
       propertyPath: m_Name
       value: PlayerContainer

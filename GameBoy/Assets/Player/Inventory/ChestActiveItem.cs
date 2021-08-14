@@ -126,6 +126,7 @@ public class ChestActiveItem : MonoBehaviour
     public void spawnCoins(int coins)
     {
         Vector3 position = transform.position;
+        coins = (int)Random.Range((coins*.6f),coins+1);
         for(int i = 0; i<coins; i++){
             Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
             Instantiate(coin,transform.position+random,Quaternion.identity);

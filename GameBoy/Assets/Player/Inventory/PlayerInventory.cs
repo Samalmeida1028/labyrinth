@@ -109,7 +109,7 @@ public class PlayerInventory : MonoBehaviour
     {
          if(item!=null&&inventory[item.itemType]!=null)
          {
-            return (inventory[item.itemType] == item); 
+            return (inventory[item.itemType] == item)||inventory[item.itemType].rarity>item.rarity; 
          }
         return false;
         
