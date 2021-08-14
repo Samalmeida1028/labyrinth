@@ -1268,13 +1268,7 @@ MonoBehaviour:
   - name: Title_Music
     clip: {fileID: 8300000, guid: 051743358af89d546a131a9b126e4579, type: 3}
     loop: 1
-    volume: 1
-    pitch: 0
-    source: {fileID: 0}
-  - name: Title_Music
-    clip: {fileID: 8300000, guid: 051743358af89d546a131a9b126e4579, type: 3}
-    loop: 1
-    volume: 0.132
+    volume: 0.803
     pitch: 0
     source: {fileID: 0}
 --- !u!4 &1359687218
