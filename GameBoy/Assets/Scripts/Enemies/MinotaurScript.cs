@@ -342,9 +342,9 @@ public class MinotaurScript : MonoBehaviour
                     isAttackPressed = true;
                     counter = 0;
 
-                    GameObject attack = Instantiate(baseAttack, firePoint.position, firePoint.rotation);
+                    GameObject attack = Instantiate(jumpAttack, firePoint.position, firePoint.rotation);
 
-                    attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage));
+                    attack.GetComponent<EnemyAttack>().SetDamage((int)(jumpDamage));
                     Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
                     Destroy(attack, projectileLife);
                 }
