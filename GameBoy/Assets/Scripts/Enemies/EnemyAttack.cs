@@ -28,7 +28,7 @@ public class EnemyAttack : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other){
-        if (other.gameObject.tag == "Player" || other.gameObject.layer == 3 || other.gameObject.layer == 9)
+        if (other.gameObject!=gameObject)
         {
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
