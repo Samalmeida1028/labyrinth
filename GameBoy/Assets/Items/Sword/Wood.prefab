@@ -95,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810b76d8ec0bd4d94f7b49aeb672e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 100
+  value: 20
   itemName: Wooden Sword
   rarity: 0
   isMelee: 1
   attackSpeed: 1
   sprite: {fileID: 0}
-  damage: 7
+  damage: 5
   armorVal: 0
   itemType: 0
+  healthAmount: 0

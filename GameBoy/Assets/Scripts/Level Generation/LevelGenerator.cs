@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.AI;
 using UnityEditor;
+using Pathfinding;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class LevelGenerator : MonoBehaviour
     public GameObject lightSourceObj;
     public GameObject chestPrefab;
     public GameObject shopkeep;
+    public GameObject enemyPrefab;
+    public GameObject levelChange;
 
     [Header("Counter Variables")]
     private float maxTreeLength;
@@ -51,6 +54,7 @@ public class LevelGenerator : MonoBehaviour
     //The grid that holds all the impassable objects
     public int [,] grid;
 
+
     [Header ("Room Population Variables")]
     public List<RoomObj> roomList;
     public RoomObj spawnRoom;
@@ -59,9 +63,10 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {   
+        
         chestCount = levelDifficulty*3;
         Debug.Log("Chest Count " + chestCount);
-        enemyCount = levelDifficulty*10;
+        enemyCount =0;
         foregroundGrid.GetComponent<Transform>().localScale = new Vector3(tilePixelCount,tilePixelCount,1);
         foregroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<Tilemap>();
         backgroundTiles = foregroundGrid.GetComponent<Transform>().GetChild(1).gameObject.GetComponent<Tilemap>();
@@ -69,7 +74,6 @@ public class LevelGenerator : MonoBehaviour
 
         //Find the player
         player = GameObject.FindWithTag("Player");
-        Debug.Log(player);
 
         roomBuffer = 2*tilePixelCount;
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
@@ -90,12 +94,25 @@ public class LevelGenerator : MonoBehaviour
         generateSpawn();
         populateRoom();
         generateShop();
+        generateExit();
         
+        //Generate Pathfinding Graph
+        StartCoroutine(GenerateGraph());
+        player.GetComponent<PlayerInventory>().inventoryUI.SetActive(true);
     }
 
     void Update()
     {
 
+    }
+
+    /**
+    *   Scans pathfinding graph
+    **/
+    public IEnumerator GenerateGraph()
+    {
+        yield return WaitFor.Frames(5);
+        AstarPath.active.Scan();
     }
 
     /**
@@ -546,7 +563,7 @@ public class LevelGenerator : MonoBehaviour
         shopRoom.isShop=true;
         shopRoom.setChestCount(chestCount);
         roomList.Remove(shopRoom);
-
+        roomList.Add(exitRoom);
         for(int i = 0; i<=chestCount; i++)
         {
             roomList[Random.Range(0,roomList.Count)].chestCount++;
@@ -614,20 +631,27 @@ public class LevelGenerator : MonoBehaviour
     
     public void generateExit()
     {
-
+        Instantiate(levelChange,new Vector3(exitRoom.roomCenter.x,exitRoom.roomCenter.y,0), Quaternion.identity);
+        
     }
 
     public void populateRoom()
     {
         
         GameObject chest = chestPrefab;
+        GameObject enemy = enemyPrefab;
         foreach (RoomObj room in roomList)
         {
+            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*4f));
+
             Vector2 min = room.botLeft;
             Vector2 max = room.topRight;
             
             bool pickChestSpawn = false;
+            bool pickEnemySpawn = false;
+
             Vector3 chestSpawn = new Vector3(0,0,0);
+            Vector3 enemySpawn = new Vector3(0,0,0);
 
             while(room.chestCount>0)
             {
@@ -637,6 +661,7 @@ public class LevelGenerator : MonoBehaviour
                 {
                     float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
                     float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
                     if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
                     {
                         pickChestSpawn = true;
@@ -653,7 +678,34 @@ public class LevelGenerator : MonoBehaviour
                     numChest++;
                     room.chestCount--;
                 }
-            }      
+            }   
+
+            while(room.enemyCount>0)
+            {
+                pickEnemySpawn = false;
+
+                while(!pickEnemySpawn)
+                {
+                    float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
+                    float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
+
+                    if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
+                    {
+                        pickEnemySpawn = true;
+                        enemySpawn = new Vector3(x,y,0);
+                    }
+
+                    if(pickEnemySpawn&&room.enemyCount>0)
+                    {
+                        grid[(int)(enemySpawn.x/tilePixelCount),(int)(enemySpawn.y/tilePixelCount)]=1;
+                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().isRanged = Random.Range(0,10)<=3;
+                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1+levelDifficulty/2,levelDifficulty*1.2f);
+                        Instantiate(enemy,enemySpawn,Quaternion.identity);
+                        room.enemyCount--;
+                        enemyCount++;
+                    }
+                }
+            }       
         }
     }
 }

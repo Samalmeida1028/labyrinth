@@ -17,12 +17,10 @@ public class DisplayText : MonoBehaviour
     }
 
 
-public void OnTriggerEnter2D(Collider2D collision){
-    Debug.Log("hi");
-    text.enabled = true;
-    
+    public void OnTriggerEnter2D(Collider2D collision){
+        Debug.Log("hi");
+        text.enabled = true;
 
-
-}
+    }
 
 }

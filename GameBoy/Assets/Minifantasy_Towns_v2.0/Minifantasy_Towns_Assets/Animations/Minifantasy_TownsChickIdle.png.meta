@@ -1,5 +1,11 @@
 fileFormatVersion: 2
-guid: f6a92b4039ea2f7418c56df9da93c132
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsChickIdle.png.meta
+guid: e164f1b5ee44ef04aacef148b2a4885f
+=======
+guid: aaae516f9c5404f77a3e586cdd59695b
+timeCreated: 1498137820
+licenseType: Pro
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@1x.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,8 +13,13 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsChickIdle.png.meta
     sRGBTexture: 1
     linearTexture: 0
+=======
+    sRGBTexture: 0
+    linearTexture: 1
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@1x.png.meta
     fadeOut: 0
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
@@ -28,9 +39,10 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: 1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 1024
   textureSettings:
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsChickIdle.png.meta
     serializedVersion: 2
     filterMode: 1
     aniso: 1
@@ -38,6 +50,12 @@ TextureImporter:
     wrapU: 1
     wrapV: 1
     wrapW: 1
+=======
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@1x.png.meta
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -52,7 +70,11 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsChickIdle.png.meta
   textureType: 8
+=======
+  textureType: 2
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@1x.png.meta
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -63,12 +85,25 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
+<<<<<<< HEAD:GameBoy/Assets/Minifantasy_Towns_v2.0/Minifantasy_Towns_Assets/Animations/Minifantasy_TownsChickIdle.png.meta
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
+=======
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+>>>>>>> Ethans-Branch:GameBoy/Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@1x.png.meta
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

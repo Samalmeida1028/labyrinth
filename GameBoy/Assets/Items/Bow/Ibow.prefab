@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810b76d8ec0bd4d94f7b49aeb672e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 250
+  value: 40
   itemName: Iron Bow
   rarity: 1
   isMelee: 0
@@ -104,3 +104,4 @@ MonoBehaviour:
   damage: 6
   armorVal: 0
   itemType: 1
+  healthAmount: 0
