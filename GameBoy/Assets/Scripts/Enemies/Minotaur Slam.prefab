@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4976290182149623798}
   - component: {fileID: 3011341347547484261}
   - component: {fileID: -4350757956347749501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Minotaur Slam
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
