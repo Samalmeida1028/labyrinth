@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc3a1ef585dba04bb6cb47e28df4e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioManagerOBJ: {fileID: 1359687216}
+  AudioManagerOBJ: {fileID: 0}
 --- !u!114 &252253697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   sounds:
   - name: TitleMusic
     clip: {fileID: 8300000, guid: 051743358af89d546a131a9b126e4579, type: 3}
-    loop: 1
+    loop: 0
     volume: 0.631
     pitch: 1
     source: {fileID: 0}
