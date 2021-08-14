@@ -12,6 +12,7 @@ public class LevelChangeScript : MonoBehaviour
     public GameObject loadScreen;
     public GameObject PlayerInventoryUI;
     public string text ="";
+    public bool endGame=false;
 
 
 
@@ -45,6 +46,14 @@ public class LevelChangeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(endGame==true&&canInteract&& Input.GetKey("e"))
+        {
+            loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "YOU WIN";
+            PlayerInventoryUI.SetActive(false);
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            Instantiate(loadScreen, player.transform.position, Quaternion.identity);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }else
         if (canInteract&& Input.GetKey("e"))
         {
             loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = text;
