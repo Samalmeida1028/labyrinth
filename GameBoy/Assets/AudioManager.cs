@@ -52,7 +52,6 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Couldn't find audio!");
             return;
         }
-
         s.source.Play();
     }
 

@@ -1387,7 +1387,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SwordSlash
     clip: {fileID: 8300000, guid: e1ef28774012b1846b6f76f827861a2b, type: 3}
-    loop: 1
+    loop: 0
     volume: 0.54
     pitch: 1
     source: {fileID: 0}
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   - name: WalkSound
     clip: {fileID: 8300000, guid: 4a251dc66b444b549b5b7d5a02816ad0, type: 3}
     loop: 1
-    volume: 1
+    volume: 0.003
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1359687218

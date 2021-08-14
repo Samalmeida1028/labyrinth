@@ -217,11 +217,7 @@ public class EnemyScript : MonoBehaviour
             Invoke("DamagedComplete", 0.2f);
         }
 
-        if (isDamaged)
-        {
-            FindObjectOfType<AudioManager>().PlayOneShot("Enemy_Hit");
-        }
-        
+
 
         // MF DEAD
         if (isKilled)
@@ -251,7 +247,10 @@ public class EnemyScript : MonoBehaviour
                 Invoke("deathAnimation", 0.2f);
             }
         }
+    
     }
+
+
 
     void deathAnimation()
     {
