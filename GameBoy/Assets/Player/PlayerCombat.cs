@@ -86,9 +86,11 @@ public class PlayerCombat : MonoBehaviour
                 {
                 updateCounter = 0;
                 int force = -projectileSpeed;
-                Debug.Log(attackPoint.rotation);
+
                 GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
+
                 bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
+
                 Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
                 rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
                 

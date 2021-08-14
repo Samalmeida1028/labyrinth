@@ -16,10 +16,10 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "Enemy"){
             other.gameObject.GetComponent<HittableStats>().TakeDamage(damage);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
         else if (other.gameObject.tag != "Coin" || other.gameObject.tag != "Player"){
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
 
     }
