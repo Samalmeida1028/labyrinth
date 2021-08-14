@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6950429217054034499}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.112, y: 1.236, z: 0}
+  m_LocalPosition: {x: -0.19, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6950429217183983173}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 6950429218003619478}
   - component: {fileID: 6950429218003619561}
   m_Layer: 10
-  m_Name: Elf
+  m_Name: Dwarf
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,19 +187,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d380f6fc66863a40a4343106573cc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
-  attackType: {fileID: 6776609541719931588, guid: aa77355743c8bfc46848d47cc2103f4f, type: 3}
+  enemyType: 1
+  attackType: {fileID: 1675434167410673763, guid: 908fd69c159b13c4084917fea118b835, type: 3}
   firePoint: {fileID: 6950429217054034496}
   enemyTier: 1.2
   FirepointAxis: {fileID: 6950429217183983174}
-  enemyDamage: 1
-  projectileLife: 0.5
-  isRanged: 0
+  enemyDamage: 5
+  projectileLife: 2
+  isRanged: 1
   health: 20
   attackSpeed: 0.8
   force: 10
-  targetRange: 5
-  attackRange: 1
+  targetRange: 10
+  attackRange: 5
   counter: 0
   radius: 10
   target: {x: 0, y: 0, z: 0}
@@ -258,7 +258,7 @@ SpriteRenderer:
   m_SortingLayerID: 1887952361
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -490672970451064074, guid: 4759f883d5467f24799204d7a165b947, type: 3}
+  m_Sprite: {fileID: 4035959289877228764, guid: 85dc1fa9890def44a9ce29a47bf1e66d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -396,7 +396,7 @@ Animator:
   m_GameObject: {fileID: 6950429218003619560}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9fb1cd5dbbf0bdc45b45c0535aa44f9e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 25473766f95ef6e4e9c7892ad481e66a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -1279,12 +1279,6 @@ MonoBehaviour:
     volume: 0.54
     pitch: 1
     source: {fileID: 0}
-  - name: Enemy_Hit
-    clip: {fileID: 8300000, guid: 366d554adad3b1f4e95c8cc18199d71d, type: 3}
-    loop: 0
-    volume: 0.54
-    pitch: 1
-    source: {fileID: 0}
 --- !u!4 &1359687218
 Transform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Walk_Backward
+  m_Name: Throw_Spell
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 7500509103958437945, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
+      value: {fileID: -6217345671112746730, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
     - time: 0.083333336
-      value: {fileID: 1008816216748069464, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
+      value: {fileID: 8584431466609264253, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
     - time: 0.16666667
-      value: {fileID: 11406907883527339, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
+      value: {fileID: -2316484262504338174, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
     - time: 0.25
-      value: {fileID: 8030128826893041618, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
+      value: {fileID: -4393810730586131446, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 7500509103958437945, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
-    - {fileID: 1008816216748069464, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
-    - {fileID: 11406907883527339, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
-    - {fileID: 8030128826893041618, guid: 20ae17e0f0aac8d48806a5a0e07a02b7, type: 3}
+    - {fileID: -6217345671112746730, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
+    - {fileID: 8584431466609264253, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
+    - {fileID: -2316484262504338174, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
+    - {fileID: -4393810730586131446, guid: 5ce6e6bacdbfd9143bc2da192dec273e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -60,7 +60,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
