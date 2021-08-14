@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3910665701cbd784bbc8fc7613c73d04, type: 3}
---- !u!43 &252271283
+--- !u!43 &746700020
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,8 +553,8 @@ MonoBehaviour:
   - {x: 23.75, y: 22.5, z: 0}
   - {x: -10, y: 22.5, z: 0}
   m_ShapePathHash: 0
-  m_Mesh: {fileID: 252271283}
-  m_InstanceId: 42896
+  m_Mesh: {fileID: 746700020}
+  m_InstanceId: 229538
 --- !u!483693784 &823028992
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -771,7 +771,8 @@ MonoBehaviour:
   lightSourceObj: {fileID: 2507652181171789533, guid: c376c87e5401c574b81e9dc4673c5ebc, type: 3}
   chestPrefab: {fileID: 7692698751698659144, guid: 51838b20595c39341aed986d2d82df72, type: 3}
   shopkeep: {fileID: 6601006645558920382, guid: 6f0c21142dc96e54b844c2176730ff22, type: 3}
-  enemyPrefab: {fileID: 4407686475379018229, guid: ba9e0176ea0fbe1419cca96997a97b4d, type: 3}
+  meleeEnemyPrefab: {fileID: 4407686475379018229, guid: ba9e0176ea0fbe1419cca96997a97b4d, type: 3}
+  mageEnemyPrefab: {fileID: 2603493108411321871, guid: 0d2f0e644d97a89428e64414934295bf, type: 3}
   levelChange: {fileID: 7711098792456152296, guid: b64261e64bcde3e4f96aac27bbfda94f, type: 3}
   tilePixelCount: 1.25
   foregroundGrid: {fileID: 1329519682}
@@ -795,7 +796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1329519681
 GameObject:
@@ -840,7 +841,7 @@ Transform:
   - {fileID: 823028989}
   - {fileID: 781592877}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503900505
 GameObject:
@@ -912,5 +913,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

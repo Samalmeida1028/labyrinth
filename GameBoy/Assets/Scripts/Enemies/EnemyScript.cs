@@ -86,15 +86,22 @@ public class EnemyScript : MonoBehaviour
     private string currentState;
 
 
-    //Animation States
+    //Animation States Walking
     const string MONSTER_WALK_F = "Walk_Forward";
     const string MONSTER_WALK_B = "Walk_Backward";
 
+    //Animation States (Damaged)
+    const string MONSTER_DAMAGED_F = "Enemy_Damaged_Forward";
+    const string MONSTER_DAMAGED_B = "Enemy_Damaged_Backward";
+
+    //Animation States (Melee)
     const string MONSTER_ATTACK_F = "Attack_Forward";
     const string MONSTER_ATTACK_B = "Attack_Backward";
 
-    const string MONSTER_DAMAGED_F = "Enemy_Damaged_Forward";
-    const string MONSTER_DAMAGED_B = "Enemy_Damaged_Backward";
+    //Animation States (Mage)
+    const string MONSTER_CAST = "Cast_Spell";
+    const string MONSTER_THROW = "Throw_Spell";
+
 
     const string DEAD = "Death";
 
@@ -172,13 +179,22 @@ public class EnemyScript : MonoBehaviour
             {
                 isAttacking = true;
                 
-                if (isFacingBack)
+
+                //If the enemy is not a mage, use melee attack animations when attacking
+                if (!isRanged) 
                 {
-                    ChangeAnimationState(MONSTER_ATTACK_B);
+                    if (isFacingBack)
+                    {
+                        ChangeAnimationState(MONSTER_ATTACK_B);
+                    }
+                    else
+                    {
+                        ChangeAnimationState(MONSTER_ATTACK_F);
+                    }
                 }
-                else
+                else //if it's a mage begin spell casting/throwing
                 {
-                    ChangeAnimationState(MONSTER_ATTACK_F);
+                    ChangeAnimationState(MONSTER_THROW);
                 }
             }
 
@@ -317,6 +333,7 @@ public class EnemyScript : MonoBehaviour
                 attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
                 Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
                 Destroy(attack, projectileLife);
+
                 if (isRanged)
                 {
                     attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
