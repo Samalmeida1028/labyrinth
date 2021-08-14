@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 7cf700287d8087c4cbbaabc5e44119e1
+guid: 382a94a7b62c4ad40b02a91706589ea7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 477038245475968593
-    second: Damaged_0
+      213: 4628027644058252719
+    second: Minifantasy_CreaturesElfDmg_0
   - first:
-      213: 1398815047815489872
-    second: Damaged_1
+      213: 8634580040728404368
+    second: Minifantasy_CreaturesElfDmg_1
   - first:
-      213: -4155106823232359955
-    second: Damaged_2
+      213: -5561718940979929262
+    second: Minifantasy_CreaturesElfDmg_2
   - first:
-      213: -3134539031082181341
-    second: Damaged_3
+      213: 8031252037720165139
+    second: Minifantasy_CreaturesElfDmg_3
   - first:
-      213: -3097028871984802304
-    second: Damaged_4
+      213: 3773005811052744215
+    second: Minifantasy_CreaturesElfDmg_4
   - first:
-      213: -7390835706220147823
-    second: Damaged_5
+      213: 617124738587944897
+    second: Minifantasy_CreaturesElfDmg_5
   - first:
-      213: -5593904837000854094
-    second: Damaged_6
+      213: -5365980941037161528
+    second: Minifantasy_CreaturesElfDmg_6
   - first:
-      213: 5227565187254193652
-    second: Damaged_7
+      213: -2447477047076024308
+    second: Minifantasy_CreaturesElfDmg_7
   - first:
-      213: -2846064482069506327
-    second: Damaged_8
+      213: -1260626554728491416
+    second: Minifantasy_CreaturesElfDmg_8
   - first:
-      213: -1728522701914535961
-    second: Damaged_9
+      213: -4084912626587738969
+    second: Minifantasy_CreaturesElfDmg_9
   - first:
-      213: 7733249414377904024
-    second: Damaged_10
+      213: -3742520508394751827
+    second: Minifantasy_CreaturesElfDmg_10
   - first:
-      213: -2115962104124767329
-    second: Damaged_11
+      213: 7518278615056496529
+    second: Minifantasy_CreaturesElfDmg_11
   - first:
-      213: 1780152933182231801
-    second: Damaged_12
+      213: -5483168867777799966
+    second: Minifantasy_CreaturesElfDmg_12
   - first:
-      213: 2851158464647486158
-    second: Damaged_13
+      213: -5019311608373929857
+    second: Minifantasy_CreaturesElfDmg_13
   - first:
-      213: -7831881456195727030
-    second: Damaged_14
+      213: 5717595906443708400
+    second: Minifantasy_CreaturesElfDmg_14
   - first:
-      213: -7159591609032779260
-    second: Damaged_15
+      213: 1320964058058921243
+    second: Minifantasy_CreaturesElfDmg_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,91 +139,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Damaged_0
+      name: Minifantasy_CreaturesElfDmg_0
       rect:
         serializedVersion: 2
         x: 12
         y: 109
         width: 8
         height: 8
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 156eeddb1c7ce9600800000000000000
-      internalID: 477038245475968593
+      spriteID: fa5b7c63f9e0a3040800000000000000
+      internalID: 4628027644058252719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_1
+      name: Minifantasy_CreaturesElfDmg_1
       rect:
         serializedVersion: 2
         x: 43
         y: 109
         width: 10
         height: 9
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 059638fefd6996310800000000000000
-      internalID: 1398815047815489872
+      spriteID: 0916b409cc034d770800000000000000
+      internalID: 8634580040728404368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_2
+      name: Minifantasy_CreaturesElfDmg_2
       rect:
         serializedVersion: 2
-        x: 77
+        x: 76
         y: 109
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1fe65eb581656c0800000000000000
-      internalID: -4155106823232359955
+      spriteID: 25f5456271ec0d2b0800000000000000
+      internalID: -5561718940979929262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_3
+      name: Minifantasy_CreaturesElfDmg_3
       rect:
         serializedVersion: 2
-        x: 109
+        x: 108
         y: 109
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32ddfb5db51ef74d0800000000000000
-      internalID: -3134539031082181341
+      spriteID: 31b41f94d2db47f60800000000000000
+      internalID: 8031252037720165139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_4
+      name: Minifantasy_CreaturesElfDmg_4
       rect:
         serializedVersion: 2
         x: 12
@@ -231,20 +231,20 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 006973256a42505d0800000000000000
-      internalID: -3097028871984802304
+      spriteID: 71e884f7bc86c5430800000000000000
+      internalID: 3773005811052744215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_5
+      name: Minifantasy_CreaturesElfDmg_5
       rect:
         serializedVersion: 2
         x: 43
@@ -252,224 +252,224 @@ TextureImporter:
         width: 10
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19b8971651a7e6990800000000000000
-      internalID: -7390835706220147823
+      spriteID: 1c7e3a91ea7709800800000000000000
+      internalID: 617124738587944897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_6
+      name: Minifantasy_CreaturesElfDmg_6
       rect:
         serializedVersion: 2
         x: 77
         y: 77
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b5893340357e52b0800000000000000
-      internalID: -5593904837000854094
+      spriteID: 8c3b6f9a3c43885b0800000000000000
+      internalID: -5365980941037161528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_7
+      name: Minifantasy_CreaturesElfDmg_7
       rect:
         serializedVersion: 2
         x: 109
         y: 77
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fd0c7a47da0c8840800000000000000
-      internalID: 5227565187254193652
+      spriteID: c009c1dc790d80ed0800000000000000
+      internalID: -2447477047076024308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_8
+      name: Minifantasy_CreaturesElfDmg_8
       rect:
         serializedVersion: 2
         x: 12
         y: 45
         width: 8
         height: 8
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e61462ce6fb088d0800000000000000
-      internalID: -2846064482069506327
+      spriteID: 866dbfad3da518ee0800000000000000
+      internalID: -1260626554728491416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_9
+      name: Minifantasy_CreaturesElfDmg_9
       rect:
         serializedVersion: 2
         x: 43
         y: 45
         width: 10
         height: 9
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e78f2eb2cd0308e0800000000000000
-      internalID: -1728522701914535961
+      spriteID: 7acdab1eb997f47c0800000000000000
+      internalID: -4084912626587738969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_10
+      name: Minifantasy_CreaturesElfDmg_10
       rect:
         serializedVersion: 2
-        x: 77
+        x: 76
         y: 45
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8971e7fae55025b60800000000000000
-      internalID: 7733249414377904024
+      spriteID: da834842d65ef0cc0800000000000000
+      internalID: -3742520508394751827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_11
+      name: Minifantasy_CreaturesElfDmg_11
       rect:
         serializedVersion: 2
-        x: 109
+        x: 108
         y: 45
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9384795da792a2e0800000000000000
-      internalID: -2115962104124767329
+      spriteID: 197bbdc119a465860800000000000000
+      internalID: 7518278615056496529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_12
+      name: Minifantasy_CreaturesElfDmg_12
       rect:
         serializedVersion: 2
         x: 12
         y: 13
         width: 8
         height: 8
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f4523c39af54b810800000000000000
-      internalID: 1780152933182231801
+      spriteID: 2e89f9047fed7e3b0800000000000000
+      internalID: -5483168867777799966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_13
+      name: Minifantasy_CreaturesElfDmg_13
       rect:
         serializedVersion: 2
         x: 43
         y: 13
         width: 10
         height: 9
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eca59ab7489519720800000000000000
-      internalID: 2851158464647486158
+      spriteID: f7890e58fa2d75ab0800000000000000
+      internalID: -5019311608373929857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_14
+      name: Minifantasy_CreaturesElfDmg_14
       rect:
         serializedVersion: 2
         x: 77
         y: 13
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a411c788f419f4390800000000000000
-      internalID: -7831881456195727030
+      spriteID: 0f70ecc0f2bf85f40800000000000000
+      internalID: 5717595906443708400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damaged_15
+      name: Minifantasy_CreaturesElfDmg_15
       rect:
         serializedVersion: 2
         x: 109
         y: 13
-        width: 6
+        width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40adbbe5d5504ac90800000000000000
-      internalID: -7159591609032779260
+      spriteID: b1519a1efc1055210800000000000000
+      internalID: 1320964058058921243
       vertices: []
       indices: 
       edges: []

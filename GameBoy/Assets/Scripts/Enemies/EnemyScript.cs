@@ -77,6 +77,9 @@ public class EnemyScript : MonoBehaviour
 
     private bool isAttacking;
     private bool isAttackPressed;
+
+    private bool killdb = false;
+
     public bool isDamaged;
     public bool isKilled;
 
@@ -195,24 +198,44 @@ public class EnemyScript : MonoBehaviour
                 ChangeAnimationState(MONSTER_DAMAGED_F);
             }
 
-            Invoke("DamagedComplete", 0.1f);
+            Invoke("DamagedComplete", 0.2f);
         }
         
 
         // MF DEAD
         if (isKilled)
         {
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
-            Component[] CircleCollider2Ds; //nuts
-            CircleCollider2Ds = GetComponents(typeof(CircleCollider2D));
+            if (!killdb)
+            {
+                killdb = true;
 
-            foreach (CircleCollider2D f in CircleCollider2Ds)
-                f.enabled = false;
+                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
-            ChangeAnimationState(DEAD);
-            Invoke("kill", 0.8f);
+                Component[] CircleCollider2Ds; //nuts
+                CircleCollider2Ds = GetComponents(typeof(CircleCollider2D));
+
+                foreach (CircleCollider2D f in CircleCollider2Ds)
+                    f.enabled = false;
+
+                if (isFacingBack)
+                {
+                    ChangeAnimationState(MONSTER_DAMAGED_B);
+                }
+                else
+                {
+                    ChangeAnimationState(MONSTER_DAMAGED_F);
+                }
+
+                Invoke("deathAnimation", 0.2f);
+            }
         }
+    }
+
+    void deathAnimation()
+    {
+        ChangeAnimationState(DEAD);
+        Invoke("kill", 0.8f);
     }
 
     void kill()

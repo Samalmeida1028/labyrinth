@@ -76,7 +76,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack()
     {
-        if (isRanged)//this is for the bow stuff, change the bullet 1 prefab if u wanna change that pprojectile
+        if (isRanged && !GetComponent<PlayerMovement>().hitDB)//this is for the bow stuff, change the bullet 1 prefab if u wanna change that pprojectile
         {
             if (GetComponent<PlayerInventory>().ammo > 0 && updateCounter>(1/attackSpeed))
             {
@@ -109,6 +109,8 @@ public class PlayerCombat : MonoBehaviour
 
     void TakeDamage(int damage)//normal takeDamage, if it is less than 0 then die;
     {
+        GetComponent<PlayerMovement>().TakeDamage();
+
         totalArmor = GetComponent<PlayerStats>().armor;
         GetComponent<PlayerStats>().currentHealth -= (int)(damage / totalArmor);
         if (GetComponent<PlayerStats>().currentHealth <= 0)

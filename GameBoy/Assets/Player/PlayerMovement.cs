@@ -30,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_BOW_ATTACK_F = "Bow_Shoot_Front";
     const string PLAYER_BOW_ATTACK_B = "Bow_Shoot_Back";
 
+    const string PLAYER_DAMAGED_F = "Damaged_F";
+    const string PLAYER_DAMAGED_B = "Damaged_B";
+
     //Other Variables
     private SpriteRenderer playerSprite;
     private Animator animator;
@@ -42,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isAttackPressed;
     private bool isAttacking;
+
+    public bool isHit;
+    public bool hitDB = false;
 
     private bool isShootingBow;
 
@@ -86,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             isMoving = false;
         }
 
-        if (isFacingRight)
+        if (isFacingRight && !hitDB)
         {
             playerSprite.flipX = false;
 
@@ -98,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Change Sprite Direction/Animation
-        if (isMoving && !isAttacking)
+        if (isMoving && !isAttacking && !hitDB)
         {
             if (isFacingRight) //If the player is facing right
             {
@@ -123,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
                }
             }
         }
-        else
+        else if (!hitDB)
         {
             if (isFacingBack && !isAttacking)
             {
@@ -146,12 +152,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Check if player attacks
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !hitDB)
         {
             isAttackPressed = true;
         };
 
-        if (isAttackPressed)
+        if (isAttackPressed && !hitDB)
         {
             isAttackPressed = false;
 
@@ -190,6 +196,37 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+
+        if (isHit)
+        {
+            isHit = false;
+
+            if (!hitDB)
+            {
+                hitDB = true;
+
+                if (isFacingBack)
+                {
+                    ChangeAnimationState(PLAYER_DAMAGED_B);
+                }
+                else    
+                {
+                    ChangeAnimationState(PLAYER_DAMAGED_F);
+                }
+
+                Invoke("hitComplete", 0.2f);
+            }
+        }
+    }
+
+    void hitComplete()
+    {
+        hitDB = false;
+    }
+
+    public void TakeDamage()
+    {
+        isHit = true;
     }
 
     void AttackComplete()
