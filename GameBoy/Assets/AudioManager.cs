@@ -7,9 +7,13 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    void Start() {
+        Play("Title_Music");
+    }
+
     void Awake() {
         foreach (Sound s in sounds) {
-            s.source=gameObject.AddComponent<AudioSource>();
+            s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
