@@ -48,6 +48,7 @@ public class PlayerStats : MonoBehaviour
         armorLvl++;
 
         armor = 1+((armorLvl-1)*.2f);
+        GetComponent<PlayerCombat>().ChangeArmor();
     }
 
     public void UpgradeHealth()
