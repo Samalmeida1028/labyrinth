@@ -82,8 +82,6 @@ public class MinotaurScript : MonoBehaviour
     public bool isDamaged;
     public bool isKilled;
 
-    public bool isMoving;
-
     private string currentState;
     public IAstarAI ai;
     float lastPathed = 0;
@@ -101,7 +99,6 @@ public class MinotaurScript : MonoBehaviour
     const string MONSTER_DAMAGED_B = "Damaged_Back";
 
     const string DEAD = "Death";
-    const string IDLE = "Idle";
 
     Vector3 PickRandomPoint() {
         var point = Random.insideUnitSphere * radius;
@@ -148,12 +145,7 @@ public class MinotaurScript : MonoBehaviour
             enemySprite.flipX = true;
         }
 
-        if (!isMoving && !isAttacking)
-        {
-            ChangeAnimationState(IDLE);
-        }
-
-        if (!isAttacking && !isDamaged && !isKilled && isMoving)
+        if (!isAttacking && !isDamaged && !isKilled)
         {
             if (isFacingRight) //If the monster is facing right
             {
@@ -180,7 +172,7 @@ public class MinotaurScript : MonoBehaviour
         }
 
         // Player Monster Attack Animation
-        if (isAttackPressed && !isDamaged && !isKilled && !isMoving)
+        if (isAttackPressed && !isDamaged && !isKilled)
         {
             isAttackPressed = false;
 
@@ -291,7 +283,6 @@ public class MinotaurScript : MonoBehaviour
                 if (updateCounter > .2)
                 {
                     updateCounter = 0;
-                    isMoving = true;
                     Roam();
                 }
 
@@ -307,14 +298,12 @@ public class MinotaurScript : MonoBehaviour
 
             case State.Attack:
                 Attack();
-                isMoving = false;
                 state = State.Transition;
                 break;
 
             case State.Transition:
                 roamPos = transform.position;
                 chasing = false;
-                isMoving = false;
                 updateCounter = 0;
                 if (CheckForPlayer()) state = State.Chase;
                 else state = State.Roaming;
@@ -452,7 +441,6 @@ public class MinotaurScript : MonoBehaviour
                     return;
                 }
             }
-            isMoving = true;
         }
         else
         {
