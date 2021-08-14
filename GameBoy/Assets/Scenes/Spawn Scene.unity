@@ -4828,6 +4828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4961826301135202762, guid: fd2128d5de1326d44882277cad27c9e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd2128d5de1326d44882277cad27c9e6, type: 3}
 --- !u!1001 &1794263238

@@ -29,6 +29,7 @@ public class ChestActiveItem : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         var main = itemParticles.main;
         itemImage.GetComponent<Image>().enabled = (false);
         tier = (int)(tierVal - Random.Range(0f, 4f));

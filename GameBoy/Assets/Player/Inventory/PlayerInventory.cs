@@ -28,17 +28,18 @@ public class PlayerInventory : MonoBehaviour
     public bool AddItem(Item item)
     {
         Item temp = item;
-        Debug.Log(item);
         if(inventory[temp.itemType]==null || (temp.rarity>inventory[temp.itemType].rarity))
         {
             inventory[temp.itemType] = temp;
             inventoryUI.GetComponent<InventoryUI>().AddItemDisplay(temp);
+            if(temp.itemType==3)
+            {
+                GetComponent<PlayerCombat>().ChangeArmor();
+            }
         }else{
             return true;
         }
-
         return false;
-
     }
 
     public void AddGold(int goldAmount)
@@ -64,18 +65,18 @@ public class PlayerInventory : MonoBehaviour
             if(slot == 1){
             GetComponent<PlayerCombat>().canAttack = true;
             GetComponent<PlayerCombat>().isRanged = true;
-        }
-        else if(slot == 0){
-            GetComponent<PlayerCombat>().canAttack = true;
-            GetComponent<PlayerCombat>().isRanged = false;
-        }
-        else if(slot == 2){
-            if(inventory[0]!=null || inventory[1]!=null){
-            GetComponent<PlayerCombat>().canAttack = false;
             }
-            GetComponent<PlayerCombat>().isPotion = true;
-        }
-        }
+            else if(slot == 0){
+                GetComponent<PlayerCombat>().canAttack = true;
+                GetComponent<PlayerCombat>().isRanged = false;
+            }
+            else if(slot == 2){
+                if(inventory[0]!=null || inventory[1]!=null){
+                GetComponent<PlayerCombat>().canAttack = false;
+                }
+                GetComponent<PlayerCombat>().isPotion = true;
+            }
+            }
         }
 
     }
@@ -106,7 +107,11 @@ public class PlayerInventory : MonoBehaviour
 
     public bool hasItem(Item item)
     {
-        return (inventory[item.itemType] == item);
+         if(item!=null&&inventory[item.itemType]!=null)
+         {
+            return (inventory[item.itemType] == item); 
+         }
+        return false;
         
     }
 }
