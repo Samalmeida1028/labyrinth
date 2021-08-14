@@ -25,7 +25,7 @@ public class MinotaurScript : MonoBehaviour
     public GameObject baseAttack;
     public GameObject jumpAttack;
     [Space(10)]
-
+    public GameObject lvlChange;
 
     [Header("Update for Attack Animation and Pathing")]
     [Space(5)]
@@ -261,6 +261,7 @@ public class MinotaurScript : MonoBehaviour
     void kill()
     {
         Destroy(gameObject);
+        lvlChange.GetComponent<LevelChangeScript>().open=true;
     }
 
     void DamagedComplete()

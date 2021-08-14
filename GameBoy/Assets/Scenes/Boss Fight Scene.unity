@@ -4318,6 +4318,10 @@ PrefabInstance:
       value: Minotaur Container
       objectReference: {fileID: 0}
     - target: {fileID: 6158095004091486381, guid: 9f44451ce8976ea4dabf471ae7f9d1d6, type: 3}
+      propertyPath: lvlChange
+      value: 
+      objectReference: {fileID: 1620965589}
+    - target: {fileID: 6158095004091486381, guid: 9f44451ce8976ea4dabf471ae7f9d1d6, type: 3}
       propertyPath: baseAttack
       value: 
       objectReference: {fileID: 3186424625157736236, guid: 4c0adaae225e4c34caef5f4ef0d091ad, type: 3}
@@ -4529,6 +4533,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b64261e64bcde3e4f96aac27bbfda94f, type: 3}
+--- !u!1 &1620965589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7711098792456152296, guid: b64261e64bcde3e4f96aac27bbfda94f, type: 3}
+  m_PrefabInstance: {fileID: 1620965588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2029748765
 PrefabInstance:
   m_ObjectHideFlags: 0
