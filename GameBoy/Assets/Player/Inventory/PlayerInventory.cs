@@ -24,31 +24,23 @@ public class PlayerInventory : MonoBehaviour
         if(Input.GetKeyDown("1")) ChangeActiveItem(0);
         if(Input.GetKeyDown("2")) ChangeActiveItem(1);
         if(Input.GetKeyDown("3")) ChangeActiveItem(2);
-        if(Input.GetKeyDown("4")) ChangeActiveItem(3);
     }
-    public bool AddItem(Item item)//checks the itemType and puts it in the designated slot, afterr checking to see if the slot has no item. if the slot hass an item then you have to hold e
+    public bool AddItem(Item item)
     {
         Item temp = item;
-        if (inventory[temp.itemType] == null || askToAdd)//check chest, chest script sets asktoAdd true which is why we set it false here
+        Debug.Log(item);
+        if(inventory[temp.itemType]==null || (temp.rarity>inventory[temp.itemType].rarity))
         {
-            askToAdd = false;
             inventory[temp.itemType] = temp;
             inventoryUI.GetComponent<InventoryUI>().AddItemDisplay(temp);
-
+        }else{
             return true;
         }
-        else if (!askToAdd)
-        {
-            return false;
 
-        }
-        else
-        {
-            return false;
-        }
-
+        return false;
 
     }
+
     public void AddGold(int goldAmount)
     {
         gold += goldAmount;
@@ -85,10 +77,6 @@ public class PlayerInventory : MonoBehaviour
         }
         }
         }
-        else{
-            //this s where you would put something to tell the player they cant switch to that slot
-        }
-
 
     }
     public void Clear()
@@ -114,5 +102,11 @@ public class PlayerInventory : MonoBehaviour
         inventory[slot]=null;
         inventoryUI.GetComponent<InventoryUI>().clear(slot);
 
+    }
+
+    public bool hasItem(Item item)
+    {
+        return (inventory[item.itemType] == item);
+        
     }
 }

@@ -37,10 +37,8 @@ public class PlayerCombat : MonoBehaviour
         }
         else if (isPotion)
         {
-            Debug.Log("Potion");
             if (Input.GetMouseButton(0))
             {
-                Debug.Log("Potion Motion");
                 if (Heal(GetComponent<PlayerInventory>().activeItem.GetComponent<Item>().healthAmount))//method for potion
                 {
                     GetComponent<PlayerInventory>().clearSlot(2);
@@ -58,14 +56,14 @@ public class PlayerCombat : MonoBehaviour
     public void ChangeDamage()//sets damage to the player base damage, item damage, and multiplier
     {
         int baseDamage = GetComponent<PlayerStats>().baseDamage;
-        int damageMult = GetComponent<PlayerStats>().damageMult;
+        float damageMult = GetComponent<PlayerStats>().damageMult;
 
         if (GetComponent<PlayerInventory>().activeItem != null)
         {
             itemDamage = GetComponent<PlayerInventory>().activeItem.damage;
         }
         else { itemDamage = 0; }
-        totalDamage = (baseDamage + itemDamage) * damageMult;
+        totalDamage = (int)((baseDamage + itemDamage) * damageMult);
     }
     public void ChangeArmor()
     {
@@ -106,7 +104,7 @@ public class PlayerCombat : MonoBehaviour
 
     void TakeDamage(int damage)//normal takeDamage, if it is less than 0 then die;
     {
-        totalArmor = GetComponent<PlayerStats>().armor;
+        totalArmor = GetComponent<PlayerStats>().armor + GetComponent<PlayerInventory>().inventory[3].armorVal;
         GetComponent<PlayerStats>().UpdateHealth((int)(damage / totalArmor));
         if (GetComponent<PlayerStats>().currentHealth <= 0)
         {

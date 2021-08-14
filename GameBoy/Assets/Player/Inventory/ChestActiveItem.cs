@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChestActiveItem : MonoBehaviour
 {
@@ -14,11 +15,40 @@ public class ChestActiveItem : MonoBehaviour
     public bool hasEntered;
     public int tier;
     public int itemInTier;
-    public float tierVal= 1.2f;
+    public float tierVal;
     public float confirm = 3f;
     public float time = 0f;
     public Sprite interacted;
+    public Image itemImage;
+    public ParticleSystem itemParticles;
 
+    public GameObject coin;
+    public GameObject ammo;
+    public ParticleSystem particleGold;
+    public AudioClip gold;
+
+    void Start()
+    {
+        var main = itemParticles.main;
+        itemImage.GetComponent<Image>().enabled = (false);
+        tier = (int)(tierVal - Random.Range(0f, 4f));
+        if(tier <1)
+        {
+            main.startColor = Color.white;
+        }
+        else if(tier<2)
+        {
+            main.startColor = Color.blue;
+        }
+        else if(tier<3)
+        {
+            main.startColor = Color.yellow;
+        }
+        else if(tier>=3)
+        {
+            main.startColor = Color.red;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,7 +59,6 @@ public class ChestActiveItem : MonoBehaviour
             hasEntered = true;
             Random.InitState(Random.Range(0, 1000));
             chestPool = GetComponent<ChestInventory>().storage;
-            tier = (int)(tierVal - Random.Range(0f, 4f));
             if (tier < 0)
             {
                 tier = 0;
@@ -43,8 +72,12 @@ public class ChestActiveItem : MonoBehaviour
             hasInteract = false;
             canInteract = false;
             activeItem = chestPool[tier, itemInTier];
-            Debug.Log(activeItem);
-            if (isShop) price = activeItem.value;
+            if (isShop)
+            {
+                price = activeItem.value;
+                itemImage.sprite = activeItem.GetComponent<SpriteRenderer>().sprite;
+                itemImage.GetComponent<Image>().enabled = (true);
+            } 
             else price = 0;
 
         }
@@ -70,30 +103,39 @@ public class ChestActiveItem : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = interacted;
         }
 
-        if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
+        if(hasInteract==false&& player.GetComponent<PlayerInventory>().hasItem(activeItem)&& Input.GetKey("e")&& canInteract)
+        {
+            player.GetComponent<PlayerInventory>().AddItem(activeItem);
+            hasInteract = true;
+            spawnCoins(activeItem.value/4);
+        }
+        else if (hasInteract==false && canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
         {
 
-            if (player.GetComponent<PlayerInventory>().AddItem(activeItem))//checks to see if player added item to take money
+            player.GetComponent<PlayerInventory>().AddItem(activeItem);
+            player.GetComponent<PlayerInventory>().AddGold(-price);
+            hasInteract = true;
+        }
+        else if (hasInteract==false&&canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+    }
+
+    public void spawnCoins(int coins)
+    {
+        Vector3 position = transform.position;
+        for(int i = 0; i<coins; i++){
+            Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
+            Instantiate(coin,transform.position+random,Quaternion.identity);
+            if(i%2==0)
             {
-                player.GetComponent<PlayerInventory>().AddGold(-price);
-                hasInteract = true;
-            }
-            else if (!hasInteract)
-            {
-                Debug.Log("Do you want to add item?");
-                time += Time.deltaTime;
-                if (time > confirm)
-                {
-                    player.GetComponent<PlayerInventory>().askToAdd = true;//sets askToAdd true so the AddItem metlhod will trigger
-                    player.GetComponent<PlayerInventory>().AddItem(activeItem);
-                    hasInteract = true;
-                }
-                else if (!Input.GetKey("e"))
-                {
-                    time = 0;
-                }
+                Instantiate(ammo,transform.position+random,Quaternion.identity);
             }
         }
-        else if (canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold <= price) Debug.Log("Not Enough Dough");
+        Instantiate(particleGold,transform.position,Quaternion.identity);
+        GetComponent<AudioSource>().PlayOneShot(gold);
+    
     }
+
 }

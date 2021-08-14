@@ -20,9 +20,8 @@ public class InventoryUI : MonoBehaviour
     void Start(){
         player = GameObject.FindGameObjectWithTag("Player");
         healthBar.wholeNumbers = true;
-        healthBar.maxValue = player.GetComponent<PlayerStats>().maxHealth;
         healthBar.minValue = 0;
-        ResetHealthBar();
+        SetBarMax(player.GetComponent<PlayerStats>().maxHealth);
 
     }
 
@@ -61,6 +60,12 @@ public class InventoryUI : MonoBehaviour
     public void UpdateHealthBar(int cHealth)
     {
         healthBar.value = (cHealth);
+    }
+
+    public void SetBarMax(int max)
+    {
+        healthBar.maxValue = max;
+        ResetHealthBar();
     }
 
     public void ResetHealthBar()
