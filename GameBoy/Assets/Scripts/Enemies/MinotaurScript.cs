@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using CodeMonkey.Utils;
 using Pathfinding;
 
@@ -11,6 +12,7 @@ public class MinotaurScript : MonoBehaviour
 
     private enum State
     {
+        Roaming,
         Transition,
         Chase,
         Attack
@@ -37,6 +39,8 @@ public class MinotaurScript : MonoBehaviour
     [Space(5)]
     public float enemyDamage;
     public float jumpDamage;
+    public float moveSpeed;
+    public float maxSpeed = 5f;
     public float projectileLife = .5f;
     public int maxHealth = 1000;
     public float attackSpeed;
@@ -54,8 +58,8 @@ public class MinotaurScript : MonoBehaviour
     public float radius = 10;
 
     [SerializeField] Vector3 target;
-    Transform playerTransform;
-    GameObject player;
+    private Vector3 roamPos;
+    Transform player;
 
     bool chasing = false;
     bool stageTwo = false;
@@ -78,8 +82,10 @@ public class MinotaurScript : MonoBehaviour
     public bool isKilled;
 
     private string currentState;
+    public IAstarAI ai;
+    float lastPathed = 0;
 
-
+    public Slider healthBar;
     //Animation States
     const string MONSTER_WALK_F = "Walk_Forward";
     const string MONSTER_WALK_B = "Walk_Backward";
@@ -95,28 +101,33 @@ public class MinotaurScript : MonoBehaviour
 
     const string DEAD = "Death";
 
+    Vector3 PickRandomPoint() {
+        var point = Random.insideUnitSphere * radius;
+
+        //point.y = 0;
+        point += transform.position;
+        return point;
+    }
+
     void Start()
     {
         GetComponent<Rigidbody2D>().freezeRotation = true;
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerTransform = player.transform;
-
+        healthBar.maxValue = maxHealth;
+        healthBar.value = maxHealth;
         //Get Animator
         animator = GetComponent<Animator>();
         enemySprite = GetComponent<SpriteRenderer>();
-        gameObject.GetComponent<HittableStats>().health = maxHealth;
+
+        //Get Enemy Stats
+        gameObject.GetComponent<HittableStats>().health = (int)(maxHealth);
+        ai = GetComponent<IAstarAI>();
+
         //float tempUpdateTime = updateTime;
-        state = State.Chase;
-        FirepointAxis.transform.position = transform.position;
+        state = State.Roaming;
     }
 
     void Update()
     {
-        if(gameObject.GetComponent<HittableStats>().health<= maxHealth/2)
-        {
-            stageTwo=true;
-        }
-
         //Keep Firepoint Axis on Enemy
         FirepointAxis.transform.position = transform.position;
 
@@ -253,6 +264,14 @@ public class MinotaurScript : MonoBehaviour
         switch (state)
         {
             default:
+            case State.Roaming:
+                if (updateCounter > .2)
+                {
+                    updateCounter = 0;
+                    Roam();
+                }
+
+                break;
             case State.Chase:
 
                 if (updateCounter < .2)
@@ -268,43 +287,37 @@ public class MinotaurScript : MonoBehaviour
                 break;
 
             case State.Transition:
+                roamPos = transform.position;
+                chasing = false;
                 updateCounter = 0;
                 if (CheckForPlayer()) state = State.Chase;
-                else state = State.Chase;
+                else state = State.Roaming;
                 break;
         }
     }
+
+
 
     void Attack()
     {
         if (!isKilled)
         {
-            //Stop Enemy Destination: ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
-            //ai.SetPath(null);
+            ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+            ai.SetPath(null);
         
             PointAtPlayer();
             if (counter >= 1 / attackSpeed)
             {
-                GameObject attack;
                 isAttackPressed = true;
                 counter = 0;
 
-                if(stageTwo)
-                {
-                    attack = Instantiate(jumpAttack, firePoint.position, firePoint.rotation);
-                    attack.GetComponent<EnemyAttack>().SetDamage((int)jumpDamage);
-                    Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-                    attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
-                }
-                else
-                {
-                    attack = Instantiate(baseAttack, firePoint.position, firePoint.rotation);
-                    attack.GetComponent<EnemyAttack>().SetDamage((int)enemyDamage);
-                    Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-                    attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
-                }
+                GameObject attack = Instantiate(baseAttack, firePoint.position, firePoint.rotation);
 
+                attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage));
+                Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
                 Destroy(attack, projectileLife);
+
+                //attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
             }
         }
 
@@ -313,7 +326,7 @@ public class MinotaurScript : MonoBehaviour
 
     void PointAtPlayer()
     {
-        Vector2 lookDir = playerTransform.position - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
+        Vector2 lookDir = player.position - transform.position;   //Subtracts both vectors to find the vector pointing towards the mouse (can be used for any object jsut need to get the objects position and convert)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;    //finds angle from horizontal field to the vector pointing toward the mouse (90f just is base rotation you can tweak it)
         FacingDirection(angle);
         FirepointAxis.GetComponent<Rigidbody2D>().rotation = angle;
@@ -335,11 +348,38 @@ public class MinotaurScript : MonoBehaviour
         {
             if (col.tag == "Player")
             {
-                playerTransform = col.GetComponent<Transform>();
+                player = col.GetComponent<Transform>();
                 return true;
             }
         }
         return false;
+    }
+
+    void Roam()
+    {
+        if (CheckForPlayer()) state = State.Chase;
+        {
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            {
+                lastPathed = Time.fixedTime;
+                ai.destination = PickRandomPoint();
+
+                targPosition = ai.destination;
+                PointAtTargPos();
+
+                ai.SearchPath();
+            }
+            else if ((Time.fixedTime - lastPathed) > 4)
+            {
+                lastPathed = Time.fixedTime;
+                ai.destination = PickRandomPoint();
+
+                targPosition = ai.destination;
+                PointAtTargPos();
+
+                ai.SearchPath();
+            }
+        }
     }
 
     void Chase()
@@ -348,10 +388,18 @@ public class MinotaurScript : MonoBehaviour
         {
             if (chasing == false)
             {
-                //stoppath
+                ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+                ai.SetPath(null);
                 chasing = true;
             }
-            //startpath
+
+
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            {
+                lastPathed = Time.fixedTime;
+                ai.destination = player.transform.position;
+                ai.SearchPath();
+            }   
             PointAtPlayer();
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
@@ -366,6 +414,7 @@ public class MinotaurScript : MonoBehaviour
         {
             state = State.Transition;
         }
+
 
     }
 
@@ -389,7 +438,6 @@ public class MinotaurScript : MonoBehaviour
         {
             isFacingBack = true;
         }
- 
 
         if (angle <= 0 && angle > -180)
         {
@@ -399,6 +447,11 @@ public class MinotaurScript : MonoBehaviour
         {
             isFacingRight = false;
         }
+    }
+
+    public void UpdateHealthBar(int cHealth)
+    {
+        healthBar.value = (cHealth);
     }
 }
 
