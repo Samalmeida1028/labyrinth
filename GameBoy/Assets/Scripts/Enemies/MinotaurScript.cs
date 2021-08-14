@@ -197,13 +197,14 @@ public class MinotaurScript : MonoBehaviour
                 {
                     ChangeAnimationState(MONSTER_JUMP_ATTACK);
 
-                    Invoke("AttackComplete", 0.8f);
+                    Invoke("AttackComplete", 0.75f);
                 }
             }
 
             
 
-        }
+        }  
+
 
         // Damaged Animation
         if (isDamaged && !isKilled)
@@ -341,16 +342,21 @@ public class MinotaurScript : MonoBehaviour
                 {
                     isAttackPressed = true;
                     counter = 0;
-
-                    GameObject attack = Instantiate(jumpAttack, firePoint.position, firePoint.rotation);
-
-                    attack.GetComponent<EnemyAttack>().SetDamage((int)(jumpDamage));
-                    Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-                    Destroy(attack, projectileLife);
+                    Invoke("JumpAttack", 0.4f);
                 }
             }
         }
 
+    }
+
+    // Jump Attack Call
+    void JumpAttack()
+    {
+        GameObject attack = Instantiate(jumpAttack, firePoint.position, firePoint.rotation);
+
+        attack.GetComponent<EnemyAttack>().SetDamage((int)(jumpDamage));
+        Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
+        Destroy(attack, projectileLife);
     }
 
 
