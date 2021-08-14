@@ -104,20 +104,20 @@ public class ChestActiveItem : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = interacted;
         }
 
-        if(hasInteract==false&& player.GetComponent<PlayerInventory>().hasItem(activeItem)&& Input.GetKey("e")&& canInteract)
+        if(canInteract&&hasInteract==false&& player.GetComponent<PlayerInventory>().hasItem(activeItem)&& Input.GetKey("e"))
         {
             player.GetComponent<PlayerInventory>().AddItem(activeItem);
             hasInteract = true;
             spawnCoins(activeItem.value/4);
         }
-        else if (hasInteract==false && canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
+        else if (canInteract&&hasInteract==false && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
         {
 
             player.GetComponent<PlayerInventory>().AddItem(activeItem);
             player.GetComponent<PlayerInventory>().AddGold(-price);
             hasInteract = true;
         }
-        else if (hasInteract==false&&canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
+        else if (canInteract && hasInteract==false && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
@@ -126,6 +126,7 @@ public class ChestActiveItem : MonoBehaviour
     public void spawnCoins(int coins)
     {
         Vector3 position = transform.position;
+        coins = (int)Random.Range((coins*.6f),coins+1);
         for(int i = 0; i<coins; i++){
             Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
             Instantiate(coin,transform.position+random,Quaternion.identity);

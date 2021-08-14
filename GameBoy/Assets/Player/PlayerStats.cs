@@ -64,7 +64,7 @@ public class PlayerStats : MonoBehaviour
     {
         moveSpeedLvl++;
 
-        maxSpeed = (8+moveSpeedLvl-1);
+        maxSpeed = (8+(moveSpeedLvl-1)/2);
         moveSpeed=maxSpeed;
     }
 
@@ -99,7 +99,7 @@ public class PlayerStats : MonoBehaviour
 
         while(continueNext == false)
         {
-            yield return new WaitForSeconds(.05f);
+            yield return new WaitForSeconds(.01f);
             if(Input.GetKeyDown("e"))
             {
                 continueNext=true;
@@ -111,6 +111,5 @@ public class PlayerStats : MonoBehaviour
         gameObject.GetComponent<PlayerInventory>().inventoryUI.GetComponent<InventoryUI>().ResetHealthBar();
         gameObject.GetComponent<PlayerCombat>().dead = false;
         SceneManager.LoadScene(1);
-
     }
 }

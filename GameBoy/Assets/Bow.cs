@@ -68,7 +68,7 @@ public class Bow : MonoBehaviour
             shot = false;
             rotateBow();
 
-            if (!isShooting)
+            if (!isShooting && Combat.canAttack)
             {
                 isShooting = true;
                 Sprite.enabled = true;
