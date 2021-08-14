@@ -29,7 +29,8 @@ public class LevelGenerator : MonoBehaviour
     public GameObject lightSourceObj;
     public GameObject chestPrefab;
     public GameObject shopkeep;
-    public GameObject enemyPrefab;
+    public GameObject meleeEnemyPrefab;
+    public GameObject mageEnemyPrefab;
     public GameObject levelChange;
 
     [Header("Counter Variables")]
@@ -639,7 +640,10 @@ public class LevelGenerator : MonoBehaviour
     {
         
         GameObject chest = chestPrefab;
-        GameObject enemy = enemyPrefab;
+
+        GameObject meleeEnemy = meleeEnemyPrefab;
+        GameObject mageEnemy = mageEnemyPrefab;
+        GameObject enemy;
         foreach (RoomObj room in roomList)
         {
             room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*4f));
@@ -698,7 +702,12 @@ public class LevelGenerator : MonoBehaviour
                     if(pickEnemySpawn&&room.enemyCount>0)
                     {
                         grid[(int)(enemySpawn.x/tilePixelCount),(int)(enemySpawn.y/tilePixelCount)]=1;
-                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().isRanged = Random.Range(0,10)<=3;
+                        if(Random.Range(0,10)<=2)
+                        {
+                            enemy = mageEnemy;
+                        }else{
+                            enemy = meleeEnemy;
+                        }
                         enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1+levelDifficulty/2,levelDifficulty*1.2f);
                         Instantiate(enemy,enemySpawn,Quaternion.identity);
                         room.enemyCount--;
