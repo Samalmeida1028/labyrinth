@@ -17,6 +17,7 @@ public class Bow : MonoBehaviour
     private string currentState;
 
     private PlayerMovement MovementInformation;
+    private PlayerCombat Combat;
 
     // Animaton References
     const string SHOOT_F = "Shoot_Forward";
@@ -31,6 +32,7 @@ public class Bow : MonoBehaviour
     {
         // Initialization
         MovementInformation = Player.GetComponent<PlayerMovement>();
+        Combat = Player.GetComponent<PlayerCombat>();
         Animator = GetComponent<Animator>();
 
         // Resets the bows position and saves its base rotation
@@ -73,12 +75,19 @@ public class Bow : MonoBehaviour
 
   
                 ChangeAnimationState(SHOOT_F); 
+                Invoke("shootBullet", 0.4f);
             }
 
             Invoke("stopShooting", 0.6f);
         }
 
 
+    }
+
+    // Shoot Bullet
+    void shootBullet()
+    {
+        Combat.Attack();
     }
 
     // Allows the shooting animation to be played again after already shooting

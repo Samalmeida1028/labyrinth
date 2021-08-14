@@ -33,7 +33,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (canAttack) Attack();
+            if (canAttack && !isRanged) Attack();
         }
         else if (isPotion)
         {
@@ -84,15 +84,15 @@ public class PlayerCombat : MonoBehaviour
                 // Ethan did this to make everything looks better and more of a "Mechanic"
                 if (GetComponent<PlayerMovement>().angle != 0 && GetComponent<PlayerMovement>().angle != -180)
                 {
-                    updateCounter = 0;
-                    int force = -projectileSpeed;
-                    GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
-                    bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
-                    
-                    Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
-                    rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
-
-                    GetComponent<PlayerInventory>().ammo -= 1;
+                updateCounter = 0;
+                int force = -projectileSpeed;
+                Debug.Log(attackPoint.rotation);
+                GameObject bulletSpawn = Instantiate(rangedAttack, attackPoint.position, attackPoint.rotation);
+                bulletSpawn.GetComponent<Bullet>().SetDamage(totalDamage);
+                Rigidbody2D rb = bulletSpawn.GetComponent<Rigidbody2D>();
+                rb.AddForce(attackPoint.up * force, ForceMode2D.Impulse);
+                
+                GetComponent<PlayerInventory>().AddAmmo(-1);
                 }
             }
         }
