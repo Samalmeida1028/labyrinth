@@ -37,13 +37,13 @@ public class MinotaurScript : MonoBehaviour
 
     [Header("Enemy Stats")]
     [Space(5)]
-    public float enemyDamage;
-    public float jumpDamage;
+    public float enemyDamage = 10;
+    public float jumpDamage = 20;
 
     public float projectileLife = .5f;
     public int maxHealth = 1000;
-    public float attackSpeed;
-    public float attackSpeedStageTwo;
+    public float attackSpeed = .8f;
+    public float attackSpeedStageTwo= .4f;
     public int force;
     public int targetRange;
     public int attackRange;
