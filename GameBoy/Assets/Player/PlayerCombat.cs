@@ -110,7 +110,7 @@ public class PlayerCombat : MonoBehaviour
             GameObject melee = Instantiate(meleeAttack, attackPoint.position, attackPoint.rotation);
             melee.GetComponent<Bullet>().SetDamage(totalDamage);
             Destroy(melee, .07f);
-            FindObjectOfType<AudioManager>().Play("SwordSlash");
+            FindObjectOfType<AudioManager>().PlayOneShot("SwordSlash");
         }
     }
 
