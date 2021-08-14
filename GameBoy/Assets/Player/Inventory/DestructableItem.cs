@@ -27,9 +27,12 @@ public class DestructableItem : MonoBehaviour
         }   
         Vector3 position = transform.position;
         for(int i = 0; i<randomAmount; i++){
-            Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
+            Vector3 random = new Vector2(Random.Range(0,.5f),Random.Range(0,.5f));
             Instantiate(coin,transform.position+random,Quaternion.identity);
-            Instantiate(ammo,transform.position+random,Quaternion.identity);
+            if(i%2==0)
+            {
+                Instantiate(ammo,transform.position+random,Quaternion.identity);
+            }
         }
         if(randomAmount>0){
             Instantiate(particleGold,transform.position,Quaternion.identity);

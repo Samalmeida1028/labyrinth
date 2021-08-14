@@ -31,12 +31,13 @@ public class PlayerInventory : MonoBehaviour
         Debug.Log(item);
         if(inventory[temp.itemType]==null || (temp.rarity>inventory[temp.itemType].rarity))
         {
-            Debug.Log("YO");
             inventory[temp.itemType] = temp;
             inventoryUI.GetComponent<InventoryUI>().AddItemDisplay(temp);
+        }else{
+            return true;
         }
 
-        return true;
+        return false;
 
     }
 

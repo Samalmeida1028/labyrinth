@@ -60,9 +60,25 @@ PrefabInstance:
       value: 1887952361
       objectReference: {fileID: 0}
     - target: {fileID: 2722083979826634576, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
+      propertyPath: ammo
+      value: 
+      objectReference: {fileID: 681646584837516381, guid: 40e00d09da778c943a21d607028334ad, type: 3}
+    - target: {fileID: 2722083979826634576, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 6044979972517161727, guid: d876bf743a79c2e45b2b529cf161266d, type: 3}
+    - target: {fileID: 2722083979826634576, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
+      propertyPath: gold
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f382f1edc301144dacecac8eebeb8d7, type: 3}
+    - target: {fileID: 2722083979826634576, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
       propertyPath: itemImage
       value: 
       objectReference: {fileID: 7056014487254251243}
+    - target: {fileID: 2722083979826634576, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
+      propertyPath: particleGold
+      value: 
+      objectReference: {fileID: 3641680453045485311, guid: 1476efe4a1c0bb94a80daaf07e2094dc, type: 3}
     - target: {fileID: 2722083979826634577, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
       propertyPath: m_SortingLayer
       value: 1

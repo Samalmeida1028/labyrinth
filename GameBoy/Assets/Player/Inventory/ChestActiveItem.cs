@@ -22,6 +22,11 @@ public class ChestActiveItem : MonoBehaviour
     public Image itemImage;
     public ParticleSystem itemParticles;
 
+    public GameObject coin;
+    public GameObject ammo;
+    public ParticleSystem particleGold;
+    public AudioClip gold;
+
     void Start()
     {
         var main = itemParticles.main;
@@ -98,25 +103,39 @@ public class ChestActiveItem : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = interacted;
         }
 
-        if(hasInteract==false&&price>0 && player.GetComponent<PlayerInventory>().hasItem(activeItem)&& Input.GetKey("e")&& canInteract)
+        if(hasInteract==false&& player.GetComponent<PlayerInventory>().hasItem(activeItem)&& Input.GetKey("e")&& canInteract)
         {
             player.GetComponent<PlayerInventory>().AddItem(activeItem);
             hasInteract = true;
+            spawnCoins(activeItem.value/4);
         }
         else if (hasInteract==false && canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold >= price)
         {
 
-            if (player.GetComponent<PlayerInventory>().AddItem(activeItem))//checks to see if player added item to take money
-            {   
-                player.GetComponent<PlayerInventory>().AddGold(-price);
-                hasInteract = true;
-            }
-        
+            player.GetComponent<PlayerInventory>().AddItem(activeItem);
+            player.GetComponent<PlayerInventory>().AddGold(-price);
+            hasInteract = true;
         }
         else if (hasInteract==false&&canInteract && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
+    }
+
+    public void spawnCoins(int coins)
+    {
+        Vector3 position = transform.position;
+        for(int i = 0; i<coins; i++){
+            Vector3 random = new Vector2(Random.Range(0,2),Random.Range(0,2));
+            Instantiate(coin,transform.position+random,Quaternion.identity);
+            if(i%2==0)
+            {
+                Instantiate(ammo,transform.position+random,Quaternion.identity);
+            }
+        }
+        Instantiate(particleGold,transform.position,Quaternion.identity);
+        GetComponent<AudioSource>().PlayOneShot(gold);
+    
     }
 
 }
