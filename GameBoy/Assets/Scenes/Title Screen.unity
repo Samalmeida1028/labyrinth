@@ -19902,6 +19902,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588598919885778546, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
+      propertyPath: m_UpscaleRT
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588598919885778546, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
       propertyPath: m_CropFrameX
       value: 1
       objectReference: {fileID: 0}
@@ -19911,7 +19915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588598919885778546, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
       propertyPath: m_StretchFill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588598919885778546, guid: 885dc706526dfbc47a96d4228ad4eb73, type: 3}
       propertyPath: m_PixelSnapping
