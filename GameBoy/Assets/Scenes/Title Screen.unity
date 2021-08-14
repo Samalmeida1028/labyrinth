@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc3a1ef585dba04bb6cb47e28df4e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioManagerOBJ: {fileID: 0}
+  AudioManagerOBJ: {fileID: 1359687216}
 --- !u!114 &252253697
 MonoBehaviour:
   m_ObjectHideFlags: 0
