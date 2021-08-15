@@ -56,7 +56,7 @@ public class EnemyScript : MonoBehaviour
     private State state;
     private Vector3 targPosition;
     private Vector3 roamPos;
-    public float radius = 10;
+    public float radius = 1.6f;
 
     [SerializeField] Vector3 target;
     Transform player;
@@ -82,6 +82,7 @@ public class EnemyScript : MonoBehaviour
 
     public bool isDamaged;
     public bool isKilled;
+    private bool damagedDB;
 
     private string currentState;
 
@@ -203,19 +204,28 @@ public class EnemyScript : MonoBehaviour
         }
 
         // Damaged Animation
-        if (isDamaged && !isKilled)
-        {
-            if (isFacingBack)
+
+            if (isDamaged && !isKilled)
             {
-                ChangeAnimationState(MONSTER_DAMAGED_B);
-            }
-            else
-            {
-                ChangeAnimationState(MONSTER_DAMAGED_F);
+                if (!damagedDB)
+                {
+                    damagedDB = true;
+
+
+                    if (isFacingBack)
+                    {
+                        ChangeAnimationState(MONSTER_DAMAGED_B);
+                    }
+                    else
+                    {
+                        ChangeAnimationState(MONSTER_DAMAGED_F);
+                    }
+
+                    FindObjectOfType<AudioManager>().Play("Enemy_Hit");
+                    Invoke("DamagedComplete", 0.2f);
+                }
             }
 
-            Invoke("DamagedComplete", 0.2f);
-        }
 
 
 
@@ -265,6 +275,7 @@ public class EnemyScript : MonoBehaviour
 
     void DamagedComplete()
     {
+        damagedDB = false;
         isDamaged = false;
     }
 
@@ -389,7 +400,7 @@ public class EnemyScript : MonoBehaviour
 
                 ai.SearchPath();
             }
-            else if ((Time.fixedTime - lastPathed) > 4)
+            else if ((Time.fixedTime - lastPathed) > 2) //If the monster hastn reached their path in 2 seconds find another one
             {
                 lastPathed = Time.fixedTime;
                 ai.destination = PickRandomPoint();
