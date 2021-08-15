@@ -635,7 +635,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject enemy;
         foreach (RoomObj room in roomList)
         {
-            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*4f));
+            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*3.25f));
 
             Vector2 min = room.botLeft;
             Vector2 max = room.topRight;
@@ -648,7 +648,7 @@ public class LevelGenerator : MonoBehaviour
 
             int chestCounter = 0;
             int enemyCounter = 0;
-            
+
             if(room.isEndRoom==false){
                 while(room.chestCount>0)
                 {
