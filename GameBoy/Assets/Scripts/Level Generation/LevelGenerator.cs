@@ -94,7 +94,7 @@ public class LevelGenerator : MonoBehaviour
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
         //populateRoom();
-        //generateShop();
+        generateShop();
         //generateExit();
         
         //Generate Pathfinding Graph
@@ -587,9 +587,9 @@ public class LevelGenerator : MonoBehaviour
         while(shopRoom.chestCount>0)
         {
 
-            pickChestSpawn=false;
+            pickChestSpawn=true;
 
-            while(!pickChestSpawn)
+            /**while(!pickChestSpawn)
             {
                 float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
                 float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
@@ -599,7 +599,7 @@ public class LevelGenerator : MonoBehaviour
                     pickChestSpawn = true;
                     chestSpawn = new Vector3(x,y,0);
                 }
-            }
+            }**/
 
             if(pickChestSpawn&&shopRoom.chestCount>0)
             {
@@ -611,8 +611,8 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
-        pickChestSpawn=false;
-        while(!pickChestSpawn)
+        pickChestSpawn=true;
+        /**while(!pickChestSpawn)
         {
             float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
             float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
@@ -622,7 +622,7 @@ public class LevelGenerator : MonoBehaviour
                 pickChestSpawn = true;
                 shopkeepSpawn = new Vector3(x,y,0);
             }
-        }
+        }**/
         grid[(int)(shopkeepSpawn.x/tilePixelCount),(int)(shopkeepSpawn.y/tilePixelCount)]=1;
         Instantiate(shopkeep,shopkeepSpawn,Quaternion.identity);
     }
