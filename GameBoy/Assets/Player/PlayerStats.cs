@@ -95,6 +95,7 @@ public class PlayerStats : MonoBehaviour
         bool continueNext = false;
         bool finishLoad = false;
         bool finishClear = false;
+        
         if(finishClear == false)
         {
             //gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);

@@ -179,4 +179,11 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public void Clear()
+    {
+        canAttack=false;
+        isRanged=false;
+        isPotion=false;
+    }
+
 }

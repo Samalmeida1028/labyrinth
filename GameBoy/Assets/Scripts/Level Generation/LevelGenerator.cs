@@ -635,7 +635,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject enemy;
         foreach (RoomObj room in roomList)
         {
-            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*4f));
+            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*3.25f));
 
             Vector2 min = room.botLeft;
             Vector2 max = room.topRight;
@@ -648,7 +648,7 @@ public class LevelGenerator : MonoBehaviour
 
             int chestCounter = 0;
             int enemyCounter = 0;
-            
+
             if(room.isEndRoom==false){
                 while(room.chestCount>0)
                 {
@@ -727,25 +727,25 @@ public class LevelGenerator : MonoBehaviour
                 for (float j = min.x; j<=max.x; j+=tilePixelCount)
                 {     
                     if(i-min.y==0||j-min.x==0||i-min.y==tilePixelCount||j-min.x==tilePixelCount||i==max.y-tilePixelCount||j==max.x-tilePixelCount)
-                {
-                    bool spawnChance = false;
+                    {
+                        bool spawnChance = false;
 
-                    if((i<max.y/4&&j<max.x/4) || ((i>(max.y-max.y/4)&&(j>(max.x-max.x/4)))))
-                    {
-                        spawnChance = Random.Range(0,10)<3;
-                    }else if((i<max.y/2.5&&j<max.x/2.5) || ((i>max.y-max.y/2.5&&j>max.x-max.x/2.5)))
-                    {
-                        spawnChance = Random.Range(0,10)<1;
-                    }else if((i<max.y/2&&j<max.x/2) ||(i>max.y/2&&j>max.x/2))
-                    {
-                        spawnChance = Random.Range(0,10)<0;
+                        if((i<max.y/4&&j<max.x/4) || ((i>(max.y-max.y/4)&&(j>(max.x-max.x/4)))))
+                        {
+                            spawnChance = Random.Range(0,10)<3;
+                        }else if((i<max.y/2.5&&j<max.x/2.5) || ((i>max.y-max.y/2.5&&j>max.x-max.x/2.5)))
+                        {
+                            spawnChance = Random.Range(0,10)<1;
+                        }else if((i<max.y/2&&j<max.x/2) ||(i>max.y/2&&j>max.x/2))
+                        {
+                            spawnChance = Random.Range(0,10)<0;
+                        }
+                        if(spawnChance&& grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
+                        {   
+                            grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=1;
+                            Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
+                        }
                     }
-                    if(spawnChance&& grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
-                    {   
-                        grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=1;
-                        Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
-                    }
-                }
                 }
             }  
         }

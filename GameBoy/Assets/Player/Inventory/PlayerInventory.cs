@@ -35,7 +35,9 @@ public class PlayerInventory : MonoBehaviour
             if(temp.itemType==3)
             {
                 GetComponent<PlayerCombat>().ChangeArmor();
+    
             }
+        GetComponent<PlayerCombat>().ChangeDamage();
         }else{
             return true;
         }
@@ -65,10 +67,12 @@ public class PlayerInventory : MonoBehaviour
             if(slot == 1){
             GetComponent<PlayerCombat>().canAttack = true;
             GetComponent<PlayerCombat>().isRanged = true;
+            GetComponent<PlayerCombat>().isPotion = false;
             }
             else if(slot == 0){
                 GetComponent<PlayerCombat>().canAttack = true;
                 GetComponent<PlayerCombat>().isRanged = false;
+                GetComponent<PlayerCombat>().isPotion = false;
             }
             else if(slot == 2){
                 if(inventory[0]!=null || inventory[1]!=null){
@@ -78,8 +82,9 @@ public class PlayerInventory : MonoBehaviour
             }
             }
         }
-
+        
     }
+
     public void Clear()
     {
         ammo=10;
@@ -91,6 +96,7 @@ public class PlayerInventory : MonoBehaviour
         }
         activeItem=null;
         AddItem(starterItem);
+        GetComponent<PlayerCombat>().Clear();
     }
 
     public void clearSlot(int slot)

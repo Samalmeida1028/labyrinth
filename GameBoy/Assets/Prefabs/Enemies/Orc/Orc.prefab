@@ -192,7 +192,7 @@ MonoBehaviour:
   firePoint: {fileID: 6950429217054034496}
   enemyTier: 1.2
   FirepointAxis: {fileID: 6950429217183983174}
-  enemyDamage: 7
+  enemyDamage: 10
   projectileLife: 0.5
   isRanged: 0
   health: 40
@@ -347,7 +347,7 @@ MonoBehaviour:
   repathRate: 1.2
   canSearch: 0
   canMove: 1
-  maxSpeed: 3
+  maxSpeed: 5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
