@@ -301,10 +301,10 @@ public class LevelGenerator : MonoBehaviour
                 float roomFinalHeight = roomY_Max-roomY_Min;
                 Vector2 roomFinalCenter = new Vector2((roomFinalWidth/2 + roomX_Min)+tilePixelCount/2, (roomFinalHeight/2 + roomY_Min)+tilePixelCount/2);
 
-                GameObject [,] roomGrid = new GameObject [(int)(roomFinalWidth/tilePixelCount)+1,(int)(roomFinalHeight/tilePixelCount)+1];
+
                 GameObject roomObj = roomCenterPrefab;
                 roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
-                roomObj.GetComponent<Transform>().GetComponent<RoomObj>().setGrid(roomGrid);
+
                 dungeon.setRoom(new Room(roomCount, roomFinalWidth, roomFinalHeight, new Vector2(roomX_Min, roomY_Min), new Vector2(roomX_Max, roomY_Max), roomFinalCenter));
                 GameObject roomHolder = new GameObject ("Room " + dungeon.room.roomNumber);
                 roomList.Add(Instantiate(roomObj, new Vector3(roomFinalCenter.x,roomFinalCenter.y, 0), Quaternion.identity, roomHolder.transform).GetComponent<RoomObj>());
