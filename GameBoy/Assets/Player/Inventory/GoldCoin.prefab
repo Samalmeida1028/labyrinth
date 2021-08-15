@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5707050753038807615}
   - component: {fileID: 7647943004757630064}
   - component: {fileID: 6916912817151865412}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GoldCoin
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5882592128169903779}
   - component: {fileID: 4058400522697783761}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
