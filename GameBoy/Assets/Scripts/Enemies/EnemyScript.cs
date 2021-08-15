@@ -436,7 +436,8 @@ public class EnemyScript : MonoBehaviour
                 ai.destination = player.transform.position;
                 ai.SearchPath();
                 Debug.Log("Chasing Player");
-            //}   
+            //}
+
             PointAtPlayer();
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
