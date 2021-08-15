@@ -21,7 +21,7 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
-        if (!isImpacted)
+        if (!isImpacted && isSpell)
         {
            ChangeAnimationState(HOLDING);
         }
@@ -56,7 +56,8 @@ public class EnemyAttack : MonoBehaviour
         if (currentState == newState) return;
 
         //pLAY THAT MF
-       gameObject.transform.GetChild(0).GetComponent<Animator>().Play(newState);
+
+        gameObject.transform.GetChild(0).GetComponent<Animator>().Play(newState);
     }
 
     void destroyProjectile()
