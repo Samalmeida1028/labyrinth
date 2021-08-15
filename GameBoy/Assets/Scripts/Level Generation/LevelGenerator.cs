@@ -76,6 +76,7 @@ public class LevelGenerator : MonoBehaviour
         //Find the player
         player = GameObject.FindWithTag("Player");
 
+
         roomBuffer = 2*tilePixelCount;
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
         startDungeon = new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0);
@@ -92,14 +93,14 @@ public class LevelGenerator : MonoBehaviour
         generateRoom(startDungeon);
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
-        generateSpawn();
         populateRoom();
         generateShop();
         generateExit();
         
         //Generate Pathfinding Graph
         StartCoroutine(GenerateGraph());
-        player.GetComponent<PlayerInventory>().inventoryUI.SetActive(true);
+        generateSpawn();
+        //player.GetComponent<PlayerInventory>().inventoryUI.SetActive(true);
     }
 
     void Update()
