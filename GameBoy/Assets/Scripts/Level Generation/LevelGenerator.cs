@@ -691,6 +691,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 pickEnemySpawn = false;
 
+                /**
                 while(!pickEnemySpawn)
                 {
                     float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
@@ -716,7 +717,7 @@ public class LevelGenerator : MonoBehaviour
                         room.enemyCount--;
                         enemyCount++;
                     }
-                }
+                }**/
             }       
         }
     }
