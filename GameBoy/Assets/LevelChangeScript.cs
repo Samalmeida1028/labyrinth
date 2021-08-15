@@ -20,7 +20,7 @@ public class LevelChangeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text = "Floor " + (SceneManager.GetActiveScene().buildIndex+1);
+        text = "Floor " + (SceneManager.GetActiveScene().buildIndex);
         canInteract = false;
         hasInteract = false;
 
@@ -63,7 +63,7 @@ public class LevelChangeScript : MonoBehaviour
                 PlayerInventoryUI.SetActive(false);
                 gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 Instantiate(loadScreen, player.transform.position, Quaternion.identity);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1;
             }
         }
     }

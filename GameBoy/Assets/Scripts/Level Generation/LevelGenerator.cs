@@ -114,6 +114,7 @@ public class LevelGenerator : MonoBehaviour
     {
         yield return WaitFor.Frames(5);
         AstarPath.active.Scan();
+        StopCoroutine(GenerateGraph());
     }
 
     /**
