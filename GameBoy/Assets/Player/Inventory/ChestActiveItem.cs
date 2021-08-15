@@ -137,7 +137,6 @@ public class ChestActiveItem : MonoBehaviour
             }
         }
         Instantiate(particleGold,transform.position,Quaternion.identity);
-        GetComponent<AudioSource>().PlayOneShot(gold);
     
     }
 
