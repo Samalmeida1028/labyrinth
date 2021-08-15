@@ -360,7 +360,6 @@ public class MinotaurScript : MonoBehaviour
 
         attack.GetComponent<EnemyAttack>().SetDamage((int)(jumpDamage));
         Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-        attackHit.AddForce(firePoint.up-player.position * 200, ForceMode2D.Impulse);
         Destroy(attack, projectileLife);
     }
 
