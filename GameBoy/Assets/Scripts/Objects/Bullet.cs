@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         Instantiate(onShot,transform.position,Quaternion.identity);
     }
     void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "Enemy"){
+        if(other.gameObject.tag == "Enemy"|| other.gameObject.tag == "Boss"){
             other.gameObject.GetComponent<HittableStats>().TakeDamage(damage);
             Destroy(gameObject);
         }

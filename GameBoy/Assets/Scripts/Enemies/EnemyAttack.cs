@@ -21,7 +21,7 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
-        if (!isImpacted)
+        if (!isImpacted&&isSpell)
         {
            ChangeAnimationState(HOLDING);
         }

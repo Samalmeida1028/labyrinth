@@ -46,7 +46,8 @@ public class MinotaurScript : MonoBehaviour
     public float attackSpeedStageTwo= .4f;
     public int force;
     public int targetRange;
-    public int attackRange;
+    public float attackRange1;
+    public float attackRange2;
 
     [Space(10)]
     [Header("References")]
@@ -440,9 +441,14 @@ public class MinotaurScript : MonoBehaviour
                 ai.destination = player.transform.position;
                 ai.SearchPath();
             }   
-
+            Collider2D[] cast;
             PointAtPlayer();
-            Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
+            if(stageTwo)
+            {
+                cast = Physics2D.OverlapCircleAll(transform.position, attackRange2);
+            }else{
+                cast = Physics2D.OverlapCircleAll(transform.position, attackRange1);
+            }
             foreach (Collider2D col in cast)
             {
                 if (col.tag == "Player")

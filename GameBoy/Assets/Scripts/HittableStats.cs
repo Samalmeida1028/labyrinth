@@ -11,8 +11,9 @@ public class HittableStats : MonoBehaviour
         if (gameObject.layer == 10)
         {
             gameObject.GetComponent<EnemyScript>().isDamaged = true;
-        }else if(gameObject.layer == 11)
+        }else if(gameObject.layer == 12)
         {
+            if(gameObject.GetComponent<MinotaurScript>().stageTwo&&gameObject.GetComponent<MinotaurScript>())
             gameObject.GetComponent<MinotaurScript>().isDamaged = true;
         }
 
@@ -21,7 +22,7 @@ public class HittableStats : MonoBehaviour
             if (gameObject.layer == 10)
             {
                 GetComponent<EnemyScript>().isKilled = true;
-            }else if(gameObject.layer == 11)
+            }else if(gameObject.layer == 12)
             {
                 GetComponent<MinotaurScript>().isKilled = true;
             }
