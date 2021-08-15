@@ -5,21 +5,17 @@ using Pathfinding;
 
 public class DestructableItem : MonoBehaviour
 {
-    public int health;
     public GameObject coin;
     public GameObject ammo;
     public ParticleSystem particleGold;
     public ParticleSystem particleNoGold;
     public AudioClip gold;
     public AudioClip noGold;
+    public bool isEnemy;
 
 
-    void Start(){
-        GetComponent<HittableStats>().health = 50;
-    }
-    void OnCollisionEnter2D(Collision2D other){
-        Transform selfPos = gameObject.transform;
-        if(other.gameObject.tag == "AttackType"){
+    public void spawnDrops()
+    {
         int randomAmount = 0;
         int spawnChance = Random.Range(1,10);
         if(spawnChance<=3)
@@ -32,21 +28,33 @@ public class DestructableItem : MonoBehaviour
             Instantiate(coin,transform.position+random,Quaternion.identity);
             if(i%2==0)
             {
-                Instantiate(ammo,transform.position+random,Quaternion.identity);
+                if(!isEnemy)
+                    Instantiate(ammo,transform.position+random,Quaternion.identity);
             }
         }
         if(randomAmount>0){
-            FindObjectOfType<AudioManager>().Play("VaseBreak");
+            if(!isEnemy)
+                FindObjectOfType<AudioManager>().Play("VaseBreak");
+                //GetComponent<AudioSource>().PlayOneShot(gold);
             Instantiate(particleGold,transform.position,Quaternion.identity);
-            GetComponent<AudioSource>().PlayOneShot(gold);
         }
         else {
-            FindObjectOfType<AudioManager>().Play("VaseBreak");
+            if(!isEnemy)
+                FindObjectOfType<AudioManager>().Play("VaseBreak");
+                //GetComponent<AudioSource>().PlayOneShot(noGold);
             Instantiate(particleNoGold,transform.position,Quaternion.identity);
-            GetComponent<AudioSource>().PlayOneShot(noGold);
         }
-        Destroy(gameObject);
-        //AstarPath.active.Scan();
+    }
+
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.tag == "AttackType"){
+        if (!isEnemy)
+        {
+           spawnDrops();
+        }
+
+        if(!isEnemy)
+            Destroy(gameObject);
         }
     }
 }

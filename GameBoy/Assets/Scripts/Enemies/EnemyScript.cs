@@ -280,6 +280,7 @@ public class EnemyScript : MonoBehaviour
 
     void kill()
     {
+        GetComponent<DestructableItem>().spawnDrops();
         Destroy(gameObject);
     }
 

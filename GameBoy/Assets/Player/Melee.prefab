@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7669882296837292194}
   - component: {fileID: 5643961464729089595}
   - component: {fileID: 3781411504137133653}
-  - component: {fileID: 3533588044878589172}
-  m_Layer: 13
+  - component: {fileID: -6494801920122811678}
+  m_Layer: 11
   m_Name: Melee
   m_TagString: AttackType
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &3533588044878589172
+--- !u!114 &-6494801920122811678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

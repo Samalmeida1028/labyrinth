@@ -39,8 +39,7 @@ public class EnemyAttack : MonoBehaviour
             else
             {
                 isImpacted = true;
-                Debug.Log("Impact");
-                
+
                 ChangeAnimationState(IMPACT);
                 Invoke("destroyProjectile", 0.35f);
                 FindObjectOfType<AudioManager>().Play("FireImpact");

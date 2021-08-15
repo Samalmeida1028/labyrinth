@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6950429217054034499}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.28, y: 0, z: 0}
+  m_LocalPosition: {x: 0.472, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6950429217183983173}
@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 6950429218003619479}
   - component: {fileID: 6950429218003619478}
   - component: {fileID: 6950429218003619561}
+  - component: {fileID: 7410948835888249685}
   m_Layer: 10
   m_Name: Dwarf
   m_TagString: Enemy
@@ -197,8 +198,8 @@ MonoBehaviour:
   isRanged: 1
   health: 20
   attackSpeed: 0.6
-  force: 10
-  targetRange: 8
+  force: 7
+  targetRange: 6
   attackRange: 7
   counter: 0
   radius: 10
@@ -347,7 +348,7 @@ MonoBehaviour:
   repathRate: 1.2
   canSearch: 0
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 1
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -356,10 +357,10 @@ MonoBehaviour:
   orientation: 1
   enableRotation: 0
   targetCompatibility: {fileID: 0}
-  maxAcceleration: 3
+  maxAcceleration: 20
   rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 2
+  slowdownDistance: 0
+  pickNextWaypointDist: 0.4
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -405,3 +406,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7410948835888249685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6950429218003619560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d91d3307a6132478be98f66a26e7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 6044979972517161727, guid: d876bf743a79c2e45b2b529cf161266d, type: 3}
+  ammo: {fileID: 681646584837516381, guid: 40e00d09da778c943a21d607028334ad, type: 3}
+  particleGold: {fileID: 3641680453045485311, guid: 1476efe4a1c0bb94a80daaf07e2094dc, type: 3}
+  particleNoGold: {fileID: 4465480220818960768, guid: 3910665701cbd784bbc8fc7613c73d04, type: 3}
+  gold: {fileID: 0}
+  noGold: {fileID: 0}
+  isEnemy: 1
