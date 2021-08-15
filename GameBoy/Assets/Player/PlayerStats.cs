@@ -98,7 +98,7 @@ public class PlayerStats : MonoBehaviour
         
         if(finishClear == false)
         {
-            gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
+            //gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
             gameObject.GetComponent<PlayerInventory>().Clear();
             gameObject.GetComponent<PlayerCombat>().dead = true;
             Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
