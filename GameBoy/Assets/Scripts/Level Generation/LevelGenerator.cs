@@ -76,7 +76,6 @@ public class LevelGenerator : MonoBehaviour
         //Find the player
         player = GameObject.FindWithTag("Player");
 
-
         roomBuffer = 2*tilePixelCount;
         //Instantiate the root of the Binary Dungeon Tree using the Level Dimensions variables
         startDungeon = new Dungeon(new Vector2(0,0), new Vector2(cols*tilePixelCount,rows*tilePixelCount), 0);
@@ -93,14 +92,14 @@ public class LevelGenerator : MonoBehaviour
         generateRoom(startDungeon);
         //Randomly select one room to become the spawn room and the farthest room from that to become the end room
         setSpawnRoom();
-        //populateRoom();
+        generateSpawn();
+        populateRoom();
         generateShop();
-        //generateExit();
+        generateExit();
         
         //Generate Pathfinding Graph
-        //StartCoroutine(GenerateGraph());
-        //generateSpawn();
-        //player.GetComponent<PlayerInventory>().inventoryUI.SetActive(true);
+        StartCoroutine(GenerateGraph());
+        player.GetComponent<PlayerInventory>().inventoryUI.SetActive(true);
     }
 
     void Update()
@@ -115,7 +114,6 @@ public class LevelGenerator : MonoBehaviour
     {
         yield return WaitFor.Frames(5);
         AstarPath.active.Scan();
-        StopCoroutine(GenerateGraph());
     }
 
     /**
@@ -453,26 +451,6 @@ public class LevelGenerator : MonoBehaviour
                 foregroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),null);
                 backgroundTiles.SetTile(foregroundGrid.WorldToCell(new Vector3(j,i,0)),floorTile);
 
-                if(i-min.y==0||j-min.x==0||i-min.y==tilePixelCount||j-min.x==tilePixelCount||i==max.y-tilePixelCount||j==max.x-tilePixelCount)
-                {
-                    bool spawnChance = false;
-
-                    if((i<max.y/4&&j<max.x/4) || ((i>(max.y-max.y/4)&&(j>(max.x-max.x/4)))))
-                    {
-                        spawnChance = Random.Range(0,10)<3;
-                    }else if((i<max.y/2.5&&j<max.x/2.5) || ((i>max.y-max.y/2.5&&j>max.x-max.x/2.5)))
-                    {
-                        spawnChance = Random.Range(0,10)<1;
-                    }else if((i<max.y/2&&j<max.x/2) ||(i>max.y/2&&j>max.x/2))
-                    {
-                        spawnChance = Random.Range(0,10)<0;
-                    }
-                    if(spawnChance&& grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
-                    {   
-                        grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=1;
-                        Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
-                    }
-                }
             }
         }
     }
@@ -576,9 +554,9 @@ public class LevelGenerator : MonoBehaviour
 
     public void generateShop()
     {
+        int count = 0;
         GameObject chest = chestPrefab;
         bool pickChestSpawn = false;
-        int count = 0;
         Vector3 chestSpawn = new Vector3(0,0,0);
         Vector3 shopkeepSpawn = new Vector3(0,0,0);
 
@@ -593,7 +571,7 @@ public class LevelGenerator : MonoBehaviour
             while(!pickChestSpawn)
             {
                 count++;
-                if(count>10)
+                if(count>Mathf.Pow(minRoomSize-6,2))
                 {
                     shopRoom.chestCount--;
                 }
@@ -606,6 +584,7 @@ public class LevelGenerator : MonoBehaviour
                     chestSpawn = new Vector3(x,y,0);
                 }
             }
+
             if(pickChestSpawn&&shopRoom.chestCount>0)
             {
                 grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
@@ -667,12 +646,20 @@ public class LevelGenerator : MonoBehaviour
             Vector3 chestSpawn = new Vector3(0,0,0);
             Vector3 enemySpawn = new Vector3(0,0,0);
 
+            int chestCounter = 0;
+            int enemyCounter = 0;
+        
             while(room.chestCount>0)
             {
                 pickChestSpawn=false;
 
                 while(!pickChestSpawn)
-                {
+                {   
+                    if(chestCounter>((room.roomDimensions.width-2)*(room.roomDimensions.height-2)))
+                    {
+                        pickChestSpawn=true;
+                    }
+                    chestCounter++;
                     float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
                     float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
 
@@ -691,16 +678,21 @@ public class LevelGenerator : MonoBehaviour
                     Instantiate(chest,chestSpawn,Quaternion.identity);
                     numChest++;
                     room.chestCount--;
+                    chestCounter=0;
                 }
             }   
 
-            /**
             while(room.enemyCount>0)
             {
                 pickEnemySpawn = false;
 
                 while(!pickEnemySpawn)
                 {
+                    if(enemyCounter>((room.roomDimensions.width-2)*(room.roomDimensions.height-2)))
+                    {
+                        pickEnemySpawn=true;
+                    }
+                    enemyCounter++;
                     float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
                     float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
 
@@ -723,11 +715,38 @@ public class LevelGenerator : MonoBehaviour
                         Instantiate(enemy,enemySpawn,Quaternion.identity);
                         room.enemyCount--;
                         enemyCount++;
+                        enemyCounter=0;
                     }
                 }
             }
-            **/
-              
+
+            for (float i =min.y; i<=max.y; i+=tilePixelCount)
+            {
+            
+                for (float j = min.x; j<=max.x; j+=tilePixelCount)
+                {     
+                    if(i-min.y==0||j-min.x==0||i-min.y==tilePixelCount||j-min.x==tilePixelCount||i==max.y-tilePixelCount||j==max.x-tilePixelCount)
+                {
+                    bool spawnChance = false;
+
+                    if((i<max.y/4&&j<max.x/4) || ((i>(max.y-max.y/4)&&(j>(max.x-max.x/4)))))
+                    {
+                        spawnChance = Random.Range(0,10)<3;
+                    }else if((i<max.y/2.5&&j<max.x/2.5) || ((i>max.y-max.y/2.5&&j>max.x-max.x/2.5)))
+                    {
+                        spawnChance = Random.Range(0,10)<1;
+                    }else if((i<max.y/2&&j<max.x/2) ||(i>max.y/2&&j>max.x/2))
+                    {
+                        spawnChance = Random.Range(0,10)<0;
+                    }
+                    if(spawnChance&& grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
+                    {   
+                        grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=1;
+                        Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
+                    }
+                }
+                }
+            }  
         }
     }
 }
