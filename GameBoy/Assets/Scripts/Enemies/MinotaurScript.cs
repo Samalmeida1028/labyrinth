@@ -63,7 +63,7 @@ public class MinotaurScript : MonoBehaviour
     Transform player;
 
     bool chasing = false;
-    bool stageTwo = false;
+    public bool stageTwo = false;
 
     //Public stuff
 
@@ -75,7 +75,7 @@ public class MinotaurScript : MonoBehaviour
     private bool isFacingBack;
     private bool isFacingRight;
 
-    private bool isAttacking;
+    public bool isAttacking;
     private bool isAttackPressed;
 
     private bool killdb = false;
@@ -433,14 +433,10 @@ public class MinotaurScript : MonoBehaviour
                 ai.SetPath(null);
                 chasing = true;
             }
-
-
-            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
-            {
                 lastPathed = Time.fixedTime;
                 ai.destination = player.transform.position;
                 ai.SearchPath();
-            }   
+  
             Collider2D[] cast;
             PointAtPlayer();
             if(stageTwo)
