@@ -5,17 +5,21 @@ using Pathfinding;
 
 public class DestructableItem : MonoBehaviour
 {
+    public int health;
     public GameObject coin;
     public GameObject ammo;
     public ParticleSystem particleGold;
     public ParticleSystem particleNoGold;
     public AudioClip gold;
     public AudioClip noGold;
-    public bool isEnemy;
 
 
-    public void spawnDrops()
-    {
+    void Start(){
+        GetComponent<HittableStats>().health = 50;
+    }
+    void OnCollisionEnter2D(Collision2D other){
+        Transform selfPos = gameObject.transform;
+        if(other.gameObject.tag == "AttackType"){
         int randomAmount = 0;
         int spawnChance = Random.Range(1,10);
         if(spawnChance<=3)
@@ -28,33 +32,21 @@ public class DestructableItem : MonoBehaviour
             Instantiate(coin,transform.position+random,Quaternion.identity);
             if(i%2==0)
             {
-                if(!isEnemy)
-                    Instantiate(ammo,transform.position+random,Quaternion.identity);
+                Instantiate(ammo,transform.position+random,Quaternion.identity);
             }
         }
         if(randomAmount>0){
-            if(!isEnemy)
-                FindObjectOfType<AudioManager>().Play("VaseBreak");
-                //GetComponent<AudioSource>().PlayOneShot(gold);
+            FindObjectOfType<AudioManager>().Play("VaseBreak");
             Instantiate(particleGold,transform.position,Quaternion.identity);
+            GetComponent<AudioSource>().PlayOneShot(gold);
         }
         else {
-            if(!isEnemy)
-                FindObjectOfType<AudioManager>().Play("VaseBreak");
-                //GetComponent<AudioSource>().PlayOneShot(noGold);
+            FindObjectOfType<AudioManager>().Play("VaseBreak");
             Instantiate(particleNoGold,transform.position,Quaternion.identity);
+            GetComponent<AudioSource>().PlayOneShot(noGold);
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "AttackType"){
-        if (!isEnemy)
-        {
-           spawnDrops();
-        }
-
-        if(!isEnemy)
-            Destroy(gameObject);
+        Destroy(gameObject);
+        //AstarPath.active.Scan();
         }
     }
 }

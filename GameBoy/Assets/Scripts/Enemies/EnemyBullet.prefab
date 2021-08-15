@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1416463458500846777}
   - component: {fileID: 1416463458500846776}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1416463458500846777
 Transform:
   m_ObjectHideFlags: 0
@@ -91,8 +91,8 @@ GameObject:
   - component: {fileID: 2691688813960946375}
   - component: {fileID: 106196280793371742}
   - component: {fileID: 8885721098002955312}
-  - component: {fileID: 5486400468158954534}
-  m_Layer: 11
+  - component: {fileID: 5776680509182288172}
+  m_Layer: 8
   m_Name: EnemyBullet
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6776609541719931588}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -202,7 +202,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5486400468158954534
+--- !u!114 &5776680509182288172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,4 +215,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  isSpell: 0

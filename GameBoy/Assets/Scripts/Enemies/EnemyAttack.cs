@@ -21,7 +21,7 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
-        if (!isImpacted && isSpell)
+        if (!isImpacted&&isSpell)
         {
            ChangeAnimationState(HOLDING);
         }
@@ -39,7 +39,8 @@ public class EnemyAttack : MonoBehaviour
             else
             {
                 isImpacted = true;
-
+                Debug.Log("Impact");
+                
                 ChangeAnimationState(IMPACT);
                 Invoke("destroyProjectile", 0.35f);
                 FindObjectOfType<AudioManager>().Play("FireImpact");
@@ -56,8 +57,7 @@ public class EnemyAttack : MonoBehaviour
         if (currentState == newState) return;
 
         //pLAY THAT MF
-
-        gameObject.transform.GetChild(0).GetComponent<Animator>().Play(newState);
+       gameObject.transform.GetChild(0).GetComponent<Animator>().Play(newState);
     }
 
     void destroyProjectile()

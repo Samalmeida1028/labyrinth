@@ -21,7 +21,6 @@ public class HittableStats : MonoBehaviour
         }
 
         gameObject.GetComponent<HittableStats>().health -= damage;
-        
         if(health<=0){
             if (gameObject.layer == 10)
             {

@@ -243,6 +243,7 @@ public class EnemyScript : MonoBehaviour
         // MF DEAD
         if (isKilled)
         {
+
             if (!killdb)
             {
                 killdb = true;
@@ -280,7 +281,6 @@ public class EnemyScript : MonoBehaviour
 
     void kill()
     {
-        GetComponent<DestructableItem>().spawnDrops();
         Destroy(gameObject);
     }
 
@@ -340,28 +340,25 @@ public class EnemyScript : MonoBehaviour
     {
         if (!isKilled)
         {
-            if (player.GetComponent<PlayerCombat>().dead != true)
+            ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+            ai.SetPath(null);
+        
+            PointAtPlayer();
+            if (counter >= 1 / attackSpeed)
             {
-                ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
-                ai.SetPath(null);
-            
-                PointAtPlayer();
-                if (counter >= 1 / attackSpeed)
+                isAttackPressed = true;
+                counter = 0;
+
+                GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
+
+                attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
+                Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
+                Destroy(attack, projectileLife);
+
+                if (isRanged)
                 {
-                    isAttackPressed = true;
-                    counter = 0;
-
-                    GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
-
-                    attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
-                    Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-                    Destroy(attack, projectileLife);
-
-                    if (isRanged)
-                    {
-                        FindObjectOfType<AudioManager>().Play("FireThrow");
-                        attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
-                    }
+                    FindObjectOfType<AudioManager>().Play("FireThrow");
+                    attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
                 }
             }
         }
@@ -393,11 +390,8 @@ public class EnemyScript : MonoBehaviour
         {
             if (col.tag == "Player")
             {
-                if (col.GetComponent<PlayerCombat>().dead != true)
-                {
-                    player = col.GetComponent<Transform>();
-                    return true;
-                }
+                player = col.GetComponent<Transform>();
+                return true;
             }
         }
         return false;
@@ -442,14 +436,12 @@ public class EnemyScript : MonoBehaviour
             }
 
 
-            //if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
-            //{
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            {
                 lastPathed = Time.fixedTime;
                 ai.destination = player.transform.position;
                 ai.SearchPath();
-                Debug.Log("Chasing Player");
-            //}
-
+            }   
             PointAtPlayer();
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)

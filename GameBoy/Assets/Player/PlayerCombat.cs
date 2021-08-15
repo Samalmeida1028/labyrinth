@@ -37,9 +37,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (!dead)
-                if (canAttack && !isRanged)
-                    Attack();
+            if (canAttack && !isRanged) Attack();
         }
         else if (isPotion)
         {
@@ -142,7 +140,6 @@ public class PlayerCombat : MonoBehaviour
 
     void Die()
     {
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         GetComponent<PlayerStats>().moveSpeed = 0;
         canAttack=false;
     }

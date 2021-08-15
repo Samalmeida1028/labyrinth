@@ -98,10 +98,10 @@ public class PlayerStats : MonoBehaviour
         
         if(finishClear == false)
         {
-            //gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
+            gameObject.GetComponent<PlayerInventory>().inventoryUI.SetActive(false);
             gameObject.GetComponent<PlayerInventory>().Clear();
             gameObject.GetComponent<PlayerCombat>().dead = true;
-            deathScreen.SetActive(true);
+            Instantiate(deathScreen,gameObject.transform.position,Quaternion.identity);
             finishClear = true;
         }
 
@@ -111,6 +111,7 @@ public class PlayerStats : MonoBehaviour
             if(Input.GetKeyDown("e"))
             {
                 continueNext=true;
+                
             }
         }
 
@@ -120,7 +121,6 @@ public class PlayerStats : MonoBehaviour
             moveSpeed=maxSpeed;
             gameObject.GetComponent<PlayerInventory>().inventoryUI.GetComponent<InventoryUI>().ResetHealthBar();
             gameObject.GetComponent<PlayerCombat>().dead = false;
-            deathScreen.SetActive(false);
             SceneManager.LoadScene(1);
             finishLoad=true;
         }

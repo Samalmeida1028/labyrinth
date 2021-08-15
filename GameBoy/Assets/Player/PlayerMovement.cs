@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Vector2 movement;
 
-    private bool isFacingBack;
+    public bool isFacingBack;
     public bool isFacingRight;
 
     public PlayerCombat playerCombatInfo;

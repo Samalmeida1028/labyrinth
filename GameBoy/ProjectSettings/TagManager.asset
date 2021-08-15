@@ -27,7 +27,7 @@ TagManager:
   - Enemy_Projectile
   - Boss
   - Projectiles/Drops
-  - DEATH SCREEN
+  - 
   - 
   - 
   - 
@@ -57,7 +57,4 @@ TagManager:
     locked: 0
   - name: Weapon
     uniqueID: 3781857995
-    locked: 0
-  - name: UI
-    uniqueID: 822898321
     locked: 0
