@@ -203,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
             if (!hitDB)
             {
                 hitDB = true;
+
                 playerCombatInfo.canAttack = false;
 
                 if (isFacingBack)

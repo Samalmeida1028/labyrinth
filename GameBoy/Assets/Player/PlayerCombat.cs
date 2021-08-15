@@ -130,8 +130,8 @@ public class PlayerCombat : MonoBehaviour
         GetComponent<PlayerStats>().UpdateHealth((int)(damage / totalArmor));
 
         FindObjectOfType<AudioManager>().PlayOneShot("Enemy_Hit");
-
         GetComponent<PlayerMovement>().TakeDamage();
+
         if (GetComponent<PlayerStats>().currentHealth <= 0)
         {
             Die();
