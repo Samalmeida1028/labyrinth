@@ -232,7 +232,6 @@ public class EnemyScript : MonoBehaviour
         // MF DEAD
         if (isKilled)
         {
-
             if (!killdb)
             {
                 killdb = true;
@@ -431,12 +430,13 @@ public class EnemyScript : MonoBehaviour
             }
 
 
-            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
-            {
+            //if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            //{
                 lastPathed = Time.fixedTime;
                 ai.destination = player.transform.position;
                 ai.SearchPath();
-            }   
+                Debug.Log("Chasing Player");
+            //}   
             PointAtPlayer();
             Collider2D[] cast = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D col in cast)
