@@ -37,7 +37,8 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (canAttack && !isRanged) Attack();
+            if (!gameObject.GetComponent<PlayerCombat>().dead)
+                if (canAttack && !isRanged) Attack();
         }
         else if (isPotion)
         {
