@@ -104,4 +104,4 @@ MonoBehaviour:
   damage: 0
   armorVal: 0
   itemType: 2
-  healthAmount: 100
+  healthAmount: 120
