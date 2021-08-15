@@ -329,25 +329,28 @@ public class EnemyScript : MonoBehaviour
     {
         if (!isKilled)
         {
-            ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
-            ai.SetPath(null);
-        
-            PointAtPlayer();
-            if (counter >= 1 / attackSpeed)
+            if (player.GetComponent<PlayerCombat>().dead != true)
             {
-                isAttackPressed = true;
-                counter = 0;
-
-                GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
-
-                attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
-                Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
-                Destroy(attack, projectileLife);
-
-                if (isRanged)
+                ai.destination = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+                ai.SetPath(null);
+            
+                PointAtPlayer();
+                if (counter >= 1 / attackSpeed)
                 {
-                    FindObjectOfType<AudioManager>().Play("FireThrow");
-                    attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+                    isAttackPressed = true;
+                    counter = 0;
+
+                    GameObject attack = Instantiate(attackType, firePoint.position, firePoint.rotation);
+
+                    attack.GetComponent<EnemyAttack>().SetDamage((int)(enemyDamage*enemyTier));
+                    Rigidbody2D attackHit = attack.GetComponent<Rigidbody2D>();
+                    Destroy(attack, projectileLife);
+
+                    if (isRanged)
+                    {
+                        FindObjectOfType<AudioManager>().Play("FireThrow");
+                        attackHit.AddForce(firePoint.up * -force, ForceMode2D.Impulse);
+                    }
                 }
             }
         }
@@ -379,8 +382,11 @@ public class EnemyScript : MonoBehaviour
         {
             if (col.tag == "Player")
             {
-                player = col.GetComponent<Transform>();
-                return true;
+                if (col.GetComponent<PlayerCombat>().dead != true)
+                {
+                    player = col.GetComponent<Transform>();
+                    return true;
+                }
             }
         }
         return false;
