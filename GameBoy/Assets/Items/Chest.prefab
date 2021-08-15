@@ -114,6 +114,11 @@ MonoBehaviour:
   interacted: {fileID: -181100321358885483, guid: a89aaae72c0d6b54fa438f2aef8d807b, type: 3}
   itemImage: {fileID: 804467626633265400}
   itemParticles: {fileID: 4662984769257244670}
+  coin: {fileID: 0}
+  ammo: {fileID: 0}
+  particleGold: {fileID: 0}
+  gold: {fileID: 0}
+  canvas: {fileID: 5712930631756311311}
 --- !u!114 &2722083979826634579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6142960944123623384
 RectTransform:
   m_ObjectHideFlags: 0
