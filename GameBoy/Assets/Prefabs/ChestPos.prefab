@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.maxCurve.m_Curve.Array.data[1].tangentMode
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 6633646865232348212, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7996559552193036852, guid: debc7ab8add84424a92a6d46102437dd, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1

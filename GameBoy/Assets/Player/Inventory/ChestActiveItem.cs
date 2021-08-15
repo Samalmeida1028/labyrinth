@@ -31,8 +31,7 @@ public class ChestActiveItem : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        var main = itemParticles.main;
-        ParticleSystem.SetActive(false);
+        /**var main = itemParticles.main;
         tier = (int)(tierVal - Random.Range(0f, 4f));
         if(tier <1)
         {
@@ -49,7 +48,7 @@ public class ChestActiveItem : MonoBehaviour
         else if(tier>=3)
         {
             main.startColor = Color.red;
-        }
+        }**/
     }
 
     private void OnTriggerEnter2D(Collider2D other)
