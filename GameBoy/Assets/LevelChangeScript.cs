@@ -20,7 +20,7 @@ public class LevelChangeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text = "Floor " + (SceneManager.GetActiveScene().buildIndex);
+        text = "Floor " + (SceneManager.GetActiveScene().buildIndex+1);
         canInteract = false;
         hasInteract = false;
 
@@ -50,21 +50,21 @@ public class LevelChangeScript : MonoBehaviour
         if(open==true)
         {
             if(endGame==true&&canInteract&& Input.GetKey("e"))
-        {
-            loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "YOU WIN";
-            PlayerInventoryUI.SetActive(false);
-            gameObject.transform.GetChild(1).gameObject.SetActive(false);
-            Instantiate(loadScreen, player.transform.position, Quaternion.identity);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else if (canInteract&& Input.GetKey("e"))
-        {
-            loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = text;
-            PlayerInventoryUI.SetActive(false);
-            gameObject.transform.GetChild(1).gameObject.SetActive(false);
-            Instantiate(loadScreen, player.transform.position, Quaternion.identity);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        }
+            {
+                loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "YOU WIN";
+                PlayerInventoryUI.SetActive(false);
+                gameObject.transform.GetChild(1).gameObject.SetActive(false);
+                Instantiate(loadScreen, player.transform.position, Quaternion.identity);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else if (canInteract&& Input.GetKey("e"))
+            {
+                loadScreen.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = text;
+                PlayerInventoryUI.SetActive(false);
+                gameObject.transform.GetChild(1).gameObject.SetActive(false);
+                Instantiate(loadScreen, player.transform.position, Quaternion.identity);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            }
         }
     }
 }
