@@ -109,17 +109,11 @@ public class PlayerCombat : MonoBehaviour
         }
         else if (updateCounter>(.7/attackSpeed))//this is for melee
         {
-            
             updateCounter = 0;
             GameObject melee = Instantiate(meleeAttack, attackPoint.position, attackPoint.rotation);
             melee.GetComponent<Bullet>().SetDamage(totalDamage);
             Destroy(melee, .07f);
-            if (playSound) {
-                FindObjectOfType<AudioManager>().PlayOneShot("SwordSlash");
-                playSound = false;
-            }
-            
-            if (playSound==false) { StartCoroutine(Wait()); }
+            FindObjectOfType<AudioManager>().PlayOneShot("SwordSlash");
             
         }
     }

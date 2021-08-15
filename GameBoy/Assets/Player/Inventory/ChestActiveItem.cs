@@ -117,10 +117,12 @@ public class ChestActiveItem : MonoBehaviour
             player.GetComponent<PlayerInventory>().AddItem(activeItem);
             player.GetComponent<PlayerInventory>().AddGold(-price);
             hasInteract = true;
+            FindObjectOfType<AudioManager>().Play("ChestOpen");
         }
         else if (canInteract && hasInteract==false && Input.GetKey("e") && player.GetComponent<PlayerInventory>().gold < price)
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            FindObjectOfType<AudioManager>().Play("ChestOpen");
         }
     }
 
