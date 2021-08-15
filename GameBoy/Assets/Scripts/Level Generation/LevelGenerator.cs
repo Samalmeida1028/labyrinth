@@ -687,6 +687,7 @@ public class LevelGenerator : MonoBehaviour
                 }
             }   
 
+            /**
             while(room.enemyCount>0)
             {
                 pickEnemySpawn = false;
@@ -717,7 +718,9 @@ public class LevelGenerator : MonoBehaviour
                         enemyCount++;
                     }
                 }
-            }       
+            }
+            **/
+              
         }
     }
 }
