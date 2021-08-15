@@ -584,12 +584,12 @@ public class LevelGenerator : MonoBehaviour
         Vector2 min = shopRoom.botLeft;
         Vector2 max = shopRoom.topRight;
 
-        while(shopRoom.chestCount>0)
+        for(int i=0;i<shopRoom.chestCount;)
         {
 
-            pickChestSpawn=true;
+            pickChestSpawn=false;
 
-            /**while(!pickChestSpawn)
+            while(!pickChestSpawn)
             {
                 float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
                 float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
@@ -599,7 +599,7 @@ public class LevelGenerator : MonoBehaviour
                     pickChestSpawn = true;
                     chestSpawn = new Vector3(x,y,0);
                 }
-            }**/
+            }
 
             if(pickChestSpawn&&shopRoom.chestCount>0)
             {
@@ -607,12 +607,12 @@ public class LevelGenerator : MonoBehaviour
                 chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = Random.Range(levelDifficulty+1,levelDifficulty*2f);
                 chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().isShop=true;
                 Instantiate(chest,chestSpawn,Quaternion.identity);
-                shopRoom.chestCount--;
+                i++;
             }
         }
 
-        pickChestSpawn=true;
-        /**while(!pickChestSpawn)
+        pickChestSpawn=false;
+        while(!pickChestSpawn)
         {
             float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
             float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
@@ -622,7 +622,7 @@ public class LevelGenerator : MonoBehaviour
                 pickChestSpawn = true;
                 shopkeepSpawn = new Vector3(x,y,0);
             }
-        }**/
+        }
         grid[(int)(shopkeepSpawn.x/tilePixelCount),(int)(shopkeepSpawn.y/tilePixelCount)]=1;
         Instantiate(shopkeep,shopkeepSpawn,Quaternion.identity);
     }
