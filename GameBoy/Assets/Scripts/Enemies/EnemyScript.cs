@@ -124,6 +124,17 @@ public class EnemyScript : MonoBehaviour
 
         //Get Enemy Stats
         gameObject.GetComponent<HittableStats>().health = (int)(health * enemyTier);
+        if(enemyType==0)
+        {
+            float dmgModifer = 0;
+            if(enemyTier/2<1)
+            {
+                dmgModifer = 1;
+            }else{
+                dmgModifer = enemyTier/2;
+            }
+            enemyDamage = (int)(enemyDamage*dmgModifer);
+        }
         ai = GetComponent<IAstarAI>();
 
         //float tempUpdateTime = updateTime;
