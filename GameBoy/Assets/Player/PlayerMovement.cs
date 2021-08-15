@@ -175,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
                         ChangeAnimationState(PLAYER_ATTACK_F);
                     }
 
-                    Invoke("AttackComplete", 0.3f);
+                    Invoke("AttackComplete", 0.35f);
                 }
                 else
                 {
