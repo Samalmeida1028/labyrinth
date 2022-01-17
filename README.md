@@ -6,20 +6,17 @@ A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Alm
 **Caleb Scoptski**
 Programmer and Designer, developed the randomized dungeon system and spawning of chests within the maps. 
 <br />
-<br />
-[<img align="left" alt="codeSTACKr.com" width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][calebgithub]
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][ethangithub]
 
 **Samuel Almeida**
 Programmer and Designer, took on the interaction, items, and combat systems within the game
 <br />
-<br />
-[<img align="left" alt="codeSTACKr.com" width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][samgithub]
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][ethangithub]
 
 **Patrick Walsh**
 Programmer and Designer, joining the project late, took charge of the audio for Labyrinth. 
 <br />
-<br />
-[<img align="left" alt="codeSTACKr.com" width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][patgithub]
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][ethangithub]
 
 **Ethan Ferrabelo**
 Programmer and Designer, most notably worked on the Enemy Pathfinding Logic and Animation System for Labyrinth.
