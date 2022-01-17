@@ -4,12 +4,12 @@ A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Alm
 # Developers
 
 **Caleb Scopetski**
-Programmer and Designer, developed the randomized dungeon system and spawning of chests within the maps. 
+Programmer and Designer, utilized procedural generation techniques to develop level generation and entity spawning systems. 
 <br />
 [<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][calebgithub]
 
 **Samuel Almeida**
-Programmer and Designer, took on the interaction, items, and combat systems within the game
+Programmer and Designer, developed the basis for the enemy/combat, interaction and inventory systems within the game
 <br />
 [<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][samgithub]
 
