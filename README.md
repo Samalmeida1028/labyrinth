@@ -24,7 +24,7 @@ Programmer and Designer, joining the project late, took charge of the audio for 
 **Ethan Ferrabelo**
 Programmer and Designer, most notably worked on the Enemy Pathfinding Logic and Animation System for Labyrinth.
 <br />
-[<img align="left" alt="codeSTACKr.com" width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][ethangithub]
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][ethangithub]
 
 
 
