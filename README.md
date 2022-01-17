@@ -3,7 +3,7 @@ A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Alm
 
 # Developers
 
-**Caleb Scoptski**
+**Caleb Scopetski**
 Programmer and Designer, developed the randomized dungeon system and spawning of chests within the maps. 
 <br />
 [<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][calebgithub]
