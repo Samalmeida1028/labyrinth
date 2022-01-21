@@ -5,12 +5,7 @@ A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Alm
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#developers">Developers</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#developers">Developers</a></li>
     <li>
       <a href="#level-generation">Level Generation</a>
       <ul>
@@ -21,12 +16,6 @@ A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Alm
         <li><a href="#populating-the-rooms">Populating the Rooms</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -62,6 +51,7 @@ You can check out the game on its [itch.io page][game]
 
 ## Level Generation
 A key aspect of any roguelite game is procedural generation. Without procedural generation players would just play the same map over and over again, and no one likes that right? (****cough*** ***cough*** MOBA players*).
+[Main Level Generation Script](https://github.com/Samalmeida1028/lowResGame/blob/a2a0b3185cb3981d30ac67db3006e8eb17250761/GameBoy/Assets/Scripts/Level%20Generation/LevelGenerator.cs)
 
 ### _The Algorithm_
 For Labyrinth we used [**Binary Space Partitioning**](http://www.roguebasin.com/index.php/Basic_BSP_Dungeon_generation) (hereafter referred to as **BSP**) to procedurally generate dungeon rooms. **BSP** is just a method for dividing a large area up into smaller pieces, which for the case of Labyrinth happens to be dividing a dungeon into many smaller rooms.
@@ -162,108 +152,8 @@ public class Room
 ### _The Hallways_
 Now the game wouldn't be very fun if the player was unable to travel from ```Room``` to ```Room``` would it? Thats where the ```Hallways``` come in. By reversing back up the tree and connecting the ```Rooms``` in each ```Dungeon``` Node with a ```Hallway```, we were able to ensure that every ```Room``` would be connected. 
 
-```
-public void generateHall(Dungeon lDungeon, Dungeon rDungeon)
-    {
-        
-        if(!(lDungeon.failSplit||rDungeon.failSplit))
-        { 
-            Room lRoom = lDungeon.getRoom();
-            Room rRoom = rDungeon.getRoom();
+[`Hallway Generation Script Source Code`](https://github.com/Samalmeida1028/lowResGame/blob/a2a0b3185cb3981d30ac67db3006e8eb17250761/GameBoy/Assets/Scripts/Level%20Generation/LevelGenerator.cs#L328-L427)
 
-
-            Vector2 dirVector = lRoom.roomCenter-rRoom.roomCenter;
-            int side = 0;
-               
-            /**
-            *   Calculate which side of the room to create the corridor on
-            **/
-            if(Mathf.Abs(dirVector.x)>Mathf.Abs(dirVector.y))
-            {
-                
-                //horizontal
-                if(dirVector.x>0)
-                {
-                    //Left Side
-                    side = 0;
-                }
-                else
-                {
-                    //Right Side
-                    side = 2;
-                }
-            }
-            else
-            {
-                //vertical
-                if(dirVector.y<0)
-                {
-                    //Top Side
-                    side = 1;
-                }
-                else
-                {
-                    //Bottom Side
-                    side = 3;
-                }
-
-            }
-
-            Vector2 vertRange = new Vector2(0,0);
-            Vector2 horzRange = new Vector2(0,0);
-
-            Vector2 startPos = new Vector2(0,0);
-            Vector2 meetPos = new Vector2(0,0); 
-            Vector2 endPos = new Vector2(0,0);
-            
-            //Calculate whether or not the hall will have to make a turn in order to reach the desired room
-            bool turn = ((Mathf.Abs(dirVector.x) - (lRoom.roomDimensions.width/2 + rRoom.roomDimensions.width/2)) >=0 && (Mathf.Abs(dirVector.y) - (lRoom.roomDimensions.height/2 + rRoom.roomDimensions.height/2)) >=0 );
-
-            //If the hall must turn, three points must be randomly generated, the start point, meet point and end point
-            if(turn)
-            {
-                
-                if(side == 0||side ==2)
-                {
-                    vertRange = new Vector2(lRoom.roomDimensions.yMin,lRoom.roomDimensions.yMax);
-                    horzRange = new Vector2(rRoom.roomDimensions.xMin,rRoom.roomDimensions.xMax);
-
-                    startPos = new Vector2((side==0 ? lRoom.roomDimensions.xMin : lRoom.roomDimensions.xMax),round(Random.Range(vertRange.x+tilePixelCount*2,vertRange.y-tilePixelCount)));
-                    meetPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount*2,horzRange.y-tilePixelCount)),startPos.y);
-                    endPos = new Vector2(meetPos.x,(dirVector.y>0 ? rRoom.roomDimensions.yMax : rRoom.roomDimensions.yMin));
-                }
-                else if (side ==1||side ==3)
-                {
-                    vertRange = new Vector2(rRoom.roomDimensions.yMin,rRoom.roomDimensions.yMax);
-                    horzRange = new Vector2(lRoom.roomDimensions.xMin,lRoom.roomDimensions.xMax);
-                    startPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount*2,horzRange.y-tilePixelCount)),(side==1 ? lRoom.roomDimensions.yMax : lRoom.roomDimensions.yMin));
-                    meetPos = new Vector2(startPos.x,round(Random.Range(vertRange.x+tilePixelCount*2,vertRange.y-tilePixelCount)));
-                    endPos = new Vector2((dirVector.x>0 ? rRoom.roomDimensions.xMax : rRoom.roomDimensions.xMin),meetPos.y);
-                }
-                drawHall(startPos,meetPos);
-                drawHall(meetPos,endPos);
-            }
-            //If the hall doesn't have to turn only a start and end point are reandomly generated
-            else
-            {
-
-                if(side == 0||side ==2)
-                {
-                    vertRange = new Vector2((lRoom.botLeft.y>rRoom.botLeft.y ? lRoom.botLeft.y : rRoom.botLeft.y),(lRoom.topRight.y>rRoom.topRight.y ? rRoom.topRight.y : lRoom.topRight.y));
-                    startPos = new Vector2((side==0 ? lRoom.roomDimensions.xMin : lRoom.roomDimensions.xMax),round(Random.Range(vertRange.x+tilePixelCount*2,vertRange.y-tilePixelCount)));
-                    endPos = new Vector2((side==0 ? rRoom.roomDimensions.xMax : rRoom.roomDimensions.xMin),startPos.y);
-                }
-                else if (side ==1||side ==3)
-                {
-                    horzRange = new Vector2((lRoom.botLeft.x>rRoom.botLeft.x ? lRoom.botLeft.x : rRoom.botLeft.x),(lRoom.topRight.x>rRoom.topRight.x ? rRoom.topRight.x : lRoom.topRight.x));
-                    startPos = new Vector2(round(Random.Range(horzRange.x+tilePixelCount*2,horzRange.y-tilePixelCount)),(side==1 ? lRoom.roomDimensions.yMax : lRoom.roomDimensions.yMin));
-                    endPos = new Vector2(startPos.x, (side==1 ? rRoom.roomDimensions.yMin : rRoom.roomDimensions.yMax));
-                }
-                drawHall(startPos,endPos);
-            }
-        }
-    }
-```
 <img src="https://sites.google.com/site/jicenospam/dungeon_bsp5.png" alt="Rogue Basin Example 4" width=400 height=400>
 
 ##### Connecting rooms at the deepest layer of the tree: [roguebasin.com](http://www.roguebasin.com/index.php/Basic_BSP_Dungeon_generation)
@@ -275,134 +165,11 @@ public void generateHall(Dungeon lDungeon, Dungeon rDungeon)
 ### _Populating the Rooms_
 After doing all the previous steps, populating the ```Rooms``` was a piece of cake! *(I wish...)*. In all seriousness, thanks to the previous preparations and the custom datatypes created, populating the ```Rooms``` with enemies, loot, etc. was made much easier. After assigning certain ```Rooms``` to be special types (start, end, shop) all that was left was to randomly spawn loot and enemies for the player to fight based off of a difficulty level that increased with each floor. ```Enemies``` and loot were spawned in a similar manner, they were confined towards the center of the room dimensions and a random spawn-point was picked. If the spawn-point already had an ```Enemy``` or loot on it, then another spawn-point would be chosen.
 
-```
-public void populateRoom()
-    {
-        
-        GameObject chest = chestPrefab;
+[`Room Population Script Source Code`](https://github.com/Samalmeida1028/lowResGame/blob/a2a0b3185cb3981d30ac67db3006e8eb17250761/GameBoy/Assets/Scripts/Level%20Generation/LevelGenerator.cs#L628-L751)
 
-        GameObject meleeEnemy = meleeEnemyPrefab;
-        GameObject mageEnemy = mageEnemyPrefab;
-        GameObject enemy;
-        foreach (RoomObj room in roomList)
-        {
-            room.enemyCount = Random.Range(levelDifficulty,(int)Mathf.Round(levelDifficulty*3.25f));
+### _Wrapping Up_
+All of the source code for Level Generation can be found here [```lowResGame/GameBoy/Assets/Scripts/Level Generation/```](https://github.com/Samalmeida1028/lowResGame/tree/main/GameBoy/Assets/Scripts/Level%20Generation)
 
-            Vector2 min = room.botLeft;
-            Vector2 max = room.topRight;
-            
-            bool pickChestSpawn = false;
-            bool pickEnemySpawn = false;
-
-            Vector3 chestSpawn = new Vector3(0,0,0);
-            Vector3 enemySpawn = new Vector3(0,0,0);
-
-            int chestCounter = 0;
-            int enemyCounter = 0;
-
-            if(room.isEndRoom==false){
-                while(room.chestCount>0)
-                {
-                    pickChestSpawn=false;
-
-                    while(!pickChestSpawn)
-                    {   
-                        if(chestCounter>((room.roomDimensions.width-2)*(room.roomDimensions.height-2)))
-                        {
-                            pickChestSpawn=true;
-                        }
-                        chestCounter++;
-                        float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
-                        float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
-
-                        if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
-                        {
-                            pickChestSpawn = true;
-                            chestSpawn = new Vector3(x,y,0);
-                        }
-                    }
-
-                    if(pickChestSpawn&&room.chestCount>0)
-                    {
-                        grid[(int)(chestSpawn.x/tilePixelCount),(int)(chestSpawn.y/tilePixelCount)]=1;
-                        chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().tierVal = Random.Range(levelDifficulty,levelDifficulty*2f);
-                        chest.transform.GetChild(0).gameObject.GetComponent<ChestActiveItem>().isShop=false;
-                        Instantiate(chest,chestSpawn,Quaternion.identity);
-                        numChest++;
-                        room.chestCount--;
-                        chestCounter=0;
-                    }
-                }   
-            }
-            while(room.enemyCount>0)
-            {
-                pickEnemySpawn = false;
-
-                while(!pickEnemySpawn)
-                {
-                    if(enemyCounter>((room.roomDimensions.width-2)*(room.roomDimensions.height-2)))
-                    {
-                        pickEnemySpawn=true;
-                    }
-                    enemyCounter++;
-                    float x = round(Random.Range(min.x+2*tilePixelCount,max.x-tilePixelCount));
-                    float y = round(Random.Range(min.y+2*tilePixelCount,max.y-tilePixelCount));
-
-                    if(grid[(int)(x/tilePixelCount),(int)(y/tilePixelCount)]==0)
-                    {
-                        pickEnemySpawn = true;
-                        enemySpawn = new Vector3(x,y,0);
-                    }
-
-                    if(pickEnemySpawn&&room.enemyCount>0)
-                    {
-                        grid[(int)(enemySpawn.x/tilePixelCount),(int)(enemySpawn.y/tilePixelCount)]=1;
-                        if(Random.Range(0,10)<=2)
-                        {
-                            enemy = mageEnemy;
-                        }else{
-                            enemy = meleeEnemy;
-                        }
-                        enemy.transform.GetChild(0).gameObject.GetComponent<EnemyScript>().enemyTier = Random.Range(1+levelDifficulty/2,levelDifficulty*1.2f);
-                        Instantiate(enemy,enemySpawn,Quaternion.identity);
-                        room.enemyCount--;
-                        enemyCount++;
-                        enemyCounter=0;
-                    }
-                }
-            }
-
-            for (float i =min.y; i<=max.y; i+=tilePixelCount)
-            {
-            
-                for (float j = min.x; j<=max.x; j+=tilePixelCount)
-                {     
-                    if(i-min.y==0||j-min.x==0||i-min.y==tilePixelCount||j-min.x==tilePixelCount||i==max.y-tilePixelCount||j==max.x-tilePixelCount)
-                    {
-                        bool spawnChance = false;
-
-                        if((i<max.y/4&&j<max.x/4) || ((i>(max.y-max.y/4)&&(j>(max.x-max.x/4)))))
-                        {
-                            spawnChance = Random.Range(0,10)<3;
-                        }else if((i<max.y/2.5&&j<max.x/2.5) || ((i>max.y-max.y/2.5&&j>max.x-max.x/2.5)))
-                        {
-                            spawnChance = Random.Range(0,10)<1;
-                        }else if((i<max.y/2&&j<max.x/2) ||(i>max.y/2&&j>max.x/2))
-                        {
-                            spawnChance = Random.Range(0,10)<0;
-                        }
-                        if(spawnChance&& grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]==0)
-                        {   
-                            grid[(int)(j/tilePixelCount),(int)(i/tilePixelCount)]=1;
-                            Instantiate(destructableObj,new Vector3(j,i,0),Quaternion.identity);
-                        }
-                    }
-                }
-            }  
-        }
-    }
-}
-```
 That just about wraps up the brief summary of Labyrinth's level generation. Since we were already on the topic of spawning ```Enemies```, let's move on to ```Enemy``` Pathfinding.
 
 ## Enemy Pathfinding
