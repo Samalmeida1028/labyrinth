@@ -15,7 +15,10 @@ A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Alm
       <a href="#level-generation">Level Generation</a>
       <ul>
         <li><a href="#the-algorithm">The Algorithm</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#the-dungeon-tree">The Dungeon Tree</a></li>
+        <li><a href="#the-rooms">The Rooms</a></li>
+        <li><a href="#the-hallways">The Hallways</a></li>
+        <li><a href="#populating-the-rooms">Populating the Rooms</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
