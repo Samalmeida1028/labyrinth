@@ -1,11 +1,11 @@
 ## [Labyrinth][game]
-A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Almeida, and Ethan Ferrabelo for [LOWREZJAM 2021][lowrez]
+A roguelite dungeon crawler developed in Unity by Caleb Scopteski, Patrick Walsh, Sam Almeida, and Ethan Ferrabelo for [LOWREZJAM 2021][lowrez]
 
 
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#developers">Developers</a></li>
+    <li><a href="#about">About</a></li>
     <li>
       <a href="#level-generation">Level Generation</a>
       <ul>
@@ -16,42 +16,24 @@ A roguelite dungeon crawler developed by Caleb Scopteski, Patrick Walsh, Sam Alm
         <li><a href="#populating-the-rooms">Populating the Rooms</a></li>
       </ul>
     </li>
+    <li><a href="#enemy-pathfinding">Enemy Pathfinding</a></li>
+      <ul>
+        <li><a href="#the-algorithm">The Algorithm</a></li>
+      </ul>
+    <li><a href="#developers">Developers</a></li>
+    <li><a href="#game-jam-results">Game Jame Results</a></li>
   </ol>
 </details>
 
-## Developers
+## About
+Labyrinth was created as a submission for the [LOWREZJAM 2021][lowrez]. Our goal with making Labyrinth was to expand our knowledge of programming, game development, and gain experience working on a longer-term group programming project. As a team we had 2 weeks to create a game within the limits of 64x64 resolution. As fans of the roguelite genre we decided to endeavour on one of our own. Using assets created by Krishna Palacio, we programmed a 3 floor 1 boss floor roguelite dungeon crawler game in C# using the Unity Engine. 
 
-**Caleb Scopetski**
-Programmer and Designer, utilized procedural generation techniques to develop level generation and entity spawning systems. 
-<br />
-[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][calebgithub]
+Check out the game on itch.io! [itch.io page][game]
 
-**Samuel Almeida**
-Programmer and Designer, developed the basis for the enemy/combat, interaction and inventory systems within the game
-<br />
-[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][samgithub]
-
-**Patrick Walsh**
-Programmer and Designer, joining the project late, took charge of the audio for Labyrinth. 
-<br />
-[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][patgithub]
-
-**Ethan Ferrabelo**
-Programmer and Designer, most notably worked on the Enemy Pathfinding Logic and Animation System for Labyrinth.
-<br />
-[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][ethangithub]
-
-## Development
-Us 4 had two weeks to create a game within the limits of 64x64 resolution. As fans of the rougelite genre we decided to endeavour on one of our own. Using assets created by Krishna Palacio, we programmed a 3 floor 1 boss rogutelite dungeon game in C# using the Unity Engine. This being our second game jam ever, we still had to face constant challenges due to our ignorance towards game development in Unity. However, we believe we did an extradonary job, and as a group, are extremely proud of what we created. There are many MANY areas of this game that could be better, but the two-week development journey was an experience we will be grateful for. 
-
-## Game Jam results
-Labyrinth ended up coming #143 out of 337 differnet submissions. We excleed in some aspects, but lacked in others. Learning a lot about Teamwork, Programming, and Game Design, we consider this game jam an extremely fun expereince where we all walked away knowing a little more about programming than we did beforehand. 
-
-You can check out the game on its [itch.io page][game]
-
-## Level Generation
+## Level Generation 
 A key aspect of any roguelite game is procedural generation. Without procedural generation players would just play the same map over and over again, and no one likes that right? (****cough*** ***cough*** MOBA players*).
-[Main Level Generation Script](https://github.com/Samalmeida1028/lowResGame/blob/a2a0b3185cb3981d30ac67db3006e8eb17250761/GameBoy/Assets/Scripts/Level%20Generation/LevelGenerator.cs)
+
+[`Level Generation Controller Source Code`](https://github.com/Samalmeida1028/lowResGame/blob/a2a0b3185cb3981d30ac67db3006e8eb17250761/GameBoy/Assets/Scripts/Level%20Generation/LevelGenerator.cs)
 
 ### _The Algorithm_
 For Labyrinth we used [**Binary Space Partitioning**](http://www.roguebasin.com/index.php/Basic_BSP_Dungeon_generation) (hereafter referred to as **BSP**) to procedurally generate dungeon rooms. **BSP** is just a method for dividing a large area up into smaller pieces, which for the case of Labyrinth happens to be dividing a dungeon into many smaller rooms.
@@ -63,13 +45,12 @@ For Labyrinth we used [**Binary Space Partitioning**](http://www.roguebasin.com/
   3. Split the space into two sub-spaces along that position line
   4. Repeat the process on the sub-spaces
 ```
-#### **Splits 1 and 2:**
 <div class="row">
   <img src="https://sites.google.com/site/jicenospam/dungeon_bsp1.png" alt="Rogue Basin Example 1" width=375 height=225>
   <img src="https://sites.google.com/site/jicenospam/dungeon_bsp2.png" alt="Rogue Basin Example 2" width=375 height=225> 
 </div>
 
-##### Image Source: [roguebasin.com](http://www.roguebasin.com/index.php/Basic_BSP_Dungeon_generation)
+##### First two splits of the space *(Left- first split, Right- second split)*: [roguebasin.com](http://www.roguebasin.com/index.php/Basic_BSP_Dungeon_generation)
 
 ### _The Dungeon Tree_
 In order to implement this in Unity, we had to create a custom binary tree structure that could hold all of our data. Since the tree would be comprised of many sub-```Dungeons``` we decided to name our tree-nodes ```Dungeons```:
@@ -174,6 +155,33 @@ That just about wraps up the brief summary of Labyrinth's level generation. Sinc
 
 ## Enemy Pathfinding
 A* poggers
+
+## Developers
+
+**Caleb Scopetski**
+Utilized procedural generation techniques to develop level generation and entity spawning systems. 
+<br />
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][calebgithub]
+
+**Samuel Almeida**
+Developed the basis for the enemy/combat, interaction and inventory systems within the game
+<br />
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][samgithub]
+
+**Patrick Walsh**
+Took charge of the audio for Labyrinth. 
+<br />
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][patgithub]
+
+**Ethan Ferrabelo**
+Worked on the Enemy Pathfinding Logic and Animation System for Labyrinth.
+<br />
+[<img width="22px" src="https://cdn-icons-png.flaticon.com/512/270/270798.png" />][ethangithub]
+
+## Game Jam Results
+Labyrinth ended up coming #143 out of 337 different submissions. Although we didn't place as high as we would've liked, we achieved our main goal of learning. Throughout the process we learned about working as a team on a larger programming project, the ins and outs of Unity, and efficiently using version control systems (Github).
+
+Check out the game on itch.io! [itch.io page][game]
 
 [game]: https://cscopetski.itch.io/labyrinth
 [ethangithub]: https://github.com/eferrabelo1114
