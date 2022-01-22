@@ -16,10 +16,6 @@ A roguelite dungeon crawler developed in Unity by Caleb Scopteski, Patrick Walsh
         <li><a href="#populating-the-rooms">Populating the Rooms</a></li>
       </ul>
     </li>
-    <li><a href="#enemy-pathfinding">Enemy Pathfinding</a></li>
-      <ul>
-        <li><a href="#the-algorithm">The Algorithm</a></li>
-      </ul>
     <li><a href="#developers">Developers</a></li>
     <li><a href="#game-jam-results">Game Jame Results</a></li>
   </ol>
@@ -151,10 +147,7 @@ After doing all the previous steps, populating the ```Rooms``` was a piece of ca
 ### _Wrapping Up_
 All of the source code for Level Generation can be found here [```lowResGame/GameBoy/Assets/Scripts/Level Generation/```](https://github.com/Samalmeida1028/lowResGame/tree/main/GameBoy/Assets/Scripts/Level%20Generation)
 
-That just about wraps up the brief summary of Labyrinth's level generation. Since we were already on the topic of spawning ```Enemies```, let's move on to ```Enemy``` Pathfinding.
-
-## Enemy Pathfinding
-A* poggers
+That just about wraps up this brief summary of Labyrinth's level generation, now lets learn about the people behind this mediocre at best game. 
 
 ## Developers
 
